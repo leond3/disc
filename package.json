@@ -1,0 +1,10 @@
+{
+  "name": "hypixel-skyblock-bot",
+  "version": "1.0.0",
+  "description": "Hypixel Skyblock Bot",
+  "main": "bot.js",
+  "author": "Leon",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  }
+}
