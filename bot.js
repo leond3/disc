@@ -16,15 +16,15 @@ client.on('message', message => {
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
 
-	if else (command === 'help') {
+	if (command === 'help') {
 		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!color [color/list]').then(msg => {msg.delete(900000)});
 		message.delete(900000);
 	}
-	if else (command === 'stats') {
+	else if (command === 'stats') {
 		message.channel.send(`https://sky.lea.moe/stats/${args}`).then(msg => {msg.delete(900000)});
 		message.delete(900000);
 	}
-	if else (command === 'bot') {
+	else if (command === 'bot') {
 		const BotEmbed = new Discord.RichEmbed()
 			.setColor('#252525')
 			.setTitle('MineCraft / ARK')
@@ -35,11 +35,11 @@ client.on('message', message => {
 		message.channel.send(BotEmbed).then(msg => {msg.delete(900000)});
 		message.delete(900000);
 	}
-	if else (command === 'reforge') {
+	else if (command === 'reforge') {
 		message.channel.send("**Damage:**\nArmor: Godly\nSword: Spicy\nLegendary/Epic talisman: Godly\nRare talisman: Itchy\nUncommon/Common talisman (*80%< crit chance*): Itchy\nUncommon/Common talisman (*80%>crit chance*): Godly/Zealous\n\n**HP&Defence:**\nArmor: Titanic\nSword: -\nTalisman: Ominous\n\n**Mana:**\nArmor: Wise\nSword: Legendary\nTalisman:Bizarre/Pretty").then(msg => {msg.delete(900000)});
 		message.delete(900000);
 	}
-	if else (command === 'color') {
+	else if (command === 'color') {
 		if (args[0].toLowerCase() === 'blue' || args[0].toLowerCase() === 'purple' || args[0].toLowerCase() === 'orange' || args[0].toLowerCase() === 'gray' || args[0].toLowerCase() === 'green' || args[0].toLowerCase() === 'aqua' || args[0].toLowerCase() === 'red' || args[0].toLowerCase() === 'pink' || args[0].toLowerCase() === 'yellow' || args[0].toLowerCase() === 'white' || args[0].toLowerCase() === 'none') {
 			message.member.removeRole(message.guild.roles.find(r => r.name === "blue"));
 			message.member.removeRole(message.guild.roles.find(r => r.name === "purple"));
