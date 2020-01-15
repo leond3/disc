@@ -59,7 +59,7 @@ client.on('message', message => {
 				message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == args[0].toLowerCase()));
 				message.channel.send(":white_check_mark: Color asigned.").then(msg => {msg.delete(3000)});
 			}
-			message.delete(3000);
+			message.delete();
 		}
 		if (args[0].toLowerCase() === 'list') {
 			message.channel.send("**Colors:**\n - Blue\n - Purple\n - Orange\n - Gray\n - Green\n - Aqua\n - Red\n - Pink\n - Yellow\n - White\n - None").then(msg => {msg.delete(300000)});
