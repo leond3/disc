@@ -34,7 +34,7 @@ client.on('message', message => {
 	}
 	if (command === 'color') {
 		if (args[0].toLowerCase() === 'a') {
-			message.member.addRole(message.guild.roles.find(role => role.name === "a"));
+			message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == args[0].toLowerCase());
 			message.delete(1000);
 		}
 		message.channel.send('color: ' + args[0].toLowerCase());
