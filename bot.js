@@ -14,11 +14,12 @@ client.on('message', message => {
 	const command = args.shift().toLowerCase();
 
 	if (command === 'help') {
-		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!color [color/list]').then(msg => {msg.delete(5000)});
-		message.delete(5000);
+		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!color [color/list]').then(msg => {msg.delete(900000)});
+		message.delete(900000);
 	}
 	if (command === 'stats') {
-		message.channel.send(`https://sky.lea.moe/stats/${args}`);
+		message.channel.send(`https://sky.lea.moe/stats/${args}`).then(msg => {msg.delete(900000)});
+		message.delete(900000);
 	}
 	if (command === 'bot') {
 		const BotEmbed = new Discord.RichEmbed()
@@ -28,10 +29,12 @@ client.on('message', message => {
 			.attachFiles(['assets/profile.jpg'],['assets/bot.png'],)
 			.setFooter('Made by Leon#1250', 'attachment://profile.jpg')
 			.setThumbnail('http://pm1.narvii.com/6527/1df18b462cbaa988114a20270672d461ecd508ab_hq.jpg')
-		message.channel.send(BotEmbed);
+		message.channel.send(BotEmbed).then(msg => {msg.delete(900000)});
+		message.delete(900000);
 	}
 	if (command === 'reforge') {
-	message.channel.send("**Damage:**\nArmor: Godly\nSword: Spicy\nLegendary/Epic talisman: Godly\nRare talisman: Itchy\nUncommon/Common talisman (*80%< crit chance*): Itchy\nUncommon/Common talisman (*80%>crit chance*): Godly/Zealous\n\n**HP&Defence:**\nArmor: Titanic\nSword: -\nTalisman: Ominous\n\n**Mana:**\nArmor: Wise\nSword: Legendary\nTalisman:Bizarre/Pretty");
+		message.channel.send("**Damage:**\nArmor: Godly\nSword: Spicy\nLegendary/Epic talisman: Godly\nRare talisman: Itchy\nUncommon/Common talisman (*80%< crit chance*): Itchy\nUncommon/Common talisman (*80%>crit chance*): Godly/Zealous\n\n**HP&Defence:**\nArmor: Titanic\nSword: -\nTalisman: Ominous\n\n**Mana:**\nArmor: Wise\nSword: Legendary\nTalisman:Bizarre/Pretty").then(msg => {msg.delete(900000)});
+		message.delete(900000);
 	}
 	if (command === 'color') {
 		if (args[0].toLowerCase() === 'blue' || args[0].toLowerCase() === 'purple' || args[0].toLowerCase() === 'orange' || args[0].toLowerCase() === 'gray' || args[0].toLowerCase() === 'green' || args[0].toLowerCase() === 'aqua' || args[0].toLowerCase() === 'red' || args[0].toLowerCase() === 'pink' || args[0].toLowerCase() === 'yellow' || args[0].toLowerCase() === 'white' || args[0].toLowerCase() === 'none') {
@@ -52,7 +55,8 @@ client.on('message', message => {
 			message.delete(1000);
 		}
 		if (args[0].toLowerCase() === 'list') {
-			message.channel.send("**Colors:**\n - Blue\n - Purple\n - Orange\n - Gray\n - Green\n - Aqua\n - Red\n - Pink\n - Yellow\n - White\n - None");
+			message.channel.send("**Colors:**\n - Blue\n - Purple\n - Orange\n - Gray\n - Green\n - Aqua\n - Red\n - Pink\n - Yellow\n - White\n - None").then(msg => {msg.delete(900000)});
+			message.delete(900000);
 		}
 	}
 });
