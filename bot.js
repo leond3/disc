@@ -9,7 +9,10 @@ client.once('ready', () => {
 
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) {
-		if (!message.author.bot) { message.delete(100); }
+		if (!message.author.bot) { 
+			message.delete();
+			message.channel.send("Invalid Command!").then(msg => {msg.delete(3000)}); 
+		}
 		return;
 	}
 
@@ -63,8 +66,9 @@ client.on('message', message => {
 			message.delete(300000);
 		}
 	}
-	else if (!message.member.roles.has(message.guild.roles.find(r => r.name === "Administrator"))) {
-		message.delete(100);
+	else {
+		message.delete();
+		message.channel.send("Invalid Command!").then(msg => {msg.delete(3000)});
 	}
 });
 
