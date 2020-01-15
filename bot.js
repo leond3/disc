@@ -9,22 +9,22 @@ client.once('ready', () => {
 
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) {
-		if (!message.author.bot) { message.delete(1000); }
+		if (!message.author.bot) { message.delete(100); }
 		return;
 	}
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
 
-	if (command === 'help') {
+	if else (command === 'help') {
 		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!color [color/list]').then(msg => {msg.delete(900000)});
 		message.delete(900000);
 	}
-	if (command === 'stats') {
+	if else (command === 'stats') {
 		message.channel.send(`https://sky.lea.moe/stats/${args}`).then(msg => {msg.delete(900000)});
 		message.delete(900000);
 	}
-	if (command === 'bot') {
+	if else (command === 'bot') {
 		const BotEmbed = new Discord.RichEmbed()
 			.setColor('#252525')
 			.setTitle('MineCraft / ARK')
@@ -35,11 +35,11 @@ client.on('message', message => {
 		message.channel.send(BotEmbed).then(msg => {msg.delete(900000)});
 		message.delete(900000);
 	}
-	if (command === 'reforge') {
+	if else (command === 'reforge') {
 		message.channel.send("**Damage:**\nArmor: Godly\nSword: Spicy\nLegendary/Epic talisman: Godly\nRare talisman: Itchy\nUncommon/Common talisman (*80%< crit chance*): Itchy\nUncommon/Common talisman (*80%>crit chance*): Godly/Zealous\n\n**HP&Defence:**\nArmor: Titanic\nSword: -\nTalisman: Ominous\n\n**Mana:**\nArmor: Wise\nSword: Legendary\nTalisman:Bizarre/Pretty").then(msg => {msg.delete(900000)});
 		message.delete(900000);
 	}
-	if (command === 'color') {
+	if else (command === 'color') {
 		if (args[0].toLowerCase() === 'blue' || args[0].toLowerCase() === 'purple' || args[0].toLowerCase() === 'orange' || args[0].toLowerCase() === 'gray' || args[0].toLowerCase() === 'green' || args[0].toLowerCase() === 'aqua' || args[0].toLowerCase() === 'red' || args[0].toLowerCase() === 'pink' || args[0].toLowerCase() === 'yellow' || args[0].toLowerCase() === 'white' || args[0].toLowerCase() === 'none') {
 			message.member.removeRole(message.guild.roles.find(r => r.name === "blue"));
 			message.member.removeRole(message.guild.roles.find(r => r.name === "purple"));
@@ -61,6 +61,9 @@ client.on('message', message => {
 			message.channel.send("**Colors:**\n - Blue\n - Purple\n - Orange\n - Gray\n - Green\n - Aqua\n - Red\n - Pink\n - Yellow\n - White\n - None").then(msg => {msg.delete(900000)});
 			message.delete(900000);
 		}
+	}
+	else {
+		message.delete(100);
 	}
 });
 
