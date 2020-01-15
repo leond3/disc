@@ -65,42 +65,47 @@ client.on('message', message => {
 			message.channel.send("**Colors:**\n - Blue\n - Purple\n - Orange\n - Gray\n - Green\n - Aqua\n - Red\n - Pink\n - Yellow\n - White\n - None").then(msg => {msg.delete(30000)});
 			message.delete(30000);
 		}
+		else if (!args[0]) {
+			message.delete();
+			message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
+		}
 		else {
 			message.delete();
 			message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
 		}
-//	else if (command === 'tag') {
-//		if (args[0].toLowerCase() === 'skyblock' || args[0].toLowerCase() === 'minigames' || args[0].toLowerCase() === 'uhc' || args[0].toLowerCase() === 'survival' || args[0].toLowerCase() === 'ark' || args[0].toLowerCase() === 'hypixel' || args[0].toLowerCase() === 'none') {
-//			message.member.removeRole(message.guild.roles.find(r => r.name === "skyblock"));
-//			message.member.removeRole(message.guild.roles.find(r => r.name === "minigames"));
-//			message.member.removeRole(message.guild.roles.find(r => r.name === "uhc"));
-//			message.member.removeRole(message.guild.roles.find(r => r.name === "survival"));
-//			message.member.removeRole(message.guild.roles.find(r => r.name === "ark"));
-//			message.member.removeRole(message.guild.roles.find(r => r.name === "hypixel"));
-//			
-//			if (args[0].toLowerCase() === 'skyblock' || args[0].toLowerCase() === 'minigames' || args[0].toLowerCase() === 'uhc' || args[0].toLowerCase() === 'survival' || args[0].toLowerCase() === 'ark' || args[0].toLowerCase() === 'hypixel') {
-//				message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == args[0].toLowerCase()));
-//				message.channel.send(":white_check_mark: Tag asigned!").then(msg => {msg.delete(4000)});
-//			}
-//			message.delete();
-//		}
-//		else if (args[0].toLowerCase() === 'list') {
-//			message.channel.send("**Tags:**\n - Skyblock\n - Minigames\n - UHC\n - Survival\n - ARK\n - Hypixel\n - None").then(msg => {msg.delete(30000)});
-//			message.delete(30000);
-//		}
-//		else if (!args[0]) {
-//			message.delete();
-//			message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
-//		}
-//		else {
-//			message.delete();
-//			message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
-//		}
-//	}
-//	else {
-//		message.delete();
-//		message.channel.send("**Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
-//	}
+	}
+	else if (command === 'tag') {
+		if (args[0].toLowerCase() === 'skyblock' || args[0].toLowerCase() === 'minigames' || args[0].toLowerCase() === 'uhc' || args[0].toLowerCase() === 'survival' || args[0].toLowerCase() === 'ark' || args[0].toLowerCase() === 'hypixel' || args[0].toLowerCase() === 'none') {
+			message.member.removeRole(message.guild.roles.find(r => r.name === "skyblock"));
+			message.member.removeRole(message.guild.roles.find(r => r.name === "minigames"));
+			message.member.removeRole(message.guild.roles.find(r => r.name === "uhc"));
+			message.member.removeRole(message.guild.roles.find(r => r.name === "survival"));
+			message.member.removeRole(message.guild.roles.find(r => r.name === "ark"));
+			message.member.removeRole(message.guild.roles.find(r => r.name === "hypixel"));
+			
+			if (args[0].toLowerCase() === 'skyblock' || args[0].toLowerCase() === 'minigames' || args[0].toLowerCase() === 'uhc' || args[0].toLowerCase() === 'survival' || args[0].toLowerCase() === 'ark' || args[0].toLowerCase() === 'hypixel') {
+				message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == args[0].toLowerCase()));
+				message.channel.send(":white_check_mark: Tag asigned!").then(msg => {msg.delete(4000)});
+			}
+			message.delete();
+		}
+		else if (args[0].toLowerCase() === 'list') {
+			message.channel.send("**Tags:**\n - Skyblock\n - Minigames\n - UHC\n - Survival\n - ARK\n - Hypixel\n - None").then(msg => {msg.delete(30000)});
+			message.delete(30000);
+		}
+		else if (!args[0]) {
+			message.delete();
+			message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
+		}
+		else {
+			message.delete();
+			message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
+		}
+	}
+	else {
+		message.delete();
+		message.channel.send("**Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
+	}
 });
 
 client.login(process.env.token);
