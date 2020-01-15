@@ -65,10 +65,6 @@ client.on('message', message => {
 			message.channel.send("**Colors:**\n - Blue\n - Purple\n - Orange\n - Gray\n - Green\n - Aqua\n - Red\n - Pink\n - Yellow\n - White\n - None").then(msg => {msg.delete(30000)});
 			message.delete(30000);
 		}
-		else if (!args[0]) {
-			message.delete();
-			message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
-		}
 		else {
 			message.delete();
 			message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
