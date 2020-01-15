@@ -9,8 +9,6 @@ client.once('ready', () => {
 
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
-	
-	var Role = message.guild.roles.find(r => r.name.toLowerCase() == args[0].toLowerCase());
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
@@ -34,8 +32,8 @@ client.on('message', message => {
 	if (command === 'reforge') {
 	message.channel.send("**Damage:**\nArmor: Godly\nSword: Spicy\nLegendary/Epic talisman: Godly\nRare talisman: Itchy\nUncommon/Common talisman (*80%< crit chance*): Itchy\nUncommon/Common talisman (*80%>crit chance*): Godly/Zealous\n\n**HP&Defence:**\nArmor: Titanic\nSword: -\nTalisman: Ominous\n\n**Mana:**\nArmor: Wise\nSword: Legendary\nTalisman:Bizarre/Pretty");
 	}
-	if (command === 'color') {
-	message.member.addRole(Role);
+	if (command === 'color a') {
+	message.member.addRole(message.guild.roles.find(role => role.name === "green"));
 	message.delete(1000);
 	}
 });
