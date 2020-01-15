@@ -9,7 +9,6 @@ client.once('ready', () => {
 
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) {
-		message.delete(1000);
 		return;
 	}
 
