@@ -11,7 +11,7 @@ client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) {
 		if (!message.author.bot) { 
 			message.delete();
-			message.channel.send("Invalid Command!").then(msg => {msg.delete(3000)}); 
+			message.channel.send("**You may only send commands in this channel!**").then(msg => {msg.delete(4000)}); 
 		}
 		return;
 	}
@@ -61,14 +61,18 @@ client.on('message', message => {
 			}
 			message.delete();
 		}
-		if (args[0].toLowerCase() === 'list') {
+		else if (args[0].toLowerCase() === 'list') {
 			message.channel.send("**Colors:**\n - Blue\n - Purple\n - Orange\n - Gray\n - Green\n - Aqua\n - Red\n - Pink\n - Yellow\n - White\n - None").then(msg => {msg.delete(300000)});
 			message.delete(300000);
+		}
+		else {
+			message.delete();
+			message.channel.send("**Invalid Argument!**").then(msg => {msg.delete(4000)});
 		}
 	}
 	else {
 		message.delete();
-		message.channel.send("Invalid Command!").then(msg => {msg.delete(3000)});
+		message.channel.send("**Invalid Command!**").then(msg => {msg.delete(4000)});
 	}
 });
 
