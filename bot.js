@@ -17,12 +17,12 @@ client.on('message', message => {
 	const command = args.shift().toLowerCase();
 
 	if (command === 'help') {
-		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!color [color/list]').then(msg => {msg.delete(900000)});
-		message.delete(900000);
+		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!color [color/list]').then(msg => {msg.delete(300000)});
+		message.delete(300000);
 	}
 	else if (command === 'stats') {
-		message.channel.send(`https://sky.lea.moe/stats/${args}`).then(msg => {msg.delete(900000)});
-		message.delete(900000);
+		message.channel.send(`https://sky.lea.moe/stats/${args}`).then(msg => {msg.delete(300000)});
+		message.delete(300000);
 	}
 	else if (command === 'bot') {
 		const BotEmbed = new Discord.RichEmbed()
@@ -32,12 +32,12 @@ client.on('message', message => {
 			.attachFiles(['assets/profile.jpg'],['assets/bot.png'],)
 			.setFooter('Made by Leon#1250', 'attachment://profile.jpg')
 			.setThumbnail('attachment://bot.png')
-		message.channel.send(BotEmbed).then(msg => {msg.delete(900000)});
-		message.delete(900000);
+		message.channel.send(BotEmbed).then(msg => {msg.delete(300000)});
+		message.delete(300000);
 	}
 	else if (command === 'reforge') {
 		message.channel.send("**Damage:**\nArmor: Godly\nSword: Spicy\nLegendary/Epic talisman: Godly\nRare talisman: Itchy\nUncommon/Common talisman (*80%< crit chance*): Itchy\nUncommon/Common talisman (*80%>crit chance*): Godly/Zealous\n\n**HP&Defence:**\nArmor: Titanic\nSword: -\nTalisman: Ominous\n\n**Mana:**\nArmor: Wise\nSword: Legendary\nTalisman:Bizarre/Pretty").then(msg => {msg.delete(900000)});
-		message.delete(900000);
+		message.delete(300000);
 	}
 	else if (command === 'color') {
 		if (args[0].toLowerCase() === 'blue' || args[0].toLowerCase() === 'purple' || args[0].toLowerCase() === 'orange' || args[0].toLowerCase() === 'gray' || args[0].toLowerCase() === 'green' || args[0].toLowerCase() === 'aqua' || args[0].toLowerCase() === 'red' || args[0].toLowerCase() === 'pink' || args[0].toLowerCase() === 'yellow' || args[0].toLowerCase() === 'white' || args[0].toLowerCase() === 'none') {
@@ -54,15 +54,21 @@ client.on('message', message => {
 			
 			if (args[0].toLowerCase() === 'blue' || args[0].toLowerCase() === 'purple' || args[0].toLowerCase() === 'orange' || args[0].toLowerCase() === 'gray' || args[0].toLowerCase() === 'green' || args[0].toLowerCase() === 'aqua' || args[0].toLowerCase() === 'red' || args[0].toLowerCase() === 'pink' || args[0].toLowerCase() === 'yellow' || args[0].toLowerCase() === 'white') {
 				message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == args[0].toLowerCase()));
+				message.channel.send(":white_check_mark: Color asigned.").then(msg => {msg.delete(3000)});
 			}
-			message.delete(1000);
+			message.delete(3000);
 		}
 		if (args[0].toLowerCase() === 'list') {
-			message.channel.send("**Colors:**\n - Blue\n - Purple\n - Orange\n - Gray\n - Green\n - Aqua\n - Red\n - Pink\n - Yellow\n - White\n - None").then(msg => {msg.delete(900000)});
-			message.delete(900000);
+			message.channel.send("**Colors:**\n - Blue\n - Purple\n - Orange\n - Gray\n - Green\n - Aqua\n - Red\n - Pink\n - Yellow\n - White\n - None").then(msg => {msg.delete(300000)});
+			message.delete(300000);
 		}
 	}
-	else {
+	
+	
+	
+	
+	
+	else if(!message.member.roles.has(message.guild.roles.find(r => r.name === "Administrator")) {
 		message.delete(100);
 	}
 });
