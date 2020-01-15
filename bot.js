@@ -63,7 +63,7 @@ client.on('message', message => {
 			message.delete(300000);
 		}
 	}
-	else {
+	else if (!message.member.roles.has(message.guild.roles.find(r => r.name === "Administrator"))) {
 		message.delete(100);
 	}
 });
