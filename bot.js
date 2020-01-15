@@ -80,9 +80,10 @@ client.on('message', message => {
 			message.member.removeRole(message.guild.roles.find(r => r.name === "uhc"));
 			message.member.removeRole(message.guild.roles.find(r => r.name === "survival"));
 			message.member.removeRole(message.guild.roles.find(r => r.name === "ark"));
+			message.member.removeRole(message.guild.roles.find(r => r.name === "hypixel"));
 			
 			if (args[0].toLowerCase() === 'skyblock' || args[0].toLowerCase() === 'minigames' || args[0].toLowerCase() === 'uhc' || args[0].toLowerCase() === 'survival' || args[0].toLowerCase() === 'ark' || args[0].toLowerCase() === 'hypixel') {
-				message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == args[0].toLowerCase() + 'tag'));
+				message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == args[0].toLowerCase()));
 				message.channel.send(":white_check_mark: Tag asigned!").then(msg => {msg.delete(4000)});
 			}
 			message.delete();
