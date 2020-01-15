@@ -33,10 +33,25 @@ client.on('message', message => {
 	message.channel.send("**Damage:**\nArmor: Godly\nSword: Spicy\nLegendary/Epic talisman: Godly\nRare talisman: Itchy\nUncommon/Common talisman (*80%< crit chance*): Itchy\nUncommon/Common talisman (*80%>crit chance*): Godly/Zealous\n\n**HP&Defence:**\nArmor: Titanic\nSword: -\nTalisman: Ominous\n\n**Mana:**\nArmor: Wise\nSword: Legendary\nTalisman:Bizarre/Pretty");
 	}
 	if (command === 'color') {
-		message.member.removeRole(message.guild.roles.find(r => r.name === "green"));
-		if (args[0].toLowerCase() === 'blue' || args[0].toLowerCase() === 'purple' || args[0].toLowerCase() === 'orange' || args[0].toLowerCase() === 'gray' || args[0].toLowerCase() === 'green' || args[0].toLowerCase() === 'aqua' || args[0].toLowerCase() === 'red' || args[0].toLowerCase() === 'pink' || args[0].toLowerCase() === 'yellow' || args[0].toLowerCase() === 'white') {
-			message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == args[0].toLowerCase()));
+		if (args[0].toLowerCase() === 'blue' || args[0].toLowerCase() === 'purple' || args[0].toLowerCase() === 'orange' || args[0].toLowerCase() === 'gray' || args[0].toLowerCase() === 'green' || args[0].toLowerCase() === 'aqua' || args[0].toLowerCase() === 'red' || args[0].toLowerCase() === 'pink' || args[0].toLowerCase() === 'yellow' || args[0].toLowerCase() === 'white' || args[0].toLowerCase() === 'none') {
+			message.member.removeRole(message.guild.roles.find(r => r.name === "blue"));
+			message.member.removeRole(message.guild.roles.find(r => r.name === "purple"));
+			message.member.removeRole(message.guild.roles.find(r => r.name === "orange"));
+			message.member.removeRole(message.guild.roles.find(r => r.name === "gray"));
+			message.member.removeRole(message.guild.roles.find(r => r.name === "green"));
+			message.member.removeRole(message.guild.roles.find(r => r.name === "aqua"));
+			message.member.removeRole(message.guild.roles.find(r => r.name === "red"));
+			message.member.removeRole(message.guild.roles.find(r => r.name === "pink"));
+			message.member.removeRole(message.guild.roles.find(r => r.name === "yellow"));
+			message.member.removeRole(message.guild.roles.find(r => r.name === "white"));
+			
+			if (args[0].toLowerCase() === 'blue' || args[0].toLowerCase() === 'purple' || args[0].toLowerCase() === 'orange' || args[0].toLowerCase() === 'gray' || args[0].toLowerCase() === 'green' || args[0].toLowerCase() === 'aqua' || args[0].toLowerCase() === 'red' || args[0].toLowerCase() === 'pink' || args[0].toLowerCase() === 'yellow' || args[0].toLowerCase() === 'white') {
+				message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == args[0].toLowerCase()));
+			}
 			message.delete(1000);
+		}
+		if (args[0].toLowerCase() === 'list') {
+			message.channel.send("**Colors:**\n - Blue\n - Purple\n - Orange\n - Gray\n - Green\n - Aqua\n - Red\n - Pink\n - Yellow\n - White\n - None");
 		}
 	}
 });
