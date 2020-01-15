@@ -72,4 +72,6 @@ client.on('message', message => {
 	}
 });
 
+client.user.setActivity("Made by Leon");
+
 client.login(process.env.token);
