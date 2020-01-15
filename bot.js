@@ -14,7 +14,7 @@ client.on('message', message => {
 	const command = args.shift().toLowerCase();
 
 	if (command === 'help') {
-		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!color [color/list]').then(msg => {msg.delete(5000)};);
+		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!color [color/list]').then(msg => {msg.delete(5000});
 		message.delete(5000);
 	}
 	if (command === 'stats') {
