@@ -14,7 +14,8 @@ client.on('message', message => {
 	const command = args.shift().toLowerCase();
 
 	if (command === 'help') {
-		message.channel.send('!help\n!bot\n!stats [player]\n!reforge');
+		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!color [color/list]').then(msg => {msg.delete(5000)};);
+		message.delete(5000);
 	}
 	if (command === 'stats') {
 		message.channel.send(`https://sky.lea.moe/stats/${args}`);
@@ -22,15 +23,15 @@ client.on('message', message => {
 	if (command === 'bot') {
 		const BotEmbed = new Discord.RichEmbed()
 			.setColor('#252525')
-			.setTitle('Hypixel Skyblock Bot')
-			.setDescription("Hypixel Skyblock Bot\nType: '!help' to get started")
-			.attachFiles(['assets/profile.jpg'])
+			.setTitle('MineCraft / ARK')
+			.setDescription("MineCraft / ARK Discord Bot\nType: '!help' to get started")
+			.attachFiles(['assets/profile.jpg'],['assets/bot.png'],)
 			.setFooter('Made by Leon#1250', 'attachment://profile.jpg')
 			.setThumbnail('http://pm1.narvii.com/6527/1df18b462cbaa988114a20270672d461ecd508ab_hq.jpg')
 		message.channel.send(BotEmbed);
 	}
 	if (command === 'reforge') {
-	message.channel.send("**Damage:**\nArmor: Godly\nSword: Spicy\nLegendary/Epic talisman: Godly\nRare talisman: Itchy\nUncommon/Common talisman (*80%< crit chance*): Itchy\nUncommon/Common talisman (*80%>crit chance*): Godly/Zealous\n\n**HP&Defence:**\nArmor: Titanic\nSword: -\nTalisman: Ominous\n\n**Mana:**\nArmor: Wise\nSword: Legendary\nTalisman:Bizarre/Pretty");
+	message.channel.send("**Damage:**\nArmor: Godly\nSword: Spicy\nLegendary/Epic talisman: Godly\nRare talisman: Itchy\nUncommon/Common talisman (*80%< crit chance*): Itchy\nUncommon/Common talisman (*80%>crit chance*): Godly/Zealous\n\n**HP&Defence:**\nArmor: Titanic\nSword: -\nTalisman: Ominous\n\n**Mana:**\nArmor: Wise\nSword: Legendary\nTalisman:Bizarre/Pretty")message.reply('Invalid command')
 	}
 	if (command === 'color') {
 		if (args[0].toLowerCase() === 'blue' || args[0].toLowerCase() === 'purple' || args[0].toLowerCase() === 'orange' || args[0].toLowerCase() === 'gray' || args[0].toLowerCase() === 'green' || args[0].toLowerCase() === 'aqua' || args[0].toLowerCase() === 'red' || args[0].toLowerCase() === 'pink' || args[0].toLowerCase() === 'yellow' || args[0].toLowerCase() === 'white' || args[0].toLowerCase() === 'none') {
