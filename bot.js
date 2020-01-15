@@ -10,6 +10,7 @@ client.once('ready', () => {
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 	
+	let rolearg = message.guild.roles.find(role => role.name === "${args}");
 	let rolered = message.guild.roles.find(role => role.name === "red");
 
 	const args = message.content.slice(prefix.length).split(/ +/);
@@ -35,10 +36,11 @@ client.on('message', message => {
 	message.channel.send("**Damage:**\nArmor: Godly\nSword: Spicy\nLegendary/Epic talisman: Godly\nRare talisman: Itchy\nUncommon/Common talisman (*80%< crit chance*): Itchy\nUncommon/Common talisman (*80%>crit chance*): Godly/Zealous\n\n**HP&Defence:**\nArmor: Titanic\nSword: -\nTalisman: Ominous\n\n**Mana:**\nArmor: Wise\nSword: Legendary\nTalisman:Bizarre/Pretty");
 	}
 	if (command === 'color') {
-	message.member.addRole(args);
+	message.member.addRole(rolearg);
 	}
 	if (command === 'red') {
 	message.member.addRole(rolered);
+	message.delete(1000);
 	}
 });
 
