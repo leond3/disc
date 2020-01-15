@@ -76,6 +76,4 @@ client.on('message', message => {
 	}
 });
 
-client.user.setActivity('Made by leond3',{type:'PLAYING'});
-
 client.login(process.env.token);
