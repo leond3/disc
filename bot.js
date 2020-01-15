@@ -28,7 +28,7 @@ client.on('message', message => {
 			.setDescription("MineCraft / ARK Discord Bot\nType: '!help' to get started")
 			.attachFiles(['assets/profile.jpg'],['assets/bot.png'],)
 			.setFooter('Made by Leon#1250', 'attachment://profile.jpg')
-			.setThumbnail('http://pm1.narvii.com/6527/1df18b462cbaa988114a20270672d461ecd508ab_hq.jpg')
+			.setThumbnail('attachment://bot.png')
 		message.channel.send(BotEmbed).then(msg => {msg.delete(900000)});
 		message.delete(900000);
 	}
