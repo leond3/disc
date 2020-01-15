@@ -33,7 +33,7 @@ client.on('message', message => {
 	message.channel.send("**Damage:**\nArmor: Godly\nSword: Spicy\nLegendary/Epic talisman: Godly\nRare talisman: Itchy\nUncommon/Common talisman (*80%< crit chance*): Itchy\nUncommon/Common talisman (*80%>crit chance*): Godly/Zealous\n\n**HP&Defence:**\nArmor: Titanic\nSword: -\nTalisman: Ominous\n\n**Mana:**\nArmor: Wise\nSword: Legendary\nTalisman:Bizarre/Pretty");
 	}
 	if (command === 'color') {
-		if (args === 'a') {
+		if (args[1] === 'a') {
 			message.member.addRole(message.guild.roles.find(role => role.name === "a"));
 			message.delete(1000);
 		}
