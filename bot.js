@@ -73,7 +73,7 @@ client.on('message', message => {
 			message.delete();
 			message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
 		}
-	else if (command === 'tag') {
+	if (command === 'tag') {
 		if (args[0].toLowerCase() === 'skyblock' || args[0].toLowerCase() === 'minigames' || args[0].toLowerCase() === 'uhc' || args[0].toLowerCase() === 'survival' || args[0].toLowerCase() === 'ark' || args[0].toLowerCase() === 'hypixel' || args[0].toLowerCase() === 'none') {
 			message.member.removeRole(message.guild.roles.find(r => r.name === "skyblock"));
 			message.member.removeRole(message.guild.roles.find(r => r.name === "minigames"));
