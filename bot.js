@@ -11,7 +11,7 @@ client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) {
 		if (!message.author.bot) { 
 			message.delete();
-			message.channel.send("**You may only send commands in this channel!**").then(msg => {msg.delete(4000)}); 
+			message.channel.send("**You may only send commands in this channel, commands start with '!'.**").then(msg => {msg.delete(4000)}); 
 		}
 		return;
 	}
@@ -67,12 +67,12 @@ client.on('message', message => {
 		}
 		else {
 			message.delete();
-			message.channel.send("**Invalid Argument!**").then(msg => {msg.delete(4000)});
+			message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
 		}
 	}
 	else {
 		message.delete();
-		message.channel.send("**Invalid Command!**").then(msg => {msg.delete(4000)});
+		message.channel.send("**Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
 	}
 });
 
