@@ -24,8 +24,15 @@ client.on('message', message => {
 		message.delete(300000);
 	}
 	else if (command === 'stats') {
-		message.channel.send(`https://sky.lea.moe/stats/${args}`).then(msg => {msg.delete(300000)});
-		message.delete(300000);
+		if (args.lenght) {	
+			message.channel.send(`https://sky.lea.moe/stats/${args}`).then(msg => {msg.delete(300000)});
+			message.delete(300000);
+		}
+		if (!args.lenght) {
+			message.delete();
+			message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
+			return;
+		}
 	}
 	else if (command === 'bot') {
 		const BotEmbed = new Discord.RichEmbed()
@@ -43,7 +50,7 @@ client.on('message', message => {
 		message.delete(300000);
 	}
 	else if (command === 'color') {
-		if (!args[0]) {
+		if (!args.lenght) {
 			message.delete();
 			message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
 			return;
@@ -76,7 +83,7 @@ client.on('message', message => {
 		}
 	}
 	else if (command === 'tag') {
-		if (!args[0]) {
+		if (!args.lenght) {
 			message.delete();
 			message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
 			return;
