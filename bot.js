@@ -135,7 +135,7 @@ client.on('message', message => {
 		
 		if (Form === 3 && Amount == 2) { message.channel.send(getRandomInt(18,50) + ' - ' + getRandomInt(1,10) + ' - ' + getRandomInt(1,10)).then(msg => {msg.delete(15000)}); }
 		if (Form === 3 && Amount == 3) { message.channel.send(getRandomInt(27,75) + ' - ' + getRandomInt(1,10) + ' - ' + getRandomInt(1,10) + ' - ' + getRandomInt(1,10)).then(msg => {msg.delete(15000)}); }
-		if (Form === 3 && Amount == 4) { message.channel.send(getRandomInt(36,100) + ' - ' + getRandomInt(1,10) ' - ' + getRandomInt(1,10) + ' - ' + getRandomInt(1,10) ' - ' + getRandomInt(1,10)).then(msg => {msg.delete(15000)}); }
+		if (Form === 3 && Amount == 4) { message.channel.send(getRandomInt(36,100) + ' - ' + getRandomInt(1,10) + ' - ' + getRandomInt(1,10) + ' - ' + getRandomInt(1,10) ' - ' + getRandomInt(1,10)).then(msg => {msg.delete(15000)}); }
 		
 		if (Form === 4 && Amount == 2) { message.channel.send('Kwadraat van: ' + getRandomInt(1, 16)).then(msg => {msg.delete(15000)}); }
 		if (Form === 4 && Amount == 3) { message.channel.send('Wortel van: 625').then(msg => {msg.delete(15000)}); }
