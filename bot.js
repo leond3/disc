@@ -122,7 +122,7 @@ client.on('message', message => {
 		if (coinflip === 2) { message.channel.send(cf[2]).then(msg => {msg.delete(300000)}); }
 		message.delete(300000);
 	}
-	else if (command === 'question' && message.author === admin) {
+	else if (command === 'question' && message.sender === admin) {
 		var Amount = getRandomInt(2,5);
 		var Form = getRandomInt(1,5);
 		
