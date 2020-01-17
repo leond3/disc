@@ -3,8 +3,6 @@ const { prefix } = require('./config.json');
 
 const client = new Discord.Client();
 
-const admin = message.guild.members.find(m => m.id === "425952619832410133");
-
 client.once('ready', () => {
 	console.log('MC/ARK responded.');
 });
@@ -19,6 +17,7 @@ client.on('message', message => {
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
+	const admin = message.guild.members.find(m => m.id === "425952619832410133");
 
 	if (command === 'help') {
 		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!color [color/list]\n!tag [tag/list]\n!cf').then(msg => {msg.delete(300000)});
