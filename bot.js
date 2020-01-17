@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const { prefix } = require('./config.json');
+const { prefix, question } = require('./config.json');
 
 const client = new Discord.Client();
 
@@ -8,7 +8,7 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-	if (!message.content.startsWith(prefix) || message.author.bot) {
+	if (!message.content.startsWith(prefix) || !message.content.startsWith(question) || message.author.bot) {
 		if (!message.author.bot) { 
 			message.delete();
 			message.channel.send("**You may only send commands in this channel, commands start with '!'.**").then(msg => {msg.delete(4000)}); 
