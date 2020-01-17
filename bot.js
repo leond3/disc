@@ -116,7 +116,7 @@ client.on('message', message => {
 		cf[1] = "Heads";
 		cf[2] = "Tails";
 		
-		var x = getRandomInt(1, 2);
+		var x = getRandomInt(1, 3);
 		if (x === 1) { message.channel.send(cf[1]).then(msg => {msg.delete(300000)}); }
 		if (x === 2) { message.channel.send(cf[2]).then(msg => {msg.delete(300000)}); }
 		message.delete(300000);
