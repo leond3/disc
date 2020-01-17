@@ -18,6 +18,8 @@ client.on('message', message => {
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
+	const argsq = message.content.slice(question.length).split(/ +/);
+	const commandq = argsq.shift().toLowerCase();
 
 	if (command === 'help') {
 		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!color [color/list]\n!tag [tag/list]').then(msg => {msg.delete(300000)});
@@ -111,10 +113,20 @@ client.on('message', message => {
 			message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
 		}
 	}
-	else {
+	else if (message.content.startsWith(prefix) || message.author.bot) {
 		message.delete();
 		message.channel.send("**Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
 	}
+	
+	
+	if (commandq === '2x2'){
+        message.author.send("2x2=?");
+        const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
+        collector.on('collect', message => {
+            if (message.content === "4") {
+                message.channel.send("Correct");
+            }
+        })
 });
 
 client.login(process.env.token);
