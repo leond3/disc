@@ -11,7 +11,6 @@ client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) {
 		if (!message.author.bot) { 
 			message.delete(10000);
-			message.channel.send("**You may only send commands in this channel, commands start with '!'.**").then(msg => {msg.delete(4000)}); 
 		}
 		return;
 	}
