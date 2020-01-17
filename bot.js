@@ -120,13 +120,13 @@ client.on('message', message => {
 		if (coinflip === 2) { message.channel.send(cf[2]).then(msg => {msg.delete(300000)}); }
 		message.delete(300000);
 	}
-	else if (command === 'math') {
-		var Amount = getRandomInt(2, 4);
+	else if (command === 'question') {
+		var Amount = getRandomInt(2,4);
 		var Form = getRandomInt(1,5);
 		
-		if (Form === 1 && Amount == 2) { message.channel.send('wat is: **' + getRandomInt(0,6) + ' x ' + getRandomInt(0,6) + '**=').then(msg => {msg.delete(30000)}); }
-		if (Form === 1 && Amount == 3) { message.channel.send('wat is: **' + getRandomInt(0,6) + ' x ' + getRandomInt(0,6) + ' x ' + getRandomInt(0,6) + '**=').then(msg => {msg.delete(30000)}); }
-		if (Form === 1 && Amount == 4) { message.channel.send('wat is: **' + getRandomInt(0,6) + ' x ' + getRandomInt(0,6) + ' x ' + getRandomInt(0,6) + ' x ' + getRandomInt(0,6) + '**=').then(msg => {msg.delete(30000)}); }
+		if (Form === 1 && Amount == 2) { message.channel.send('wat is: **' + getRandomInt(0,10) + ' x ' + getRandomInt(0,10) + '**=').then(msg => {msg.delete(30000)}); }
+		if (Form === 1 && Amount == 3) { message.channel.send('wat is: **' + getRandomInt(0,10) + ' x ' + getRandomInt(0,10) + ' x ' + getRandomInt(0,10) + '**=').then(msg => {msg.delete(30000)}); }
+		if (Form === 1 && Amount == 4) { message.channel.send('Wat is het kwadraat van: **' + getRandomInt(1, 16) + '**?').then(msg => {msg.delete(30000)}); }
 		
 		if (Form === 2 && Amount == 2) { message.channel.send('wat is: **' + getRandomInt(1,21) + ' + ' + getRandomInt(1,21) + '**=').then(msg => {msg.delete(30000)}); }
 		if (Form === 2 && Amount == 3) { message.channel.send('wat is: **' + getRandomInt(1,21) + ' + ' + getRandomInt(1,21) + ' + ' + getRandomInt(1,21) + '**=').then(msg => {msg.delete(30000)}); }
@@ -136,9 +136,10 @@ client.on('message', message => {
 		if (Form === 3 && Amount == 3) { message.channel.send('wat is: **' + getRandomInt(27,75) + ' - ' + getRandomInt(1,10) + ' - ' + getRandomInt(1,10) + ' - ' + getRandomInt(1,10) + '**=').then(msg => {msg.delete(30000)}); }
 		if (Form === 3 && Amount == 4) { message.channel.send('wat is: **' + getRandomInt(36,100) + ' - ' + getRandomInt(1,10) + ' - ' + getRandomInt(1,10) + ' - ' + getRandomInt(1,10) + ' - ' + getRandomInt(1,10) + '**=').then(msg => {msg.delete(30000)}); }
 		
-		if (Form === 4 && Amount == 2) { message.channel.send('Wat is het kwadraat van: **' + getRandomInt(1, 16) + '**?').then(msg => {msg.delete(30000)}); }
-		if (Form === 4 && Amount == 3) { message.channel.send('Wat is de wortel van: **625**?').then(msg => {msg.delete(30000)}); }
-		if (Form === 4 && Amount == 4) { message.channel.send('Wat is de wortel van: **256**?').then(msg => {msg.delete(30000)}); }
+		
+		if (Form === 4 && Amount == 2) { message.channel.send('Wat is: **(' + getRandomInt(1,100) + ' + ' + getRandomInt(1,50) + ' - ' + getRandomInt(1,25) + ') x ' + getRandomInt(1,4) + '**=').then(msg => {msg.delete(30000)}); }
+		if (Form === 4 && Amount == 4) { message.channel.send('Tag another user.').then(msg => {msg.delete(30000)}); }
+		if (Form === 4 && Amount == 4) { message.channel.send('Tag yourself.').then(msg => {msg.delete(30000)}); }
 		
 		message.delete();
 	}
