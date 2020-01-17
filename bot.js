@@ -153,7 +153,7 @@ client.on('message', message => {
 		message.delete();
 	}
 	else if (command === 'muteall' && message.member.roles.find(r => r.name === "Bot builder")) {
-		channel.overwritePermissions(channel.guild.defaultRole, { SEND_MESSAGES: false });
+		message.channel.overwritePermissions(message.channel.guild.defaultRole, { SEND_MESSAGES: false });
 		message.channel.send("Server chat messages: **Disabled**.").then(msg => {msg.delete(60000)});
 		message.delete();
 	}
