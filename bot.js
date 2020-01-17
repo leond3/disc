@@ -3,6 +3,8 @@ const { prefix } = require('./config.json');
 
 const client = new Discord.Client();
 
+const admin = message.guild.members.find(m => m.id === "425952619832410133");
+
 client.once('ready', () => {
 	console.log('MC/ARK responded.');
 });
@@ -120,7 +122,7 @@ client.on('message', message => {
 		if (coinflip === 2) { message.channel.send(cf[2]).then(msg => {msg.delete(300000)}); }
 		message.delete(300000);
 	}
-	else if (command === 'question') {
+	else if (command === 'question' && message.author === admin)) {
 		var Amount = getRandomInt(2,5);
 		var Form = getRandomInt(1,5);
 		
