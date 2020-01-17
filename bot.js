@@ -121,6 +121,28 @@ client.on('message', message => {
 		if (coinflip === 2) { message.channel.send(cf[2]).then(msg => {msg.delete(300000)}); }
 		message.delete(300000);
 	}
+	else if (command === 'math') {
+		var Amount = getRandomInt(2, 4);
+		var Form = getRandomInt(1,5);
+		
+		if (Form === 1 && Amount == 2) { message.channel.send(getRandomInt(0,6) + ' x ' + getRandomInt(0,6)).then(msg => {msg.delete(15000)}); }
+		if (Form === 1 && Amount == 3) { message.channel.send(getRandomInt(0,6) + ' x ' + getRandomInt(0,6) + ' x ' + getRandomInt(0,6)).then(msg => {msg.delete(15000)}); }
+		if (Form === 1 && Amount == 4) { message.channel.send(getRandomInt(0,6) + ' x ' + getRandomInt(0,6) + ' x ' + getRandomInt(0,6) + ' x ' + getRandomInt(0,6)).then(msg => {msg.delete(15000)}); }
+		
+		if (Form === 2 && Amount == 2) { message.channel.send(getRandomInt(1,21) + ' + ' + getRandomInt(1,21)).then(msg => {msg.delete(15000)}); }
+		if (Form === 2 && Amount == 3) { message.channel.send(getRandomInt(1,21) + ' + ' + getRandomInt(1,21) + ' + ' + getRandomInt(1,21)).then(msg => {msg.delete(15000)}); }
+		if (Form === 2 && Amount == 4) { message.channel.send(getRandomInt(1,21) + ' + ' + getRandomInt(1,21) + ' + ' + getRandomInt(1,21) + ' + ' + getRandomInt(1,21)).then(msg => {msg.delete(15000)}); }
+		
+		if (Form === 3 && Amount == 2) { message.channel.send(getRandomInt(18,50) + ' - ' + getRandomInt(1,10) + ' - ' + getRandomInt(1,10)).then(msg => {msg.delete(15000)}); }
+		if (Form === 3 && Amount == 3) { message.channel.send(getRandomInt(27,75) + ' - ' + getRandomInt(1,10) + ' - ' + getRandomInt(1,10) + ' - ' + getRandomInt(1,10)).then(msg => {msg.delete(15000)}); }
+		if (Form === 3 && Amount == 4) { message.channel.send(getRandomInt(36,100) + ' - ' + getRandomInt(1,10) ' - ' + getRandomInt(1,10) + ' - ' + getRandomInt(1,10) ' - ' + getRandomInt(1,10)).then(msg => {msg.delete(15000)}); }
+		
+		if (Form === 4 && Amount == 2) { message.channel.send('Kwadraat van: ' + getRandomInt(1, 16)).then(msg => {msg.delete(15000)}); }
+		if (Form === 4 && Amount == 3) { message.channel.send('Wortel van: 625').then(msg => {msg.delete(15000)}); }
+		if (Form === 4 && Amount == 4) { message.channel.send('Wortel van: 256').then(msg => {msg.delete(15000)}); }
+		
+		message.delete();
+	}
 	else {
 		message.delete();
 		message.channel.send("**Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
@@ -131,7 +153,7 @@ client.on('message', message => {
  		min = Math.ceil(min);
   		max = Math.floor(max);
  		return Math.floor(Math.random() * (max - min)) + min;
-}
+	}
 });
 
 client.login(process.env.token);
