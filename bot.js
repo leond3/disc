@@ -114,7 +114,8 @@ client.on('message', message => {
 	else if (command === 'cf') {
 		let outcome = ["Heads", "Tails"];
 		let random = Math.round(Math.random() * outcomes.length);
-		message.channel.send(outcome[random]));
+		message.channel.send(outcome[random]).then(msg => {msg.delete(300000)});
+		message.delete(300000);
 	}
 	else {
 		message.delete();
