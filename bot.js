@@ -160,7 +160,7 @@ client.on('message', message => {
             		message.channel.bulkDelete(fetched);
         	}
         	clearmute();
-		message.channel.send("Server chat messages: **Disabled**.").then(msg => {msg.delete(60000)});
+		message.channel.send("Server chat messages: **Disabled**.");
 	}
 	else if (command === 'muteall' && !message.member.roles.find(r => r.name === "Bot builder")) {
 		message.channel.send("**You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
@@ -168,13 +168,13 @@ client.on('message', message => {
 	}
 	else if (command === 'unmuteall' && message.member.roles.find(r => r.name === "Bot builder")) {
 		message.channel.overwritePermissions(message.channel.guild.defaultRole, { SEND_MESSAGES: true });
-		message.channel.send("Server chat messages: **Enabled**.").then(msg => {msg.delete(60000)});
 		async function clearunmute() {
             		message.delete();
             		const fetched = await message.channel.fetchMessages({limit: 99});
             		message.channel.bulkDelete(fetched);
         	}
         	clearunmute();
+		message.channel.send("Server chat messages: **Enabled**.");
 	}
 	else if (command === 'unmuteall' && !message.member.roles.find(r => r.name === "Bot builder")) {
 		message.channel.send("**You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
