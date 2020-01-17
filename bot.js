@@ -4,7 +4,7 @@ const { prefix } = require('./config.json');
 const client = new Discord.Client();
 
 client.once('ready', () => {
-	console.log('HSB responded.');
+	console.log('MC/ARK responded.');
 });
 
 client.on('message', message => {
@@ -20,7 +20,7 @@ client.on('message', message => {
 	const command = args.shift().toLowerCase();
 
 	if (command === 'help') {
-		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!color [color/list]\n!tag [tag/list]').then(msg => {msg.delete(300000)});
+		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!color [color/list]\n!tag [tag/list]\n!cf').then(msg => {msg.delete(300000)});
 		message.delete(300000);
 	}
 	else if (command === 'stats') {
