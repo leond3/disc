@@ -24,11 +24,11 @@ client.on('message', message => {
 		message.delete(300000);
 	}
 	else if (command === 'stats') {
-		if (args.lenght) {	
+		if (args[0]) {	
 			message.channel.send(`https://sky.lea.moe/stats/${args}`).then(msg => {msg.delete(300000)});
 			message.delete(300000);
 		}
-		if (!args.lenght) {
+		else {
 			message.delete();
 			message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
 			return;
@@ -50,12 +50,7 @@ client.on('message', message => {
 		message.delete(300000);
 	}
 	else if (command === 'color') {
-		if (!args.lenght) {
-			message.delete();
-			message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
-			return;
-		}
-		else if (args[0].toLowerCase() === 'blue' || args[0].toLowerCase() === 'purple' || args[0].toLowerCase() === 'orange' || args[0].toLowerCase() === 'gray' || args[0].toLowerCase() === 'green' || args[0].toLowerCase() === 'aqua' || args[0].toLowerCase() === 'red' || args[0].toLowerCase() === 'pink' || args[0].toLowerCase() === 'yellow' || args[0].toLowerCase() === 'white' || args[0].toLowerCase() === 'none') {
+		if (args[0].toLowerCase() === 'blue' || args[0].toLowerCase() === 'purple' || args[0].toLowerCase() === 'orange' || args[0].toLowerCase() === 'gray' || args[0].toLowerCase() === 'green' || args[0].toLowerCase() === 'aqua' || args[0].toLowerCase() === 'red' || args[0].toLowerCase() === 'pink' || args[0].toLowerCase() === 'yellow' || args[0].toLowerCase() === 'white' || args[0].toLowerCase() === 'none') {
 			message.member.removeRole(message.guild.roles.find(r => r.name === "blue"));
 			message.member.removeRole(message.guild.roles.find(r => r.name === "purple"));
 			message.member.removeRole(message.guild.roles.find(r => r.name === "orange"));
@@ -77,18 +72,18 @@ client.on('message', message => {
 			message.channel.send("**Colors:**\n - Blue\n - Purple\n - Orange\n - Gray\n - Green\n - Aqua\n - Red\n - Pink\n - Yellow\n - White\n - None").then(msg => {msg.delete(30000)});
 			message.delete(30000);
 		}
+		else if (!args[0]) {
+			message.delete();
+			message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
+			return;
+		}
 		else {
 			message.delete();
 			message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
 		}
 	}
 	else if (command === 'tag') {
-		if (!args.lenght) {
-			message.delete();
-			message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
-			return;
-		}
-		else if (args[0].toLowerCase() === 'skyblock' || args[0].toLowerCase() === 'minigames' || args[0].toLowerCase() === 'uhc' || args[0].toLowerCase() === 'survival' || args[0].toLowerCase() === 'ark' || args[0].toLowerCase() === 'hypixel' || args[0].toLowerCase() === 'none') {
+		if (args[0].toLowerCase() === 'skyblock' || args[0].toLowerCase() === 'minigames' || args[0].toLowerCase() === 'uhc' || args[0].toLowerCase() === 'survival' || args[0].toLowerCase() === 'ark' || args[0].toLowerCase() === 'hypixel' || args[0].toLowerCase() === 'none') {
 			message.member.removeRole(message.guild.roles.find(r => r.name === "skyblock"));
 			message.member.removeRole(message.guild.roles.find(r => r.name === "minigames"));
 			message.member.removeRole(message.guild.roles.find(r => r.name === "uhc"));
@@ -106,15 +101,24 @@ client.on('message', message => {
 			message.channel.send("**Tags:**\n - Skyblock\n - Minigames\n - UHC\n - Survival\n - ARK\n - Hypixel\n - None").then(msg => {msg.delete(30000)});
 			message.delete(30000);
 		}
+		else if (!args[0]) {
+			message.delete();
+			message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
+			return;
+		}
 		else {
 			message.delete();
 			message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
 		}
 	}
 	else if (command === 'cf') {
-		let outcome = ["Heads", "Tails"];
-		let random = Math.round(Math.random() * outcome.length);
-		message.channel.send(outcome[random]).then(msg => {msg.delete(300000)});
+		var cf = Array(2);
+		cf[1] = "Heads";
+		cf[2] = "Tails";
+		
+		var x = getRandomInt(1, 2);
+		if (x === 1) { message.channel.send(cf[1]).then(msg => {msg.delete(300000)}); }
+		if (x === 2) { message.channel.send(cf[2]).then(msg => {msg.delete(300000)}); }
 		message.delete(300000);
 	}
 	else {
