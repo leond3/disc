@@ -120,7 +120,7 @@ client.on('message', message => {
 		if (coinflip === 2) { message.channel.send(cf[2]).then(msg => {msg.delete(300000)}); }
 		message.delete(300000);
 	}
-	else if (command === 'question' && message.sender === 667723496448720896) {
+	else if (command === 'question' && message.member.roles.find(r => r.name === "Bot builder")) {
 		var Amount = getRandomInt(2,5);
 		var Form = getRandomInt(1,5);
 		
