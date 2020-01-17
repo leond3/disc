@@ -125,6 +125,13 @@ client.on('message', message => {
 		message.delete();
 		message.channel.send("**Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
 	}
+	
+	
+	function getRandomInt(min, max) {
+ 		min = Math.ceil(min);
+  		max = Math.floor(max);
+ 		return Math.floor(Math.random() * (max - min)) + min;
+}
 });
 
 client.login(process.env.token);
