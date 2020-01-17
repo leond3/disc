@@ -17,7 +17,7 @@ client.on('message', message => {
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
-	const admin = message.guild.members.find(m => m.id === "332505483950817290");
+	const admin = message.guild.members.find(m => m.id === "667723496448720896");
 
 	if (command === 'help') {
 		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!color [color/list]\n!tag [tag/list]\n!cf').then(msg => {msg.delete(300000)});
