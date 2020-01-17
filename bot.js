@@ -111,6 +111,12 @@ client.on('message', message => {
 			message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
 		}
 	}
+	else if (command === 'cf') {
+		let outcome = ["Heads", "Tails"];
+		let random = Math.round(Math.random() * outcomes.length);
+		message.channel.send(outcome[random]).then(msg => {msg.delete(30000)});
+		message.delete(30000);
+	}
 	else {
 		message.delete();
 		message.channel.send("**Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
