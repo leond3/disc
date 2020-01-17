@@ -70,7 +70,7 @@ client.on('message', message => {
 			message.delete();
 		}
 		else if (args[0].toLowerCase() === 'list') {
-			message.channel.send("**Colors:**\n - Blue\n - Purple\n - Orange\n - Gray\n - Green\n - Aqua\n - Red\n - Pink\n - Yellow\n - White\n - None").then(msg => {msg.delete(30000)});
+			message.channel.send("**Colors:**\n - Blue\n - Dark_Green\n - Dark_Red\n - Purple\n - Orange\n - Gray\n - Green\n - Aqua\n - Red\n - Pink\n - Yellow\n - White\n - None").then(msg => {msg.delete(30000)});
 			message.delete(30000);
 		}
 		else if (!args[0]) {
