@@ -17,7 +17,6 @@ client.on('message', message => {
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
-	const admin = message.guild.members.find(m => m.id === "667723496448720896");
 
 	if (command === 'help') {
 		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!color [color/list]\n!tag [tag/list]\n!cf').then(msg => {msg.delete(300000)});
@@ -121,7 +120,7 @@ client.on('message', message => {
 		if (coinflip === 2) { message.channel.send(cf[2]).then(msg => {msg.delete(300000)}); }
 		message.delete(300000);
 	}
-	else if (command === 'question' && message.sender === admin) {
+	else if (command === 'question' && message.sender === '667723496448720896') {
 		var Amount = getRandomInt(2,5);
 		var Form = getRandomInt(1,5);
 		
