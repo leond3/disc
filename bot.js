@@ -180,6 +180,9 @@ client.on('message', message => {
 		message.channel.send("**You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
 		message.delete();
 	}
+	else if (command === 'gstart' && message.member.roles.find(r => r.name === "Giveaways")) {
+		message.delete(1000);
+	}
 	else {
 		message.delete();
 		message.channel.send("**Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
