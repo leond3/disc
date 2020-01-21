@@ -132,7 +132,7 @@ client.on('message', message => {
 		message.delete(300000);
 	}
 	else if (command === 'price') {
-		if (data.datatag === nametag) {
+		if (data.nametag === datatag) {
 			let price = data.price;
 			message.channel.send(price).then(msg => {msg.delete(4000)});
 		}
