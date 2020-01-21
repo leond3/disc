@@ -130,7 +130,7 @@ client.on('message', message => {
 		message.delete(300000);
 	}
 	else if (command === 'price') {
-		message.channel.send(data.eye).then(msg => {msg.delete(4000)});
+		message.channel.send(pricecheck).then(msg => {msg.delete(4000)});
 		message.delete(4000);
 	}
 
