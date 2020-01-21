@@ -132,9 +132,9 @@ client.on('message', message => {
 		message.delete(300000);
 	}
 	else if (command === 'price') {
-		for (var i = 0; i < jsonFile.length; i++) {
-			if (data.nametag === datatag) {
-			let price = data.price;
+		for (var i = 0; i < data.length; i++) {
+			if (data[i].nametag === datatag) {
+			let price = data[i].price;
 			message.channel.send(price).then(msg => {msg.delete(4000)});
 			}
 		}
