@@ -19,9 +19,6 @@ client.on('message', message => {
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
-	
-	const data = fs.readFile('./data.json');
-	const datatag = message.content.split(/ +/);
 
 	if (command === 'help') {
 		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!talisman\n!color [color/list]\n!tag [tag/list]\n!cf\n/nick [name]').then(msg => {msg.delete(300000)});
@@ -132,8 +129,10 @@ client.on('message', message => {
 		message.delete(300000);
 	}
 	else if (command === 'price') {
-		database();
-		message.channel.send(price).then(msg => {msg.delete(4000)});
+		const data = fs.readFile('./data.json');
+		if (data.nametag === args) {
+		message.channel.send(data.price).then(msg => {msg.delete(4000)});
+		}
 		message.delete(4000);
 	}
 
@@ -203,14 +202,6 @@ client.on('message', message => {
 		message.channel.send("**Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
 	}
 	
-	
-	
-	
-	function database() {
-		if (data.nametag === datatag) {
-		let price = data.price;
-		}
-	}
 	function getRandomInt(min, max) {
  		min = Math.ceil(min);
   		max = Math.floor(max);
