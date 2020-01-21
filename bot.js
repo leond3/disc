@@ -126,6 +126,12 @@ client.on('message', message => {
 		if (coinflip === 2) { message.channel.send(cf[2]).then(msg => {msg.delete(300000)}); }
 		message.delete(300000);
 	}
+	else if (command === 'price') {
+		message.channel.send(prefix).then(msg => {msg.delete(4000)});
+		message.delete(4000);
+	}
+	
+	
 	else if (command === 'question' && message.member.roles.find(r => r.name === "Bot builder")) {
 		var Amount = getRandomInt(2,5);
 		var Form = getRandomInt(1,5);
@@ -187,7 +193,6 @@ client.on('message', message => {
 		message.delete();
 		message.channel.send("**Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
 	}
-	
 	
 	function getRandomInt(min, max) {
  		min = Math.ceil(min);
