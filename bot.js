@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const { prefix } = require('./config.json');
 
-const data = require("./data.json");
+const data = require("./data.json").message.content.slice(prefix.length).split(/ +/);
 
 const client = new Discord.Client();
 
@@ -19,7 +19,6 @@ client.on('message', message => {
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
-	const pricecheck = message.content.slice(data.args);
 
 	if (command === 'help') {
 		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!talisman\n!color [color/list]\n!tag [tag/list]\n!cf\n/nick [name]').then(msg => {msg.delete(300000)});
@@ -130,7 +129,7 @@ client.on('message', message => {
 		message.delete(300000);
 	}
 	else if (command === 'price') {
-		message.channel.send(pricecheck).then(msg => {msg.delete(4000)});
+		message.channel.send(data).then(msg => {msg.delete(4000)});
 		message.delete(4000);
 	}
 
