@@ -21,7 +21,7 @@ client.on('message', message => {
 	const command = args.shift().toLowerCase();
 	
 	const data = fs.readFile('./data.json');
-	const nametag = message.content.split(/ +/);
+	const datatag = message.content.split(/ +/);
 
 	if (command === 'help') {
 		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!talisman\n!color [color/list]\n!tag [tag/list]\n!cf\n/nick [name]').then(msg => {msg.delete(300000)});
