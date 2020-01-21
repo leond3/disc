@@ -1,9 +1,6 @@
 const Discord = require('discord.js');
 const { prefix } = require('./config.json');
 
-const fs = require('fs');
-const data = fs.readFile('./data.json');
-
 const client = new Discord.Client();
 
 client.once('ready', () => {
@@ -129,7 +126,9 @@ client.on('message', message => {
 		if (coinflip === 2) { message.channel.send(cf[2]).then(msg => {msg.delete(300000)}); }
 		message.delete(300000);
 	}
-	else if (command === 'price') {
+	else if (command === 'price') {	
+		const fs = require('fs');
+		const data = fs.readFile('./data.json');
 		if (data.nametag === args) {
 		message.channel.send(data.price).then(msg => {msg.delete(4000)});
 		}
