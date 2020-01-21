@@ -1,8 +1,6 @@
 const Discord = require('discord.js');
 const { prefix } = require('./config.json');
 
-const data = require("./data.json").message.content.slice(prefix.length).split(/ +/);
-
 const client = new Discord.Client();
 
 client.once('ready', () => {
@@ -19,6 +17,7 @@ client.on('message', message => {
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
+	const data = require("./data.json").message.content.slice(prefix.length).split(/ +/);
 
 	if (command === 'help') {
 		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!talisman\n!color [color/list]\n!tag [tag/list]\n!cf\n/nick [name]').then(msg => {msg.delete(300000)});
