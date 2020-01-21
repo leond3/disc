@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const { prefix } = require('./config.json');
 
+const data = require("./data.json");
+
 const client = new Discord.Client();
 
 client.once('ready', () => {
@@ -127,9 +129,13 @@ client.on('message', message => {
 		message.delete(300000);
 	}
 	else if (command === 'price') {
-		message.channel.send(prefix).then(msg => {msg.delete(4000)});
+		message.channel.send(data.args[0]).then(msg => {msg.delete(4000)});
+		message.channel.send(data.eye).then(msg => {msg.delete(4000)});
 		message.delete(4000);
 	}
+
+	
+	
 	
 	
 	else if (command === 'question' && message.member.roles.find(r => r.name === "Bot builder")) {
