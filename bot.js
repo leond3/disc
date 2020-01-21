@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const { prefix } = require('./config.json');
 
-const fs = require('file-system');
+const fs = require('fs');
 const data = fs.readFile('./data.json');
 
 const client = new Discord.Client();
