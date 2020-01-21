@@ -132,12 +132,8 @@ client.on('message', message => {
 		message.delete(300000);
 	}
 	else if (command === 'price') {
-		for (var i = 0; i < data.length; i++) {
-			if (data[i].nametag === datatag) {
-			let price = data[i].price;
-			message.channel.send(price).then(msg => {msg.delete(4000)});
-			}
-		}
+		database();
+		message.channel.send(price).then(msg => {msg.delete(4000)});
 		message.delete(4000);
 	}
 
@@ -207,6 +203,14 @@ client.on('message', message => {
 		message.channel.send("**Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
 	}
 	
+	
+	
+	
+	function database() {
+		if (data.nametag === datatag) {
+		let price = data.price;
+		}
+	}
 	function getRandomInt(min, max) {
  		min = Math.ceil(min);
   		max = Math.floor(max);
