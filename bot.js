@@ -21,7 +21,7 @@ client.on('message', message => {
 	const command = args.shift().toLowerCase();
 	
 	const data = fs.readFile('./data.json');
-	const nametag = message.content.split(' ').slice(1);
+	const nametag = message.content.split(/ +/);
 
 	if (command === 'help') {
 		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!talisman\n!color [color/list]\n!tag [tag/list]\n!cf\n/nick [name]').then(msg => {msg.delete(300000)});
@@ -132,7 +132,10 @@ client.on('message', message => {
 		message.delete(300000);
 	}
 	else if (command === 'price') {
-		message.channel.send(data.nametag).then(msg => {msg.delete(4000)});
+		if (data.datatag === nametag) {
+			let price = data.price;
+			message.channel.send(price).then(msg => {msg.delete(4000)});
+		}
 		message.delete(4000);
 	}
 
