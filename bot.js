@@ -130,7 +130,7 @@ client.on('message', message => {
 		message.delete(4000);
 		if (!message.guild.me.hasPermission('MANAGE_NICKNAMES')) return message.channel.send('I don\'t have permission to change your nickname!');
 		message.channel.send(":white_check_mark: Nick asigned!").then(msg => {msg.delete(4000)});
-		message.author.setNickname(message.content.replace('!nick ', ''));
+		message.member.setNickname(message.content.replace('!nick ', ''));
 	}
 	else if (command === 'question' && message.member.roles.find(r => r.name === "Bot builder")) {
 		var Amount = getRandomInt(2,5);
