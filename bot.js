@@ -160,12 +160,12 @@ client.on('message', message => {
 	}
 	else if (command === 'muteall' && message.member.roles.find(r => r.name === "Bot builder")) {
 		message.channel.overwritePermissions(message.channel.guild.defaultRole, { SEND_MESSAGES: false });
-        	async function clearmute() {
-            		message.delete();
-            		const fetched = await message.channel.fetchMessages({limit: 99});
-            		message.channel.bulkDelete(fetched);
+        	async function clearchat() {
+            	message.delete();
+            	const fetched = await message.channel.fetchMessages({limit: 99});
+            	message.channel.bulkDelete(fetched);
         	}
-        	clearmute();
+		clearchat();
 		message.channel.send("Server chat messages: **Disabled**.");
 	}
 	else if (command === 'muteall' && !message.member.roles.find(r => r.name === "Bot builder")) {
@@ -174,12 +174,12 @@ client.on('message', message => {
 	}
 	else if (command === 'unmuteall' && message.member.roles.find(r => r.name === "Bot builder")) {
 		message.channel.overwritePermissions(message.channel.guild.defaultRole, { SEND_MESSAGES: true });
-		async function clearunmute() {
-            		message.delete();
-            		const fetched = await message.channel.fetchMessages({limit: 99});
-            		message.channel.bulkDelete(fetched);
+        	async function clearchat() {
+            	message.delete();
+            	const fetched = await message.channel.fetchMessages({limit: 99});
+            	message.channel.bulkDelete(fetched);
         	}
-        	clearunmute();
+		clearchat();
 		message.channel.send("Server chat messages: **Enabled**.");
 	}
 	else if (command === 'unmuteall' && !message.member.roles.find(r => r.name === "Bot builder")) {
