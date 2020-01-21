@@ -19,7 +19,7 @@ client.on('message', message => {
 	const command = args.shift().toLowerCase();
 
 	if (command === 'help') {
-		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!talisman\n!color [color/list]\n!tag [tag/list]\n!cf').then(msg => {msg.delete(300000)});
+		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!talisman\n!color [color/list]\n!tag [tag/list]\n!cf\n!nick [name]').then(msg => {msg.delete(300000)});
 		message.delete(300000);
 	}
 	else if (command === 'stats') {
@@ -125,6 +125,9 @@ client.on('message', message => {
 		if (coinflip === 1) { message.channel.send(cf[1]).then(msg => {msg.delete(300000)}); }
 		if (coinflip === 2) { message.channel.send(cf[2]).then(msg => {msg.delete(300000)}); }
 		message.delete(300000);
+	}
+	else if (command === 'nick') {
+    		message.member.setNickname(message.content.replace('!nick ', ''));
 	}
 	else if (command === 'question' && message.member.roles.find(r => r.name === "Bot builder")) {
 		var Amount = getRandomInt(2,5);
