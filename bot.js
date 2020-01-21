@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
 const { prefix } = require('./config.json');
+
 const fs = require('fs');
-client.data = require('./data.json');
+const data = require('./data.json');
 
 const client = new Discord.Client();
 
