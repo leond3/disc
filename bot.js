@@ -13,7 +13,8 @@ client.on('message', message => {
 	for (var i = 0; i = swearwords.lenght; i++) {
 		if (detectsw.includes(swearwords[i])) {
 			message.delete();
-			return message.channel.send("Lenght[i] Matched.").then(msg => {msg.delete(4000)})
+			message.channel.send("Lenght[i] Matched.").then(msg => {msg.delete(4000)});
+			return;
 		}
 	}
 	
