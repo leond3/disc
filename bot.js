@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const { prefix } = require('./config.json');
 
-const fs = require('fs');
-const data = fs.readFile('./data.json');
-
 const client = new Discord.Client();
+
+var fs = require('fs');
+var files = fs.readdirSync('./assets/joost/')
 
 client.once('ready', () => {
 	console.log('MC/ARK responded.');
@@ -91,7 +91,8 @@ client.on('message', message => {
 		}
 	}
 	else if (command === 'tag') {
-		if (args[0].toLowerCase() === 'skyblock' || args[0].toLowerCase() === 'minigames' || args[0].toLowerCase() === 'uhc' || args[0].toLowerCase() === 'survival' || args[0].toLowerCase() === 'ark' || args[0].toLowerCase() === 'hypixel' || args[0].toLowerCase() === 'none') {
+		if (args[0].toLowerCase() === 'school' || args[0].toLowerCase() === 'skyblock' || args[0].toLowerCase() === 'minigames' || args[0].toLowerCase() === 'uhc' || args[0].toLowerCase() === 'survival' || args[0].toLowerCase() === 'ark' || args[0].toLowerCase() === 'hypixel' || args[0].toLowerCase() === 'none') {
+			message.member.removeRole(message.guild.roles.find(r => r.name === "school"));
 			message.member.removeRole(message.guild.roles.find(r => r.name === "skyblock"));
 			message.member.removeRole(message.guild.roles.find(r => r.name === "minigames"));
 			message.member.removeRole(message.guild.roles.find(r => r.name === "uhc"));
@@ -99,14 +100,14 @@ client.on('message', message => {
 			message.member.removeRole(message.guild.roles.find(r => r.name === "ark"));
 			message.member.removeRole(message.guild.roles.find(r => r.name === "hypixel"));
 			
-			if (args[0].toLowerCase() === 'skyblock' || args[0].toLowerCase() === 'minigames' || args[0].toLowerCase() === 'uhc' || args[0].toLowerCase() === 'survival' || args[0].toLowerCase() === 'ark' || args[0].toLowerCase() === 'hypixel') {
+			if (args[0].toLowerCase() === 'school' || args[0].toLowerCase() === 'skyblock' || args[0].toLowerCase() === 'minigames' || args[0].toLowerCase() === 'uhc' || args[0].toLowerCase() === 'survival' || args[0].toLowerCase() === 'ark' || args[0].toLowerCase() === 'hypixel') {
 				message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == args[0].toLowerCase()));
 				message.channel.send(":white_check_mark: Tag asigned!").then(msg => {msg.delete(4000)});
 			}
 			message.delete();
 		}
 		else if (args[0].toLowerCase() === 'list') {
-			message.channel.send("**Tags:**\n - Skyblock\n - Minigames\n - UHC\n - Survival\n - ARK\n - Hypixel\n - None").then(msg => {msg.delete(30000)});
+			message.channel.send("**Tags:**\n - School\n - Skyblock\n - Minigames\n - UHC\n - Survival\n - ARK\n - Hypixel\n - None").then(msg => {msg.delete(30000)});
 			message.delete(30000);
 		}
 		else if (!args[0]) {
@@ -129,14 +130,18 @@ client.on('message', message => {
 		if (coinflip === 2) { message.channel.send(cf[2]).then(msg => {msg.delete(300000)}); }
 		message.delete(300000);
 	}
-	else if (command === 'price') {
-		if (data.nametag === args) {
-		message.channel.send(data.price).then(msg => {msg.delete(4000)});
+	const img_joost = [
+		'https://media.giphy.com/media/CZpro4AZHs436/giphy.gif',
+		'https://media.giphy.com/media/CZpro4AZHs436/giphy2.gif',
+		'https://media.giphy.com/media/CZpro4AZHs436/giphy3.gif',
+		]
+	else if (command === 'image') {
+		if (args[0].toLowerCase() === 'joost') {
+			let chosenFile = files[Math.floor(Math.random() * files.length)]
+			message.channel.send(chosenFile).then(msg => {msg.delete(30000)});
 		}
 		message.delete(4000);
 	}
-
-	
 	
 	
 	
