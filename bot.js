@@ -8,10 +8,9 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-	var swearwords = ["aap", "kk"];
-	var detectsw = message.content.toLowerCase();
+	const swearwords = ["aap", "kk"];
 	for (var i = 0; i = swearwords.lenght; i++) {
-		if (detectsw.includes(swearwords[i])) {
+		if (message.content.toLowerCase().includes(swearwords[i])) {
 			message.delete();
 			message.channel.send("Lenght[i] Matched.").then(msg => {msg.delete(4000)});
 		}
