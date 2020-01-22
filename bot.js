@@ -14,7 +14,7 @@ client.on('message', message => {
 	for (var i = 0; i = swearwords.lenght; i++) {
 		if (message.includes(swearwords[i])) {
 			message.delete();
-			return message.channel.send("Gewoon nee").then(msg => {msg.delete(4000)})
+			return message.channel.send("Lenght[i] Matched.").then(msg => {msg.delete(4000)})
 		}
 	}
 	
