@@ -130,11 +130,6 @@ client.on('message', message => {
 		if (coinflip === 2) { message.channel.send(cf[2]).then(msg => {msg.delete(300000)}); }
 		message.delete(300000);
 	}
-	const img_joost = [
-		'https://media.giphy.com/media/CZpro4AZHs436/giphy.gif',
-		'https://media.giphy.com/media/CZpro4AZHs436/giphy2.gif',
-		'https://media.giphy.com/media/CZpro4AZHs436/giphy3.gif',
-		]
 	else if (command === 'image') {
 		if (args[0].toLowerCase() === 'joost') {
 			let chosenFile = files[Math.floor(Math.random() * files.length)]
