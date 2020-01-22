@@ -4,7 +4,7 @@ const { prefix } = require('./config.json');
 const client = new Discord.Client();
 
 var fs = require('fs');
-var files = fs.readdirSync('./assets/joost/')
+var files = fs.readdirSync('assets/joost/')
 
 client.once('ready', () => {
 	console.log('MC/ARK responded.');
