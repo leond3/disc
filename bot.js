@@ -8,11 +8,11 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-	const swearwords = ["aap", "kk"];
-	for (var i = 0; i = swearwords.lenght; i++) {
-		if (message.content.toLowerCase().includes(swearwords[i])) {
+	let blacklisted = ["aap", "kk"];
+	for (var i in blacklisted) {
+		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) {
 			message.delete();
-			message.channel.send("Lenght[i] Matched.").then(msg => {msg.delete(4000)});
+			message.channel.send("You can't use blacklisted words!").then(msg => {msg.delete(4000)});
 		}
 	}
 
