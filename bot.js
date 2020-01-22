@@ -8,7 +8,7 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-	let blacklisted = ["aap", "kk"];
+	let blacklisted = ["kanker", "kk"];
 	for (var i in blacklisted) {
 		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) {
 			message.delete();
