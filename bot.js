@@ -14,22 +14,19 @@ client.on('message', message => {
 		if (detectsw.includes(swearwords[i])) {
 			message.delete();
 			message.channel.send("Lenght[i] Matched.").then(msg => {msg.delete(4000)});
-			return;
 		}
 	}
-	
-	if (!message.content.startsWith(prefix) || message.author.bot) {
-		if (!message.author.bot) { 
-			message.delete(10000);
-		}
-		return;
-	}
-	message.channel.send("test");
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
 	
 	if(message.channel.name == "commands") {
+		if (!message.content.startsWith(prefix) || message.author.bot) {
+			if (!message.author.bot) { 
+				message.delete(10000);
+			}
+			return;
+		}
 		if (command === 'help') {
 		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!talisman\n!color [color/list]\n!tag [tag/list]\n!cf\n/nick [name]').then(msg => {msg.delete(300000)});
 		message.delete(300000);
