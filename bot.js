@@ -3,16 +3,15 @@ const { prefix } = require('./config.json');
 
 const client = new Discord.Client();
 
-var swearwords = ["aap", "kk"];
-
 client.once('ready', () => {
 	console.log('MC/ARK responded.');
 });
 
 client.on('message', message => {
-	var message = message.content.toLowerCase();
+	var swearwords = ["aap", "kk"];
+	var detectsw = message.content.toLowerCase();
 	for (var i = 0; i = swearwords.lenght; i++) {
-		if (message.includes(swearwords[i])) {
+		if (detectsw.includes(swearwords[i])) {
 			message.delete();
 			return message.channel.send("Lenght[i] Matched.").then(msg => {msg.delete(4000)})
 		}
