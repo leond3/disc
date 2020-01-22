@@ -3,9 +3,6 @@ const { prefix } = require('./config.json');
 
 const client = new Discord.Client();
 
-var fs = require('fs');
-var files = fs.readdirSync('assets/joost/')
-
 client.once('ready', () => {
 	console.log('MC/ARK responded.');
 });
@@ -129,13 +126,6 @@ client.on('message', message => {
 		if (coinflip === 1) { message.channel.send(cf[1]).then(msg => {msg.delete(300000)}); }
 		if (coinflip === 2) { message.channel.send(cf[2]).then(msg => {msg.delete(300000)}); }
 		message.delete(300000);
-	}
-	else if (command === 'image') {
-		if (args[0].toLowerCase() === 'joost') {
-			let chosenFile = files[Math.floor(Math.random() * files.length)]
-			message.channel.send(chosenFile).then(msg => {msg.delete(30000)});
-		}
-		message.delete(4000);
 	}
 	
 	
