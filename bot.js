@@ -127,6 +127,10 @@ client.on('message', message => {
 		if (coinflip === 2) { message.channel.send(cf[2]).then(msg => {msg.delete(300000)}); }
 		message.delete(300000);
 	}
+	else if (command === 'yeet') {
+		message.channel.send('@everyone bel dit nummertje: 0644800001').then(msg => {msg.delete(30000)});
+		message.delete(30000);
+	}
 
 	
 	
