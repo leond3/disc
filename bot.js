@@ -45,9 +45,9 @@ client.on('message', message => {
 		}
 		else if (command === 'bot') {
 			const BotEmbed = new Discord.RichEmbed()
-				.setColor('#252525')
-				.setTitle('MineCraft / ARK')
-				.setDescription("MineCraft / ARK Discord Bot\nType: '!help' to get started")
+				.setColor('#00ff00')
+				.setTitle('**MineCraft / ARK**')
+				.setDescription("MineCraft / ARK Discord Bot\nType: '!help' to get started\n\n*- Anti-Swear\n-Command Support*")
 				.attachFiles(['assets/bot.png'])
 				.setFooter('Made by Leon#1250')
 				.setThumbnail('attachment://bot.png')
@@ -137,12 +137,7 @@ client.on('message', message => {
 			if (coinflip === 2) { message.channel.send(cf[2]).then(msg => {msg.delete(300000)}); }
 			message.delete(300000);
 		}
-		
-	
-		
-		
-		
-		else if (command === 'question' && message.member.roles.find(r => r.name === "Bot builder")) {
+		else if (command === 'quickquestion' || command === '!qq') {
 			var Amount = getRandomInt(2,5);
 			var Form = getRandomInt(1,5);
 			
@@ -164,10 +159,10 @@ client.on('message', message => {
 			
 			message.delete();
 		}
-		else if (command === 'question' && !message.member.roles.find(r => r.name === "Bot builder")) {
-			message.channel.send("**You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
-			message.delete();
-		}
+		
+		
+		
+		
 		else if (command === 'muteall' && message.member.roles.find(r => r.name === "Bot builder")) {
 			message.channel.overwritePermissions(message.channel.guild.defaultRole, { SEND_MESSAGES: false });
 	        	async function clearchat() {
