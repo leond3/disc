@@ -11,9 +11,9 @@ client.on('message', message => {
 	let blacklisted = ["kanker", "kk", "suck"];
 	for (var i in blacklisted) {
 		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) {
-			message.delete();
-			if (blacklisted[i] == "suck") { message.channel.send("U. gay.\n - Get rekt by bot.").then(msg => {msg.delete(4000)}); }
+			if (blacklisted[i] == "suck") { message.reply("U. gay.\n - Get rekt by bot.").then(msg => {msg.delete(4000)}); }
 			else { message.channel.send("You used a blacklisted word!").then(msg => {msg.delete(4000)}); }
+			message.delete();
 		}
 	}
 
