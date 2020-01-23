@@ -164,7 +164,7 @@ client.on('message', message => {
 		else if (command === 'price' || command === 'p') {
 			var price = JSON.parse(fs.readFileSync("/assets/pricelist.json"))
 			
-			message.channel.send(price[args[0]]).then(msg => {msg.delete(4000)});
+			message.channel.send(price["eye"]).then(msg => {msg.delete(4000)});
 			message.delete(4000);
 			
 		}
