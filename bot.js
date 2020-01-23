@@ -12,7 +12,7 @@ client.on('message', message => {
 	for (var i in blacklisted) {
 		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) {
 			if (blacklisted[i] == "suck") { message.reply("U R GAY.\nBro u just got rekt by a bot...").then(msg => {msg.delete(4000)}); }
-			else if (blacklisted[i] == "stfu" || blacklisted[i] == "shut" || blacklisted[i] = "bek") { message.reply("vraagt u gelieve uw mondje dicht te houden en uw handjes van uw toetsenbord af te halen voor enkele seconden.").then(msg => {msg.delete(4000)}); }
+			//else if (blacklisted[i] == "stfu" || blacklisted[i] == "shut" || blacklisted[i] = "bek") { message.reply("vraagt u gelieve uw mondje dicht te houden en uw handjes van uw toetsenbord af te halen voor enkele seconden.").then(msg => {msg.delete(4000)}); }
 			else { message.channel.send("You used a blacklisted word!").then(msg => {msg.delete(4000)}); }
 			message.delete();
 		}
