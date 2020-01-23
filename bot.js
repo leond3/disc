@@ -45,7 +45,7 @@ client.on('message', message => {
 		}
 		else if (command === 'bot') {
 			const BotEmbed = new Discord.RichEmbed()
-				.setColor('#505050')
+				.setColor('#808080')
 				.setTitle('**MineCraft / ARK**')
 				.setDescription("MineCraft / ARK Discord Bot\nType: '!help' to get started\n\n*- Anti-Swear\n- Command Support*")
 				.attachFiles(['assets/bot.png'])
