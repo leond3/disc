@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const { prefix } = require('./config.json');
 
-const fs = require("fs");
+const price = require("/assets/pricelist.json")
 
 const client = new Discord.Client();
 
@@ -161,12 +161,9 @@ client.on('message', message => {
 			
 			message.delete();
 		}
-		else if (command === 'price' || command === 'p') {
-			var price = JSON.parse(fs.readFileSync("/assets/pricelist.json"))
-			
-			message.channel.send(price["eye"]).then(msg => {msg.delete(4000)});
+		else if (command === 'price' || command === 'p') {	
+			message.channel.send(price.eye).then(msg => {msg.delete(4000)});
 			message.delete(4000);
-			
 		}
 		
 		
