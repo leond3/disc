@@ -12,10 +12,10 @@ client.on('message', message => {
 	for (var i in blacklisted) {
 		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) {
 			message.delete();
-			message.channel.send("You can't use blacklisted words!").then(msg => {msg.delete(4000)});
+			message.channel.send("You used a blacklisted word!").then(msg => {msg.delete(4000)});
 		}
 	}
-	message.edit(message.content.replace(/suck/gi, "[im gay]"))
+	message.edit(message.content.toLowerCase().replace(/suck/gi, "[im gay]"))
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
