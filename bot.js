@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const { prefix } = require('./config.json');
 
+const fs = require("fs");
+
 const client = new Discord.Client();
 
 client.once('ready', () => {
@@ -29,7 +31,7 @@ client.on('message', message => {
 			return;
 		}
 		if (command === 'help') {
-		message.channel.send('!help\n!bot\n!stats [player]\n!reforge\n!talisman\n!color [color/list]\n!tag [tag/list]\n!cf\n/nick [name]').then(msg => {msg.delete(300000)});
+		message.channel.send('**Bot command list:**\n - !help\n - !bot\n - !stats [player]\n - !reforge\n - !talisman\n - !color [color/list]\n - !tag [tag/list]\n - !cf\n - /nick [name]\n - !quickquestion\n - !price [item]').then(msg => {msg.delete(300000)});
 		message.delete(300000);
 		}
 		else if (command === 'stats') {
@@ -159,7 +161,13 @@ client.on('message', message => {
 			
 			message.delete();
 		}
-		
+		else if (command === 'price' || command === 'p') {
+			var price = JSON.parse(fs.readFileSync("/assets/pricelist.json"))
+			
+			message.channel.send(price[args[0]]).then(msg => {msg.delete(4000)});
+			message.delete(4000);
+			
+		}
 		
 		
 		
