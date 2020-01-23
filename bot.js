@@ -8,14 +8,14 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-	let blacklisted = ["kanker", "kk"];
+	let blacklisted = ["kanker", "kk", "suck"];
 	for (var i in blacklisted) {
 		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) {
-			message.delete();
+			message.edit(message.content.toLowerCase().replace(blacklisted[i].toLowerCase(), "im gay"))
+			//message.delete();
 			message.channel.send("You used a blacklisted word!").then(msg => {msg.delete(4000)});
 		}
 	}
-	//message.edit(message.content.toLowerCase().replace("suck", "im gay"))
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
