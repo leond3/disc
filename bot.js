@@ -15,8 +15,7 @@ client.on('message', message => {
 			message.channel.send("You can't use blacklisted words!").then(msg => {msg.delete(4000)});
 		}
 	}
-	message.edit(message.content.replace(/suck me/gi, "[im gay]"))
-	message.edit(message.content.replace(/suck my/gi, "[im gay]"))
+	message.edit(message.content.replace(/suck/gi, "[im gay]"))
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
