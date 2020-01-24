@@ -22,6 +22,44 @@ client.on('message', message => {
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
+	if (message.content.startsWith(prefix) || !message.author.bot) {
+		if (command === 'muteall' && message.member.roles.find(r => r.name === "Bot builder")) {
+			message.channel.overwritePermissions(message.channel.guild.defaultRole, { SEND_MESSAGES: false });
+			message.channel.send("Server chat messages: **Disabled**.").then(msg => {msg.delete(72000000)});
+			message.delete();
+		}
+		if (command === 'muteall' && !message.member.roles.find(r => r.name === "Bot builder")) {
+			message.channel.send("**You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
+			message.delete();
+		}
+		if (command === 'unmuteall' && message.member.roles.find(r => r.name === "Bot builder")) {
+			message.channel.overwritePermissions(message.channel.guild.defaultRole, { SEND_MESSAGES: true });
+			message.channel.send("Server chat messages: **Enabled**.").then(msg => {msg.delete(72000000)});
+			message.delete();
+		}
+		if (command === 'unmuteall' && !message.member.roles.find(r => r.name === "Bot builder")) {
+			message.channel.send("**You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
+			message.delete();
+		}
+		if (command === 'clearchat' && message.member.roles.find(r => r.name === "Bot builder")) {
+			async function clearchat() {
+	            	message.delete();
+	            	const fetched = await message.channel.fetchMessages({limit: 99});
+	            	message.channel.bulkDelete(fetched);
+	        	}
+			clearchat();
+		}
+		if (command === 'clearchat' && !message.member.roles.find(r => r.name === "Bot builder")) {
+			message.channel.send("**You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
+			message.delete();
+		}
+	}
+
+	if(message.channel.name == "skyblock-giveaways") {
+		if (command === 'gstart' && message.member.roles.find(r => r.name === "Giveaways")) {
+			message.delete(10000);
+		}
+	}
 	
 	if(message.channel.name == "skyblock-commands") {
 		if (!message.content.startsWith(prefix) || message.author.bot) {
@@ -193,42 +231,6 @@ client.on('message', message => {
 			if (Form === 4 && Amount == 4) { message.channel.send('Tag yourself.').then(msg => {msg.delete(30000)}); }
 			
 			message.delete();
-		}
-		
-		
-		
-		else if (command === 'muteall' && message.member.roles.find(r => r.name === "Bot builder")) {
-			message.channel.overwritePermissions(message.channel.guild.defaultRole, { SEND_MESSAGES: false });
-			message.channel.send("Server chat messages: **Disabled**.").then(msg => {msg.delete(72000000)});
-			message.delete();
-		}
-		else if (command === 'muteall' && !message.member.roles.find(r => r.name === "Bot builder")) {
-			message.channel.send("**You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
-			message.delete();
-		}
-		else if (command === 'unmuteall' && message.member.roles.find(r => r.name === "Bot builder")) {
-			message.channel.overwritePermissions(message.channel.guild.defaultRole, { SEND_MESSAGES: true });
-			message.channel.send("Server chat messages: **Enabled**.").then(msg => {msg.delete(72000000)});
-			message.delete();
-		}
-		else if (command === 'unmuteall' && !message.member.roles.find(r => r.name === "Bot builder")) {
-			message.channel.send("**You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
-			message.delete();
-		}
-		else if (command === 'clearchat' && message.member.roles.find(r => r.name === "Bot builder")) {
-			async function clearchat() {
-	            	message.delete();
-	            	const fetched = await message.channel.fetchMessages({limit: 99});
-	            	message.channel.bulkDelete(fetched);
-	        	}
-			clearchat();
-		}
-		else if (command === 'clearchat' && !message.member.roles.find(r => r.name === "Bot builder")) {
-			message.channel.send("**You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
-			message.delete();
-		}
-		else if (command === 'gstart' && message.member.roles.find(r => r.name === "Giveaways")) {
-			message.delete(1000);
 		}
 		else {
 			message.delete();
