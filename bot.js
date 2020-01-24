@@ -27,7 +27,7 @@ client.on('message', message => {
 		if (!message.content.startsWith(prefix) || message.author.bot) {
 			if (!message.author.bot) { 
 				message.delete();
-				message.channel.send("**You can't chat in this channel, try: '!help'.**").then(msg => {msg.delete(300000)});
+				message.channel.send("**You can't chat in this channel, try: '!help'.**").then(msg => {msg.delete(4000)});
 			}
 			return;
 		}
