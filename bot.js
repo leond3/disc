@@ -26,7 +26,8 @@ client.on('message', message => {
 	if(message.channel.name == "skyblock-commands") {
 		if (!message.content.startsWith(prefix) || message.author.bot) {
 			if (!message.author.bot) { 
-				message.delete(10000);
+				message.delete();
+				message.channel.send("**You can't chat in this channel, try: '!help'.**").then(msg => {msg.delete(300000)});
 			}
 			return;
 		}
