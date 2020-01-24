@@ -10,7 +10,7 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-	let blacklisted = ["kanker", "kk", "kkr", "suck", "mongool", "idioot", "idiot", "stfu", "shut", "bek", "tyfus", "autist", "bitch", "eikel", "hoer", "homo", "kut", "lul", "pedo", "mof", "slet", "tering"];
+	let blacklisted = ["kank", "kkr", "suck", "mongool", "idioot", "idiot", "stfu", "shut", "bek", "tyfus", "autist", "bitch", "eikel", "hoer", "homo", "kut", "lul", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk", "h0m0", "h0mo", "hom0", "gay", "g4y"];
 	for (var i in blacklisted) {
 		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) {
 			if (blacklisted[i] == "suck") { message.reply("U R GAY.\nBro u just got rekt by a bot...").then(msg => {msg.delete(3600000)}); }
