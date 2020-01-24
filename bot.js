@@ -28,7 +28,7 @@ client.on('message', message => {
 			return;
 		}
 		if (command === 'help') {
-			message.channel.send('**Bot command list:**\n - !talisman\n - !reforge').then(msg => {msg.delete(300000)});
+			message.channel.send('**Bot command list:**\n - !talisman\n - !reforge\n - !stats [username]').then(msg => {msg.delete(300000)});
 			message.delete(300000);
 		}
 		else if (command === 'reforge') {
@@ -38,6 +38,11 @@ client.on('message', message => {
 		else if (command === 'talisman') {
 			message.channel.send("**Common:**\n - Mine Affinity Talisman\n - Village Affinity Talisman\n - Farming Talisman\n - Wolf Talisman (U)\n - Zombie Talisman (U)\n - Skeleton Talisman\n - Scavenger Talisman\n - Intimidation Talisman (U)\n - Talisman of Coins\n - Potion Affinity Talisman (U)\n - Vaccine Talisman\n - Night Vision Charm\n - Fire Talisman\n - Healing Talisman (U)\n - Speed Talisman\n - Feather Talisman (U)\n - Sea Creature Talisman (U)\n\n**Uncommon:**\n - Wood Affinity Talisman\n - Potion Affinity Ring (U)\n - Zombie Ring (U)\n - Feather Ring (U)\n - Red Claw Talisman (U)\n - Magnetic Talisman\n - Hunter Talisman (U)\n - Farmer Orb\n - Gravity Talisman\n - Piggy Bank\n - Lava Talisman\n - Spider Talisman (U)\n - Sea Creature Ring (U)\n - Healing Ring (M)\n - Wolf Paw\n - Intimidation Ring (U)\n - Shady Ring (U)\n - New Years Cake Bag\n - Candy Ring (U)\n\n**Rare:**\n - Haste Ring\n - Potion Affinity Artifact (M)\n - Survivor Cube\n - Hunter Ring (M)\n - Fish Affinity Talisman\n - Feather Artifact (M)\n - Bat Talisman (U)\n - Pig's Foot\n - Spider Ring (U)\n - Bait Ring\n - Candy Ring (U)\n - Day Crystal\n - Night Crystal\n - Red Claw Ring (U)\n - Devour Ring\n - Sea Creature Artifact (M)\n - Intimidation Artifact (M)\n - Wolf Ring (M)\n - Crooked Artifact (U)\n - Frozen Chicken\n\n**Epic:**\n - Ender Artifact\n - Spider Artifact (M)\n - Tarantula Talisman\n - Red Claw Artifact (M)\n - Candy Artifact (M)\n - Bat Ring (U)\n - Experience Artifact\n - Melody's Hair\n - Wither Artifact\n - Seal of the Family (M)\n\n**Legendary:**\n - Bat Artifact (M)\n\n**Others:**\n - Campfire Quest (common-legendary)\n - Romero Quest (common-legendary)").then(msg => {msg.delete(300000)});
 			message.delete(300000);
+		}
+		else if (command === 'stats') {
+			if (args[0]) { message.channel.send("https://sky.lea.moe/stats/" + args[0] + "\nhttps://skyblock.matdoes.dev/profiles/" + args[0]).then(msg => {msg.delete(30000)}); }
+			else { message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
+			message.delete(30000);
 		}
 	}
 	
