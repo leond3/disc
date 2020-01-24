@@ -25,10 +25,13 @@ client.on('message', message => {
 	
 	if(message.channel.name == "skyblock-commands") {
 		if (!message.content.startsWith(prefix) || message.author.bot) {
+			if (!message.author.bot) { 
+				message.delete(10000);
+			}
 			return;
 		}
 		if (command === 'help') {
-			message.channel.send('**Bot command list:**\n - !talisman\n - !reforge\n - !stats [username]').then(msg => {msg.delete(300000)});
+			message.channel.send('**Bot command list:**\n - !help\n - !talisman\n - !reforge\n - !stats [username]\n - !price [item]').then(msg => {msg.delete(300000)});
 			message.delete(300000);
 		}
 		else if (command === 'reforge') {
@@ -44,6 +47,18 @@ client.on('message', message => {
 			else { message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
 			message.delete(30000);
 		}
+		else if (command === 'price' || command === 'p') {
+			if (args[0]) {
+				var price = JSON.parse(fs.readFileSync("./assets/pricelist.json"));
+				message.channel.send(price[args[0]]).then(msg => {msg.delete(4000)});
+			}
+			else { message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
+			message.delete(4000);
+		}
+		else {
+			message.delete();
+			message.channel.send("**Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
+		}
 	}
 	
 	if(message.channel.name == "discord-commands") {
@@ -54,7 +69,7 @@ client.on('message', message => {
 			return;
 		}
 		if (command === 'help') {
-		message.channel.send('**Bot command list:**\n - !help\n - !bot\n - !color [color/list]\n - !tag [tag/list]\n - !cf\n - /nick [name]\n - !quickquestion\n - !price [item]').then(msg => {msg.delete(300000)});
+		message.channel.send('**Bot command list:**\n - !help\n - !bot\n - !color [color/list]\n - !tag [tag/list]\n - !cf\n - !quickquestion\n - /nick [name]').then(msg => {msg.delete(300000)});
 		message.delete(300000);
 		}
 		else if (command === 'bot') {
@@ -177,14 +192,6 @@ client.on('message', message => {
 			if (Form === 4 && Amount == 4) { message.channel.send('Tag yourself.').then(msg => {msg.delete(30000)}); }
 			
 			message.delete();
-		}
-		else if (command === 'price' || command === 'p') {
-			if (args[0]) {
-				var price = JSON.parse(fs.readFileSync("./assets/pricelist.json"));
-				message.channel.send(price[args[0]]).then(msg => {msg.delete(4000)});
-			}
-			else { message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
-			message.delete(4000);
 		}
 		
 		
