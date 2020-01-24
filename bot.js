@@ -199,13 +199,7 @@ client.on('message', message => {
 		
 		else if (command === 'muteall' && message.member.roles.find(r => r.name === "Bot builder")) {
 			message.channel.overwritePermissions(message.channel.guild.defaultRole, { SEND_MESSAGES: false });
-	        	async function clearchat() {
-	       	     	message.delete();
-	            	const fetched = await message.channel.fetchMessages({limit: 99});
-	            	message.channel.bulkDelete(fetched);
-	        	}
-			clearchat();
-			message.channel.send("Server chat messages: **Disabled**.");
+			message.channel.send("Server chat messages: **Disabled**.").then(msg => {msg.delete(72000000)});
 		}
 		else if (command === 'muteall' && !message.member.roles.find(r => r.name === "Bot builder")) {
 			message.channel.send("**You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
@@ -213,15 +207,21 @@ client.on('message', message => {
 		}
 		else if (command === 'unmuteall' && message.member.roles.find(r => r.name === "Bot builder")) {
 			message.channel.overwritePermissions(message.channel.guild.defaultRole, { SEND_MESSAGES: true });
-	        	async function clearchat() {
+			message.channel.send("Server chat messages: **Enabled**.").then(msg => {msg.delete(72000000)});
+		}
+		else if (command === 'unmuteall' && !message.member.roles.find(r => r.name === "Bot builder")) {
+			message.channel.send("**You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
+			message.delete();
+		}
+		else if (command === 'clearchat' && message.member.roles.find(r => r.name === "Bot builder")) {
+			async function clearchat() {
 	            	message.delete();
 	            	const fetched = await message.channel.fetchMessages({limit: 99});
 	            	message.channel.bulkDelete(fetched);
 	        	}
 			clearchat();
-			message.channel.send("Server chat messages: **Enabled**.");
 		}
-		else if (command === 'unmuteall' && !message.member.roles.find(r => r.name === "Bot builder")) {
+		else if (command === 'clearchat' && !message.member.roles.find(r => r.name === "Bot builder")) {
 			message.channel.send("**You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
 			message.delete();
 		}
