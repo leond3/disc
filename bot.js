@@ -249,7 +249,7 @@ client.on('message', message => {
 //			}
 			message.guild.members.forEach( (member) => {
         		if(member.roles.has(r => r.name.toLowerCase() === "notifications")) {
-            		member.send("This is a test for our notification command. DM the bot dev if you don't have the notifications role."); 
+            		member.send("This is a test for our notification command. DM the bot dev if you don't have the notifications role.").then(msg => {msg.delete(6000)});
         		}})
 			message.delete(4000);
 		}
