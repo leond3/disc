@@ -94,15 +94,6 @@ client.on('message', message => {
 			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
 			message.delete(4000);
 		}
-		else if (command === 'test') {			
-			message.delete(4000);
-			for (var i in message.guild.members.size) {
-    				if (message.guild.members[i].roles.has(message.guild.roles.find(role => role.name.toLowerCase() === "notifications"))) {
-        				message.guild.members[i].author.send("This is a test message.").then(msg => {msg.delete(6000)});
-    				}
-			}
-			message.author.send("EHHHHHHHHHHHHHHHH").then(msg => {msg.delete(6000)});
-		}
 		else {
 			message.delete();
 			message.channel.send(":no_entry: **Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
@@ -251,6 +242,12 @@ client.on('message', message => {
 			if (Form === 4 && Amount == 4) { message.channel.send('Tag yourself.').then(msg => {msg.delete(30000)}); }
 			
 			message.delete();
+		}
+		else if (command === 'test') {
+			if (message.member.roles.find(r => r.name.toLowerCase() === "notifications")) {
+				message.author.send("This is a test message.").then(msg => {msg.delete(60000)});
+			}
+			message.delete(4000);
 		}
 		else {
 			message.delete();
