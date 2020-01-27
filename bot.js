@@ -6,7 +6,7 @@ const fs = require("fs");
 const client = new Discord.Client();
 
 client.once('ready', () => {
-	console.log('MC/ARK responded.');
+	console.log('MineCraft bot responded and is operational!');
 });
 
 client.on('message', message => {
