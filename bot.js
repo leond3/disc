@@ -70,7 +70,7 @@ client.on('message', message => {
 			return;
 		}
 		if (command === 'help') {
-			message.channel.send('**Bot command list:**\n - !help\n - !talisman\n - !reforge\n - !stats [username]\n - !price [item]').then(msg => {msg.delete(300000)});
+			message.channel.send('**Bot command list:**\n - !help\n - !talisman\n - !reforge\n - !stats [username]]').then(msg => {msg.delete(300000)});
 			message.delete(300000);
 		}
 		else if (command === 'reforge') {
@@ -93,6 +93,10 @@ client.on('message', message => {
 			}
 			else { message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
 			message.delete(4000);
+		}
+		else if (command === 'message') {
+			message.author.send("This is a test message.")
+			message.delete();
 		}
 		else {
 			message.delete();
