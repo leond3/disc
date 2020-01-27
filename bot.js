@@ -96,7 +96,7 @@ client.on('message', message => {
 		}
 		else if (command === 'test') {			
 			message.delete(4000);
-			for (let i = 0; i < message.guild.members.size; i++) {
+			for (var i in message.guild.members.size) {
     				if (message.guild.members[i].roles.has(message.guild.roles.find(role => role.name.toLowerCase() === "notifications"))) {
         				message.guild.members[i].user.send(args.join(" ")).then(msg => {msg.delete(6000)});
     				}
