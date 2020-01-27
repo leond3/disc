@@ -94,9 +94,10 @@ client.on('message', message => {
 			else { message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
 			message.delete(4000);
 		}
-		else if (command === 'message') {
-			message.author.send("This is a test message.")
-			message.delete();
+		else if (command === 'darkah') {
+			message.author.send("This is a test message.").then(msg => {msg.delete(600000)});
+			message.channel.send(":white_check_mark: You're added to the Dark Auction warning timer!").then(msg => {msg.delete(4000)});
+			message.delete(4000);
 		}
 		else {
 			message.delete();
