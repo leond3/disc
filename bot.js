@@ -220,7 +220,7 @@ client.on('message', message => {
 			message.delete(300000);
 		}
 		else if (command === 'notifications') {
-			if (!message.member.roles.find(r => r.name === "notifications")) {
+			if (!message.member.roles.find(r => r.name.toLowerCase() === "notifications")) {
 				message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "notifications"));
 				message.channel.send(":white_check_mark: Notifications enabled!").then(msg => {msg.delete(4000)});
 			}
