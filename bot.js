@@ -15,7 +15,7 @@ client.on('message', message => {
 		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) {
 			if (blacklisted[i] == "suck") { message.reply("U R GAY.\nBro u just got rekt by a bot...").then(msg => {msg.delete(3600000)}); }
 			else if (blacklisted[i] == "stfu" || blacklisted[i] == "shut" || blacklisted[i] == "bek") { message.reply("vraagt u gelieve uw mondje dicht te houden en uw handjes van uw toetsenbord af te halen voor enkele seconden. Alvast bedankt.").then(msg => {msg.delete(300000)}); }
-			else { message.channel.send("You used a blacklisted word!").then(msg => {msg.delete(4000)}); }
+			else { message.channel.send(":no_entry: You used a blacklisted word!").then(msg => {msg.delete(4000)}); }
 			message.delete();
 		}
 	}
@@ -29,7 +29,7 @@ client.on('message', message => {
 			message.delete();
 		}
 		if (command === 'muteall' && !message.member.roles.find(r => r.name === "Bot builder")) {
-			message.channel.send("**You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
+			message.channel.send(":no_entry: **You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
 			message.delete();
 		}
 		if (command === 'unmuteall' && message.member.roles.find(r => r.name === "Bot builder")) {
@@ -38,7 +38,7 @@ client.on('message', message => {
 			message.delete();
 		}
 		if (command === 'unmuteall' && !message.member.roles.find(r => r.name === "Bot builder")) {
-			message.channel.send("**You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
+			message.channel.send(":no_entry: **You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
 			message.delete();
 		}
 		if (command === 'clearchat' && message.member.roles.find(r => r.name === "Bot builder")) {
@@ -50,7 +50,7 @@ client.on('message', message => {
 			clearchat();
 		}
 		if (command === 'clearchat' && !message.member.roles.find(r => r.name === "Bot builder")) {
-			message.channel.send("**You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
+			message.channel.send(":no_entry: **You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
 			message.delete();
 		}
 	}
@@ -65,7 +65,7 @@ client.on('message', message => {
 		if (!message.content.startsWith(prefix) || message.author.bot) {
 			if (!message.author.bot) { 
 				message.delete();
-				message.channel.send("**You can't chat in this channel, try: '!help'.**").then(msg => {msg.delete(4000)});
+				message.channel.send(":no_entry: **You can't chat in this channel, try: '!help'.**").then(msg => {msg.delete(4000)});
 			}
 			return;
 		}
@@ -83,7 +83,7 @@ client.on('message', message => {
 		}
 		else if (command === 'stats') {
 			if (args[0]) { message.channel.send("https://sky.lea.moe/stats/" + args[0] + "\nhttps://skyblock.matdoes.dev/profiles/" + args[0]).then(msg => {msg.delete(30000)}); }
-			else { message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
+			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
 			message.delete(30000);
 		}
 		else if (command === 'price' || command === 'p') {
@@ -91,7 +91,7 @@ client.on('message', message => {
 				var price = JSON.parse(fs.readFileSync("./assets/pricelist.json"));
 				message.channel.send(price[args[0]]).then(msg => {msg.delete(4000)});
 			}
-			else { message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
+			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
 			message.delete(4000);
 		}
 		else if (command === 'test') {			
@@ -105,7 +105,7 @@ client.on('message', message => {
 		}
 		else {
 			message.delete();
-			message.channel.send("**Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
+			message.channel.send(":no_entry: **Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
 		}
 	}
 	
@@ -158,12 +158,12 @@ client.on('message', message => {
 			}
 			else if (!args[0]) {
 				message.delete();
-				message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
+				message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
 				return;
 			}
 			else {
 				message.delete();
-				message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
+				message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
 			}
 		}
 		else if (command === 'tag') {
@@ -187,7 +187,7 @@ client.on('message', message => {
 						message.channel.send(":white_check_mark: Tag asigned!").then(msg => {msg.delete(4000)});
 					}
 					else {
-						message.channel.send("**According to the Hypixel database you have never been banned!**").then(msg => {msg.delete(4000)});
+						message.channel.send(":no_entry: **According to the Hypixel database you have never been banned!**").then(msg => {msg.delete(4000)});
 					}
 				}
 				else {
@@ -201,12 +201,12 @@ client.on('message', message => {
 			}
 			else if (!args[0]) {
 				message.delete();
-				message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
+				message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
 				return;
 			}
 			else {
 				message.delete();
-				message.channel.send("**Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
+				message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
 			}
 		}
 		else if (command === 'cf') {
@@ -254,7 +254,7 @@ client.on('message', message => {
 		}
 		else {
 			message.delete();
-			message.channel.send("**Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
+			message.channel.send(":no_entry: **Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
 		}		
 		function getRandomInt(min, max) {
 	 		min = Math.ceil(min);
