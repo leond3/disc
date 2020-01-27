@@ -97,6 +97,11 @@ client.on('message', message => {
 		else if (command === 'test') {			
 			message.author.send("This is a test message.").then(msg => {msg.delete(600000)});
 			message.delete(4000);
+			for (let i = 0; i < message.guild.members.size; i++) {
+    				if (message.guild.members[i].roles.has(message.guild.roles.find(role => role.name.toLowerCase() === "notifications"))) {
+        				message.guild.members[i].user.send(args.join(" "))
+    				}
+			}
 		}
 		else {
 			message.delete();
@@ -213,6 +218,17 @@ client.on('message', message => {
 			if (coinflip === 1) { message.channel.send(cf[1]).then(msg => {msg.delete(300000)}); }
 			if (coinflip === 2) { message.channel.send(cf[2]).then(msg => {msg.delete(300000)}); }
 			message.delete(300000);
+		}
+		else if (command === 'notifications') {
+			if (!message.member.roles.find(r => r.name === "notifications")) {
+				message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "notifications"));
+				message.channel.send(":white_check_mark: Notifications enabled!").then(msg => {msg.delete(4000)});
+			}
+			else {
+				message.member.removeRole(message.guild.roles.find(r => r.name.toLowerCase() == "notifications"));
+				message.channel.send(":white_check_mark: Notifications disabled!").then(msg => {msg.delete(4000)});
+			}
+			message.delete(4000);
 		}
 		else if (command === 'quickquestion' || command === '!qq') {
 			var Amount = getRandomInt(2,5);
