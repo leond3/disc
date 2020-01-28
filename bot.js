@@ -244,9 +244,12 @@ client.on('message', message => {
 			message.delete();
 		}
 		else if (command === 'test') {
-			if (message.member.roles.find(r => r.name.toLowerCase() === "notifications")) {
-				message.author.send("This is a test message and will be deleted in 1 minute.").then(msg => {msg.delete(60000)});
-			}
+//			if (message.member.roles.find(r => r.name.toLowerCase() === "notifications")) {
+//				message.author.send("This is a test message and will be deleted in 1 minute.").then(msg => {msg.delete(60000)});
+//			}
+			mention = message.mentions.users.first();
+			mentionMessage = message.content.slice(6);
+			mention.sendMessage(mentionMessage).then(msg => {msg.delete(60000)});
 			message.delete(4000);
 		}
 		else {
