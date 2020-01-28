@@ -247,9 +247,9 @@ client.on('message', message => {
 //			if (message.member.roles.find(r => r.name.toLowerCase() === "notifications")) {
 //				message.author.send("This is a test message and will be deleted in 1 minute.").then(msg => {msg.delete(60000)});
 //			}
-			mention = message.mentions.users.first();
+//			mention = message.mentions.users.first();
 			mentionMessage = message.content.slice(6);
-			mention.sendMessage(mentionMessage).then(msg => {msg.delete(60000)});
+			message.member.roles.find(r => r.name.toLowerCase() === "notifications").sendMessage(mentionMessage).then(msg => {msg.delete(6000)});
 			message.delete(4000);
 		}
 		else {
