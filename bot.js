@@ -246,11 +246,11 @@ client.on('message', message => {
 		else if (command === 'notify') {
 			mention = message.mentions.users.first();
 			mentionMessage = message.content.slice(8);
-			if (message.mentions.roles.find(r => r.name.toLowerCase() === "notifications")) {
+			if (message.mentions.member.roles.find(r => r.name.toLowerCase() === "notifications")) {
 				mention.sendMessage(mentionMessage + "\n\n*Deze berichten kan je uitschakelen door notifications uit te zetten in de discord-commands channel, dit bericht wordt na 15 minuten automatisch verwijderd.*").then(msg => {msg.delete(900000)});
 				message.channel.send(":white_check_mark: Notification succesfully send!").then(msg => {msg.delete(4000)});
 			}
-			else { message.channel.send(":no_enty: User has notifications disabled!").then(msg => {msg.delete(4000)}); }
+			else { message.channel.send(":no_entry: User has notifications disabled!").then(msg => {msg.delete(4000)}); }
 			message.delete();
 		}
 		else {
