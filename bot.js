@@ -247,7 +247,7 @@ client.on('message', message => {
 //			if (message.member.roles.find(r => r.name.toLowerCase() === "notifications")) {
 //				message.author.send("This is a test message and will be deleted in 1 minute.").then(msg => {msg.delete(60000)});
 //			}
-			mention = message.mentions();
+			mention = message.mentions.first();
 //			mentionMessage = message.content.slice(6);
 //			mention.sendMessage(mentionMessage + "\n\n*Deze berichten kan je uitschakelen door notifications uit te zetten in de discord-commands channel, dit bericht wordt na 15 minuten automatisch verwijderd.*").then(msg => {msg.delete(900000)});
 //			message.channel.send(":white_check_mark: Notification succesfully send!").then(msg => {msg.delete(4000)});
