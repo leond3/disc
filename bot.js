@@ -64,8 +64,8 @@ client.on('message', message => {
 		if (message.content.startsWith(prefix) || !message.author.bot) {
 			message.delete(4000);
 		}
-		if (!message.content.startsWith(prefix) || !message.author.bot) {
-			message.delete();
+		else if (!message.content.startsWith(prefix) || !message.author.bot) {
+			message.delete(100);
 			message.channel.send(":no_entry: **You can't chat in this channel, try: '!help'.**").then(msg => {msg.delete(4000)});
 		}
 	}
