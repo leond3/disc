@@ -61,10 +61,10 @@ client.on('message', message => {
 		}
 	}
 	if(message.channel.name == "music") {
-		if (message.content.startWith(prefix) || !message.author.bot) {
+		if (message.content.startsWith(prefix) || !message.author.bot) {
 			message.delete(4000);
 		}
-		if (!message.content.startWith(prefix) || !message.author.bot) {
+		if (!message.content.startsWith(prefix) || !message.author.bot) {
 			message.delete();
 			message.channel.send(":no_entry: **You can't chat in this channel, try: '!help'.**").then(msg => {msg.delete(4000)});
 		}
