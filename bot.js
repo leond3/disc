@@ -60,6 +60,15 @@ client.on('message', message => {
 			message.delete(10000);
 		}
 	}
+	if(message.channel.name == "music") {
+		if (message.content.startWith(prefix) || !message.author.bot) {
+			message.delete(4000);
+		}
+		if (!message.content.startWith(prefix) || !message.author.bot) {
+			message.delete();
+			message.channel.send(":no_entry: **You can't chat in this channel, try: '!help'.**").then(msg => {msg.delete(4000)});
+		}
+	}
 	
 	if(message.channel.name == "skyblock-commands") {
 		if (!message.content.startsWith(prefix) || message.author.bot) {
@@ -247,7 +256,7 @@ client.on('message', message => {
 			if (message.member.roles.find(r => r.name === "Bot builder")) {
 				mention = message.mentions.users.first();
 				mentionMessage = message.content.slice(8);
-				mention.sendMessage(mentionMessage + "\n\n*Deze berichten kan je uitschakelen door notifications uit te zetten in de discord-commands channel, dit bericht wordt na 15 minuten automatisch verwijderd.*").then(msg => {msg.delete(900000)});
+				mention.sendMessage(mentionMessage + "\n\n*Deze berichten kan je uitschakelen door notifications uit te zetten in de discord-commands channel, dit bericht wordt na 60 minuten automatisch verwijderd.*").then(msg => {msg.delete(3600000)});
 				message.channel.send(":white_check_mark: Notification succesfully send!").then(msg => {msg.delete(4000)});
 			}
 			else {
