@@ -49,6 +49,10 @@ client.on('message', message => {
 	        	}
 			clearchat();
 		}
+		if (command === 'mcnotify' && message.member.roles.find(r => r.name === "Bot builder")) {
+			message.delete(1800000);
+			message.channel.send(":white_check_mark: Notification detected!").then(msg => {msg.delete(4000)});
+		}
 		if (command === 'clearchat' && !message.member.roles.find(r => r.name === "Bot builder")) {
 			message.channel.send(":no_entry: **You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
 			message.delete();
