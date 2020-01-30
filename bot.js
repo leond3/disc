@@ -117,7 +117,7 @@ client.on('message', message => {
 			return;
 		}
 		if (command === 'help') {
-		message.channel.send('**Bot command list:**\n - !help\n - !bot\n - !color [color/list]\n - !tag [tag/list]\n - !cf\n - !quickquestion\n - !notifications\n - /nick [name]').then(msg => {msg.delete(300000)});
+		message.channel.send('**Bot command list:**\n - !help\n - !bot\n - !color [color/list]\n - !tag [tag/list]\n - !cf\n - !quickquestion\n - !notifications\n - !privatecall\n - /nick [name]').then(msg => {msg.delete(300000)});
 		message.delete(300000);
 		}
 		else if (command === 'bot') {
