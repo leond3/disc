@@ -230,7 +230,7 @@ client.on('message', message => {
 			}
 			message.delete(4000);
 		}
-		else if (command === 'quickquestion' || command === '!qq') {
+		else if (command === 'quickquestion' || command === 'qq') {
 			var Amount = getRandomInt(2,5);
 			var Form = getRandomInt(1,5);
 			
@@ -250,6 +250,11 @@ client.on('message', message => {
 			if (Form === 4 && Amount == 3) { message.channel.send('Tag another user.').then(msg => {msg.delete(30000)}); }
 			if (Form === 4 && Amount == 4) { message.channel.send('Tag yourself.').then(msg => {msg.delete(30000)}); }
 			
+			message.delete();
+		}
+		else if (command === 'privatecall' || command === 'pc') {
+			message.member.setVoiceChannel(c => c.name.toLowerCase() === "private call (bot)");
+			message.channel.send(":white_check_mark: User has been succesfully moved to a private channel.").then(msg => {msg.delete(4000)});
 			message.delete();
 		}
 		else if (command === 'notify') {
