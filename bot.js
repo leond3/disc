@@ -254,8 +254,10 @@ client.on('message', message => {
 		}
 		else if (command === 'privatecall' || command === 'pc') {
 			const voiceChannel = message.member.voiceChannel;
+			let privatechannels = ["667089585527980062", "672407468130959371", "672407491807543297", "672407504914743318", "672407514259914762", "672407536741122048", "672407548229320754", "672407558270746635", "672407597248151591", "672407607004364801"];
+			
 			if (voiceChannel) {
-				message.member.setVoiceChannel('667089585527980062');
+				message.member.setVoiceChannel(privatechannels[getRandomInt(0,10)]);
 				message.channel.send(":white_check_mark: User has been succesfully moved to a private channel.").then(msg => {msg.delete(4000)});
 			}
 			else {
