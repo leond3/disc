@@ -253,8 +253,14 @@ client.on('message', message => {
 			message.delete();
 		}
 		else if (command === 'privatecall' || command === 'pc') {
-			message.member.setVoiceChannel('667089585527980062');
-			message.channel.send(":white_check_mark: User has been succesfully moved to a private channel.").then(msg => {msg.delete(4000)});
+			const voiceChannel = message.member.voiceChannel;
+			if (voiceChannel) {
+				message.member.setVoiceChannel('667089585527980062');
+				message.channel.send(":white_check_mark: User has been succesfully moved to a private channel.").then(msg => {msg.delete(4000)});
+			}
+			else {
+				message.channel.send(":no_entry: User is not connected to a channel and thus can't be moved.").then(msg => {msg.delete(4000)});
+			}
 			message.delete();
 		}
 		else if (command === 'notify') {
