@@ -253,7 +253,7 @@ client.on('message', message => {
 			message.delete();
 		}
 		else if (command === 'privatecall' || command === 'pc') {
-			message.member.setVoiceChannel(667089585527980062);
+			message.member.setVoiceChannel('667089585527980062');
 			message.channel.send(":white_check_mark: User has been succesfully moved to a private channel.").then(msg => {msg.delete(4000)});
 			message.delete();
 		}
