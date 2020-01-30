@@ -258,7 +258,7 @@ client.on('message', message => {
 			
 			if (voiceChannel) {
 				message.member.setVoiceChannel(privatechannels[getRandomInt(0,10)]);
-				message.channel.send(":white_check_mark: User has been succesfully moved to a private channel.").then(msg => {msg.delete(4000)});
+				message.channel.send(":white_check_mark: User has been succesfully moved to a private channel.\n*You've to move users into this call!*").then(msg => {msg.delete(4000)});
 			}
 			else {
 				message.channel.send(":no_entry: User is not connected to a channel and thus can't be moved.").then(msg => {msg.delete(4000)});
