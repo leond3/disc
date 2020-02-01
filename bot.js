@@ -10,7 +10,7 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-	let blacklisted = ["kank", "kkr", "suck", "mongool", "idioot", "idiot", "stfu", "shut", "bek", "tyfus", "autist", "bitch", "eikel", "hoer", "homo", "kut", "lul", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk", "h0m0", "h0mo", "hom0", "gay", "g4y"];
+	let blacklisted = ["kank", "kk ", "suck", "mongool", "idioot", "idiot", "stfu", "shut ", "bek ", "tyfus", "autist", "bitch", "eikel", "hoer", "homo", "kut", "lul ", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk ", "h0m0", "h0mo", "hom0", "gay", "g4y", "sukkel"];
 	for (var i in blacklisted) {
 		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) {
 			if (blacklisted[i] == "suck") { message.reply("U R GAY.\nBro u just got rekt by a bot...").then(msg => {msg.delete(3600000)}); }
@@ -127,8 +127,8 @@ client.on('message', message => {
 		else if (command === 'bot') {
 			const BotEmbed = new Discord.RichEmbed()
 				.setColor('#808080')
-				.setTitle('**MineCraft / ARK**')
-				.setDescription("MineCraft / ARK Discord Bot\nType: '!help' to get started\n\n*- Anti-Swear\n- Command Support*")
+				.setTitle('**MineCraft Bot**')
+				.setDescription("MineCraft Discord Server\nType: '!help' to get started\n\n*- Anti-Swear\n- Custom Commands\n- Chat Support\n- Roles*")
 				.attachFiles(['assets/bot.png'])
 				.setFooter('Made by Leon#1250')
 				.setThumbnail('attachment://bot.png')
