@@ -107,6 +107,12 @@ client.on('message', message => {
 			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
 			message.delete(4000);
 		}
+		else if (command === 'appeal') {
+			const contentMessage = message.content.slice(8);
+			client.channels.get('673274676104921159').send(contentMessage);
+			message.channel.send(":white_check_mark: Your appeal has been send.").then(msg => {msg.delete(4000)});
+			message.delete();
+		}
 		else {
 			message.delete();
 			message.channel.send(":no_entry: **Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
