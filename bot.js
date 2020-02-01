@@ -113,7 +113,7 @@ client.on('message', message => {
 		}
 		else if (command === 'appeal') {
 			const contentMessage = message.content.slice(8);
-			client.channels.get('673274676104921159').send(contentMessage);
+			client.channels.get('673274676104921159').send(contentMessage + "\nCode: " + getRandomInt(0,16384));
 			message.channel.send(":white_check_mark: Your appeal has been send.").then(msg => {msg.delete(4000)});
 			message.delete();
 		}
