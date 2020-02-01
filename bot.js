@@ -83,7 +83,7 @@ client.on('message', message => {
 			return;
 		}
 		if (command === 'help') {
-			message.channel.send('**Bot command list:**\n - !help\n - !talisman\n - !reforge\n - !stats [username]').then(msg => {msg.delete(300000)});
+			message.channel.send('**Bot command list:**\n - !help\n - !talisman\n - !reforge\n - !stats [username]\n - !format\n - !appeal [format]').then(msg => {msg.delete(300000)});
 			message.delete(300000);
 		}
 		else if (command === 'reforge') {
@@ -105,6 +105,10 @@ client.on('message', message => {
 				message.channel.send(price[args[0]]).then(msg => {msg.delete(4000)});
 			}
 			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
+			message.delete(4000);
+		}
+		else if (command === 'format') {
+			message.channel.send("**Hypixel guild rank appeal format:**\n\nUsername: *irisd5*\nCurrent Rank:*Nons*\nRank: *Admin*\nReason: *I'm a bot*\n\n\n*This message will be deleted in 30 seconds.*").then(msg => {msg.delete(30000)});
 			message.delete(4000);
 		}
 		else if (command === 'appeal') {
