@@ -108,7 +108,7 @@ client.on('message', message => {
 			message.delete(4000);
 		}
 		else if (command === 'format') {
-			message.channel.send("**Hypixel guild rank appeal format:**\n\nUsername: *irisd5*\nCurrent Rank: *Nons*\nRank: *Admin*\nReason: *I'm a bot*\n\n\n*This message will be deleted in 30 seconds.*").then(msg => {msg.delete(30000)});
+			message.channel.send("**Hypixel guild rank appeal format:**\n\n!appeal USERNAME\nCURRENT RANK\nRANK YOU'RE APPEALING FOR\nREASON/MOTIVATION\n\n\n*This message will be deleted in 30 seconds.\nAppealing namens iemand anders is niet toegestaan en kan al jouw huidige en toekomstige appeals blokkeren!*").then(msg => {msg.delete(30000)});
 			message.delete(4000);
 		}
 		else if (command === 'appeal') {
