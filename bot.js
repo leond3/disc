@@ -110,20 +110,20 @@ client.on('message', message => {
 		else if (command === 'networth') {
 			const worth = {
 				"leond3": "Unknown",
-				"Grecio0278": "1",
-				"Jortboss": "1",
-				"Yojoost_1": "1",
+				"grecio0278": "1",
+				"jortboss": "1",
+				"yojoost_1": "1",
 				"n0xy": "1",
-				"NietGewoonTim": "1",
-				"VanAntonie": "1",
-				"Luukystrikes": "1",
-				"JoostFTW": "1",
-				"Vapenqtion": "Unknown",
-				"DeMiner2003": "Unknown",
+				"nietgewoontim": "1",
+				"vanantonie": "1",
+				"luukystrikes": "1",
+				"joostftw": "1",
+				"vapenqtion": "Unknown",
+				"deminer2003": "Unknown",
 				"quey0278": "Unknown"
 			};
 			if (args[0]) {
-    				message.channel.send(":white_check_mark: Estimated networth: " + worth[message.content] + "\n*Networth may take a while to update.*").then(msg => {msg.delete(10000)});
+    				message.channel.send(":white_check_mark: Estimated networth: " + worth[args[0].toLowerCase()] + "\n*Networth may take a while to update.*").then(msg => {msg.delete(10000)});
 			}
 			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
 			message.delete(4000);
