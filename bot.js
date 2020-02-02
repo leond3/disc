@@ -122,8 +122,11 @@ client.on('message', message => {
 				"deminer2003": "**Less than a million**",
 				"quey0278": "**Less than a million**"
 			};
-			if (worth[message.content.slice(10)]) {
-    				message.channel.send(":white_check_mark: Estimated networth: " + worth[args[0].toLowerCase()] + "\n*Networth may take a while to update\nNetworth calculations will not include any coins in your bank\nCalculations may be incorrect if you do not have API enabled*").then(msg => {msg.delete(10000)});
+			if (args[0]) {
+				if (worth[message.content.slice(10)]) {
+    					message.channel.send(":white_check_mark: Estimated networth: " + worth[args[0].toLowerCase()] + "\n*Networth may take a while to update\nNetworth calculations will not include any coins in your bank\nCalculations may be incorrect if you do not have API enabled*").then(msg => {msg.delete(30000)});
+				}
+				else { message.channel.send(":no_entry: **Invalid Username, try: '!help'.**").then(msg => {msg.delete(4000)}); }
 			}
 			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
 			message.delete(4000);
