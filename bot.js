@@ -109,21 +109,21 @@ client.on('message', message => {
 		}
 		else if (command === 'networth') {
 			const worth = {
-				"leond3": "Unknown",
-				"grecio0278": "1",
-				"jortboss": "1",
-				"yojoost_1": "1",
-				"n0xy": "1",
-				"nietgewoontim": "1",
-				"vanantonie": "1",
-				"luukystrikes": "1",
-				"joostftw": "1",
-				"vapenqtion": "Unknown",
-				"deminer2003": "Unknown",
-				"quey0278": "Unknown"
+				"leond3": "**~52 Million**",
+				"grecio0278": "**~89 Million**",
+				"jortboss": "**~34 Million**",
+				"yojoost_1": "**~27 Million**",
+				"n0xy": "**~24 Million**",
+				"nietgewoontim": "**~1 Million**",
+				"vanantonie": "**Less than a million**",
+				"luukystrikes": "**Less than a million**",
+				"joostftw": "**~21 Million**",
+				"vapenqtion": "**Less than a million**",
+				"deminer2003": "**Less than a million**",
+				"quey0278": "**Less than a million**"
 			};
 			if (args[0]) {
-    				message.channel.send(":white_check_mark: Estimated networth: " + worth[args[0].toLowerCase()] + "\n*Networth may take a while to update.*").then(msg => {msg.delete(10000)});
+    				message.channel.send(":white_check_mark: Estimated networth: " + worth[args[0].toLowerCase()] + "\n*Networth may take a while to update\nNetworth calculations will not include any coins in your bank\nCalculations may be incorrect if you do not have API enabled*").then(msg => {msg.delete(10000)});
 			}
 			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
 			message.delete(4000);
