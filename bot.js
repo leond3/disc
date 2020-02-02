@@ -83,7 +83,7 @@ client.on('message', message => {
 			return;
 		}
 		if (command === 'help') {
-			message.channel.send('**Bot command list:**\n - !help\n - !talisman\n - !reforge\n - !stats [username]\n - !format\n - !appeal [format]').then(msg => {msg.delete(30000)});
+			message.channel.send('**Bot command list:**\n - !help\n - !talisman\n - !reforge\n - !stats [username]').then(msg => {msg.delete(30000)});
 			message.delete(30000);
 		}
 		else if (command === 'reforge') {
@@ -106,16 +106,6 @@ client.on('message', message => {
 			}
 			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
 			message.delete(4000);
-		}
-		else if (command === 'format') {
-			message.channel.send("**Hypixel guild rank appeal format:**\n\n!appeal USERNAME\nCURRENT RANK\nRANK YOU'RE APPEALING FOR\nREASON/MOTIVATION\n\n**If you didn't make an appeal, run this command:**\n!appeal USERNAME\nCODE\n\n\n*This message will be deleted in 30 seconds.\nAppealing namens iemand anders is niet toegestaan en kan al jouw huidige en toekomstige appeals blokkeren!\nYOU NEED TO HAVE NOTIFICATIONS ENABLED TO APPEAL!*").then(msg => {msg.delete(30000)});
-			message.delete(4000);
-		}
-		else if (command === 'appeal') {
-			const contentMessage = message.content.slice(8);
-			client.channels.get('673274676104921159').send(contentMessage + "\nCode: " + getRandomInt(0,16384));
-			message.channel.send(":white_check_mark: Your appeal has been send.").then(msg => {msg.delete(4000)});
-			message.delete();
 		}
 		else {
 			message.delete();
