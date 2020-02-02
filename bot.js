@@ -107,6 +107,27 @@ client.on('message', message => {
 			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
 			message.delete(4000);
 		}
+		else if (command === 'networth') {
+			const worth = {
+				"leond3": "Unknown",
+				"grecio0278": "1",
+				"jortboss": "1",
+				"yojoost_1": "1",
+				"n0xy": "1",
+				"nietgewoontim": "1",
+				"vanantonie": "1",
+				"luukystrikes": "1",
+				"joostftw": "1",
+				"vapenqtion": "Unknown",
+				"deminer2003": "Unknown",
+				"quey0278": "Unknown"
+			};
+			if (args[0] && worth[message.content]) {
+    				message.channel.send(":white_check_mark: Estimated networth of " + args[0] + "is: " + worth[message.content.toLowerCase()] + "\n*Networth may take a while to update.*").then(msg => {msg.delete(10000)});
+			}
+			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
+			message.delete(4000);
+		}
 		else {
 			message.delete();
 			message.channel.send(":no_entry: **Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
