@@ -122,7 +122,7 @@ client.on('message', message => {
 				"deminer2003": "Unknown",
 				"quey0278": "Unknown"
 			};
-			if (worth[message.content]) {
+			if (args[0]) {
     				message.channel.send(":white_check_mark: Estimated networth: " + worth[message.content.toLowerCase()] + "\n*Networth may take a while to update.*").then(msg => {msg.delete(10000)});
 			}
 			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
