@@ -108,7 +108,7 @@ client.on('message', message => {
 			message.delete(4000);
 		}
 		else if (command === 'networth') {
-			const worth = {[
+			const worth = {
 				"leond3": "Unknown",
 				"grecio0278": "1",
 				"jortboss": "1",
@@ -121,7 +121,7 @@ client.on('message', message => {
 				"vapenqtion": "Unknown",
 				"deminer2003": "Unknown",
 				"quey0278": "Unknown"
-			]};
+			};
 			if (args[0] && worth[message.content]) {
     				message.channel.send(":white_check_mark: Estimated networth of " + args[0] + "is: " + worth[message.content.toLowerCase()] + "\n*Networth may take a while to update.*").then(msg => {msg.delete(10000)});
 			}
