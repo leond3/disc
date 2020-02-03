@@ -49,9 +49,9 @@ client.on('message', message => {
 	        	}
 			clearchat();
 		}
-		if (command === 'mcnotify' && message.member.roles.find(r => r.name === "Bot builder")) {
+		if (command === 'mcnotify' && message.member.roles.find(r => r.name === "Moderator")) {
 			message.delete(1800000);
-			message.channel.send(":white_check_mark: Notification detected!").then(msg => {msg.delete(4000)});
+			message.channel.send(":white_check_mark: Notification detected!\n*Your message will be deleted in 30 minutes.*\n@Notifications").then(msg => {msg.delete(4000)});
 		}
 		if (command === 'clearchat' && !message.member.roles.find(r => r.name === "Bot builder")) {
 			message.channel.send(":no_entry: **You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
@@ -310,8 +310,9 @@ client.on('message', message => {
 		}
 		else if (command === 'avatar') {
 			if (message.member.roles.find(r => r.name === "Bot builder")) {
-				var member = message.mentions.users.first();
+				member = message.mentions.users.first();
 				message.channel.send(":white_check_mark: " + message.member.avatarURL).then(msg => {msg.delete(4000)});
+				message.delete(4000);
 			}
 			else {
 				message.channel.send(":no_entry: You do not have the right permission to execute this command, or this user has notifications disabled!").then(msg => {msg.delete(4000)});
