@@ -113,7 +113,7 @@ client.on('message', message => {
 				let body = r.low;
 				let name = args[0];
 				if (!name) { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); return; }
-				let entry = body.find(post => post.id === name)
+				let entry = body.find(post => post.name === name);
 				console.log(entry);
 			});
 			
