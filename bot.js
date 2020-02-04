@@ -107,11 +107,15 @@ client.on('message', message => {
 			message.delete(30000);
 		}
 		else if (command === 'price' || command === 'p') {
-			if (args[0]) {
-				var price = JSON.parse(fs.readFileSync("./assets/pricelist.json"));
-				message.channel.send(price[args[0]]).then(msg => {msg.delete(4000)});
-			}
-			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
+			const api = "https://raw.githubusercontent.com/skyblockz/pricecheckbot/master/data.json";
+			const snekfetch = require("snekfetch");
+			snekfetch.get(api).then(console.log);
+			
+//			if (args[0]) {
+//				var price = JSON.parse(fs.readFileSync("./assets/pricelist.json"));
+//				message.channel.send(price[args[0]]).then(msg => {msg.delete(4000)});
+//			}
+//			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
 			message.delete(4000);
 		}
 		else if (command === 'networth') {
