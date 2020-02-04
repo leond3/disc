@@ -114,6 +114,13 @@ client.on('message', message => {
 			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
 			message.delete(4000);
 		}
+		else if (command === 'setprice') {
+			var setprice = JSON.parse(fs.readFileSync("./assets/pricelist.json", "utf8"));
+			setprice[args[0]] = {
+    				price: args[1]
+  			};
+			fs.writeFile("./points.json", JSON.stringify(setprice));
+		}
 		else if (command === 'networth') {
 			const worth = {
 				"leond3": "**~52 Million**",
