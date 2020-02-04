@@ -113,7 +113,6 @@ client.on('message', message => {
 				let body = r.low;
 				let name = args[0];
 				if (!name) { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); return; }
-				if (isNaN(name)) { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); return; }
 				let entry = body.find(post => post.id === name)
 				console.log(entry);
 			});
