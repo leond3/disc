@@ -109,7 +109,11 @@ client.on('message', message => {
 		else if (command === 'price' || command === 'p') {
 			const api = "https://raw.githubusercontent.com/skyblockz/pricecheckbot/master/data.json";
 			const snekfetch = require("snekfetch");
-			snekfetch.get(api).then(console.log);
+			snekfetch.get(api).then(r => {
+				let body = r.body;
+				let name = args[0];
+				if (!name) return message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**");
+			});
 			
 //			if (args[0]) {
 //				var price = JSON.parse(fs.readFileSync("./assets/pricelist.json"));
