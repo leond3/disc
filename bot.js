@@ -119,7 +119,7 @@ client.on('message', message => {
 				"leond3": "**~52 Million**",
 				"grecio0278": "**~89 Million**",
 				"jortboss": "**~34 Million**",
-				"yojoost_1": "**~27 Million**",
+				"yojoost_1": "**~31 Million**",
 				"n0xy": "**~24 Million**",
 				"nietgewoontim": "**~1 Million**",
 				"vanantonie": "**Less than a million**",
