@@ -111,7 +111,7 @@ client.on('message', message => {
 			const snekfetch = require("snekfetch");
 			snekfetch.get(api).then(r => {
 				let body = r.body;
-				let id = args[0];
+				let id = Number(args[0]);
 				if (!id) { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); return; }
 				let entry = body.find(post => post.id === id);
 				console.log(entry);
