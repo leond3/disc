@@ -116,10 +116,14 @@ client.on('message', message => {
 		}
 		else if (command === 'setprice') {
 			var setprice = JSON.parse(fs.readFileSync("./assets/pricelist.json", "utf8"));
-			setprice[args[0]] = {
-    				price: args[1]
+			setprice = {
+    				eye: 480,
+				sc3000: 400
   			};
-			fs.writeFile("./points.json", JSON.stringify(setprice));
+			fs.writeFile("./assets/pricelist.json", JSON.stringify(setprice));
+			
+			message.channel.send(":white_check_mark: Price set.").then(msg => {msg.delete(4000)});
+			message.delete(4000);
 		}
 		else if (command === 'networth') {
 			const worth = {
