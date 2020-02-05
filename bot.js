@@ -12,11 +12,10 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-	let blacklisted = ["kank", "kk ", "suck", "mongool", "idioot", "idiot", "stfu", "shut ", "bek ", "tyfus", "autist", "bitch", "eikel", "hoer", "homo", "kut", "lul ", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk ", "h0m0", "h0mo", "hom0", "gay", "g4y", "sukkel"];
+	let blacklisted = ["kank", "kk ", "suck ", "mongool", "idioot", "idiot", "stfu", "shut ", "bek ", "tyfus", "autist", "bitch", "eikel", "hoer", "homo", "kut", "lul ", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk ", "h0m0", "h0mo", "hom0", "gay", "g4y", "sukkel"];
 	for (var i in blacklisted) {
 		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) {
-			if (blacklisted[i] == "suck") { message.reply("U R GAY.\nBro u just got rekt by a bot...").then(msg => {msg.delete(3600000)}); }
-			else if (blacklisted[i] == "stfu" || blacklisted[i] == "shut" || blacklisted[i] == "bek") { message.reply("vraagt u gelieve uw mondje dicht te houden en uw handjes van uw toetsenbord af te halen voor enkele seconden. Alvast bedankt.").then(msg => {msg.delete(300000)}); }
+			if (blacklisted[i] == "stfu" || blacklisted[i] == "shut" || blacklisted[i] == "bek") { message.reply("vraagt u gelieve uw mondje dicht te houden en uw handjes van uw toetsenbord af te halen voor enkele seconden. Alvast bedankt.").then(msg => {msg.delete(300000)}); }
 			else { message.channel.send(":no_entry: You used a blacklisted word!").then(msg => {msg.delete(4000)}); }
 			message.delete();
 		}
@@ -70,6 +69,7 @@ client.on('message', message => {
 		if (command === 'gstart' && message.member.roles.find(r => r.name === "Giveaways")) {
 			message.delete(10000);
 		}
+		else { message.delete(21600000); }
 	}
 	if(message.channel.name == "music") {
 		if (message.content.startsWith(prefix) && !message.author.bot) {
@@ -106,14 +106,25 @@ client.on('message', message => {
 			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
 			message.delete(30000);
 		}
-		else if (command === 'price' || command === 'p') {			
-			if (args[0]) {
-				var price = JSON.parse(fs.readFileSync("./assets/pricelist.json"));
-				message.channel.send(price[args[0]]).then(msg => {msg.delete(4000)});
+		else if (command === 'price' || command === 'p') {
+			const api = 'https://raw.githubusercontent.com/skyblockz/pricecheckbot/master/data.json';
+			const snekfletch = require('snekfletch');
+			
+			module.exports.run = async (client, message, args) => {
+				snekfletch.get(api).then(console.log);
+				message.delete();
 			}
-			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
-			message.delete(4000);
+			
+			
 		}
+//		else if (command === 'price' || command === 'p') {			
+//			if (args[0]) {
+//				var price = JSON.parse(fs.readFileSync("./assets/pricelist.json"));
+//				message.channel.send("Item worth (each): " + price[args[0]] + " coins.").then(msg => {msg.delete(4000)});
+//			}
+//			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
+//			message.delete(4000);
+//		}
 		else if (command === 'networth') {
 			const worth = {
 				"leond3": "**~52 Million**",
