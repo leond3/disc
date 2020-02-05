@@ -111,7 +111,15 @@ client.on('message', message => {
 			const api = 'https://raw.githubusercontent.com/skyblockz/pricecheckbot/master/data.json';
 			const snekfetch = require('snekfetch');
 			
-			snekfetch.get(api).then(console.log);
+			snekfetch.get(api).then(r => {
+				let body = r.body;
+				let id = Number(args[0]);
+				if (!id) { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
+				if (isNaN(id)) { message.channel.send(":no_entry: **Invalid Number, try: '!help'.**").then(msg => {msg.delete(4000)}); }
+				
+				let entry = body.find(post => post.id === id);
+				console.log(entry);
+			});
 			message.delete();
 			
 		}
