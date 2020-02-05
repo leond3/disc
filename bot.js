@@ -52,12 +52,13 @@ client.on('message', message => {
 		}
 		if (command === 'mcnotify') {
 			if (message.member.roles.find(r => r.name === "Moderator")) {
-				message.channel.send(":white_check_mark: Notification detected!\n\n" + message.content.slice(10) + "\n\n*This message will be deleted in 30 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(1800000)});
+				message.channel.send(":white_check_mark: Notification detected!").then(msg => {msg.delete(4000)});
+				message.channel.send(message.content.slice(10) + "\n\n*This message will be deleted in 10 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(600000)});
 			}
 			else {
 				message.channel.send(":no_entry: You do not have the permission to create a server notification.\n*Please contact a Moderator if you want to create a notification*").then(msg => {msg.delete(4000)});
 			}
-			message.delete(4000);
+			message.delete();
 		}
 		if (command === 'clearchat' && !message.member.roles.find(r => r.name === "Bot builder")) {
 			message.channel.send(":no_entry: **You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
