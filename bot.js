@@ -107,17 +107,6 @@ client.on('message', message => {
 			message.delete(30000);
 		}
 		
-		const api = 'https://raw.githubusercontent.com/skyblockz/pricecheckbot/master/data.json';
-		const snekfetch = require('snekfetch');
-		
-		module.exports.run = async (client, message, args) => {
-			snekfetch.get(api).then(console.log);
-			message.delete();
-		}
-		module.exports.help = {
-			name: "json"
-		
-		}
 //		else if (command === 'price' || command === 'p') {			
 //			if (args[0]) {
 //				var price = JSON.parse(fs.readFileSync("./assets/pricelist.json"));
@@ -157,6 +146,19 @@ client.on('message', message => {
 	}
 	
 	if(message.channel.name == "discord-commands") {
+		//
+		const api = 'https://raw.githubusercontent.com/skyblockz/pricecheckbot/master/data.json';
+		const snekfetch = require('snekfetch');
+		
+		module.exports.run = async (client, message, args) => {
+			snekfetch.get(api).then(console.log);
+			message.delete();
+		}
+		module.exports.help = {
+			name: "json"
+		
+		}
+		//
 		if (!message.content.startsWith(prefix) || message.author.bot) {
 			if (!message.author.bot) { 
 				message.delete(10000);
