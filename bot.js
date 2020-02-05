@@ -106,16 +106,17 @@ client.on('message', message => {
 			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
 			message.delete(30000);
 		}
-		else if (command === 'price' || command === 'p') {
-			const api = 'https://raw.githubusercontent.com/skyblockz/pricecheckbot/master/data.json';
-			const snekfetch = require('snekfetch');
-			
-			module.exports.run = async (client, message, args) => {
-				snekfetch.get(api).then(console.log);
-				message.delete();
-			}
-			
-			
+		
+		const api = 'https://raw.githubusercontent.com/skyblockz/pricecheckbot/master/data.json';
+		const snekfetch = require('snekfetch');
+		
+		module.exports.run = async (client, message, args) => {
+			snekfetch.get(api).then(console.log);
+			message.delete();
+		}
+		module.exports.help = {
+			name: "json"
+		
 		}
 //		else if (command === 'price' || command === 'p') {			
 //			if (args[0]) {
