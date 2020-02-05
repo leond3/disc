@@ -140,8 +140,7 @@ client.on('message', message => {
 		}
 		//
 		else if (command === 'image') {
-			const attachment = new MessageAttachment('https://hypixel.net/proxy/aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXR0YWNobWVudHMvNTg3NzY1OTg0MDMxNTM5MjQyLzY3MjEwNDM3NjM1NzIyNDQ4OS9hOWQxM2I4YS01MGFkLTQ1MWItOWI5ZS0xOGE5YWVhZTIyOTAucG5n/image.png');
-			message.channel.send("test image: " + attachment).then(msg => {msg.delete(4000)});
+			message.channel.sendMessage("TEXT").attachments["",{url:"https://hypixel.net/proxy/aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXR0YWNobWVudHMvNTg3NzY1OTg0MDMxNTM5MjQyLzY3MjEwNDM3NjM1NzIyNDQ4OS9hOWQxM2I4YS01MGFkLTQ1MWItOWI5ZS0xOGE5YWVhZTIyOTAucG5n/image.png" }].then(msg => {msg.delete(4000)});
 			message.delete(4000);
 		}
 		//
