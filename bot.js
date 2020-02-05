@@ -108,7 +108,7 @@ client.on('message', message => {
 		}
 		else if (command === 'price' || command === 'p') {
 			const api = 'https://raw.githubusercontent.com/skyblockz/pricecheckbot/master/data.json';
-			const snekfetch = require('snekletch');
+			const snekfetch = require('snekfetch');
 			
 			module.exports.run = async (client, message, args) => {
 				snekfetch.get(api).then(console.log);
