@@ -138,12 +138,6 @@ client.on('message', message => {
 			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
 			message.delete(4000);
 		}
-		//
-		else if (command === 'image') {
-			message.channel.sendMessage("TEXT").attachments["",{url:"https://hypixel.net/proxy/aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXR0YWNobWVudHMvNTg3NzY1OTg0MDMxNTM5MjQyLzY3MjEwNDM3NjM1NzIyNDQ4OS9hOWQxM2I4YS01MGFkLTQ1MWItOWI5ZS0xOGE5YWVhZTIyOTAucG5n/image.png" }].then(msg => {msg.delete(4000)});
-			message.delete(4000);
-		}
-		//
 		else {
 			message.delete();
 			message.channel.send(":no_entry: **Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
