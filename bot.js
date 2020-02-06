@@ -70,7 +70,7 @@ client.on('message', message => {
 		if (command === 'gstart' && message.member.roles.find(r => r.name === "Giveaways")) {
 			message.delete(10000);
 		}
-		else { message.delete(21600000); }
+		else { message.delete(1000000); }
 	}
 	if(message.channel.name == "music") {
 		if (message.content.startsWith(prefix) && !message.author.bot) {
