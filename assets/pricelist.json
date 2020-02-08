@@ -1,0 +1,4266 @@
+{
+  "feather_artifact": "207458",
+  "feather_ring": "662",
+  "guardian_chestplate": "1491",
+  "grand_experience_bottle": "3776",
+  "titanic_experience_bottle": "368035",
+  "aspect_of_the_dragons": "6136765",
+  "night_crystal": "250000",
+  "day_crystal": "250000",
+  "sea_creature_artifact": "1500000",
+  "ender_artifact": "6506540",
+  "crystal_fragment": "2243",
+  "hot_potato_book": "84064",
+  "stonk": "345393",
+  "ender_slayer_vi": "1241181",
+  "power_vi": "2940165",
+  "remnant_of_the_eye": "702",
+  "young_dragon_fragment": "1468",
+  "old_dragon_fragment": "215",
+  "wise_dragon_fragment": "5000",
+  "protector_dragon_fragment": "1056",
+  "strong_dragon_fragment": "25551",
+  "superior_dragon_fragment": "154882",
+  "unstable_dragon_fragment": "9374",
+  "ender_bow": "1008",
+  "end_stone_bow": "3208",
+  "end_stone_sword": "274847",
+  "diamond_block": "72",
+  "enchanted_diamond": "1210",
+}
+    {
+        "hi": 217890,
+        "low": 217890,
+        "name": "enchanted_diamond_block",
+        "revised": "enchanted_diamond_block"
+    },
+    {
+        "hi": 54,
+        "low": 54,
+        "name": "emerald_block",
+        "revised": "emerald_block"
+    },
+    {
+        "hi": 1291,
+        "low": 1291,
+        "name": "enchanted_emerald",
+        "revised": "enchanted_emerald"
+    },
+    {
+        "hi": 184175,
+        "low": 184175,
+        "name": "enchanted_emerald_block",
+        "revised": "enchanted_emerald_block"
+    },
+    {
+        "hi": 745,
+        "low": 745,
+        "name": "enchanted_cobblestone",
+        "revised": "enchanted_cobblestone"
+    },
+    {
+        "hi": 478,
+        "low": 478,
+        "name": "enchanted_coal",
+        "revised": "enchanted_coal"
+    },
+    {
+        "hi": 965,
+        "high": "600",
+        "low": 965,
+        "name": "enchanted_iron",
+        "revised": "enchanted_iron"
+    },
+    {
+        "hi": 132211,
+        "low": 132211,
+        "name": "enchanted_iron_block",
+        "revised": "enchanted_iron_block"
+    },
+    {
+        "hi": 1271,
+        "low": 1271,
+        "name": "enchanted_gold",
+        "revised": "enchanted_gold"
+    },
+    {
+        "hi": 135320,
+        "low": 135320,
+        "name": "enchanted_gold_block",
+        "revised": "enchanted_gold_block"
+    },
+    {
+        "hi": 938,
+        "low": 938,
+        "name": "enchanted_redstone",
+        "revised": "enchanted_redstone"
+    },
+    {
+        "hi": 134343,
+        "low": 134343,
+        "name": "enchanted_redstone_block",
+        "revised": "enchanted_redstone_block"
+    },
+    {
+        "hi": 596,
+        "low": 596,
+        "name": "jungle_axe",
+        "revised": "jungle_axe"
+    },
+    {
+        "hi": 7,
+        "low": 7,
+        "name": "spider_eye",
+        "revised": "spider_eye"
+    },
+    {
+        "hi": 6,
+        "low": 6,
+        "name": "rotten_flesh",
+        "revised": "rotten_flesh"
+    },
+    {
+        "hi": 6,
+        "low": 6,
+        "name": "bone",
+        "revised": "bone"
+    },
+    {
+        "hi": 2.4,
+        "low": 2.4,
+        "name": "arrow",
+        "revised": "arrow"
+    },
+    {
+        "hi": 13,
+        "low": 13,
+        "name": "blaze_rod",
+        "revised": "blaze_rod"
+    },
+    {
+        "hi": 20,
+        "low": 20,
+        "name": "ghast_tear",
+        "revised": "ghast_tear"
+    },
+    {
+        "hi": 9,
+        "low": 9,
+        "name": "magma_cream",
+        "revised": "magma_cream"
+    },
+    {
+        "hi": 6,
+        "low": 6,
+        "name": "slimeball",
+        "revised": "slimeball"
+    },
+    {
+        "hi": 1355,
+        "low": 1355,
+        "name": "enchanted_spider_eye",
+        "revised": "enchanted_spider_eye"
+    },
+    {
+        "hi": 1805,
+        "low": 1805,
+        "name": "enchanted_string",
+        "revised": "enchanted_string"
+    },
+    {
+        "hi": 1084,
+        "low": 1084,
+        "name": "enchanted_rotten_flesh",
+        "revised": "enchanted_rotten_flesh"
+    },
+    {
+        "hi": 748,
+        "low": 748,
+        "name": "enchanted_bone",
+        "revised": "enchanted_bone"
+    },
+    {
+        "hi": 2252,
+        "low": 2252,
+        "name": "enchanted_blaze_powder",
+        "revised": "enchanted_blaze_powder"
+    },
+    {
+        "hi": 502373,
+        "low": 502373,
+        "name": "enchanted_blaze_rod",
+        "revised": "enchanted_blaze_rod"
+    },
+    {
+        "hi": 111,
+        "low": 111,
+        "name": "enchanted_ghast_tear",
+        "revised": "enchanted_ghast_tear"
+    },
+    {
+        "hi": 1421,
+        "low": 1421,
+        "name": "enchanted_magma_cream",
+        "revised": "enchanted_magma_cream"
+    },
+    {
+        "hi": 1323,
+        "low": 1323,
+        "name": "enchanted_slimeball",
+        "revised": "enchanted_slimeball"
+    },
+    {
+        "hi": 101340,
+        "low": 101340,
+        "name": "enchanted_fermented_spider_eye",
+        "revised": "enchanted_fermented_spider_eye"
+    },
+    {
+        "hi": 2,
+        "low": 2,
+        "name": "potato",
+        "revised": "potato"
+    },
+    {
+        "hi": 2,
+        "low": 2,
+        "name": "carrot",
+        "revised": "carrot"
+    },
+    {
+        "hi": 10,
+        "low": 10,
+        "name": "salmon",
+        "revised": "salmon"
+    },
+    {
+        "hi": 20,
+        "low": 20,
+        "name": "fish",
+        "revised": "fish"
+    },
+    {
+        "hi": 20,
+        "low": 20,
+        "name": "pufferfish",
+        "revised": "pufferfish"
+    },
+    {
+        "hi": 39,
+        "low": 39,
+        "name": "clownfish",
+        "revised": "clownfish"
+    },
+    {
+        "hi": 114,
+        "low": 114,
+        "name": "sponge",
+        "revised": "sponge"
+    },
+    {
+        "hi": 106,
+        "low": 106,
+        "name": "prismarine_shard",
+        "revised": "prismarine_shard"
+    },
+    {
+        "hi": 100,
+        "low": 100,
+        "name": "prismarine_crystal",
+        "revised": "prismarine_crystal"
+    },
+    {
+        "hi": 62,
+        "low": 62,
+        "name": "lily_pad",
+        "revised": "lily_pad"
+    },
+    {
+        "hi": 71,
+        "low": 71,
+        "name": "ink_sack",
+        "revised": "ink_sack"
+    },
+    {
+        "hi": 25,
+        "low": 25,
+        "name": "mushroom_helmet",
+        "revised": "mushroom_helmet"
+    },
+    {
+        "hi": 33,
+        "low": 33,
+        "name": "mushroom_chestplate",
+        "revised": "mushroom_chestplate"
+    },
+    {
+        "hi": 24,
+        "low": 24,
+        "name": "mushroom_leggings",
+        "revised": "mushroom_leggings"
+    },
+    {
+        "hi": 24,
+        "low": 24,
+        "name": "mushroom_boots",
+        "revised": "mushroom_boots"
+    },
+    {
+        "hi": 1000,
+        "low": 1000,
+        "name": "miners_outfit_helmet",
+        "revised": "miners_outfit_helmet"
+    },
+    {
+        "hi": 1600.0,
+        "low": 1600.0,
+        "name": "miners_outfit_chestplate",
+        "revised": "miners_outfit_chestplate"
+    },
+    {
+        "hi": 1400.0,
+        "low": 1400.0,
+        "name": "miners_outfit_leggings",
+        "revised": "miners_outfit_leggings"
+    },
+    {
+        "hi": 750,
+        "low": 750,
+        "name": "miners_outfit_boots",
+        "revised": "miners_outfit_boots"
+    },
+    {
+        "hi": 727,
+        "low": 727,
+        "name": "lapis_armor_helmet",
+        "revised": "lapis_armor_helmet"
+    },
+    {
+        "hi": 1777,
+        "low": 1777,
+        "name": "lapis_armor_chestplate",
+        "revised": "lapis_armor_chestplate"
+    },
+    {
+        "hi": 1408,
+        "low": 1408,
+        "name": "lapis_armor_leggings",
+        "revised": "lapis_armor_leggings"
+    },
+    {
+        "hi": 725,
+        "low": 725,
+        "name": "lapis_armor_boots",
+        "revised": "lapis_armor_boots"
+    },
+    {
+        "hi": 2901,
+        "low": 2901,
+        "name": "hardened_diamond_helmet",
+        "revised": "hardened_diamond_helmet"
+    },
+    {
+        "hi": 5287,
+        "low": 5287,
+        "name": "hardened_diamond_chestplate",
+        "revised": "hardened_diamond_chestplate"
+    },
+    {
+        "hi": 3594,
+        "low": 3594,
+        "name": "hardened_diamond_leggings",
+        "revised": "hardened_diamond_leggings"
+    },
+    {
+        "hi": 2683,
+        "low": 2683,
+        "name": "hardened_diamond_boots",
+        "revised": "hardened_diamond_boots"
+    },
+    {
+        "hi": 564393,
+        "low": 564393,
+        "name": "speedster_helmet",
+        "revised": "speedster_helmet"
+    },
+    {
+        "hi": 1071250.0,
+        "low": 1071250.0,
+        "name": "speedster_chestplate",
+        "revised": "speedster_chestplate"
+    },
+    {
+        "hi": 978195.3,
+        "low": 978195.3,
+        "name": "speedster_leggings",
+        "revised": "speedster_leggings"
+    },
+    {
+        "hi": 441034,
+        "low": 441034,
+        "name": "speedster_boots",
+        "revised": "speedster_boots"
+    },
+    {
+        "hi": 456747,
+        "low": 456747,
+        "name": "emerald_armor_helmet",
+        "revised": "emerald_armor_helmet"
+    },
+    {
+        "hi": 888177,
+        "low": 888177,
+        "name": "emerald_armor_chestplate",
+        "revised": "emerald_armor_chestplate"
+    },
+    {
+        "hi": 751662,
+        "low": 751662,
+        "name": "emerald_armor_leggings",
+        "revised": "emerald_armor_leggings"
+    },
+    {
+        "hi": 337913,
+        "low": 337913,
+        "name": "emerald_armor_boots",
+        "revised": "emerald_armor_boots"
+    },
+    {
+        "hi": 150000,
+        "low": 100000,
+        "name": "skeletons_helmet",
+        "revised": "skeletons_helmet"
+    },
+    {
+        "hi": 382819,
+        "low": 382819,
+        "name": "creeper_pants",
+        "revised": "creeper_pants"
+    },
+    {
+        "hi": 350000,
+        "low": 300000,
+        "name": "spiders_boots",
+        "revised": "spiders_boots"
+    },
+    {
+        "hi": 901,
+        "low": 901,
+        "name": "ember_helmet",
+        "revised": "ember_helmet"
+    },
+    {
+        "hi": 1370,
+        "low": 1370,
+        "name": "ember_chestplate",
+        "revised": "ember_chestplate"
+    },
+    {
+        "hi": 1288,
+        "low": 1288,
+        "name": "ember_leggings",
+        "revised": "ember_leggings"
+    },
+    {
+        "hi": 2036,
+        "low": 2036,
+        "name": "ember_boots",
+        "revised": "ember_boots"
+    },
+    {
+        "hi": 50000,
+        "low": 30000,
+        "name": "magma_helmet",
+        "revised": "magma_helmet"
+    },
+    {
+        "hi": 100000,
+        "low": 60000,
+        "name": "magma_chestplate",
+        "revised": "magma_chestplate"
+    },
+    {
+        "hi": 75000,
+        "low": 50000,
+        "name": "magma_leggings",
+        "revised": "magma_leggings"
+    },
+    {
+        "hi": 40000,
+        "low": 30000,
+        "name": "magma_boots",
+        "revised": "magma_boots"
+    },
+    {
+        "60000": 90000,
+        "hi": 17241,
+        "low": 17241,
+        "name": "ender_helmet",
+        "revised": "ender_helmet"
+    },
+    {
+        "hi": 15207,
+        "low": 15207,
+        "name": "ender_chestplate",
+        "revised": "ender_chestplate"
+    },
+    {
+        "hi": 15890,
+        "low": 15890,
+        "name": "ender_leggings",
+        "revised": "ender_leggings"
+    },
+    {
+        "hi": 21135,
+        "low": 21135,
+        "name": "ender_boots",
+        "revised": "ender_boots"
+    },
+    {
+        "hi": 14369,
+        "low": 14369,
+        "name": "water_hydra_head",
+        "revised": "water_hydra_head"
+    },
+    {
+        "hi": 3207,
+        "low": 3207,
+        "name": "obsidian_chestplate",
+        "revised": "obsidian_chestplate"
+    },
+    {
+        "hi": 945609,
+        "low": 945609,
+        "name": "strong_dragon_helmet",
+        "revised": "strong_dragon_helmet"
+    },
+    {
+        "hi": 2243045,
+        "low": 2243045,
+        "name": "strong_dragon_leggings",
+        "revised": "strong_dragon_leggings"
+    },
+    {
+        "hi": 996121,
+        "low": 996121,
+        "name": "strong_dragon_boots",
+        "revised": "strong_dragon_boots"
+    },
+    {
+        "hi": 361287,
+        "low": 361287,
+        "name": "young_dragon_helmet",
+        "revised": "young_dragon_helmet"
+    },
+    {
+        "hi": 517763,
+        "low": 517763,
+        "name": "young_dragon_chestplate",
+        "revised": "young_dragon_chestplate"
+    },
+    {
+        "hi": 627954,
+        "low": 627954,
+        "name": "young_dragon_leggings",
+        "revised": "young_dragon_leggings"
+    },
+    {
+        "hi": 258699,
+        "low": 258699,
+        "name": "young_dragon_boots",
+        "revised": "young_dragon_boots"
+    },
+    {
+        "hi": 107442,
+        "low": 107442,
+        "name": "protector_dragon_helmet",
+        "revised": "protector_dragon_helmet"
+    },
+    {
+        "hi": 120545,
+        "low": 120545,
+        "name": "protector_dragon_chestplate",
+        "revised": "protector_dragon_chestplate"
+    },
+    {
+        "125000": "200000",
+        "hi": 123129,
+        "low": 123129,
+        "name": "protector_dragon_leggings",
+        "revised": "protector_dragon_leggings"
+    },
+    {
+        "hi": 102865,
+        "low": 102865,
+        "name": "protector_dragon_boots",
+        "revised": "protector_dragon_boots"
+    },
+    {
+        "hi": 222518,
+        "low": 222518,
+        "name": "wise_dragon_helmet",
+        "revised": "wise_dragon_helmet"
+    },
+    {
+        "hi": 265097,
+        "low": 265097,
+        "name": "wise_dragon_chestplate",
+        "revised": "wise_dragon_chestplate"
+    },
+    {
+        "hi": 212335,
+        "low": 212335,
+        "name": "wise_dragon_leggings",
+        "revised": "wise_dragon_leggings"
+    },
+    {
+        "hi": 146529,
+        "low": 146529,
+        "name": "wise_dragon_boots",
+        "revised": "wise_dragon_boots"
+    },
+    {
+        "hi": 621446,
+        "low": 621446,
+        "name": "unstable_dragon_helmet",
+        "revised": "unstable_dragon_helmet"
+    },
+    {
+        "hi": 749783,
+        "low": 749783,
+        "name": "unstable_dragon_chestplate",
+        "revised": "unstable_dragon_chestplate"
+    },
+    {
+        "hi": 685672,
+        "low": 685672,
+        "name": "unstable_dragon_leggings",
+        "revised": "unstable_dragon_leggings"
+    },
+    {
+        "hi": 312998,
+        "low": 312998,
+        "name": "unstable_dragon_boots",
+        "revised": "unstable_dragon_boots"
+    },
+    {
+        "hi": 144728,
+        "low": 144728,
+        "name": "old_dragon_helmet",
+        "revised": "old_dragon_helmet"
+    },
+    {
+        "hi": 116836,
+        "low": 116836,
+        "name": "old_dragon_chestplate",
+        "revised": "old_dragon_chestplate"
+    },
+    {
+        "hi": 144803,
+        "low": 144803,
+        "name": "old_dragon_leggings",
+        "revised": "old_dragon_leggings"
+    },
+    {
+        "hi": 118977,
+        "low": 118977,
+        "name": "old_dragon_boots",
+        "revised": "old_dragon_boots"
+    },
+    {
+        "6500000": "7750000",
+        "hi": 8585431,
+        "low": 8585431,
+        "name": "superior_dragon_helmet",
+        "revised": "superior_dragon_helmet"
+    },
+    {
+        "hi": 13444442,
+        "low": 13444442,
+        "name": "superior_dragon_chestplate",
+        "revised": "superior_dragon_chestplate"
+    },
+    {
+        "hi": 11748170,
+        "low": 11748170,
+        "name": "superior_dragon_leggings",
+        "revised": "superior_dragon_leggings"
+    },
+    {
+        "3400000": "4000000",
+        "hi": 7017192,
+        "low": 7017192,
+        "name": "superior_dragon_boots",
+        "revised": "superior_dragon_boots"
+    },
+    {
+        "hi": 38102,
+        "low": 38102,
+        "name": "crystal_helmet",
+        "revised": "crystal_helmet"
+    },
+    {
+        "hi": 19815,
+        "low": 19815,
+        "name": "crystal_chestplate",
+        "revised": "crystal_chestplate"
+    },
+    {
+        "hi": 72112,
+        "low": 72112,
+        "name": "crystal_leggings",
+        "revised": "crystal_leggings"
+    },
+    {
+        "hi": 13489,
+        "low": 13489,
+        "name": "crystal_boots",
+        "revised": "crystal_boots"
+    },
+    {
+        "hi": 672129,
+        "low": 672129,
+        "name": "emerald_blade",
+        "revised": "emerald_blade"
+    },
+    {
+        "hi": 96196,
+        "low": 96196,
+        "name": "golem_sword",
+        "revised": "golem_sword"
+    },
+    {
+        "hi": 145097,
+        "low": 145097,
+        "name": "aspect_of_the_end",
+        "revised": "aspect_of_the_end"
+    },
+    {
+        "hi": 581,
+        "low": 581,
+        "name": "prismarine_blade",
+        "revised": "prismarine_blade"
+    },
+    {
+        "hi": 1685,
+        "low": 1685,
+        "name": "silver_fang",
+        "revised": "silver_fang"
+    },
+    {
+        "hi": 11793,
+        "low": 11793,
+        "name": "ember_rod",
+        "revised": "ember_rod"
+    },
+    {
+        "hi": 564068,
+        "high": "1200000",
+        "low": 564068,
+        "name": "zombie_sword",
+        "revised": "zombie_sword"
+    },
+    {
+        "200000": "350000",
+        "hi": 88989,
+        "low": 88989,
+        "name": "hurricane_bow",
+        "revised": "hurricane_bow"
+    },
+    {
+        "hi": 69644,
+        "low": 69644,
+        "name": "magma_bow",
+        "revised": "magma_bow"
+    },
+    {
+        "hi": 3,
+        "low": 3,
+        "name": "coal",
+        "revised": "coal"
+    },
+    {
+        "hi": 28,
+        "low": 28,
+        "name": "coalblock",
+        "revised": "coalblock"
+    },
+    {
+        "hi": 14000,
+        "low": 12000,
+        "name": "catalyst",
+        "revised": "catalyst"
+    },
+    {
+        "hi": 856,
+        "low": 856,
+        "name": "compactor",
+        "revised": "compactor"
+    },
+    {
+        "hi": 438944,
+        "lo": "365000",
+        "low": 438944,
+        "name": "super_compactor_3000",
+        "revised": "super_compactor_3000"
+    },
+    {
+        "512000": "980000",
+        "hi": 802684,
+        "low": 802684,
+        "name": "enchanted_hopper",
+        "revised": "enchanted_hopper"
+    },
+    {
+        "hi": 1691,
+        "low": 1691,
+        "name": "budget_hopper",
+        "revised": "budget_hopper"
+    },
+    {
+        "hi": 5997,
+        "low": 5997,
+        "name": "minion_expander",
+        "revised": "minion_expander"
+    },
+    {
+        "hi": 1492,
+        "low": 1492,
+        "name": "intimidation_talisman",
+        "revised": "intimidation_talisman"
+    },
+    {
+        "hi": 13377,
+        "low": 13377,
+        "name": "fire_talisman",
+        "revised": "fire_talisman"
+    },
+    {
+        "hi": 123,
+        "low": 123,
+        "name": "zombie_talisman",
+        "revised": "zombie_talisman"
+    },
+    {
+        "hi": 201,
+        "low": 201,
+        "name": "skeleton_talisman",
+        "revised": "skeleton_talisman"
+    },
+    {
+        "hi": 881,
+        "low": 881,
+        "name": "village_affinity_talisman",
+        "revised": "village_affinity_talisman"
+    },
+    {
+        "hi": 813,
+        "low": 813,
+        "name": "mine_affinity_talisman",
+        "revised": "mine_affinity_talisman"
+    },
+    {
+        "hi": 2500.0,
+        "low": 2500.0,
+        "name": "farm_affinity_talisman",
+        "revised": "farm_affinity_talisman"
+    },
+    {
+        "hi": 63944,
+        "low": 63944,
+        "name": "spider_talisman",
+        "revised": "spider_talisman"
+    },
+    {
+        "hi": 2117,
+        "low": 2117,
+        "name": "magnetic_talisman",
+        "revised": "magnetic_talisman"
+    },
+    {
+        "hi": 9354,
+        "low": 9354,
+        "name": "lava_talisman",
+        "revised": "lava_talisman"
+    },
+    {
+        "hi": 1086,
+        "low": 1086,
+        "name": "gravity_talisman",
+        "revised": "gravity_talisman"
+    },
+    {
+        "hi": 74762,
+        "low": 74762,
+        "name": "piggy_bank",
+        "revised": "piggy_bank"
+    },
+    {
+        "hi": 28824,
+        "low": 28824,
+        "name": "bat_talisman",
+        "revised": "bat_talisman"
+    },
+    {
+        "hi": 179729,
+        "low": 179729,
+        "name": "haste_ring",
+        "revised": "haste_ring"
+    },
+    {
+        "hi": 179879,
+        "low": 179879,
+        "name": "fish_affinity_talisman",
+        "revised": "fish_affinity_talisman"
+    },
+    {
+        "hi": 221,
+        "low": 221,
+        "name": "potion_affinity_talisman",
+        "revised": "potion_affinity_talisman"
+    },
+    {
+        "hi": 100000,
+        "low": 60000,
+        "name": "pigs_foot",
+        "revised": "pigs_foot"
+    },
+    {
+        "hi": 483155,
+        "low": 483155,
+        "name": "experience_artifact",
+        "revised": "experience_artifact"
+    },
+    {
+        "hi": 1753,
+        "low": 1753,
+        "name": "grappling_hook",
+        "revised": "grappling_hook"
+    },
+    {
+        "hi": 342,
+        "low": 342,
+        "name": "ember_fragment",
+        "revised": "ember_fragment"
+    },
+    {
+        "hi": 3,
+        "low": 3,
+        "name": "clay",
+        "revised": "clay"
+    },
+    {
+        "hi": 194504,
+        "low": 194504,
+        "name": "enchanted_grilled_pork",
+        "revised": "enchanted_grilled_pork"
+    },
+    {
+        "hi": 75066,
+        "lo": "25000",
+        "low": 75066,
+        "name": "enchanted_lapis_block",
+        "revised": "enchanted_lapis_block"
+    },
+    {
+        "hi": 530,
+        "low": 530,
+        "name": "enchanted_lapis_lazuli",
+        "revised": "enchanted_lapis_lazuli"
+    },
+    {
+        "hi": 2,
+        "low": 2,
+        "name": "lapis_lazuli",
+        "revised": "lapis_lazuli"
+    },
+    {
+        "hi": 94856,
+        "low": 94856,
+        "name": "solar_panel",
+        "revised": "solar_panel"
+    },
+    {
+        "hi": 14867520,
+        "low": 14867520,
+        "name": "bait_ring",
+        "revised": "bait_ring"
+    },
+    {
+        "hi": 1246,
+        "low": 1246,
+        "name": "enchanted_pork",
+        "revised": "enchanted_pork"
+    },
+    {
+        "hi": 55000000,
+        "lo": 50000000,
+        "low": 100000,
+        "name": "midas_sword",
+        "revised": "midas_sword"
+    },
+    {
+        "hi": 11783118,
+        "low": 11783118,
+        "name": "rod_of_legends",
+        "revised": "rod_of_legends"
+    },
+    {
+        "hi": 5446592,
+        "low": 5446592,
+        "name": "shredder",
+        "revised": "shredder"
+    },
+    {
+        "900000": "1000000",
+        "900k": "1m",
+        "hi": 1359739,
+        "low": 1359739,
+        "name": "rod_of_champions",
+        "revised": "rod_of_champions"
+    },
+    {
+        "hi": 686,
+        "low": 686,
+        "name": "enchanted_quartz",
+        "revised": "enchanted_quartz"
+    },
+    {
+        "hi": 215072,
+        "low": 215072,
+        "name": "enchanted_quartz_block",
+        "revised": "enchanted_quartz_block"
+    },
+    {
+        "hi": 3188,
+        "low": 3188,
+        "name": "night_vision_charm",
+        "revised": "night_vision_charm"
+    },
+    {
+        "hi": 2827,
+        "low": 2827,
+        "name": "potion_affinity_ring",
+        "revised": "potion_affinity_ring"
+    },
+    {
+        "hi": 216602,
+        "low": 216602,
+        "name": "farmer_orb",
+        "revised": "farmer_orb"
+    },
+    {
+        "hi": 13964,
+        "low": 13964,
+        "name": "angler_v",
+        "revised": "angler_v"
+    },
+    {
+        "hi": 19356,
+        "low": 19356,
+        "name": "blessing_v",
+        "revised": "blessing_v"
+    },
+    {
+        "hi": 14569,
+        "low": 14569,
+        "name": "caster_v",
+        "revised": "caster_v"
+    },
+    {
+        "hi": 7490,
+        "low": 7490,
+        "name": "critical_v",
+        "revised": "critical_v"
+    },
+    {
+        "hi": 209,
+        "low": 209,
+        "name": "cubism_v",
+        "revised": "cubism_v"
+    },
+    {
+        "hi": 1492,
+        "low": 1492,
+        "name": "ender_slayer_v",
+        "revised": "ender_slayer_v"
+    },
+    {
+        "hi": 861,
+        "low": 861,
+        "name": "execute_v",
+        "revised": "execute_v"
+    },
+    {
+        "hi": 8131,
+        "low": 8131,
+        "name": "first_strike_iv",
+        "revised": "first_strike_iv"
+    },
+    {
+        "hi": 248,
+        "low": 248,
+        "name": "giant_killer_v",
+        "revised": "giant_killer_v"
+    },
+    {
+        "hi": 1884,
+        "high": "27218",
+        "low": 1884,
+        "name": "growth_v",
+        "revised": "growth_v"
+    },
+    {
+        "hi": 3107,
+        "low": 3107,
+        "name": "lethality_v",
+        "revised": "lethality_v"
+    },
+    {
+        "hi": 210,
+        "low": 210,
+        "name": "luck_v",
+        "revised": "luck_v"
+    },
+    {
+        "hi": 2844,
+        "low": 2844,
+        "name": "lure_v",
+        "revised": "lure_v"
+    },
+    {
+        "hi": 1231,
+        "low": 1231,
+        "name": "vampirism_v",
+        "revised": "vampirism_v"
+    },
+    {
+        "hi": 467898,
+        "low": 467898,
+        "name": "potion_affinity_artifact",
+        "revised": "potion_affinity_artifact"
+    },
+    {
+        "hi": 23,
+        "low": 23,
+        "name": "undead_sword",
+        "revised": "undead_sword"
+    },
+    {
+        "hi": 25,
+        "low": 25,
+        "name": "flaming_sword",
+        "revised": "flaming_sword"
+    },
+    {
+        "hi": 20,
+        "low": 20,
+        "name": "blaze_mask",
+        "revised": "blaze_mask"
+    },
+    {
+        "hi": 30,
+        "low": 30,
+        "name": "end_sword",
+        "revised": "end_sword"
+    },
+    {
+        "hi": 12,
+        "low": 12,
+        "name": "rogue_sword",
+        "revised": "rogue_sword"
+    },
+    {
+        "hi": 111647,
+        "low": 111647,
+        "name": "enchanted_sugar_cane",
+        "revised": "enchanted_sugar_cane"
+    },
+    {
+        "hi": 430329,
+        "low": 430329,
+        "name": "large_storage",
+        "revised": "large_storage"
+    },
+    {
+        "hi": 2144,
+        "low": 2144,
+        "name": "medium_storage",
+        "revised": "medium_storage"
+    },
+    {
+        "hi": 782,
+        "low": 782,
+        "name": "enchanted_feather",
+        "revised": "enchanted_feather"
+    },
+    {
+        "hi": 8,
+        "low": 8,
+        "name": "feather",
+        "revised": "feather"
+    },
+    {
+        "hi": 14230,
+        "low": 14230,
+        "name": "enchanted_sponge",
+        "revised": "enchanted_sponge"
+    },
+    {
+        "hi": 193638,
+        "low": 193638,
+        "name": "large_backpack",
+        "revised": "large_backpack"
+    },
+    {
+        "hi": 45286,
+        "low": 45286,
+        "name": "enchanted_ink_sack",
+        "revised": "enchanted_ink_sack"
+    },
+    {
+        "hi": 100000,
+        "low": 50000,
+        "name": "farming_crystal",
+        "revised": "farming_crystal"
+    },
+    {
+        "hi": 513851,
+        "low": 513851,
+        "name": "explosive_bow",
+        "revised": "explosive_bow"
+    },
+    {
+        "hi": 548,
+        "high": "671",
+        "low": 548,
+        "name": "enchanted_clay",
+        "revised": "enchanted_clay"
+    },
+    {
+        "1500000": "2500000",
+        "hi": 9244772,
+        "high": "2000000",
+        "low": 9244772,
+        "name": "sharpness_vi",
+        "revised": "sharpness_vi"
+    },
+    {
+        "hi": 90662,
+        "low": 90662,
+        "name": "enchanted_lily_pad",
+        "revised": "enchanted_lily_pad"
+    },
+    {
+        "hi": 1265,
+        "low": 1265,
+        "name": "enchanted_nether_wart",
+        "revised": "enchanted_nether_wart"
+    },
+    {
+        "hi": 8,
+        "low": 8,
+        "name": "diamond",
+        "revised": "diamond"
+    },
+    {
+        "hi": 8,
+        "low": 8,
+        "name": "leather",
+        "revised": "leather"
+    },
+    {
+        "hi": 8256,
+        "low": 8256,
+        "name": "enchanted_leather",
+        "revised": "enchanted_leather"
+    },
+    {
+        "hi": 1186,
+        "low": 1186,
+        "name": "medium_backpack",
+        "revised": "medium_backpack"
+    },
+    {
+        "hi": 148,
+        "low": 148,
+        "name": "small_backpack",
+        "revised": "small_backpack"
+    },
+    {
+        "hi": 203889,
+        "low": 203889,
+        "name": "angler_vi",
+        "revised": "angler_vi"
+    },
+    {
+        "hi": 2118,
+        "low": 2118,
+        "name": "spiked_hook_vi",
+        "revised": "spiked_hook_vi"
+    },
+    {
+        "hi": 15444,
+        "low": 15444,
+        "name": "lure_vi",
+        "revised": "lure_vi"
+    },
+    {
+        "hi": 590900,
+        "low": 590900,
+        "name": "caster_vi",
+        "revised": "caster_vi"
+    },
+    {
+        "hi": 134,
+        "low": 134,
+        "name": "magnet_vi",
+        "revised": "magnet_vi"
+    },
+    {
+        "hi": 7137,
+        "low": 7137,
+        "name": "frail_vi",
+        "revised": "frail_vi"
+    },
+    {
+        "hi": 1979,
+        "low": 1979,
+        "name": "enchanted_obsidian",
+        "revised": "enchanted_obsidian"
+    },
+    {
+        "hi": 11,
+        "low": 11,
+        "name": "obsidian",
+        "revised": "obsidian"
+    },
+    {
+        "hi": 3402040,
+        "low": 3402040,
+        "name": "growth_vi",
+        "revised": "growth_vi"
+    },
+    {
+        "hi": 4734,
+        "low": 4734,
+        "name": "enchanted_eye_of_ender",
+        "revised": "enchanted_eye_of_ender"
+    },
+    {
+        "hi": 3,
+        "low": 3,
+        "name": "sunflower",
+        "revised": "sunflower"
+    },
+    {
+        "hi": 628998,
+        "low": 628998,
+        "name": "healing_ring",
+        "revised": "healing_ring"
+    },
+    {
+        "hi": 107951,
+        "low": 107951,
+        "name": "healing_talisman",
+        "revised": "healing_talisman"
+    },
+    {
+        "hi": 1280,
+        "low": 1280,
+        "name": "enchanted_slime",
+        "revised": "enchanted_slime"
+    },
+    {
+        "hi": 163093,
+        "low": 163093,
+        "name": "enchanted_slime_block",
+        "revised": "enchanted_slime_block"
+    },
+    {
+        "hi": 5500000,
+        "low": 5250000,
+        "name": "slime_bow",
+        "revised": "slime_bow"
+    },
+    {
+        "hi": 257913,
+        "low": 257913,
+        "name": "enchanted_lava_bucket",
+        "revised": "enchanted_lava_bucket"
+    },
+    {
+        "hi": 6,
+        "low": 6,
+        "name": "iron",
+        "revised": "iron"
+    },
+    {
+        "hi": 420000,
+        "low": 370000,
+        "name": "zombie_heart",
+        "revised": "zombie_heart"
+    },
+    {
+        "hi": 40,
+        "low": 40,
+        "name": "day_saver",
+        "revised": "day_saver"
+    },
+    {
+        "hi": 613424,
+        "low": 613424,
+        "name": "greater_backpack",
+        "revised": "greater_backpack"
+    },
+    {
+        "hi": 12,
+        "low": 12,
+        "name": "hay_bale",
+        "revised": "hay_bale"
+    },
+    {
+        "hi": 250,
+        "low": 240,
+        "name": "enchanted_wheat",
+        "revised": "enchanted_wheat"
+    },
+    {
+        "hi": 1933,
+        "low": 1933,
+        "name": "enchanted_hay_bale",
+        "revised": "enchanted_hay_bale"
+    },
+    {
+        "hi": 32155,
+        "low": 32155,
+        "name": "sea_creature_ring",
+        "revised": "sea_creature_ring"
+    },
+    {
+        "hi": 8799,
+        "low": 8799,
+        "name": "enchanted_cake",
+        "revised": "enchanted_cake"
+    },
+    {
+        "hi": 3289,
+        "low": 3289,
+        "name": "enchanted_mutton",
+        "revised": "enchanted_mutton"
+    },
+    {
+        "hi": 40000,
+        "low": 25000,
+        "name": "saving_grace",
+        "revised": "saving_grace"
+    },
+    {
+        "hi": 300000,
+        "low": 200000,
+        "name": "beacon",
+        "revised": "beacon"
+    },
+    {
+        "560000": "750000",
+        "590000": "750000",
+        "hi": 820000,
+        "low": 750000,
+        "name": "runaans_bow",
+        "revised": "runaans_bow"
+    },
+    {
+        "hi": 8,
+        "low": 8,
+        "name": "clay_block",
+        "revised": "clay_block"
+    },
+    {
+        "hi": 1169,
+        "low": 1169,
+        "name": "stereo_pants",
+        "revised": "stereo_pants"
+    },
+    {
+        "hi": 6390571,
+        "low": 6390571,
+        "name": "giant_killer_vi",
+        "revised": "giant_killer_vi"
+    },
+    {
+        "hi": 2500000,
+        "low": 2000000,
+        "name": "divers_mask",
+        "revised": "divers_mask"
+    },
+    {
+        "hi": 4000000,
+        "low": 3200000,
+        "name": "divers_shirt",
+        "revised": "divers_shirt"
+    },
+    {
+        "hi": 3500000,
+        "low": 2800000,
+        "name": "divers_trunks",
+        "revised": "divers_trunks"
+    },
+    {
+        "hi": 2000000,
+        "low": 1600000,
+        "name": "divers_boots",
+        "revised": "divers_boots"
+    },
+    {
+        "hi": 400000,
+        "low": 350000,
+        "name": "emperor_skull",
+        "revised": "emperor_skull"
+    },
+    {
+        "hi": 168,
+        "low": 168,
+        "name": "enchanted_ice",
+        "revised": "enchanted_ice"
+    },
+    {
+        "hi": 1,
+        "low": 1,
+        "name": "ice",
+        "revised": "ice"
+    },
+    {
+        "hi": 36,
+        "low": 36,
+        "name": "magical_water_bucket",
+        "revised": "magical_water_bucket"
+    },
+    {
+        "hi": 8,
+        "low": 8,
+        "name": "magical_mushroom_soup",
+        "revised": "magical_mushroom_soup"
+    },
+    {
+        "hi": 3029282,
+        "low": 3029282,
+        "name": "blaze_helmet",
+        "revised": "blaze_helmet"
+    },
+    {
+        "hi": 2702500,
+        "low": 2702500,
+        "name": "blaze_boots",
+        "revised": "blaze_boots"
+    },
+    {
+        "hi": 3982900,
+        "low": 3982900,
+        "name": "blaze_chestplate",
+        "revised": "blaze_chestplate"
+    },
+    {
+        "hi": 3642500,
+        "low": 3642500,
+        "name": "blaze_leggings",
+        "revised": "blaze_leggings"
+    },
+    {
+        "hi": 1000,
+        "low": 1000,
+        "name": "lapis_boots",
+        "revised": "lapis_boots"
+    },
+    {
+        "hi": 1000,
+        "low": 1000,
+        "name": "lapis_helmet",
+        "revised": "lapis_helmet"
+    },
+    {
+        "hi": 2000,
+        "low": 2000,
+        "name": "lapis_chestplate",
+        "revised": "lapis_chestplate"
+    },
+    {
+        "hi": 1750,
+        "low": 1750,
+        "name": "lapis_leggings",
+        "revised": "lapis_leggings"
+    },
+    {
+        "hi": 5,
+        "low": 5,
+        "name": "leaflet_helmet",
+        "revised": "leaflet_helmet"
+    },
+    {
+        "hi": 3,
+        "low": 3,
+        "name": "leaflet_boots",
+        "revised": "leaflet_boots"
+    },
+    {
+        "hi": 7,
+        "low": 7,
+        "name": "leaflet_leggings",
+        "revised": "leaflet_leggings"
+    },
+    {
+        "hi": 470,
+        "low": 470,
+        "name": "enchanted_charcoal",
+        "revised": "enchanted_charcoal"
+    },
+    {
+        "hi": 8,
+        "low": 8,
+        "name": "leaflet_chestplate",
+        "revised": "leaflet_chestplate"
+    },
+    {
+        "hi": 29,
+        "low": 29,
+        "name": "farm_suit_helmet",
+        "revised": "farm_suit_helmet"
+    },
+    {
+        "hi": 44,
+        "low": 44,
+        "name": "farm_suit_chestplate",
+        "revised": "farm_suit_chestplate"
+    },
+    {
+        "hi": 43,
+        "low": 43,
+        "name": "farm_suit_leggings",
+        "revised": "farm_suit_leggings"
+    },
+    {
+        "hi": 23,
+        "low": 23,
+        "name": "farm_suit_boots",
+        "revised": "farm_suit_boots"
+    },
+    {
+        "350": "500",
+        "hi": 480,
+        "low": 480,
+        "name": "enchanted_egg",
+        "revised": "enchanted_egg"
+    },
+    {
+        "hi": 5112,
+        "low": 5112,
+        "name": "farm_armor_helmet",
+        "revised": "farm_armor_helmet"
+    },
+    {
+        "hi": 3104,
+        "low": 3104,
+        "name": "farm_armor_boots",
+        "revised": "farm_armor_boots"
+    },
+    {
+        "hi": 8270,
+        "low": 8270,
+        "name": "farm_armor_leggings",
+        "revised": "farm_armor_leggings"
+    },
+    {
+        "hi": 7453,
+        "low": 7453,
+        "name": "farm_armor_chestplate",
+        "revised": "farm_armor_chestplate"
+    },
+    {
+        "650": "/",
+        "hi": 220,
+        "low": 220,
+        "name": "dark_bait",
+        "revised": "dark_bait"
+    },
+    {
+        "hi": 59100,
+        "low": 59100,
+        "name": "lantern_helmet",
+        "revised": "lantern_helmet"
+    },
+    {
+        "hi": 1369,
+        "low": 1369,
+        "name": "enchanted_cactus_green",
+        "revised": "enchanted_cactus_green"
+    },
+    {
+        "hi": 24290,
+        "low": 24290,
+        "name": "enchanted_cactus",
+        "revised": "enchanted_cactus"
+    },
+    {
+        "hi": 7,
+        "low": 7,
+        "name": "pumpkin",
+        "revised": "pumpkin"
+    },
+    {
+        "hi": 20480,
+        "low": 10240,
+        "name": "enchanted_carrot_on_a_stick",
+        "revised": "enchanted_carrot_on_a_stick"
+    },
+    {
+        "hi": 9,
+        "low": 9,
+        "name": "melon_slice",
+        "revised": "melon_slice"
+    },
+    {
+        "hi": 9,
+        "low": 9,
+        "name": "melon_block",
+        "revised": "melon_block"
+    },
+    {
+        "hi": 202,
+        "low": 202,
+        "name": "enchanted_melon",
+        "revised": "enchanted_melon"
+    },
+    {
+        "hi": 41120,
+        "low": 41120,
+        "name": "enchanted_melon_block",
+        "revised": "enchanted_melon_block"
+    },
+    {
+        "hi": 261,
+        "low": 261,
+        "name": "enchanted_carrot",
+        "revised": "enchanted_carrot"
+    },
+    {
+        "hi": 8,
+        "low": 8,
+        "name": "raw_beef",
+        "revised": "raw_beef"
+    },
+    {
+        "hi": 782,
+        "low": 782,
+        "name": "enchanted_raw_beef",
+        "revised": "enchanted_raw_beef"
+    },
+    {
+        "hi": 14,
+        "low": 14,
+        "name": "pumpkin_helmet",
+        "revised": "pumpkin_helmet"
+    },
+    {
+        "hi": 13,
+        "low": 13,
+        "name": "pumpkin_boots",
+        "revised": "pumpkin_boots"
+    },
+    {
+        "hi": 20,
+        "low": 20,
+        "name": "pumpkin_leggings",
+        "revised": "pumpkin_leggings"
+    },
+    {
+        "hi": 21,
+        "low": 21,
+        "name": "pumpkin_chestplate",
+        "revised": "pumpkin_chestplate"
+    },
+    {
+        "hi": 5,
+        "low": 5,
+        "name": "cactus_helmet",
+        "revised": "cactus_helmet"
+    },
+    {
+        "hi": 8,
+        "low": 8,
+        "name": "cactus_chestplate",
+        "revised": "cactus_chestplate"
+    },
+    {
+        "hi": 8,
+        "low": 8,
+        "name": "cactus_leggings",
+        "revised": "cactus_leggings"
+    },
+    {
+        "hi": 4,
+        "low": 4,
+        "name": "cactus_boots",
+        "revised": "cactus_boots"
+    },
+    {
+        "hi": 4,
+        "low": 4,
+        "name": "sugar_cane",
+        "revised": "sugar_cane"
+    },
+    {
+        "hi": 425,
+        "low": 425,
+        "name": "enchanted_sugar",
+        "revised": "enchanted_sugar"
+    },
+    {
+        "hi": 363,
+        "low": 363,
+        "name": "enchanted_paper",
+        "revised": "enchanted_paper"
+    },
+    {
+        "hi": 175,
+        "low": 175,
+        "name": "speed_talisman",
+        "revised": "speed_talisman"
+    },
+    {
+        "hi": 79735,
+        "low": 79735,
+        "name": "enchanted_baked_potato",
+        "revised": "enchanted_baked_potato"
+    },
+    {
+        "hi": 30,
+        "low": 30,
+        "name": "farming_talisman",
+        "revised": "farming_talisman"
+    },
+    {
+        "hi": 6,
+        "low": 6,
+        "name": "flint",
+        "revised": "flint"
+    },
+    {
+        "hi": 1407,
+        "low": 1407,
+        "name": "enchanted_flint",
+        "revised": "enchanted_flint"
+    },
+    {
+        "hi": 450000,
+        "low": 300000,
+        "name": "spider_boots",
+        "revised": "spider_boots"
+    },
+    {
+        "hi": 6000,
+        "low": 6000,
+        "name": "fairys_fedora",
+        "revised": "fairys_fedora"
+    },
+    {
+        "hi": 6000,
+        "low": 6000,
+        "name": "fairys_galoshes",
+        "revised": "fairys_galoshes"
+    },
+    {
+        "hi": 6000,
+        "low": 6000,
+        "name": "fairys_polo",
+        "revised": "fairys_polo"
+    },
+    {
+        "hi": 5200,
+        "low": 420,
+        "name": "fairys_trousers",
+        "revised": "fairys_trousers"
+    },
+    {
+        "hi": 174,
+        "low": 174,
+        "name": "enchanted_potato",
+        "revised": "enchanted_potato"
+    },
+    {
+        "hi": 8,
+        "low": 8,
+        "name": "gunpowder",
+        "revised": "gunpowder"
+    },
+    {
+        "hi": 1663,
+        "low": 1663,
+        "name": "enchanted_gunpowder",
+        "revised": "enchanted_gunpowder"
+    },
+    {
+        "hi": 338928,
+        "low": 338928,
+        "name": "challenging_rod",
+        "revised": "challenging_rod"
+    },
+    {
+        "hi": 6,
+        "low": 6,
+        "name": "end_stone",
+        "revised": "end_stone"
+    },
+    {
+        "hi": 770,
+        "low": 770,
+        "name": "haste_block",
+        "revised": "haste_block"
+    },
+    {
+        "hi": 2560,
+        "low": 2560,
+        "name": "silence_block",
+        "revised": "silence_block"
+    },
+    {
+        "hi": 636,
+        "low": 636,
+        "name": "enchanted_end_stone",
+        "revised": "enchanted_end_stone"
+    },
+    {
+        "hi": 137,
+        "low": 137,
+        "name": "end_biome_stick",
+        "revised": "end_biome_stick"
+    },
+    {
+        "hi": 1050,
+        "low": 1050,
+        "name": "portal_to_the_end",
+        "revised": "portal_to_the_end"
+    },
+    {
+        "hi": 38,
+        "low": 38,
+        "name": "hard_glass",
+        "revised": "hard_glass"
+    },
+    {
+        "hi": 4,
+        "low": 4,
+        "name": "sand",
+        "revised": "sand"
+    },
+    {
+        "hi": 1415,
+        "low": 1415,
+        "name": "enchanted_sand",
+        "revised": "enchanted_sand"
+    },
+    {
+        "hi": 9,
+        "low": 9,
+        "name": "soul_sand",
+        "revised": "soul_sand"
+    },
+    {
+        "hi": 118,
+        "low": 118,
+        "name": "bridge_egg",
+        "revised": "bridge_egg"
+    },
+    {
+        "hi": 11,
+        "low": 11,
+        "name": "raw_chicken",
+        "revised": "raw_chicken"
+    },
+    {
+        "hi": 1203,
+        "low": 1203,
+        "name": "enchanted_raw_chicken",
+        "revised": "enchanted_raw_chicken"
+    },
+    {
+        "hi": 9,
+        "low": 9,
+        "name": "raw_porkchop",
+        "revised": "raw_porkchop"
+    },
+    {
+        "hi": 2,
+        "low": 2,
+        "name": "stone_bricks",
+        "revised": "stone_bricks"
+    },
+    {
+        "hi": 1,
+        "low": 1,
+        "name": "egg",
+        "revised": "egg"
+    },
+    {
+        "hi": 4,
+        "low": 4,
+        "name": "gold_ingot",
+        "revised": "gold_ingot"
+    },
+    {
+        "hi": 3,
+        "low": 2,
+        "name": "cobblestone",
+        "revised": "cobblestone"
+    },
+    {
+        "hi": 9,
+        "low": 9,
+        "name": "emerald",
+        "revised": "emerald"
+    },
+    {
+        "hi": 3,
+        "low": 3,
+        "name": "redstone",
+        "revised": "redstone"
+    },
+    {
+        "hi": 32,
+        "low": 32,
+        "name": "quartz_block",
+        "revised": "quartz_block"
+    },
+    {
+        "hi": 4,
+        "low": 4,
+        "name": "nether_quartz",
+        "revised": "nether_quartz"
+    },
+    {
+        "hi": 12,
+        "low": 12,
+        "name": "glowstone",
+        "revised": "glowstone"
+    },
+    {
+        "hi": 6,
+        "low": 6,
+        "name": "glowstone_dust",
+        "revised": "glowstone_dust"
+    },
+    {
+        "hi": 15204,
+        "low": 15204,
+        "name": "golem_armor_helmet",
+        "revised": "golem_armor_helmet"
+    },
+    {
+        "hi": 21992,
+        "low": 21992,
+        "name": "golem_armor_chestplate",
+        "revised": "golem_armor_chestplate"
+    },
+    {
+        "hi": 19829,
+        "low": 19829,
+        "name": "golem_armor_leggings",
+        "revised": "golem_armor_leggings"
+    },
+    {
+        "hi": 9976,
+        "low": 9976,
+        "name": "golem_armor_boots",
+        "revised": "golem_armor_boots"
+    },
+    {
+        "hi": 12,
+        "low": 12,
+        "name": "cleaver",
+        "revised": "cleaver"
+    },
+    {
+        "hi": 220,
+        "low": 220,
+        "name": "sea_creature_talisman",
+        "revised": "sea_creature_talisman"
+    },
+    {
+        "hi": 3500000,
+        "low": 3000000,
+        "name": "ink_wand",
+        "revised": "ink_wand"
+    },
+    {
+        "hi": 5,
+        "low": 5,
+        "name": "cooked_porkchop",
+        "revised": "cooked_porkchop"
+    },
+    {
+        "hi": 1000000,
+        "low": 625000,
+        "name": "perfect_helmet_i",
+        "revised": "perfect_helmet_i"
+    },
+    {
+        "hi": 1600000,
+        "low": 1000000,
+        "name": "perfect_chestplate_i",
+        "revised": "perfect_chestplate_i"
+    },
+    {
+        "hi": 1400000,
+        "low": 716800,
+        "name": "perfect_leggings_i",
+        "revised": "perfect_leggings_i"
+    },
+    {
+        "hi": 800000,
+        "low": 409600,
+        "name": "perfect_boots_i",
+        "revised": "perfect_boots_i"
+    },
+    {
+        "hi": 1800000,
+        "low": 921600,
+        "name": "perfect_helmet_ii",
+        "revised": "perfect_helmet_ii"
+    },
+    {
+        "hi": 2400000,
+        "low": 1229200,
+        "name": "perfect_chestplate_ii",
+        "revised": "perfect_chestplate_ii"
+    },
+    {
+        "hi": 2200000,
+        "low": 1126400,
+        "name": "perfect_leggings_ii",
+        "revised": "perfect_leggings_ii"
+    },
+    {
+        "hi": 1600000,
+        "low": 819200,
+        "name": "perfect_boots_ii",
+        "revised": "perfect_boots_ii"
+    },
+    {
+        "hi": 2600000,
+        "low": 1331200,
+        "name": "perfect_helmet_iii",
+        "revised": "perfect_helmet_iii"
+    },
+    {
+        "hi": 3200000,
+        "low": 1638800,
+        "name": "perfect_chestplate_iii",
+        "revised": "perfect_chestplate_iii"
+    },
+    {
+        "hi": 3000000,
+        "low": 1536000,
+        "name": "perfect_leggings_iii",
+        "revised": "perfect_leggings_iii"
+    },
+    {
+        "hi": 2400000,
+        "low": 1228800,
+        "name": "perfect_boots_iii",
+        "revised": "perfect_boots_iii"
+    },
+    {
+        "hi": 3400000,
+        "low": 1740800,
+        "name": "perfect_helmet_iv",
+        "revised": "perfect_helmet_iv"
+    },
+    {
+        "hi": 4000000,
+        "low": 2048400,
+        "name": "perfect_chestplate_iv",
+        "revised": "perfect_chestplate_iv"
+    },
+    {
+        "hi": 3800000,
+        "low": 1945600,
+        "name": "perfect_leggings_iv",
+        "revised": "perfect_leggings_iv"
+    },
+    {
+        "hi": 3200000,
+        "low": 1638400,
+        "name": "perfect_boots_iv",
+        "revised": "perfect_boots_iv"
+    },
+    {
+        "hi": 4200000,
+        "low": 2150400,
+        "name": "perfect_helmet_v",
+        "revised": "perfect_helmet_v"
+    },
+    {
+        "hi": 4800000,
+        "low": 2458000,
+        "name": "perfect_chestplate_v",
+        "revised": "perfect_chestplate_v"
+    },
+    {
+        "hi": 4600000,
+        "low": 2355200,
+        "name": "perfect_leggings_v",
+        "revised": "perfect_leggings_v"
+    },
+    {
+        "hi": 4000000,
+        "low": 2048000,
+        "name": "perfect_boots_v",
+        "revised": "perfect_boots_v"
+    },
+    {
+        "hi": 5000000,
+        "low": 2560000,
+        "name": "perfect_helmet_vi",
+        "revised": "perfect_helmet_vi"
+    },
+    {
+        "hi": 5600000,
+        "low": 2867600,
+        "name": "perfect_chestplate_vi",
+        "revised": "perfect_chestplate_vi"
+    },
+    {
+        "hi": 5400000,
+        "low": 2764800,
+        "name": "perfect_leggings_vi",
+        "revised": "perfect_leggings_vi"
+    },
+    {
+        "hi": 4800000,
+        "low": 2457600,
+        "name": "perfect_boots_vi",
+        "revised": "perfect_boots_vi"
+    },
+    {
+        "hi": 5800000,
+        "low": 2969600,
+        "name": "perfect_helmet_vii",
+        "revised": "perfect_helmet_vii"
+    },
+    {
+        "hi": 6400000,
+        "low": 3277200,
+        "name": "perfect_chestplate_vii",
+        "revised": "perfect_chestplate_vii"
+    },
+    {
+        "hi": 6200000,
+        "low": 3174400,
+        "name": "perfect_leggings_vii",
+        "revised": "perfect_leggings_vii"
+    },
+    {
+        "hi": 5600000,
+        "low": 2867200,
+        "name": "perfect_boots_vii",
+        "revised": "perfect_boots_vii"
+    },
+    {
+        "hi": 6600000,
+        "low": 3379200,
+        "name": "perfect_helmet_viii",
+        "revised": "perfect_helmet_viii"
+    },
+    {
+        "hi": 7200000,
+        "low": 3686800,
+        "name": "perfect_chestplate_viii",
+        "revised": "perfect_chestplate_viii"
+    },
+    {
+        "hi": 7000000,
+        "low": 3584000,
+        "name": "perfect_leggings_viii",
+        "revised": "perfect_leggings_viii"
+    },
+    {
+        "hi": 6400000,
+        "low": 3276800,
+        "name": "perfect_boots_viii",
+        "revised": "perfect_boots_viii"
+    },
+    {
+        "hi": 7400000,
+        "low": 3788800,
+        "name": "perfect_helmet_ix",
+        "revised": "perfect_helmet_ix"
+    },
+    {
+        "hi": 8000000,
+        "low": 4096400,
+        "name": "perfect_chestplate_ix",
+        "revised": "perfect_chestplate_ix"
+    },
+    {
+        "hi": 7800000,
+        "low": 3993600,
+        "name": "perfect_leggings_ix",
+        "revised": "perfect_leggings_ix"
+    },
+    {
+        "hi": 7200000,
+        "low": 3686400,
+        "name": "perfect_boots_ix",
+        "revised": "perfect_boots_ix"
+    },
+    {
+        "hi": 8200000,
+        "low": 4198400,
+        "name": "perfect_helmet_x",
+        "revised": "perfect_helmet_x"
+    },
+    {
+        "hi": 8800000,
+        "low": 4506000,
+        "name": "perfect_chestplate_x",
+        "revised": "perfect_chestplate_x"
+    },
+    {
+        "hi": 8600000,
+        "low": 4403200,
+        "name": "perfect_leggings_x",
+        "revised": "perfect_leggings_x"
+    },
+    {
+        "hi": 8000000,
+        "low": 4096000,
+        "name": "perfect_boots_x",
+        "revised": "perfect_boots_x"
+    },
+    {
+        "hi": 128,
+        "low": 128,
+        "name": "desert_biome_stick",
+        "revised": "desert_biome_stick"
+    },
+    {
+        "hi": 171960,
+        "low": 171960,
+        "name": "spirit_mask",
+        "revised": "spirit_mask"
+    },
+    {
+        "hi": 1146,
+        "low": 1146,
+        "name": "teleport_pad",
+        "revised": "teleport_pad"
+    },
+    {
+        "hi": 5,
+        "low": 5,
+        "name": "rabbit_hide",
+        "revised": "rabbit_hide"
+    },
+    {
+        "hi": 960,
+        "low": 800,
+        "name": "enchanted_rabbit_hide",
+        "revised": "enchanted_rabbit_hide"
+    },
+    {
+        "hi": 1211,
+        "low": 1211,
+        "name": "speedster_rod",
+        "revised": "speedster_rod"
+    },
+    {
+        "hi": 416,
+        "low": 416,
+        "name": "stone_platform",
+        "revised": "stone_platform"
+    },
+    {
+        "hi": 372,
+        "low": 372,
+        "name": "flint_shovel",
+        "revised": "flint_shovel"
+    },
+    {
+        "hi": 8,
+        "low": 8,
+        "name": "packed_ice",
+        "revised": "packed_ice"
+    },
+    {
+        "hi": 343,
+        "low": 343,
+        "name": "weather_stick",
+        "revised": "weather_stick"
+    },
+    {
+        "hi": 25,
+        "low": 25,
+        "name": "spider_hat",
+        "revised": "spider_hat"
+    },
+    {
+        "hi": 218,
+        "low": 218,
+        "name": "ghast_head",
+        "revised": "ghast_head"
+    },
+    {
+        "hi": 101765,
+        "low": 101765,
+        "name": "enchanted_firework_rocket",
+        "revised": "enchanted_firework_rocket"
+    },
+    {
+        "hi": 1737687,
+        "low": 1737687,
+        "name": "zombie_chestplate",
+        "revised": "zombie_chestplate"
+    },
+    {
+        "hi": 740633,
+        "low": 740633,
+        "name": "zombie_leggings",
+        "revised": "zombie_leggings"
+    },
+    {
+        "hi": 750000,
+        "low": 550000,
+        "name": "zombie_boots",
+        "revised": "zombie_boots"
+    },
+    {
+        "hi": 172,
+        "low": 172,
+        "name": "feather_talisman",
+        "revised": "feather_talisman"
+    },
+    {
+        "hi": 2372,
+        "low": 2372,
+        "name": "enchanted_pufferfish",
+        "revised": "enchanted_pufferfish"
+    },
+    {
+        "hi": 110838,
+        "low": 110838,
+        "name": "enchanted_redstone_lamp",
+        "revised": "enchanted_redstone_lamp"
+    },
+    {
+        "hi": 2069523,
+        "low": 2069523,
+        "name": "protection_vi",
+        "revised": "protection_vi"
+    },
+    {
+        "hi": 2144,
+        "low": 2144,
+        "name": "enchanted_raw_salmon",
+        "revised": "enchanted_raw_salmon"
+    },
+    {
+        "hi": 63,
+        "low": 63,
+        "name": "small_storage",
+        "revised": "small_storage"
+    },
+    {
+        "hi": 2232,
+        "low": 2232,
+        "name": "enchanted_rabbit_foot",
+        "revised": "enchanted_rabbit_foot"
+    },
+    {
+        "25": "25",
+        "hi": 33,
+        "low": 33,
+        "name": "spiked_bait",
+        "revised": "spiked_bait"
+    },
+    {
+        "hi": 2000,
+        "low": 500,
+        "name": "farmer_rod",
+        "revised": "farmer_rod"
+    },
+    {
+        "hi": 3000,
+        "low": 2500,
+        "name": "fortune_III",
+        "revised": "fortune_III"
+    },
+    {
+        "hi": 12000,
+        "low": 5000,
+        "name": "mushroom_island_portal"
+    },
+    {
+        "hi": 12000,
+        "low": 5000,
+        "name": "end_island_portal"
+    },
+    {
+        "hi": 5000,
+        "low": 1000,
+        "name": "blazingfortress_island_portal",
+        "revised": "blazingfortress_island_portal"
+    },
+    {
+        "hi": 1000,
+        "low": 500,
+        "name": "barn_island_portal"
+    },
+    {
+        "hi": 5000,
+        "low": 3000,
+        "name": "deepcaverns_island_portal"
+    },
+    {
+        "hi": 19,
+        "low": 19,
+        "name": "squid_boots",
+        "revised": "squid_boots"
+    },
+    {
+        "hi": 4,
+        "low": 4,
+        "name": "cactus",
+        "revised": "cactus"
+    },
+    {
+        "hi": 5,
+        "low": 5,
+        "name": "sugar",
+        "revised": "sugar"
+    },
+    {
+        "hi": 35,
+        "low": 35,
+        "name": "fish_bait",
+        "revised": "fish_bait"
+    },
+    {
+        "hi": 157163,
+        "low": 157163,
+        "name": "revenant_boots",
+        "revised": "revenant_boots"
+    },
+    {
+        "hi": 183585,
+        "low": 183585,
+        "name": "revenant_leggings",
+        "revised": "revenant_leggings"
+    },
+    {
+        "hi": 2925258,
+        "low": 2925258,
+        "name": "revenant_chestplate",
+        "revised": "revenant_chestplate"
+    },
+    {
+        "hi": 382234,
+        "low": 382234,
+        "name": "revenant_falchion",
+        "revised": "revenant_falchion"
+    },
+    {
+        "hi": 743654,
+        "low": 743654,
+        "name": "crystallized_heart",
+        "revised": "crystallized_heart"
+    },
+    {
+        "hi": 8,
+        "low": 8,
+        "name": "red_mushroom",
+        "revised": "red_mushroom"
+    },
+    {
+        "hi": 8,
+        "low": 8,
+        "name": "brown_mushroom",
+        "revised": "brown_mushroom"
+    },
+    {
+        "hi": 21210,
+        "low": 21210,
+        "name": "hamster_wheel",
+        "revised": "hamster_wheel"
+    },
+    {
+        "hi": 13,
+        "low": 13,
+        "name": "wolf_tooth",
+        "revised": "wolf_tooth"
+    },
+    {
+        "hi": 50000,
+        "low": 50000,
+        "name": "power_orb",
+        "revised": "power_orb"
+    },
+    {
+        "hi": 46,
+        "low": 46,
+        "name": "sea_lantern",
+        "revised": "sea_lantern"
+    },
+    {
+        "hi": 2,
+        "low": 2,
+        "name": "stone",
+        "revised": "stone"
+    },
+    {
+        "hi": 621,
+        "low": 621,
+        "name": "red_claw_talisman",
+        "revised": "red_claw_talisman"
+    },
+    {
+        "hi": 1448,
+        "low": 1448,
+        "name": "enchanted_jungle_wood",
+        "revised": "enchanted_jungle_wood"
+    },
+    {
+        "hi": 916,
+        "low": 916,
+        "name": "enchanted_acacia_wood",
+        "revised": "enchanted_acacia_wood"
+    },
+    {
+        "hi": 305,
+        "low": 305,
+        "name": "enchanted_spruce_wood",
+        "revised": "enchanted_spruce_wood"
+    },
+    {
+        "hi": 1216,
+        "low": 1216,
+        "name": "enchanted_birch_wood",
+        "revised": "enchanted_birch_wood"
+    },
+    {
+        "hi": 6,
+        "low": 6,
+        "name": "gold",
+        "revised": "gold"
+    },
+    {
+        "hi": 54,
+        "low": 36,
+        "name": "goldblock",
+        "revised": "goldblock"
+    },
+    {
+        "hi": 192,
+        "low": 192,
+        "name": "enchanted_golden_apple",
+        "revised": "enchanted_golden_apple"
+    },
+    {
+        "hi": 14,
+        "low": 14,
+        "name": "golden_apple",
+        "revised": "golden_apple"
+    },
+    {
+        "hi": 4922472,
+        "low": 4922472,
+        "name": "reaper_falchion",
+        "revised": "reaper_falchion"
+    },
+    {
+        "hi": 215234,
+        "low": 215234,
+        "name": "golden_powder",
+        "revised": "golden_powder"
+    },
+    {
+        "hi": 1335118,
+        "low": 1335118,
+        "name": "ornate_zombie_sword",
+        "revised": "ornate_zombie_sword"
+    },
+    {
+        "hi": 423532,
+        "high": "3000000",
+        "low": 423532,
+        "name": "critical_vi",
+        "revised": "critical_vi"
+    },
+    {
+        "hi": 2276,
+        "low": 2276,
+        "name": "savanna_bow",
+        "revised": "savanna_bow"
+    },
+    {
+        "hi": 4,
+        "low": 4,
+        "name": "granite",
+        "revised": "granite"
+    },
+    {
+        "hi": 4,
+        "low": 4,
+        "name": "diorite",
+        "revised": "diorite"
+    },
+    {
+        "hi": 4,
+        "low": 4,
+        "name": "andesite",
+        "revised": "andesite"
+    },
+    {
+        "hi": 4,
+        "low": 4,
+        "name": "mossy_stone_bricks",
+        "revised": "mossy_stone_bricks"
+    },
+    {
+        "hi": 12,
+        "low": 12,
+        "name": "moss_stone",
+        "revised": "moss_stone"
+    },
+    {
+        "hi": 4,
+        "low": 4,
+        "name": "nether_bricks",
+        "revised": "nether_bricks"
+    },
+    {
+        "hi": 6,
+        "low": 6,
+        "name": "sandstone",
+        "revised": "sandstone"
+    },
+    {
+        "hi": 6,
+        "low": 6,
+        "name": "red_sandstone",
+        "revised": "red_sandstone"
+    },
+    {
+        "hi": 3,
+        "low": 3,
+        "name": "white_wool",
+        "revised": "white_wool"
+    },
+    {
+        "hi": 4,
+        "low": 4,
+        "name": "hardened_clay",
+        "revised": "hardened_clay"
+    },
+    {
+        "hi": 6,
+        "low": 6,
+        "name": "bricks",
+        "revised": "bricks"
+    },
+    {
+        "hi": 4,
+        "low": 4,
+        "name": "glass",
+        "revised": "glass"
+    },
+    {
+        "hi": 20,
+        "low": 20,
+        "name": "block_of_quartz",
+        "revised": "block_of_quartz"
+    },
+    {
+        "hi": 10,
+        "low": 10,
+        "name": "prismarine",
+        "revised": "prismarine"
+    },
+    {
+        "hi": 10,
+        "low": 10,
+        "name": "dark_prismarine",
+        "revised": "dark_prismarine"
+    },
+    {
+        "hi": 80,
+        "low": 80,
+        "name": "prismarine_bricks",
+        "revised": "prismarine_bricks"
+    },
+    {
+        "hi": 76171,
+        "low": 76171,
+        "name": "recluse_fang",
+        "revised": "recluse_fang"
+    },
+    {
+        "hi": 94431,
+        "low": 94431,
+        "name": "smite_vi",
+        "revised": "smite_vi"
+    },
+    {
+        "hi": 481,
+        "low": 481,
+        "name": "undead_catalyst",
+        "revised": "undead_catalyst"
+    },
+    {
+        "hi": 17,
+        "low": 17,
+        "name": "tarantula_web",
+        "revised": "tarantula_web",
+        "web": "hi"
+    },
+    {
+        "hi": 1.3,
+        "low": 1.3,
+        "name": "dead_bush",
+        "revised": "dead_bush"
+    },
+    {
+        "hi": 9,
+        "low": 9,
+        "name": "redstone_block",
+        "revised": "redstone_block"
+    },
+    {
+        "hi": 66358,
+        "low": 66358,
+        "name": "wolf_talisman",
+        "revised": "wolf_talisman"
+    },
+    {
+        "hi": 255498,
+        "low": 255498,
+        "name": "spider_catalyst",
+        "revised": "spider_catalyst"
+    },
+    {
+        "75000": "100000",
+        "hi": 87629,
+        "low": 87629,
+        "name": "tarantula_silk",
+        "revised": "tarantula_silk"
+    },
+    {
+        "hi": 1290492,
+        "low": 1290492,
+        "name": "tarantula_boots",
+        "revised": "tarantula_boots"
+    },
+    {
+        "hi": 975598,
+        "low": 975598,
+        "name": "tarantula_leggings",
+        "revised": "tarantula_leggings"
+    },
+    {
+        "hi": 492612,
+        "low": 492612,
+        "name": "tarantula_helmet",
+        "revised": "tarantula_helmet"
+    },
+    {
+        "hi": 868640,
+        "low": 868640,
+        "name": "tarantula_chestplate",
+        "revised": "tarantula_chestplate"
+    },
+    {
+        "hi": 8,
+        "low": 8,
+        "name": "blaze_powder",
+        "revised": "blaze_powder"
+    },
+    {
+        "hi": 100,
+        "low": 10,
+        "name": "desert_crystal",
+        "revised": "desert_crystal"
+    },
+    {
+        "hi": 547,
+        "low": 547,
+        "name": "desert_island",
+        "revised": "desert_island"
+    },
+    {
+        "hi": 116,
+        "low": 116,
+        "name": "silent_pearl",
+        "revised": "silent_pearl"
+    },
+    {
+        "hi": 919,
+        "low": 919,
+        "name": "zombie_ring",
+        "revised": "zombie_ring"
+    },
+    {
+        "hi": 28433,
+        "low": 28433,
+        "name": "foul_flesh",
+        "revised": "foul_flesh"
+    },
+    {
+        "hi": 1239435,
+        "low": 1239435,
+        "name": "red_claw_egg",
+        "revised": "red_claw_egg"
+    },
+    {
+        "hi": 46020000,
+        "low": 46020000,
+        "name": "reaper_scythe",
+        "revised": "reaper_scythe"
+    },
+    {
+        "hi": 37016744,
+        "low": 37016744,
+        "name": "scythe_blade",
+        "revised": "scythe_blade"
+    },
+    {
+        "hi": 59127,
+        "low": 59127,
+        "name": "spider_ring",
+        "revised": "spider_ring"
+    },
+    {
+        "hi": 70550,
+        "low": 70550,
+        "name": "shaman_sword",
+        "revised": "shaman_sword"
+    },
+    {
+        "hi": 93489,
+        "low": 93489,
+        "name": "revenant_viscera",
+        "revised": "revenant_viscera"
+    },
+    {
+        "hi": 10287794,
+        "low": 10287794,
+        "name": "red_claw_artifact",
+        "revised": "red_claw_artifact"
+    },
+    {
+        "hi": 1175801,
+        "low": 1175801,
+        "name": "bat_artifact",
+        "revised": "bat_artifact"
+    },
+    {
+        "hi": 185500,
+        "low": 185500,
+        "name": "farmer_boots",
+        "revised": "farmer_boots"
+    },
+    {
+        "hi": 219,
+        "low": 219,
+        "name": "purple_candy",
+        "revised": "purple_candy"
+    },
+    {
+        "hi": 14,
+        "low": 14,
+        "name": "green_candy",
+        "revised": "green_candy"
+    },
+    {
+        "hi": 8000000,
+        "low": 5500000,
+        "name": "scorpion_bow",
+        "revised": "scorpion_bow"
+    },
+    {
+        "hi": 193517,
+        "low": 193517,
+        "name": "bat_ring",
+        "revised": "bat_ring"
+    },
+    {
+        "hi": 646041,
+        "low": 646041,
+        "name": "candy_artifact",
+        "revised": "candy_artifact"
+    },
+    {
+        "hi": 2566475,
+        "low": 2566475,
+        "name": "scorpion_foil",
+        "revised": "scorpion_foil"
+    },
+    {
+        "hi": 491,
+        "low": 491,
+        "name": "enchanted_glowstone_dust",
+        "revised": "enchanted_glowstone_dust"
+    },
+    {
+        "hi": 83338262,
+        "low": 83338262,
+        "name": "overflux_power_orb",
+        "revised": "overflux_power_orb"
+    },
+    {
+        "hi": 4296104,
+        "low": 4296104,
+        "name": "mana_flux_power_orb",
+        "revised": "mana_flux_power_orb"
+    },
+    {
+        "hi": 71,
+        "low": 71,
+        "name": "bane_of_arthropods_vi",
+        "revised": "bane_of_arthropods_vi"
+    },
+    {
+        "hi": 385459,
+        "low": 385459,
+        "name": "maddox_batphone",
+        "revised": "maddox_batphone"
+    },
+    {
+        "hi": 920960,
+        "low": 920960,
+        "name": "mastiff_boots",
+        "revised": "mastiff_boots"
+    },
+    {
+        "hi": 1441982,
+        "low": 1441982,
+        "name": "mastiff_leggings",
+        "revised": "mastiff_leggings"
+    },
+    {
+        "hi": 1402457,
+        "low": 1402457,
+        "name": "mastiff_chestplate",
+        "revised": "mastiff_chestplate"
+    },
+    {
+        "hi": 2042490,
+        "low": 2042490,
+        "name": "edible_mace",
+        "revised": "edible_mace"
+    },
+    {
+        "hi": 9867673,
+        "low": 9867673,
+        "name": "vampire_mask",
+        "revised": "vampire_mask"
+    },
+    {
+        "hi": 2434183,
+        "low": 2434183,
+        "name": "weird_tuba",
+        "revised": "weird_tuba"
+    },
+    {
+        "hi": 15364,
+        "low": 15364,
+        "name": "revenant_catalyst",
+        "revised": "revenant_catalyst"
+    },
+    {
+        "hi": 8,
+        "low": 8,
+        "name": "ink_boots",
+        "revised": "ink_boots"
+    },
+    {
+        "hi": 74075000,
+        "low": 74075000,
+        "name": "overflux_capacitor",
+        "revised": "overflux_capacitor"
+    },
+    {
+        "hi": 801,
+        "low": 801,
+        "name": "enchanted_pumpkin",
+        "revised": "enchanted_pumpkin"
+    },
+    {
+        "hi": 1338,
+        "low": 1338,
+        "name": "training_dummy",
+        "revised": "training_dummy"
+    },
+    {
+        "hi": 1776277,
+        "low": 1776277,
+        "name": "life_steal_iv",
+        "revised": "life_steal_iv"
+    },
+    {
+        "hi": 3280,
+        "low": 3280,
+        "name": "life_steal_iii",
+        "revised": "life_steal_iii"
+    },
+    {
+        "hi": 14,
+        "low": 14,
+        "name": "telekinesis_i",
+        "revised": "telekinesis_i"
+    },
+    {
+        "hi": 85,
+        "low": 85,
+        "name": "experience_iii",
+        "revised": "experience_iii"
+    },
+    {
+        "hi": 103,
+        "low": 103,
+        "name": "scavenger_iii",
+        "revised": "scavenger_iii"
+    },
+    {
+        "hi": 276,
+        "low": 276,
+        "name": "looting_iii",
+        "revised": "looting_iii"
+    },
+    {
+        "hi": 4817,
+        "low": 4817,
+        "name": "impaling_iii",
+        "revised": "impaling_iii"
+    },
+    {
+        "hi": 179,
+        "low": 179,
+        "name": "sharpness_v",
+        "revised": "sharpness_v"
+    },
+    {
+        "hi": 2000000,
+        "low": 2000000,
+        "name": "dragon_hunter_ii",
+        "revised": "dragon_hunter_ii"
+    },
+    {
+        "hi": 4004750,
+        "low": 4004750,
+        "name": "dragon_hunter_iii",
+        "revised": "dragon_hunter_iii"
+    },
+    {
+        "hi": 8000000,
+        "low": 8000000,
+        "name": "dragon_hunter_iv",
+        "revised": "dragon_hunter_iv"
+    },
+    {
+        "hi": 16000000,
+        "low": 16000000,
+        "name": "dragon_hunter_v",
+        "revised": "dragon_hunter_v"
+    },
+    {
+        "hi": 3905160,
+        "low": 3905160,
+        "name": "devour_ring",
+        "revised": "devour_ring"
+    },
+    {
+        "hi": 1176920,
+        "low": 1176920,
+        "name": "red_claw_ring",
+        "revised": "red_claw_ring"
+    },
+    {
+        "hi": 395797,
+        "low": 395797,
+        "name": "beheaded_horror",
+        "revised": "beheaded_horror"
+    },
+    {
+        "hi": 25000000,
+        "low": 20000000,
+        "name": "reaper_mask",
+        "revised": "reaper_mask"
+    },
+    {
+        "hi": 153203,
+        "low": 153203,
+        "name": "intimidation_ring",
+        "revised": "intimidation_ring"
+    },
+    {
+        "hi": 1824959,
+        "low": 1824959,
+        "name": "intimidation_artifact",
+        "revised": "intimidation_artifact"
+    },
+    {
+        "hi": 50224,
+        "low": 50224,
+        "name": "spooky_shard",
+        "revised": "spooky_shard"
+    },
+    {
+        "hi": 1423016,
+        "low": 1423016,
+        "name": "bat_person_boots",
+        "revised": "bat_person_boots"
+    },
+    {
+        "hi": 1388517,
+        "low": 1388517,
+        "name": "bat_person_helmet",
+        "revised": "bat_person_helmet"
+    },
+    {
+        "hi": 1436252,
+        "low": 1436252,
+        "name": "bat_person_leggings",
+        "revised": "bat_person_leggings"
+    },
+    {
+        "hi": 1214859,
+        "low": 1214859,
+        "name": "bat_person_chestplate",
+        "revised": "bat_person_chestplate"
+    },
+    {
+        "hi": 448,
+        "low": 448,
+        "name": "superboom_tnt",
+        "revised": "superboom_tnt"
+    },
+    {
+        "hi": 783997,
+        "low": 783997,
+        "name": "spooky_helmet",
+        "revised": "spooky_helmet"
+    },
+    {
+        "hi": 630507,
+        "low": 630507,
+        "name": "spooky_chestplate",
+        "revised": "spooky_chestplate"
+    },
+    {
+        "hi": 866512,
+        "low": 866512,
+        "name": "spooky_leggings",
+        "revised": "spooky_leggings"
+    },
+    {
+        "hi": 1058903,
+        "low": 1058903,
+        "name": "spooky_boots",
+        "revised": "spooky_boots"
+    },
+    {
+        "1125000": "1325000",
+        "hi": 968942,
+        "low": 968942,
+        "name": "mastiff_crown",
+        "revised": "mastiff_crown"
+    },
+    {
+        "hi": 1899146,
+        "low": 1899146,
+        "name": "vampirism_vi",
+        "revised": "vampirism_vi"
+    },
+    {
+        "hi": 104214,
+        "low": 104214,
+        "name": "candy_ring",
+        "revised": "candy_ring"
+    },
+    {
+        "hi": 19430,
+        "low": 19430,
+        "name": "candy_talisman",
+        "revised": "candy_talisman"
+    },
+    {
+        "hi": 3767314,
+        "low": 3767314,
+        "name": "wood_singularity",
+        "revised": "wood_singularity"
+    },
+    {
+        "hi": 35000,
+        "low": 35000,
+        "name": "tacticians_sword",
+        "revised": "tacticians_sword"
+    },
+    {
+        "hi": 156649,
+        "low": 156649,
+        "name": "wolf_paw",
+        "revised": "wolf_paw"
+    },
+    {
+        "hi": 8840,
+        "low": 8840,
+        "name": "enchanted_red_mushroom_block",
+        "revised": "enchanted_red_mushroom_block"
+    },
+    {
+        "hi": 1537,
+        "low": 1537,
+        "name": "toxic_arrow_poison",
+        "revised": "toxic_arrow_poison"
+    },
+    {
+        "hi": 4795,
+        "low": 4795,
+        "name": "silky_lichen",
+        "revised": "silky_lichen"
+    },
+    {
+        "hi": 112265,
+        "low": 112265,
+        "name": "raider_axe",
+        "revised": "raider_axe"
+    },
+    {
+        "hi": 10,
+        "low": 10,
+        "name": "rabbits_foot",
+        "revised": "rabbits_foot"
+    },
+    {
+        "hi": 313,
+        "low": 313,
+        "name": "miner_helmet",
+        "revised": "miner_helmet"
+    },
+    {
+        "hi": 1321,
+        "low": 1321,
+        "name": "miner_chestplate",
+        "revised": "miner_chestplate"
+    },
+    {
+        "hi": 182,
+        "low": 182,
+        "name": "miner_leggings",
+        "revised": "miner_leggings"
+    },
+    {
+        "hi": 410,
+        "low": 410,
+        "name": "miner_boots",
+        "revised": "miner_boots"
+    },
+    {
+        "hi": 255985,
+        "low": 255985,
+        "name": "sugar_rush_i",
+        "revised": "sugar_rush_i"
+    },
+    {
+        "hi": 525000,
+        "low": 525000,
+        "name": "sugar_rush_ii",
+        "revised": "sugar_rush_ii"
+    },
+    {
+        "hi": 1448570,
+        "low": 1448570,
+        "name": "sugar_rush_iii",
+        "revised": "sugar_rush_iii"
+    },
+    {
+        "hi": 8417344,
+        "low": 8417344,
+        "name": "tarantula_talisman",
+        "revised": "tarantula_talisman"
+    },
+    {
+        "hi": 506091,
+        "low": 506091,
+        "name": "true_protection_i",
+        "revised": "true_protection_i"
+    },
+    {
+        "hi": 1135836,
+        "low": 1135836,
+        "name": "wolf_ring",
+        "revised": "wolf_ring"
+    },
+    {
+        "hi": 178,
+        "low": 178,
+        "name": "wood_affinity_talisman",
+        "revised": "wood_affinity_talisman"
+    },
+    {
+        "hi": 411704,
+        "low": 411704,
+        "name": "helmet_of_growth",
+        "revised": "helmet_of_growth"
+    },
+    {
+        "hi": 667762,
+        "low": 667762,
+        "name": "chestplate_of_growth",
+        "revised": "chestplate_of_growth"
+    },
+    {
+        "hi": 682829,
+        "low": 682829,
+        "name": "leggings_of_growth",
+        "revised": "leggings_of_growth"
+    },
+    {
+        "hi": 256779,
+        "low": 256779,
+        "name": "boots_of_growth",
+        "revised": "boots_of_growth"
+    },
+    {
+        "hi": 2287,
+        "low": 2287,
+        "name": "enchanted_brown_mushroom_block",
+        "revised": "enchanted_brown_mushroom_block"
+    },
+    {
+        "hi": 2,
+        "low": 2,
+        "name": "poppy",
+        "revised": "poppy"
+    },
+    {
+        "hi": 2,
+        "low": 2,
+        "name": "dandelion",
+        "revised": "dandelion"
+    },
+    {
+        "hi": 756925,
+        "low": 756925,
+        "name": "weak_wolf_catalyst",
+        "revised": "weak_wolf_catalyst"
+    },
+    {
+        "hi": 455121,
+        "low": 455121,
+        "name": "name_tag",
+        "revised": "name_tag"
+    },
+    {
+        "hi": 310335,
+        "low": 310335,
+        "name": "iron_horse_armor",
+        "revised": "iron_horse_armor"
+    },
+    {
+        "hi": 348186,
+        "low": 348186,
+        "name": "diamond_horse_armor",
+        "revised": "diamond_horse_armor"
+    },
+    {
+        "hi": 328868,
+        "low": 328868,
+        "name": "gold_horse_armor",
+        "revised": "gold_horse_armor"
+    },
+    {
+        "hi": 516,
+        "low": 516,
+        "name": "spooky_disc",
+        "revised": "spooky_disc"
+    },
+    {
+        "hi": 600000,
+        "low": 400000,
+        "name": "horsemans_candle",
+        "revised": "horsemans_candle"
+    },
+    {
+        "hi": 458,
+        "low": 458,
+        "name": "polished_pebble",
+        "revised": "polished_pebble"
+    },
+    {
+        "hi": 323,
+        "low": 323,
+        "name": "enchantment_table",
+        "revised": "enchantment_table"
+    },
+    {
+        "hi": 69,
+        "low": 69,
+        "name": "bookshelf",
+        "revised": "bookshelf"
+    },
+    {
+        "hi": 6244,
+        "low": 6244,
+        "name": "enchanted_bookshelf",
+        "revised": "enchanted_bookshelf"
+    },
+    {
+        "hi": 832,
+        "low": 832,
+        "name": "diamond_spreading",
+        "revised": "diamond_spreading"
+    },
+    {
+        "hi": 936,
+        "low": 936,
+        "name": "hunter_knife",
+        "revised": "hunter_knife"
+    },
+    {
+        "hi": 14,
+        "low": 14,
+        "name": "enderman_mask",
+        "revised": "enderman_mask"
+    },
+    {
+        "hi": 36187,
+        "low": 36187,
+        "name": "wand_of_mending",
+        "revised": "wand_of_mending"
+    },
+    {
+        "hi": 670,
+        "low": 670,
+        "name": "wand_of_healing",
+        "revised": "wand_of_healing"
+    },
+    {
+        "hi": 1171000,
+        "low": 1171000,
+        "name": "wand_of_restoration",
+        "revised": "wand_of_restoration"
+    },
+    {
+        "hi": 21624,
+        "low": 21624,
+        "name": "true_essence",
+        "revised": "true_essence"
+    },
+    {
+        "hi": 57061111,
+        "low": 57061111,
+        "name": "mosquito_bow",
+        "revised": "mosquito_bow"
+    },
+    {
+        "hi": 640,
+        "low": 640,
+        "name": "enchanted_beef",
+        "revised": "enchanted_beef"
+    },
+    {
+        "hi": 148910,
+        "low": 148910,
+        "name": "fly_swatter",
+        "revised": "fly_swatter"
+    },
+    {
+        "hi": 4500000,
+        "low": 4000000,
+        "name": "fly_catcher",
+        "revised": "fly_catcher"
+    },
+    {
+        "hi": 5000000,
+        "low": 4000000,
+        "name": "silk_edge_sword",
+        "revised": "silk_edge_sword"
+    },
+    {
+        "hi": 3270685,
+        "low": 3270685,
+        "name": "spider_artifact",
+        "revised": "spider_artifact"
+    },
+    {
+        "hi": 673546,
+        "low": 673546,
+        "name": "cheap_tuxedo_jacket",
+        "revised": "cheap_tuxedo_jacket"
+    },
+    {
+        "hi": 328415,
+        "low": 328415,
+        "name": "cheap_tuxedo_oxfords",
+        "revised": "cheap_tuxedo_oxfords"
+    },
+    {
+        "hi": 70000000,
+        "low": 50000000,
+        "name": "elegant_tuxedo",
+        "revised": "elegant_tuxedo"
+    },
+    {
+        "hi": 20000000,
+        "low": 20000000,
+        "name": "fancy_tuxedo",
+        "revised": "fancy_tuxedo"
+    },
+    {
+        "hi": 4667871,
+        "low": 4667871,
+        "name": "revived_heart",
+        "revised": "revived_heart"
+    },
+    {
+        "hi": 11,
+        "low": 11,
+        "name": "poisonous_potato",
+        "revised": "poisonous_potato"
+    },
+    {
+        "hi": 1658,
+        "low": 1658,
+        "name": "enchanted_poisonous_potato",
+        "revised": "enchanted_poisonous_potato"
+    },
+    {
+        "hi": 355722,
+        "low": 355722,
+        "name": "experience_iv",
+        "revised": "experience_iv"
+    },
+    {
+        "hi": 2839581,
+        "low": 2839581,
+        "name": "grizzly_bait",
+        "revised": "grizzly_bait"
+    },
+    {
+        "hi": 7000000,
+        "low": 5000000,
+        "name": "hunter_talisman",
+        "revised": "hunter_talisman"
+    },
+    {
+        "hi": 900000,
+        "low": 900000,
+        "name": "true_defense_i",
+        "revised": "true_defense_i"
+    },
+    {
+        "hi": 325142,
+        "low": 325142,
+        "name": "luck_of_the_sea_vi",
+        "revised": "luck_of_the_sea_vi"
+    },
+    {
+        "hi": 3055,
+        "low": 3055,
+        "name": "luck_of_the_sea_v",
+        "revised": "luck_of_the_sea_v"
+    },
+    {
+        "hi": 30302439,
+        "low": 30302439,
+        "name": "digested_mosquito",
+        "revised": "digested_mosquito"
+    },
+    {
+        "hi": 2598,
+        "low": 2598,
+        "name": "decent_bow",
+        "revised": "decent_bow"
+    },
+    {
+        "hi": 6335,
+        "low": 6335,
+        "name": "radiant_power_orb",
+        "revised": "radiant_power_orb"
+    },
+    {
+        "hi": 5,
+        "low": 5,
+        "name": "cocoa_bean",
+        "revised": "cocoa_bean"
+    },
+    {
+        "hi": 59,
+        "low": 59,
+        "name": "enchanted_bread",
+        "revised": "enchanted_bread"
+    },
+    {
+        "hi": 15134,
+        "low": 15134,
+        "name": "snow_suit_helmet",
+        "revised": "snow_suit_helmet"
+    },
+    {
+        "hi": 1304,
+        "low": 1304,
+        "name": "snow_suit_chestplate",
+        "revised": "snow_suit_chestplate"
+    },
+    {
+        "hi": 1251,
+        "low": 1251,
+        "name": "snow_suit_leggings",
+        "revised": "snow_suit_leggings"
+    },
+    {
+        "hi": 6930,
+        "low": 6930,
+        "name": "snow_suit_boots",
+        "revised": "snow_suit_boots"
+    },
+    {
+        "hi": 25543,
+        "low": 25543,
+        "name": "enchanted_packed_ice",
+        "revised": "enchanted_packed_ice"
+    },
+    {
+        "hi": 9519,
+        "low": 9519,
+        "name": "hunk_of_blue_ice",
+        "revised": "hunk_of_blue_ice"
+    },
+    {
+        "hi": 39000000,
+        "low": 33000000,
+        "name": "hunter_ring",
+        "revised": "hunter_ring"
+    },
+    {
+        "hi": 9130500,
+        "low": 9130500,
+        "name": "wither_artifact",
+        "revised": "wither_artifact"
+    },
+    {
+        "hi": 8500000,
+        "low": 5500000,
+        "name": "pefect_helmet_xi",
+        "revised": "pefect_helmet_xi"
+    },
+    {
+        "hi": 9000000,
+        "low": 6500000,
+        "name": "pefect_chestplate_xi",
+        "revised": "pefect_chestplate_xi"
+    },
+    {
+        "hi": 9000000,
+        "low": 6000000,
+        "name": "pefect_leggings_xi",
+        "revised": "pefect_leggings_xi"
+    },
+    {
+        "hi": 8000000,
+        "low": 5000000,
+        "name": "pefect_boots_xi",
+        "revised": "pefect_boots_xi"
+    },
+    {
+        "hi": 11000000,
+        "low": 6000000,
+        "name": "pefect_helmet_xii",
+        "revised": "pefect_helmet_xii"
+    },
+    {
+        "hi": 11500000,
+        "low": 7000000,
+        "name": "pefect_chestplate_xii",
+        "revised": "pefect_chestplate_xii"
+    },
+    {
+        "hi": 11500000,
+        "low": 6500000,
+        "name": "pefect_leggings_xii",
+        "revised": "pefect_leggings_xii"
+    },
+    {
+        "hi": 10500000,
+        "low": 6000000,
+        "name": "pefect_boots_xii",
+        "revised": "pefect_boots_xii"
+    },
+    {
+        "hi": 5930112,
+        "low": 5930112,
+        "name": "pooch_sword",
+        "revised": "pooch_sword"
+    },
+    {
+        "hi": 3900000,
+        "low": 3100000,
+        "name": "thick_tactician_sword",
+        "revised": "thick_tactician_sword"
+    },
+    {
+        "hi": 2384262,
+        "low": 2384262,
+        "name": "strong_dragon_chestplate",
+        "revised": "strong_dragon_chestplate"
+    },
+    {
+        "hi": 107640,
+        "low": 107640,
+        "name": "golden_tooth",
+        "revised": "golden_tooth"
+    },
+    {
+        "hi": 7395227,
+        "low": 7395227,
+        "name": "pigman_sword",
+        "revised": "pigman_sword"
+    },
+    {
+        "hi": 2355964,
+        "low": 2355964,
+        "name": "leaping_sword",
+        "revised": "leaping_sword"
+    },
+    {
+        "hi": 8,
+        "low": 8,
+        "name": "snow_block",
+        "revised": "snow_block"
+    },
+    {
+        "hi": 664,
+        "low": 664,
+        "name": "enchanted_snow_block",
+        "revised": "enchanted_snow_block"
+    },
+    {
+        "575000": "575000",
+        "hi": 551452,
+        "low": 551452,
+        "name": "summoning_eye",
+        "revised": "summoning_eye"
+    },
+    {
+        "hi": 2144,
+        "low": 2144,
+        "name": "gift_the_fish",
+        "revised": "gift_the_fish"
+    },
+    {
+        "hi": 114928,
+        "low": 114928,
+        "name": "flake_the_fish",
+        "revised": "flake_the_fish"
+    },
+    {
+        "hi": 32151,
+        "low": 32151,
+        "name": "red_gift",
+        "revised": "red_gift"
+    },
+    {
+        "hi": 774,
+        "low": 774,
+        "name": "green_gift",
+        "revised": "green_gift"
+    },
+    {
+        "hi": 792,
+        "low": 792,
+        "name": "white_gift",
+        "revised": "white_gift"
+    },
+    {
+        "hi": 49867,
+        "low": 49867,
+        "name": "winter_rod",
+        "revised": "winter_rod"
+    },
+    {
+        "hi": 119089,
+        "low": 119089,
+        "name": "frozen_chicken",
+        "revised": "frozen_chicken"
+    },
+    {
+        "hi": 213,
+        "low": 213,
+        "name": "scavenger_iv",
+        "revised": "scavenger_iv"
+    },
+    {
+        "hi": 1143,
+        "low": 1143,
+        "name": "enchanted_dark_oak_wood",
+        "revised": "enchanted_dark_oak_wood"
+    },
+    {
+        "hi": 893,
+        "low": 893,
+        "name": "gift_compass",
+        "revised": "gift_compass"
+    },
+    {
+        "hi": 20,
+        "low": 20,
+        "name": "eye_of_ender",
+        "revised": "eye_of_ender"
+    },
+    {
+        "hi": 3373,
+        "low": 3373,
+        "name": "cleave_v",
+        "revised": "cleave_v"
+    },
+    {
+        "hi": 11,
+        "low": 11,
+        "name": "ender_pearl",
+        "revised": "ender_pearl"
+    },
+    {
+        "hi": 63,
+        "low": 63,
+        "name": "carrot_bait",
+        "revised": "carrot_bait"
+    },
+    {
+        "hi": 22,
+        "low": 22,
+        "name": "vaccine_talisman",
+        "revised": "vaccine_talisman"
+    },
+    {
+        "hi": 9,
+        "low": 9,
+        "name": "trapped_chest",
+        "revised": "trapped_chest"
+    },
+    {
+        "hi": 3,
+        "low": 3,
+        "name": "tripwire_hook",
+        "revised": "tripwire_hook"
+    },
+    {
+        "hi": 133732,
+        "low": 133732,
+        "name": "enchanted_block_of_coal",
+        "revised": "enchanted_block_of_coal"
+    },
+    {
+        "hi": 45,
+        "low": 45,
+        "name": "Slime_block",
+        "revised": "Slime_block"
+    },
+    {
+        "hi": 218,
+        "low": 218,
+        "name": "enchanted_ender_pearl",
+        "revised": "enchanted_ender_pearl"
+    },
+    {
+        "hi": 949,
+        "low": 949,
+        "name": "enchanted_oak_wood",
+        "revised": "enchanted_oak_wood"
+    },
+    {
+        "hi": 583,
+        "low": 583,
+        "name": "enchanted_red_mushroom",
+        "revised": "enchanted_red_mushroom"
+    },
+    {
+        "hi": 1266,
+        "low": 1266,
+        "name": "enchanted_brown_mushroom",
+        "revised": "enchanted_brown_mushroom"
+    },
+    {
+        "hi": 2823,
+        "low": 2823,
+        "name": "enchanted_raw_fish",
+        "revised": "enchanted_raw_fish"
+    },
+    {
+        "hi": 1094,
+        "low": 1094,
+        "name": "pond_island",
+        "revised": "pond_island"
+    },
+    {
+        "hi": 558,
+        "low": 558,
+        "name": "farming_island",
+        "revised": "farming_island"
+    },
+    {
+        "hi": 695,
+        "low": 695,
+        "name": "nether_wart_island",
+        "revised": "nether_wart_island"
+    },
+    {
+        "hi": 1905,
+        "low": 1905,
+        "name": "roofed_forest_island",
+        "revised": "roofed_forest_island"
+    },
+    {
+        "hi": 3000000,
+        "low": 3000000,
+        "name": "cheap_tuxedo",
+        "revised": "cheap_tuxedo"
+    },
+    {
+        "hi": 55,
+        "low": 55,
+        "name": "fancy_sword",
+        "revised": "fancy_sword"
+    },
+    {
+        "hi": 22,
+        "low": 22,
+        "name": "spider_sword",
+        "revised": "spider_sword"
+    },
+    {
+        "hi": 1792429,
+        "low": 1792429,
+        "name": "frozen_scythe",
+        "revised": "frozen_scythe"
+    },
+    {
+        "hi": 15200000,
+        "low": 14500000,
+        "name": "yeti_sword",
+        "revised": "yeti_sword"
+    },
+    {
+        "hi": 1600000,
+        "low": 1500000,
+        "name": "auger_rod",
+        "revised": "auger_rod"
+    },
+    {
+        "hi": 6189272,
+        "low": 6189272,
+        "name": "hilt_of_true_ice",
+        "revised": "hilt_of_true_ice"
+    },
+    {
+        "hi": 4055191,
+        "low": 4055191,
+        "name": "frozen_blaze_helmet",
+        "revised": "frozen_blaze_helmet"
+    },
+    {
+        "hi": 5150531,
+        "low": 5150531,
+        "name": "frozen_blaze_chestplate",
+        "revised": "frozen_blaze_chestplate"
+    },
+    {
+        "hi": 4290160,
+        "low": 4290160,
+        "name": "frozen_blaze_boots",
+        "revised": "frozen_blaze_boots"
+    },
+    {
+        "hi": 4708405,
+        "low": 4708405,
+        "name": "frozen_blaze_leggings",
+        "revised": "frozen_blaze_leggings"
+    },
+    {
+        "hi": 69574,
+        "low": 69574,
+        "name": "enchanted_golden_carrot",
+        "revised": "enchanted_golden_carrot"
+    },
+    {
+        "hi": 3500000,
+        "low": 3500000,
+        "name": "survivor_cube",
+        "revised": "survivor_cube"
+    },
+    {
+        "hi": 5095000,
+        "low": 5095000,
+        "name": "zombie_artifact",
+        "revised": "zombie_artifact"
+    },
+    {
+        "hi": 11,
+        "low": 11,
+        "name": "hunk_of_ice",
+        "revised": "hunk_of_ice"
+    },
+    {
+        "hi": 8,
+        "low": 8,
+        "name": "string",
+        "revised": "string"
+    },
+    {
+        "hi": 1250,
+        "low": 781,
+        "name": "enchanted_redstone_dust",
+        "revised": "enchanted_redstone_dust"
+    },
+    {
+        "hi": 507,
+        "low": 507,
+        "name": "luck_vi",
+        "revised": "luck_vi"
+    },
+    {
+        "hi": 392,
+        "low": 392,
+        "name": "looting_iv",
+        "revised": "looting_iv"
+    },
+    {
+        "hi": 115276,
+        "low": 115276,
+        "name": "enchanted_cookie",
+        "revised": "enchanted_cookie"
+    },
+    {
+        "hi": 320,
+        "low": 320,
+        "name": "enchanted_glowstone",
+        "revised": "enchanted_glowstone"
+    },
+    {
+        "hi": 115000,
+        "low": 100000,
+        "name": "enchanted_glowstone_block",
+        "revised": "enchanted_glowstone_block"
+    },
+    {
+        "hi": 32953000,
+        "low": 32953000,
+        "name": "seal_of_the_family",
+        "revised": "seal_of_the_family"
+    },
+    {
+        "hi": 547,
+        "low": 547,
+        "name": "bat_the_fish",
+        "revised": "bat_the_fish"
+    },
+    {
+        "hi": 397390,
+        "low": 397390,
+        "name": "new_year_cake_bag",
+        "revised": "new_year_cake_bag"
+    },
+    {
+        "hi": 2,
+        "low": 2,
+        "name": "dirt",
+        "revised": "dirt"
+    },
+    {
+        "hi": 1,
+        "low": 1,
+        "name": "seed",
+        "revised": "seed"
+    },
+    {
+        "hi": 1,
+        "low": 1,
+        "name": "grass",
+        "revised": "grass"
+    },
+    {
+        "hi": 481849,
+        "low": 481849,
+        "name": "enchanted_wet_sponge",
+        "revised": "enchanted_wet_sponge"
+    },
+    {
+        "hi": 5,
+        "low": 5,
+        "name": "spruce_wood",
+        "revised": "spruce_wood"
+    },
+    {
+        "hi": 108,
+        "low": 108,
+        "name": "brown_mushroom_block",
+        "revised": "brown_mushroom_block"
+    },
+    {
+        "hi": 73,
+        "low": 73,
+        "name": "red_mushroom_block",
+        "revised": "red_mushroom_block"
+    },
+    {
+        "hi": 1,
+        "low": 1,
+        "name": "wheat",
+        "revised": "wheat"
+    },
+    {
+        "hi": 972812,
+        "low": 972812,
+        "name": "dragon_hunter_i",
+        "revised": "dragon_hunter_i"
+    },
+    {
+        "hi": 4,
+        "low": 4,
+        "name": "chest",
+        "revised": "chest"
+    },
+    {
+        "hi": 8500000,
+        "low": 7500000,
+        "name": "yeti_rod",
+        "revised": "yeti_rod"
+    },
+    {
+        "hi": 10,
+        "low": 10,
+        "name": "revenant_flesh",
+        "revised": "revenant_flesh"
+    },
+    {
+        "hi": 1426,
+        "low": 1426,
+        "name": "power_v",
+        "revised": "power_v"
+    },
+    {
+        "hi": 50000,
+        "low": 50000,
+        "name": "krampus_helmet",
+        "revised": "krampus_helmet"
+    },
+    {
+        "hi": 28,
+        "low": 28,
+        "name": "fish_hat",
+        "revised": "fish_hat"
+    },
+    {
+        "hi": 4500000,
+        "low": 4000000,
+        "name": "flower_minion",
+        "revised": "flower_minion"
+    }
+]
