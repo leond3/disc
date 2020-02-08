@@ -316,17 +316,6 @@ client.on('message', message => {
 			}
 			message.delete();
 		}
-		else if (command === 'avatar') {
-			if (message.member.roles.find(r => r.name === "Bot builder")) {
-				member = message.mentions.users.first();
-				message.channel.send(":white_check_mark: " + message.member.avatarURL).then(msg => {msg.delete(4000)});
-				message.delete(4000);
-			}
-			else {
-				message.channel.send(":no_entry: You do not have the right permission to execute this command, or this user has notifications disabled!").then(msg => {msg.delete(4000)});
-			}
-			message.delete();
-		}
 		else {
 			message.delete();
 			message.channel.send(":no_entry: **Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
