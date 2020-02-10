@@ -62,7 +62,7 @@ client.on('message', message => {
 		}
 		if (command === 'image') {
 			if (message.member.roles.find(r => r.name === "Moderator")) {
-				message.channel.send("*This message will be deleted in 30 seconds.*", {files: ["https://i.imgur.com/XxxXxXX.jpg"]}).then(msg => {msg.delete(30000)});
+				message.channel.send("*This message will be deleted in 30 seconds.*", {files: ["./assets/joost_bot.png"]}).then(msg => {msg.delete(30000)});
 			}
 			else {
 				message.channel.send(":no_entry: You do not have the permission to get a random image from the database.\n*Please contact a Moderator if you want to get a random image from the database*").then(msg => {msg.delete(4000)});
