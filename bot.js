@@ -60,15 +60,6 @@ client.on('message', message => {
 			}
 			message.delete();
 		}
-		if (command === 'image') {
-			if (message.member.roles.find(r => r.name === "Moderator")) {
-				message.channel.send("*This message will be deleted in 30 seconds.*", {files: ["./assets/joost_bot.png"]}).then(msg => {msg.delete(30000)});
-			}
-			else {
-				message.channel.send(":no_entry: You do not have the permission to get a random image from the database.\n*Please contact a Moderator if you want to get a random image from the database*").then(msg => {msg.delete(4000)});
-			}
-			message.delete();
-		}
 		if (command === 'clearchat' && !message.member.roles.find(r => r.name === "Bot builder")) {
 			message.channel.send(":no_entry: **You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
 			message.delete();
