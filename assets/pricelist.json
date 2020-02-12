@@ -27,194 +27,36 @@
   "end_stone_sword": "274847",
   "diamond_block": "72",
   "enchanted_diamond": "1210",
-}
-    {
-        "hi": 217890,
-        "low": 217890,
-        "name": "enchanted_diamond_block",
-        "revised": "enchanted_diamond_block"
-    },
-    {
-        "hi": 54,
-        "low": 54,
-        "name": "emerald_block",
-        "revised": "emerald_block"
-    },
-    {
-        "hi": 1291,
-        "low": 1291,
-        "name": "enchanted_emerald",
-        "revised": "enchanted_emerald"
-    },
-    {
-        "hi": 184175,
-        "low": 184175,
-        "name": "enchanted_emerald_block",
-        "revised": "enchanted_emerald_block"
-    },
-    {
-        "hi": 745,
-        "low": 745,
-        "name": "enchanted_cobblestone",
-        "revised": "enchanted_cobblestone"
-    },
-    {
-        "hi": 478,
-        "low": 478,
-        "name": "enchanted_coal",
-        "revised": "enchanted_coal"
-    },
-    {
-        "hi": 965,
-        "high": "600",
-        "low": 965,
-        "name": "enchanted_iron",
-        "revised": "enchanted_iron"
-    },
-    {
-        "hi": 132211,
-        "low": 132211,
-        "name": "enchanted_iron_block",
-        "revised": "enchanted_iron_block"
-    },
-    {
-        "hi": 1271,
-        "low": 1271,
-        "name": "enchanted_gold",
-        "revised": "enchanted_gold"
-    },
-    {
-        "hi": 135320,
-        "low": 135320,
-        "name": "enchanted_gold_block",
-        "revised": "enchanted_gold_block"
-    },
-    {
-        "hi": 938,
-        "low": 938,
-        "name": "enchanted_redstone",
-        "revised": "enchanted_redstone"
-    },
-    {
-        "hi": 134343,
-        "low": 134343,
-        "name": "enchanted_redstone_block",
-        "revised": "enchanted_redstone_block"
-    },
-    {
-        "hi": 596,
-        "low": 596,
-        "name": "jungle_axe",
-        "revised": "jungle_axe"
-    },
-    {
-        "hi": 7,
-        "low": 7,
-        "name": "spider_eye",
-        "revised": "spider_eye"
-    },
-    {
-        "hi": 6,
-        "low": 6,
-        "name": "rotten_flesh",
-        "revised": "rotten_flesh"
-    },
-    {
-        "hi": 6,
-        "low": 6,
-        "name": "bone",
-        "revised": "bone"
-    },
-    {
-        "hi": 2.4,
-        "low": 2.4,
-        "name": "arrow",
-        "revised": "arrow"
-    },
-    {
-        "hi": 13,
-        "low": 13,
-        "name": "blaze_rod",
-        "revised": "blaze_rod"
-    },
-    {
-        "hi": 20,
-        "low": 20,
-        "name": "ghast_tear",
-        "revised": "ghast_tear"
-    },
-    {
-        "hi": 9,
-        "low": 9,
-        "name": "magma_cream",
-        "revised": "magma_cream"
-    },
-    {
-        "hi": 6,
-        "low": 6,
-        "name": "slimeball",
-        "revised": "slimeball"
-    },
-    {
-        "hi": 1355,
-        "low": 1355,
-        "name": "enchanted_spider_eye",
-        "revised": "enchanted_spider_eye"
-    },
-    {
-        "hi": 1805,
-        "low": 1805,
-        "name": "enchanted_string",
-        "revised": "enchanted_string"
-    },
-    {
-        "hi": 1084,
-        "low": 1084,
-        "name": "enchanted_rotten_flesh",
-        "revised": "enchanted_rotten_flesh"
-    },
-    {
-        "hi": 748,
-        "low": 748,
-        "name": "enchanted_bone",
-        "revised": "enchanted_bone"
-    },
-    {
-        "hi": 2252,
-        "low": 2252,
-        "name": "enchanted_blaze_powder",
-        "revised": "enchanted_blaze_powder"
-    },
-    {
-        "hi": 502373,
-        "low": 502373,
-        "name": "enchanted_blaze_rod",
-        "revised": "enchanted_blaze_rod"
-    },
-    {
-        "hi": 111,
-        "low": 111,
-        "name": "enchanted_ghast_tear",
-        "revised": "enchanted_ghast_tear"
-    },
-    {
-        "hi": 1421,
-        "low": 1421,
-        "name": "enchanted_magma_cream",
-        "revised": "enchanted_magma_cream"
-    },
-    {
-        "hi": 1323,
-        "low": 1323,
-        "name": "enchanted_slimeball",
-        "revised": "enchanted_slimeball"
-    },
-    {
-        "hi": 101340,
-        "low": 101340,
-        "name": "enchanted_fermented_spider_eye",
-        "revised": "enchanted_fermented_spider_eye"
-    },
+  "enchanted_diamond_block": "217890",
+  "emerald_block": "54",
+  "enchanted_emerald": "1291",
+  "enchanted_emerald_block": "184175",
+  "enchanted_cobblestone": "745",
+  "enchanted_coal": "478",
+  "enchanted_iron": "965",
+  "enchanted_iron_block": "132211",
+  "enchanted_gold": "1271",
+  "enchanted_gold_block": "135320",
+  "enchanted_redstone": "938",
+  "enchanted_redstone_block": "134343",
+  "jungle_axe": "596",
+  "spider_eye": "7",
+  "rotten_flesh": "6",
+  "bone": "6",
+  "arrow": "2",
+  "blaze_rod": "13",
+  "ghast_tear": "20",
+  "magma_cream": "9",
+  "slimeball": "6",
+  "enchanted_spider_eye": "1335",
+  "enchanted_string": "1805",
+  "enchanted_rotten_flesh": "1084",
+  "enchanted_bone": "748",
+  "enchanted_blaze_powder": "2252",
+  "enchanted_ghast_tear": "111",
+  "enchanted_magma_cream": "1421",
+  "enchanted_slimeball": "1323",
+  "enchanted_fermented_spider_eye": "101340",
     {
         "hi": 2,
         "low": 2,
