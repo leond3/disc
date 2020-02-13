@@ -20,6 +20,10 @@ client.on('message', message => {
 			message.delete();
 		}
 	}
+	const reaction = message.reactions.get('✅');
+	for (const user of reaction.users.values()) {
+		await reaction.remove(user);
+	}
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
@@ -326,12 +330,6 @@ client.on('message', message => {
 	  		max = Math.floor(max);
 	 		return Math.floor(Math.random() * (max - min)) + min;
 	}
-});
-
-client.on('messageReactionAdd', (reaction, user) => {
-    if(reaction.emoji.name === "✅") {
-    console.log(reaction.users);
-    }
 });
 
 client.login(process.env.token);
