@@ -21,8 +21,10 @@ client.on('message', message => {
 		}
 	}
 	const reaction = message.reactions.get('✅');
-	for (const user of reaction.users.values()) {
-		reaction.remove(user);
+	try {
+		for (const user of reaction.users.values()) {
+			await reaction.remove(user);
+		}
 	}
 
 	const args = message.content.slice(prefix.length).split(/ +/);
