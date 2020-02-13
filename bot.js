@@ -117,7 +117,7 @@ client.on('message', message => {
 //		}
 		else if (command === 'networth') {
 			const worth = {
-				"leond3": "**~72 Million**",
+				"leond3": "**~62 Million**",
 				"grecio0278": "**~91 Million**",
 				"jortboss": "**~34 Million**",
 				"yojoost_1": "**~36 Million**",
