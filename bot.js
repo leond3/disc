@@ -20,10 +20,6 @@ client.on('message', message => {
 			message.delete();
 		}
 	}
-	const reaction = message.reactions.get('✅');
-	for (const user of reaction.users.values()) {
-		reaction.remove(user);
-	}
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
