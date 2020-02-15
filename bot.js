@@ -168,7 +168,12 @@ client.on('message', message => {
 			message.delete(300000);
 		}
 		else if (command === 'color') {
-			if (args[0].toLowerCase() === 'blue' || args[0].toLowerCase() === 'dark_green' || args[0].toLowerCase() === 'dark_red' || args[0].toLowerCase() === 'purple' || args[0].toLowerCase() === 'orange' || args[0].toLowerCase() === 'gray' || args[0].toLowerCase() === 'green' || args[0].toLowerCase() === 'aqua' || args[0].toLowerCase() === 'red' || args[0].toLowerCase() === 'pink' || args[0].toLowerCase() === 'yellow' || args[0].toLowerCase() === 'white' || args[0].toLowerCase() === 'none') {
+			if (!args[0]) {
+				message.delete();
+				message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
+				return;
+			}
+			else if (args[0].toLowerCase() === 'blue' || args[0].toLowerCase() === 'dark_green' || args[0].toLowerCase() === 'dark_red' || args[0].toLowerCase() === 'purple' || args[0].toLowerCase() === 'orange' || args[0].toLowerCase() === 'gray' || args[0].toLowerCase() === 'green' || args[0].toLowerCase() === 'aqua' || args[0].toLowerCase() === 'red' || args[0].toLowerCase() === 'pink' || args[0].toLowerCase() === 'yellow' || args[0].toLowerCase() === 'white' || args[0].toLowerCase() === 'none') {
 				message.member.removeRole(message.guild.roles.find(r => r.name === "blue"));
 				message.member.removeRole(message.guild.roles.find(r => r.name === "dark_green"));
 				message.member.removeRole(message.guild.roles.find(r => r.name === "dark_red"));
@@ -192,18 +197,18 @@ client.on('message', message => {
 				message.channel.send("**Colors:**\n - Blue\n - Dark_Green\n - Dark_Red\n - Purple\n - Orange\n - Gray\n - Green\n - Aqua\n - Red\n - Pink\n - Yellow\n - White\n - None").then(msg => {msg.delete(30000)});
 				message.delete(30000);
 			}
-			else if (!args[0]) {
-				message.delete();
-				message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
-				return;
-			}
 			else {
 				message.delete();
 				message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
 			}
 		}
 		else if (command === 'tag') {
-			if (args[0].toLowerCase() === 'school' || args[0].toLowerCase() === 'skyblock' || args[0].toLowerCase() === 'wynncraft' || args[0].toLowerCase() === 'minigames' || args[0].toLowerCase() === 'uhc' || args[0].toLowerCase() === 'survival' || args[0].toLowerCase() === 'modded' || args[0].toLowerCase() === 'ark' || args[0].toLowerCase() === 'hypixel' || args[0].toLowerCase() === 'banned' || args[0].toLowerCase() === 'none') {
+			if (!args[0]) {
+				message.delete();
+				message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
+				return;
+			}
+			else if (args[0].toLowerCase() === 'school' || args[0].toLowerCase() === 'skyblock' || args[0].toLowerCase() === 'wynncraft' || args[0].toLowerCase() === 'minigames' || args[0].toLowerCase() === 'uhc' || args[0].toLowerCase() === 'survival' || args[0].toLowerCase() === 'modded' || args[0].toLowerCase() === 'ark' || args[0].toLowerCase() === 'hypixel' || args[0].toLowerCase() === 'banned' || args[0].toLowerCase() === 'none') {
 				message.member.removeRole(message.guild.roles.find(r => r.name === "banned"));
 				message.member.removeRole(message.guild.roles.find(r => r.name === "school"));
 				message.member.removeRole(message.guild.roles.find(r => r.name === "skyblock"));
@@ -236,11 +241,6 @@ client.on('message', message => {
 			else if (args[0].toLowerCase() === 'list') {
 				message.channel.send("**Tags:**\n - Banned\n - School\n - Skyblock\n - Wynncraft\n - Minigames\n - UHC\n - Survival\n - Modded\n - ARK\n - Hypixel\n - None").then(msg => {msg.delete(30000)});
 				message.delete(30000);
-			}
-			else if (!args[0]) {
-				message.delete();
-				message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
-				return;
 			}
 			else {
 				message.delete();
