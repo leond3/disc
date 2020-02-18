@@ -68,16 +68,16 @@ client.on('message', message => {
 
 	if(message.channel.name == "skyblock-giveaways") {
 		if (command === 'gstart' && message.member.roles.find(r => r.name === "Giveaways") && !message.author.bot) {
-			message.delete(1000);
-			message.channel.send(":white_check_mark: Giveaway detected").then(msg => {msg.delete(1000)});
+			message.delete(4000);
+			message.channel.send(":white_check_mark: Giveaway detected").then(msg => {msg.delete(4000)});
 		}
-		if (command === 'gstart' && !message.member.roles.find(r => r.name === "Giveaways") && !message.author.bot) {
-			message.delete(1000);
-			message.channel.send(":no_entry: No permissions").then(msg => {msg.delete(1000)});
+		else if (command === 'gstart' && !message.member.roles.find(r => r.name === "Giveaways") && !message.author.bot) {
+			message.delete(4000);
+			message.channel.send(":no_entry: No permissions").then(msg => {msg.delete(4000)});
 		}
 		else if (!message.member.roles.find(r => r.name === "Giveaway") && !message.author.bot) {
 			message.delete(300000);
-			message.channel.send(":no_entry: No giveaway detected\n*Your message will be deleted in 5 minutes!*").then(msg => {msg.delete(1000)});
+			message.channel.send(":no_entry: No giveaway detected\n*Your message will be deleted in 5 minutes!*").then(msg => {msg.delete(4000)});
 		}
 	}
 	if(message.channel.name == "music") {
