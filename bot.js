@@ -134,8 +134,7 @@ client.on('message', message => {
 				"vanantonie": "**Less than a million**",
 				"luukystrikes": "**Less than a million**",
 				"joostftw": "**~21 Million**",
-				"vapenqtion": "**Less than a million**",
-				"deminer2003": "**Less than a million**",
+				"itzzties": "**~11 Million**",
 				"quey0278": "**Less than a million**"
 			};
 			if (args[0]) {
