@@ -69,7 +69,7 @@ client.on('message', message => {
 	if(message.channel.name == "skyblock-giveaways") {
 		if (command === 'gstart' && message.member.roles.find(r => r.name === "Giveaways") && !message.author.bot) {
 			message.delete(4000);
-			message.channel.send(":white_check_mark: Giveaway detected").then(msg => {msg.delete(4000)});
+			message.channel.send(":tada: Giveaway detected").then(msg => {msg.delete(4000)});
 		}
 		else if (command === 'gstart' && !message.member.roles.find(r => r.name === "Giveaways") && !message.author.bot) {
 			message.delete(4000);
@@ -77,7 +77,6 @@ client.on('message', message => {
 		}
 		else if (!message.member.roles.find(r => r.name === "Giveaway") && !message.author.bot) {
 			message.delete(300000);
-			message.channel.send(":no_entry: No giveaway detected\n*Your message will be deleted in 5 minutes!*").then(msg => {msg.delete(4000)});
 		}
 	}
 	if(message.channel.name == "music") {
@@ -126,7 +125,7 @@ client.on('message', message => {
 		else if (command === 'networth') {
 			const worth = {
 				"leond3": "**~64 Million**",
-				"grecio0278": "**~142 Million**",
+				"grecio0278": "**~92 Million**",
 				"jortboss": "**~35 Million**",
 				"yojoost_1": "**~37 Million**",
 				"n0xy": "**~27 Million**",
@@ -135,11 +134,10 @@ client.on('message', message => {
 				"luukystrikes": "**Less than a million**",
 				"joostftw": "**~21 Million**",
 				"itzzties": "**~11 Million**",
-				"quey0278": "**Less than a million**"
 			};
 			if (args[0]) {
 				if (worth[message.content.toLowerCase().slice(10)]) {
-    					message.channel.send(":white_check_mark: Estimated networth: " + worth[args[0].toLowerCase()] + " (" + message.content.slice(10) + ")\n*Networth may take a while to update\nNetworth calculations will not include any coins in your bank\nCalculations may be incorrect if you do not have API enabled*").then(msg => {msg.delete(30000)});
+    					message.channel.send(":euro: Estimated networth: " + worth[args[0].toLowerCase()] + " (" + message.content.slice(10) + ")\n*Networth may take a while to update\nNetworth calculations will not include any coins in your bank or pets\nCalculations may be incorrect (you need to have API enabled)*").then(msg => {msg.delete(30000)});
 				}
 				else { message.channel.send(":no_entry: **Invalid Username, try: '!help'.**").then(msg => {msg.delete(4000)}); }
 			}
