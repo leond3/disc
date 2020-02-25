@@ -11,8 +11,12 @@ client.once('ready', () => {
 	client.user.setActivity('Made by Leon#1250');
 });
 
+client.on('guildMemberAdd', member => {
+    member.guild.channels.get('628953682934890538').send("Welcome to the server " + member + ".\nI'm the Minecraft discord bot, you can talk to me in the <#667042753179287572> channel.").then(msg => {msg.delete(80000000)}); 
+});
+
 client.on('message', message => {
-	let blacklisted = ["kank", "kk ", "suck ", "mongool", "idioot", "idiot", "stfu", "shut ", "bek ", "tyfus", "autist", "bitch", "eikel", "hoer", "homo", "kut", "lul ", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk ", "h0m0", "h0mo", "hom0", "gay", "g4y", "sukkel", "niger", "nigger", "g@y", "n1g", "f@ck", "f*ck"];
+	let blacklisted = ["kank", "kk ", "k@nk", "suck ", "mongool", "idioot", "idiot", "stfu", "shut ", "bek ", "tyfus", "autist", "bitch", "eikel", "hoer", "homo", "kut", "lul ", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk ", "h0m0", "h0mo", "hom0", "gay", "g4y", "sukkel", "niger", "nigger", "g@y", "n1g", "f@ck", "f*ck"];
 	for (var i in blacklisted) {
 		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) {
 			if (blacklisted[i] == "stfu" || blacklisted[i] == "shut" || blacklisted[i] == "bek") { message.reply("vraagt u gelieve uw mondje dicht te houden en uw handjes van uw toetsenbord af te halen voor enkele seconden. Alvast bedankt.").then(msg => {msg.delete(300000)}); }
@@ -23,6 +27,12 @@ client.on('message', message => {
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
+	//
+	if (command === 'test') {
+		message.channel.send("Message: <#667042753179287572> channel").then(msg => {message.delete(1000)}):
+		message.delete();
+	}
+	//
 	if (message.content.startsWith(prefix) || !message.author.bot) {
 		if (command === 'muteall' && message.member.roles.find(r => r.name === "Bot builder")) {
 			message.channel.overwritePermissions(message.channel.guild.defaultRole, { SEND_MESSAGES: false });
