@@ -28,12 +28,6 @@ client.on('message', message => {
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
-	//
-	if (command === 'test') {
-		message.channel.send("Message: <#667042753179287572> channel").then(msg => {message.delete(1000)});
-		message.delete();
-	}
-	//
 	if (message.content.startsWith(prefix) || !message.author.bot) {
 		if (command === 'muteall' && message.member.roles.find(r => r.name === "Bot builder")) {
 			message.channel.overwritePermissions(message.channel.guild.defaultRole, { SEND_MESSAGES: false });
