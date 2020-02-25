@@ -12,7 +12,7 @@ client.once('ready', () => {
 });
 
 client.on('guildMemberAdd', member => {
-    member.guild.channels.get('628953682934890538').send("Welcome to the server " + member + ".\nI'm the Minecraft discord bot, you can talk to me in the <#667042753179287572> channel.").then(msg => {msg.delete(80000000)}); 
+    member.guild.channels.get('628953682934890538').send("Welcome to the server " + member + ".\nI'm the Minecraft discord bot, you can talk to me in the <#667042753179287572> channel.").then(msg => {msg.delete(80000000)});
 });
 
 client.on('message', message => {
@@ -29,7 +29,7 @@ client.on('message', message => {
 	const command = args.shift().toLowerCase();
 	//
 	if (command === 'test') {
-		message.channel.send("Message: <#667042753179287572> channel").then(msg => {message.delete(1000)}):
+		message.channel.send("Message: <#667042753179287572> channel").then(msg => {message.delete(1000)});
 		message.delete();
 	}
 	//
