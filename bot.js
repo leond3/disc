@@ -12,7 +12,7 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-	let blacklisted = ["kank", "kk ", "suck ", "mongool", "idioot", "idiot", "stfu", "shut ", "bek ", "tyfus", "autist", "bitch", "eikel", "hoer", "homo", "kut", "lul ", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk ", "h0m0", "h0mo", "hom0", "gay", "g4y", "sukkel"];
+	let blacklisted = ["kank", "kk ", "suck ", "mongool", "idioot", "idiot", "stfu", "shut ", "bek ", "tyfus", "autist", "bitch", "eikel", "hoer", "homo", "kut", "lul ", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk ", "h0m0", "h0mo", "hom0", "gay", "g4y", "sukkel", "niger", "nigger", "g@y", "n1g", "f@ck", "f*ck"];
 	for (var i in blacklisted) {
 		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) {
 			if (blacklisted[i] == "stfu" || blacklisted[i] == "shut" || blacklisted[i] == "bek") { message.reply("vraagt u gelieve uw mondje dicht te houden en uw handjes van uw toetsenbord af te halen voor enkele seconden. Alvast bedankt.").then(msg => {msg.delete(300000)}); }
