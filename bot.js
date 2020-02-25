@@ -12,7 +12,8 @@ client.once('ready', () => {
 });
 
 client.on('guildMemberAdd', member => {
-    member.guild.channels.get('628953682934890538').send("Welcome to the server " + member + ".\nI'm the Minecraft discord bot, you can talk to me in the <#667042753179287572> channel.").then(msg => {msg.delete(80000000)});
+	member.guild.channels.get('628953682934890538').send("Welcome to the server " + member + ".").then(msg => {msg.delete(80000000)});
+	member.sendMessage("Welkom in de **MineCraft Server**!\nIk ben de main discord bot, je kan met mij praten in de `#discord-commands` channel.\nIk ben een chat control, moderation, role support en command bot.\n\n*Dit bericht wordt na 60 minuten automatisch verwijderd.*").then(msg => {msg.delete(3600000)});
 });
 
 client.on('message', message => {
