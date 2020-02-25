@@ -178,28 +178,29 @@ client.on('message', message => {
 				message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
 				return;
 			}
-			else if (args[0].toLowerCase() === 'blue' || args[0].toLowerCase() === 'dark_green' || args[0].toLowerCase() === 'dark_red' || args[0].toLowerCase() === 'purple' || args[0].toLowerCase() === 'orange' || args[0].toLowerCase() === 'gray' || args[0].toLowerCase() === 'green' || args[0].toLowerCase() === 'aqua' || args[0].toLowerCase() === 'red' || args[0].toLowerCase() === 'pink' || args[0].toLowerCase() === 'yellow' || args[0].toLowerCase() === 'white' || args[0].toLowerCase() === 'none') {
+			else if (args[0].toLowerCase() === 'blue' || args[0].toLowerCase() === 'cyan' || args[0].toLowerCase() === 'dark_green' || args[0].toLowerCase() === 'dark_red' || args[0].toLowerCase() === 'purple' || args[0].toLowerCase() === 'orange' || args[0].toLowerCase() === 'gray' || args[0].toLowerCase() === 'green' || args[0].toLowerCase() === 'aqua' || args[0].toLowerCase() === 'red' || args[0].toLowerCase() === 'pink' || args[0].toLowerCase() === 'yellow' || args[0].toLowerCase() === 'white' || args[0].toLowerCase() === 'none') {
+				message.member.removeRole(message.guild.roles.find(r => r.name === "aqua"));
 				message.member.removeRole(message.guild.roles.find(r => r.name === "blue"));
+				message.member.removeRole(message.guild.roles.find(r => r.name === "cyan"));
 				message.member.removeRole(message.guild.roles.find(r => r.name === "dark_green"));
 				message.member.removeRole(message.guild.roles.find(r => r.name === "dark_red"));
 				message.member.removeRole(message.guild.roles.find(r => r.name === "purple"));
 				message.member.removeRole(message.guild.roles.find(r => r.name === "orange"));
 				message.member.removeRole(message.guild.roles.find(r => r.name === "gray"));
 				message.member.removeRole(message.guild.roles.find(r => r.name === "green"));
-				message.member.removeRole(message.guild.roles.find(r => r.name === "aqua"));
 				message.member.removeRole(message.guild.roles.find(r => r.name === "red"));
 				message.member.removeRole(message.guild.roles.find(r => r.name === "pink"));
 				message.member.removeRole(message.guild.roles.find(r => r.name === "yellow"));
 				message.member.removeRole(message.guild.roles.find(r => r.name === "white"));
 				
-				if (args[0].toLowerCase() === 'blue' || args[0].toLowerCase() === 'dark_green' || args[0].toLowerCase() === 'dark_red' || args[0].toLowerCase() === 'purple' || args[0].toLowerCase() === 'orange' || args[0].toLowerCase() === 'gray' || args[0].toLowerCase() === 'green' || args[0].toLowerCase() === 'aqua' || args[0].toLowerCase() === 'red' || args[0].toLowerCase() === 'pink' || args[0].toLowerCase() === 'yellow' || args[0].toLowerCase() === 'white') {
+				if (args[0].toLowerCase() === 'blue' || args[0].toLowerCase() === 'cyan' || args[0].toLowerCase() === 'dark_green' || args[0].toLowerCase() === 'dark_red' || args[0].toLowerCase() === 'purple' || args[0].toLowerCase() === 'orange' || args[0].toLowerCase() === 'gray' || args[0].toLowerCase() === 'green' || args[0].toLowerCase() === 'aqua' || args[0].toLowerCase() === 'red' || args[0].toLowerCase() === 'pink' || args[0].toLowerCase() === 'yellow' || args[0].toLowerCase() === 'white') {
 					message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == args[0].toLowerCase()));
 					message.channel.send(":white_check_mark: Color asigned!").then(msg => {msg.delete(4000)});
 				}
 				message.delete();
 			}
 			else if (args[0].toLowerCase() === 'list') {
-				message.channel.send("**Colors:**\n - Blue\n - Dark_Green\n - Dark_Red\n - Purple\n - Orange\n - Gray\n - Green\n - Aqua\n - Red\n - Pink\n - Yellow\n - White\n - None").then(msg => {msg.delete(30000)});
+				message.channel.send("**Colors:**\n - Blue\n - Cyan\n - Dark_Green\n - Dark_Red\n - Purple\n - Orange\n - Gray\n - Green\n - Aqua\n - Red\n - Pink\n - Yellow\n - White\n - None").then(msg => {msg.delete(30000)});
 				message.delete(30000);
 			}
 			else {
