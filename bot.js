@@ -102,14 +102,14 @@ client.on('message', message => {
 			message.delete(30000);
 		}
 		else if (command === 'eten') {
-			const voedsel = [
+			const voedsel = {
 				"chips": "zout",
 				"chocolade": "zoet",
 				"appel": "zuur",
 				"friet": "vet"
-				]
+				};
 			if (args[0]) {
-				message.channel.send("Data: " + args[0] + " - " + "voedsel[args[0].toLowerCase()]");
+				message.channel.send("Data: " + args[0] + " - " + "voedsel[args[0].toLowerCase()]").then(msg => {msg.delete(10000)});
 			}
 		}
 		else if (command === 'reforge') {
