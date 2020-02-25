@@ -101,17 +101,6 @@ client.on('message', message => {
 			message.channel.send('**Bot command list:**\n - !help\n - !talisman\n - !reforge\n - !stats [username]\n - !networth [username]').then(msg => {msg.delete(30000)});
 			message.delete(30000);
 		}
-		else if (command === 'eten') {
-			const voedsel = {
-				"chips": "zout",
-				"chocolade": "zoet",
-				"appel": "zuur",
-				"friet": "vet"
-				};
-			if (args[0]) {
-				message.channel.send("Data: " + args[0] + " - " + "voedsel[args[0].toLowerCase()]").then(msg => {msg.delete(10000)});
-			}
-		}
 		else if (command === 'reforge') {
 			message.channel.send("**Damage:**\nArmor: Godly\nSword: Spicy\nBow: Rapid\nLegendary/Epic talisman: Godly\nRare talisman: Itchy\nUncommon/Common talisman (*80%< crit chance*): Itchy\nUncommon/Common talisman (*80%>crit chance*): Godly/Zealous\n\n**HP&Defence:**\nArmor: Titanic\nSword: -\nBow: -\nTalisman: Ominous\n\n**Mana:**\nArmor: Wise\nSword: Legendary\nBow: Deadly\nTalisman:Bizarre/Pretty\n\n\n*Tag de 'Tag Me' bot als je je talisman optimaal wilt reforgen*").then(msg => {msg.delete(30000)});
 			message.delete(30000);
@@ -335,6 +324,20 @@ client.on('message', message => {
 			}
 			message.delete();
 		}
+//------------------------------------------------------------------------------------------------------------------------------
+		else if (command === 'eten') {
+			const voedsel = {
+				"chips": "zout",
+				"chocolade": "zoet",
+				"appel": "zuur",
+				"friet": "vet"
+				};
+			if (args[0]) {
+				message.channel.send("Data: " + args[0] + " - " + voedsel[args[0].toLowerCase()]).then(msg => {msg.delete(10000)});
+			}
+			message.delete(1000);
+		}
+//------------------------------------------------------------------------------------------------------------------------------
 		else {
 			message.delete();
 			message.channel.send(":no_entry: **Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
