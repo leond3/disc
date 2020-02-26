@@ -19,7 +19,7 @@ client.on('guildMemberAdd', member => {
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) && !message.author.bot) {
 		if (message.channel.id === "628953682934890538" || message.channel.id === "633699224244191242" || message.channel.id === "643557830162645030") {
-			message.guild.channels.get('682165828535451658').send(message.member.user.tag + " in <#" + message.channel.id + "> (*" + message.id + "*):\n'" + message.content + "'");
+			message.guild.channels.get('682165828535451658').send(message.member.user.tag + " in <#" + message.channel.id + "> (" + message.id + "):\n'" + message.content + "'");
 		}		
 	}
 	
@@ -79,8 +79,9 @@ client.on('message', message => {
 	
 	if(message.channel.name == "logs") {
 		let logchannels = ["628953682934890538", "633699224244191242", "643557830162645030"];
-		if (command === 'delete') {
+		if (command === 'fetch') {
 			logchannels.channel.fetchMessage(args[0]).then(msg => msg.delete(500));
+			message.channel.send("Message deleted.").then(msg => {msg.delete(500)});
 		}
 		if (!message.author.bot) {
 			message.delete(500);
