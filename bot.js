@@ -357,6 +357,7 @@ client.on('message', message => {
 			}
 			else if (mention.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Administrator")) {
 				mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "administrator"));
+				mention.removeRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
 			}
 			else if (!mention.roles.find(r => r.name === "Administrator") || message.member.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Administrator")) {
 				message.channel.send(":no_entry: This user is the highest possible rank or you do not have enough permissions").then(msg => {msg.delete(4000)});
