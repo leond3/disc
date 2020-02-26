@@ -17,9 +17,10 @@ client.on('guildMemberAdd', member => {
 });
 
 client.on('message', message => {
-	let logchannels = ["628953682934890538", "633699224244191242", "643557830162645030"];
-	if (!message.content.startsWith(prefix) && !message.author.bot && message.channel.id === logchannels) {
-		message.guild.channels.get('682165828535451658').send(message + ":\n" + message.content);
+	if (!message.content.startsWith(prefix) && !message.author.bot) {
+		if (message.channel.id === "628953682934890538" || message.channel.id === "633699224244191242" || message.channel.id === "643557830162645030") {
+			message.guild.channels.get('682165828535451658').send("<@" + message.id + ">:\n" + message.content);
+		}		
 	}
 	
 	let blacklisted = ["kank", "kk ", "k@nk", "suck ", "mongool", "idioot", "idiot", "stfu", "shut ", "bek ", "tyfus", "autist", "bitch", "eikel", "hoer", "homo", "kut", "lul ", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk ", "h0m0", "h0mo", "hom0", "gay", "g4y", "sukkel", "niger", "nigger", "g@y", "n1g", "f@ck", "f*ck"];
