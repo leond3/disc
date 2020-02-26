@@ -350,6 +350,18 @@ client.on('message', message => {
 			}
 			message.delete();
 		}
+		else if (command === 'promote') {
+			mention = message.mentions.users.first();
+			if (!mention.member.roles.find(r => r.name.toLowerCase() === "moderator")) {
+				mention.member.addRole(mention.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
+			}
+		}
+		else if (command === 'demote') {
+			mention = message.mentions.users.first();
+			if (mention.member.roles.find(r => r.name.toLowerCase() === "moderator")) {
+				mention.member.removeRole(mention.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
+			}
+		}
 //------------------------------------------------------------------------------------------------------------------------------
 		else if (command === 'eten') {
 			const voedsel = {
