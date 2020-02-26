@@ -352,7 +352,7 @@ client.on('message', message => {
 		}
 		else if (command === 'promote') {
 			const mention = message.mentions.members.first();
-			if (!mention.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Moderator") || message.member.roles.find(r => r.name === "Administrator")) {
+			if (!mention.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Moderator") || !mention.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Administrator")) {
 				mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
 				message.channel.send(":white_check_mark: Succesfully updated rank!").then(msg => {msg.delete(4000)});
 			}
