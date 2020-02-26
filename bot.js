@@ -354,10 +354,12 @@ client.on('message', message => {
 			const mention = message.mentions.members.first();
 			if (!mention.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Moderator") || message.member.roles.find(r => r.name === "Administrator")) {
 				mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
+				message.channel.send(":white_check_mark: Succesfully updated rank!").then(msg => {msg.delete(4000)});
 			}
 			else if (mention.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Administrator")) {
 				mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "administrator"));
 				mention.removeRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
+				message.channel.send(":white_check_mark: Succesfully updated rank!").then(msg => {msg.delete(4000)});
 			}
 			else if (!mention.roles.find(r => r.name === "Administrator") || message.member.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Administrator")) {
 				message.channel.send(":no_entry: This user is the highest possible rank or you do not have enough permissions").then(msg => {msg.delete(4000)});
@@ -371,6 +373,12 @@ client.on('message', message => {
 			const mention = message.mentions.members.first();
 			if (mention.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Administrator")) {
 				mention.removeRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
+				message.channel.send(":white_check_mark: Succesfully updated rank!").then(msg => {msg.delete(4000)});
+			}
+			else if (mention.roles.find(r => r.name === "Administrator") && message.member.roles.find(r => r.name === "Bot builder")) {
+				mention.removeRole(message.guild.roles.find(r => r.name.toLowerCase() == "administrator"));
+				mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
+				message.channel.send(":white_check_mark: Succesfully updated rank!").then(msg => {msg.delete(4000)});
 			}
 			else if (!mention.roles.find(r => r.name === "Moderator")) {
 				message.channel.send(":no_entry: This user is the lowest possible rank or you do not have enough permissions").then(msg => {msg.delete(4000)});
