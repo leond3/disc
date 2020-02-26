@@ -78,10 +78,11 @@ client.on('message', message => {
 	}
 	
 	if(message.channel.name == "logs") {
-		//let logchannels = ["628953682934890538", "633699224244191242", "643557830162645030"];
 		if (command === 'fetch') {
+			message.guild.channels.get('628953682934890538').fetchMessage(args[0]).then(msg => {msg.delete(500)});
 			message.guild.channels.get('633699224244191242').fetchMessage(args[0]).then(msg => {msg.delete(500)});
-			message.channel.send("Message deleted.").then(msg => {msg.delete(500)});
+			message.guild.channels.get('643557830162645030').fetchMessage(args[0]).then(msg => {msg.delete(500)});
+			message.channel.send(":no_entry_sign: Message deleted.").then(msg => {msg.delete(500)});
 		}
 		if (!message.author.bot) {
 			message.delete(500);
