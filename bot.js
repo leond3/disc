@@ -80,7 +80,7 @@ client.on('message', message => {
 	if(message.channel.name == "logs") {
 		let logchannels = ["628953682934890538", "633699224244191242", "643557830162645030"];
 		if (command === 'fetch') {
-			logchannels.channel.fetchMessage(args[0]).then(msg => {msg.delete(500)});
+			message.guild.channels.get(logchannels).fetchMessage(args[0]).then(msg => {msg.delete(500)});
 			message.channel.send("Message deleted.").then(msg => {msg.delete(500)});
 		}
 		if (!message.author.bot) {
