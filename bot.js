@@ -19,7 +19,7 @@ client.on('guildMemberAdd', member => {
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) && !message.author.bot) {
 		if (message.channel.id === "628953682934890538" || message.channel.id === "633699224244191242" || message.channel.id === "643557830162645030") {
-			message.guild.channels.get('682165828535451658').send(message.member.user.tag + " in <#" + message.channel.id + ">:\n" + message.content);
+			message.guild.channels.get('682165828535451658').send(message.member.user.tag + " in <#" + message.channel.id + "> (*" + message.id + "*):\n'" + message.content + "'");
 		}		
 	}
 	
@@ -76,7 +76,13 @@ client.on('message', message => {
 			message.delete();
 		}
 	}
-
+	
+	if(message.channel.name == "logs") {
+		if (command === 'delete') {
+			message.channel.fetchMessage(args[0]).then(msg => msg.delete(500));
+		}
+	}
+	
 	if(message.channel.name == "skyblock-giveaways") {
 		if (command === 'gstart' && message.member.roles.find(r => r.name === "Giveaways") && !message.author.bot) {
 			message.delete(4000);
