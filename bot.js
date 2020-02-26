@@ -78,7 +78,7 @@ client.on('message', message => {
 	
 	if(message.channel.name == "logs") {
 		if (command === 'fetch' && args[0]) {
-			message.guild.fetchMessage(args[0]).then(msg => {msg.delete(500)});
+			message.guild.channels.fetchMessage(args[0]).then(msg => {msg.delete(500)});
 			//message.guild.channels.get('633699224244191242').fetchMessage(args[0]).then(msg => {msg.delete(500)});
 			//message.guild.channels.get('643557830162645030').fetchMessage(args[0]).then(msg => {msg.delete(500)});
 			//message.guild.channels.get('660214547231277102').fetchMessage(args[0]).then(msg => {msg.delete(500)});
