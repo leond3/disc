@@ -78,13 +78,13 @@ client.on('message', message => {
 	}
 	
 	if(message.channel.name == "logs") {
-		if (message.author.bot) {
-			return;
-		}
+		let logchannels = ["628953682934890538", "633699224244191242", "643557830162645030"];
 		if (command === 'delete') {
-			message.channel.fetchMessage(args[0]).then(msg => msg.delete(500));
+			logchannels.channel.fetchMessage(args[0]).then(msg => msg.delete(500));
 		}
-		else { message.delete(500); }
+		if (!message.author.bot) {
+			message.delete(500);
+		}
 	}
 	
 	if(message.channel.name == "skyblock-giveaways") {
