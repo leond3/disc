@@ -351,14 +351,12 @@ client.on('message', message => {
 			message.delete();
 		}
 		else if (command === 'promote') {
-			mention = message.mentions.users.first();
-			if (!mention.roles.has(r => r.name.toLowerCase() === "moderator")) {
-				mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
-			}
+			const mention = message.mentions.members.first();
+			mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
 			message.delete(4000);
 		}
 		else if (command === 'demote') {
-			mention = message.mentions.users.first();
+			const mention = message.mentions.members.first();
 			if (mention.roles.has(r => r.name.toLowerCase() === "moderator")) {
 				mention.removeRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
 			}
