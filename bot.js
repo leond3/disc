@@ -19,7 +19,7 @@ client.on('guildMemberAdd', member => {
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) && !message.author.bot) {
 		if (message.channel.id === "628953682934890538" || message.channel.id === "633699224244191242" || message.channel.id === "643557830162645030") {
-			message.guild.channels.get('682165828535451658').send("<@" + message.member.id + "> in <#" + message.channel.id + ">:\n" + message.content);
+			message.guild.channels.get('682165828535451658').send(message.member.user.tag + " in <#" + message.channel.id + ">:\n" + message.content);
 		}		
 	}
 	
