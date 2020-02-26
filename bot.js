@@ -78,9 +78,13 @@ client.on('message', message => {
 	}
 	
 	if(message.channel.name == "logs") {
+		if (message.author.bot) {
+			return;
+		}
 		if (command === 'delete') {
 			message.channel.fetchMessage(args[0]).then(msg => msg.delete(500));
 		}
+		else { message.delete(500); }
 	}
 	
 	if(message.channel.name == "skyblock-giveaways") {
