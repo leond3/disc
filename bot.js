@@ -352,13 +352,13 @@ client.on('message', message => {
 		}
 		else if (command === 'promote') {
 			mention = message.mentions.users.first();
-			if (!mention.roles.find(r => r.name.toLowerCase() === "moderator")) {
+			if (!mention.hasRole(r => r.name.toLowerCase() === "moderator")) {
 				mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
 			}
 		}
 		else if (command === 'demote') {
 			mention = message.mentions.users.first();
-			if (mention.roles.find(r => r.name.toLowerCase() === "moderator")) {
+			if (mention.roles.has(r => r.name.toLowerCase() === "moderator")) {
 				mention.removeRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
 			}
 		}
