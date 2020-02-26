@@ -357,7 +357,7 @@ client.on('message', message => {
 		}
 		else if (command === 'demote') {
 			const mention = message.mentions.members.first();
-			if (mention.roles.has(r => r.name === "Moderator")) {
+			if (mention.roles.find(r => r.name === "Moderator")) {
 				mention.removeRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
 			}
 			message.delete(4000);
