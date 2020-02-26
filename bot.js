@@ -7,7 +7,6 @@ const client = new Discord.Client();
 
 client.once('ready', () => {
 	console.log('MineCraft bot responded and is operational!');
-	client.user.setStatus('dnd');
 	client.user.setActivity('Made by Leon#1250');
 });
 
