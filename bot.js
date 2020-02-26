@@ -184,7 +184,7 @@ client.on('message', message => {
 			return;
 		}
 		if (command === 'help') {
-		message.channel.send('**Bot command list:**\n - !help\n - !bot\n - !color [color/list]\n - !tag [tag/list]\n - !cf\n - !quickquestion\n - !notifications\n - !privatecall\n - /nick [name]').then(msg => {msg.delete(300000)});
+		message.channel.send('**Bot command list:**\n - !help\n - !bot\n - !color [color/list]\n - !tag [tag/list]\n - !cf\n - !quickquestion\n - !notifications\n - !privatecall\n - !promote [mention]\n - !demote [mention]\n - /nick [name]').then(msg => {msg.delete(300000)});
 		message.delete(300000);
 		}
 		else if (command === 'bot') {
@@ -352,13 +352,30 @@ client.on('message', message => {
 		}
 		else if (command === 'promote') {
 			const mention = message.mentions.members.first();
-			mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
+			if (!mention.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Moderator") || message.member.roles.find(r => r.name === "Administrator")) {
+				mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
+			}
+			else if (mention.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Administrator")) {
+				mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "administrator"));
+			}
+			else if (!mention.roles.find(r => r.name === "Administrator") || message.member.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Administrator")) {
+				message.channel.send(":no_entry: This user is the highest possible rank or you do not have enough permissions").then(msg => {msg.delete(4000)});
+			}
+			else {
+				message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
+			}
 			message.delete(4000);
 		}
 		else if (command === 'demote') {
 			const mention = message.mentions.members.first();
-			if (mention.roles.find(r => r.name === "Moderator")) {
+			if (mention.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Administrator")) {
 				mention.removeRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
+			}
+			else if (!mention.roles.find(r => r.name === "Moderator")) {
+				message.channel.send(":no_entry: This user is the lowest possible rank or you do not have enough permissions").then(msg => {msg.delete(4000)});
+			}
+			else {
+				message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
 			}
 			message.delete(4000);
 		}
