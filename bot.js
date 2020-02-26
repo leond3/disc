@@ -78,15 +78,15 @@ client.on('message', message => {
 	}
 	
 	if(message.channel.name == "logs") {
-		if (command === 'fetch' && args[0]) {
-			message.guild.channels.fetchMessage(args[0]).then(msg => {msg.delete(500)});
-			//message.guild.channels.get('633699224244191242').fetchMessage(args[0]).then(msg => {msg.delete(500)});
-			//message.guild.channels.get('643557830162645030').fetchMessage(args[0]).then(msg => {msg.delete(500)});
-			//message.guild.channels.get('660214547231277102').fetchMessage(args[0]).then(msg => {msg.delete(500)});
-			//message.guild.channels.get('629330312232435736').fetchMessage(args[0]).then(msg => {msg.delete(500)});
-			//message.guild.channels.get('640818734633582602').fetchMessage(args[0]).then(msg => {msg.delete(500)});
-			message.channel.send(":no_entry_sign: " + message.member.user.tag + " deleted: " + args[0]);
-		}
+//		if (command === 'fetch' && args[0]) {
+//			message.guild.channels.get('628953682934890538').fetchMessage(args[0]).then(msg => {msg.delete(500)});
+//			message.guild.channels.get('633699224244191242').fetchMessage(args[0]).then(msg => {msg.delete(500)});
+//			message.guild.channels.get('643557830162645030').fetchMessage(args[0]).then(msg => {msg.delete(500)});
+//			message.guild.channels.get('660214547231277102').fetchMessage(args[0]).then(msg => {msg.delete(500)});
+//			message.guild.channels.get('629330312232435736').fetchMessage(args[0]).then(msg => {msg.delete(500)});
+//			message.guild.channels.get('640818734633582602').fetchMessage(args[0]).then(msg => {msg.delete(500)});
+//			message.channel.send(":no_entry_sign: " + message.member.user.tag + " deleted: " + args[0]);
+//		}
 		if (!message.author.bot) {
 			message.delete(500);
 		}
