@@ -17,12 +17,10 @@ client.on('guildMemberAdd', member => {
 });
 
 client.on('message', message => {	
-	let blacklisted = ["kank", "kk ", "k@nk", "suck ", "mongool", "idioot", "idiot", "stfu", "shut ", "bek ", "tyfus", "autist", "bitch", "eikel", "hoer", "homo", "kut", "lul ", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk ", "h0m0", "h0mo", "hom0", "gay", "g4y", "sukkel", "niger", "nigger", "g@y", "n1g", "f@ck", "f*ck"];
+	let blacklisted = ["kank", "kk ", "k@nk", "suck ", "mongool", "idioot", "idiot", "stfu", "shut ", "bek ", "tyfus", "autist", "bitch", "eikel", "hoer", "homo", "kut", "lul ", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk ", "h0m0", "h0mo", "hom0", "gay", "g4y", "sukkel", "niger", "nigger", "g@y", "n1g", "f@ck", "f*ck", "h*m", "g*y", "b*tch", "k*nk"];
 	for (var i in blacklisted) {
 		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) {
-			if (blacklisted[i] == "stfu" || blacklisted[i] == "shut" || blacklisted[i] == "bek") { message.reply("vraagt u gelieve uw mondje dicht te houden en uw handjes van uw toetsenbord af te halen voor enkele seconden. Alvast bedankt.").then(msg => {msg.delete(300000)}); }
-			else { message.channel.send(":no_entry: You used a blacklisted word!").then(msg => {msg.delete(4000)}); }
-			message.delete();
+			message.content.replace(blacklisted[i], ":x:")
 		}
 	}
 
@@ -35,7 +33,7 @@ client.on('message', message => {
 		}
 	}
 	if (message.content.startsWith(prefix) && !message.author.bot && command === 'fetch' && args[0] && message.member.roles.find(r => r.name === "Administrator")) {
-		message.guild.channels.get('682165828535451658').send(":no_entry_sign: " + message.member.user.tag + " deleted: " + args[0]);
+		message.guild.channels.get('682165828535451658').send(":wastebasket: " + message.member.user.tag + " deleted: " + args[0]);
 		message.delete(500);
 		message.channel.fetchMessage(args[0]).then(msg => {msg.delete(500)});
 	}
