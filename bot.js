@@ -69,8 +69,8 @@ client.on('message', message => {
 		}
 		if (command === 'mcnotify') {
 			if (message.member.roles.find(r => r.name === "Moderator")) {
-				message.channel.send(":white_check_mark: Notification detected!").then(msg => {msg.delete(4000)});
-				message.channel.send(message.content.slice(10) + "\n\n*This message will be deleted in 10 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(600000)});
+				message.channel.send(":envelope: Notification detected!").then(msg => {msg.delete(4000)});
+				message.channel.send("`" + message.content.slice(10) + "`\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)});
 			}
 			else {
 				message.channel.send(":no_entry: You do not have the permission to create a server notification.\n*Please contact a Moderator if you want to create a notification*").then(msg => {msg.delete(4000)});
@@ -331,10 +331,15 @@ client.on('message', message => {
 		}
 		else if (command === 'notify') {
 			if (message.member.roles.find(r => r.name === "Bot builder")) {
-				mention = message.mentions.users.first();
-				mentionMessage = message.content.slice(8);
-				mention.sendMessage(mentionMessage + "\n\n*Deze berichten kan je uitschakelen door notifications uit te zetten in de discord-commands channel, dit bericht wordt na 60 minuten automatisch verwijderd.*").then(msg => {msg.delete(3600000)});
-				message.channel.send(":white_check_mark: Notification succesfully send!").then(msg => {msg.delete(4000)});
+				const mention = message.mentions.members.first();
+				const mentionMessage = message.content.slice(8);
+				if (mention.roles.find(r => r.name === "Notifications")) {
+					mention.sendMessage(mentionMessage + "\n\n*Deze berichten kan je uitschakelen door notifications uit te zetten in de discord-commands channel, dit bericht wordt na 60 minuten automatisch verwijderd.*").then(msg => {msg.delete(3600000)});
+					message.channel.send(":incoming_envelope: Notification succesfully send!").then(msg => {msg.delete(4000)});
+				}
+				else {
+					message.channel.send(":no_entry: This user doesn't have notifications enabled!").then(msg => {msg.delete(4000)});
+				}
 			}
 			else {
 				message.channel.send(":no_entry: You do not have the right permission to execute this command, or this user has notifications disabled!").then(msg => {msg.delete(4000)});
