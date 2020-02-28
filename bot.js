@@ -16,13 +16,7 @@ client.on('guildMemberAdd', member => {
 	member.sendMessage("Welkom in de **MineCraft Server**!\nIk ben de main discord bot, je kan met mij praten in de `#discord-commands` channel.\nIk ben een chat control, moderation, role support en command bot.\n\n*Dit bericht wordt na 60 minuten automatisch verwijderd.*").then(msg => {msg.delete(3600000)});
 });
 
-client.on('message', message => {
-	if (!message.content.startsWith(prefix) && !message.author.bot) {
-		if (message.channel.id === "628953682934890538" || message.channel.id === "633699224244191242" || message.channel.id === "643557830162645030" || message.channel.id === "660214547231277102" || message.channel.id === "629330312232435736" || message.channel.id === "640818734633582602") {
-			message.guild.channels.get('682165828535451658').send(message.member.user.tag + " in <#" + message.channel.id + "> (" + message.id + "):\n'" + message.content + "'");
-		}		
-	}
-	
+client.on('message', message => {	
 	let blacklisted = ["kank", "kk ", "k@nk", "suck ", "mongool", "idioot", "idiot", "stfu", "shut ", "bek ", "tyfus", "autist", "bitch", "eikel", "hoer", "homo", "kut", "lul ", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk ", "h0m0", "h0mo", "hom0", "gay", "g4y", "sukkel", "niger", "nigger", "g@y", "n1g", "f@ck", "f*ck"];
 	for (var i in blacklisted) {
 		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) {
@@ -34,6 +28,18 @@ client.on('message', message => {
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
+	
+	if (!message.content.startsWith(prefix) && !message.author.bot) {
+		if (message.channel.id === "628953682934890538" || message.channel.id === "633699224244191242" || message.channel.id === "643557830162645030" || message.channel.id === "660214547231277102" || message.channel.id === "629330312232435736" || message.channel.id === "640818734633582602") {
+			message.guild.channels.get('682165828535451658').send(message.member.user.tag + " in <#" + message.channel.id + "> (" + message.id + "):\n'" + message.content + "'");
+		}
+	}
+	if (message.content.startsWith(prefix) && !message.author.bot && command === 'fetch' && args[0] && message.member.roles.find(r => r.name === "Administrator")) {
+		message.guild.channels.get('682165828535451658').send(":no_entry_sign: " + message.member.user.tag + " deleted: " + args[0]);
+		message.delete(500);
+		message.channel.fetchMessage(args[0]).then(msg => {msg.delete(500)});
+	}
+	
 	if (message.content.startsWith(prefix) || !message.author.bot) {
 		if (command === 'muteall' && message.member.roles.find(r => r.name === "Bot builder")) {
 			message.channel.overwritePermissions(message.channel.guild.defaultRole, { SEND_MESSAGES: false });
@@ -74,21 +80,6 @@ client.on('message', message => {
 		if (command === 'clearchat' && !message.member.roles.find(r => r.name === "Bot builder")) {
 			message.channel.send(":no_entry: **You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
 			message.delete();
-		}
-	}
-	
-	if(message.channel.name == "logs") {
-//		if (command === 'fetch' && args[0]) {
-//			message.guild.channels.get('628953682934890538').fetchMessage(args[0]).then(msg => {msg.delete(500)});
-//			message.guild.channels.get('633699224244191242').fetchMessage(args[0]).then(msg => {msg.delete(500)});
-//			message.guild.channels.get('643557830162645030').fetchMessage(args[0]).then(msg => {msg.delete(500)});
-//			message.guild.channels.get('660214547231277102').fetchMessage(args[0]).then(msg => {msg.delete(500)});
-//			message.guild.channels.get('629330312232435736').fetchMessage(args[0]).then(msg => {msg.delete(500)});
-//			message.guild.channels.get('640818734633582602').fetchMessage(args[0]).then(msg => {msg.delete(500)});
-//			message.channel.send(":no_entry_sign: " + message.member.user.tag + " deleted: " + args[0]);
-//		}
-		if (!message.author.bot) {
-			message.delete(500);
 		}
 	}
 	
