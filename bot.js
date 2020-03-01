@@ -20,7 +20,8 @@ client.on('message', message => {
 	let blacklisted = ["kank", "kk ", "k@nk", "suck ", "mongool", "idioot", "idiot", "stfu", "shut ", "bek ", "tyfus", "autist", "bitch", "eikel", "hoer", "homo", "kut", "lul ", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk ", "h0m0", "h0mo", "hom0", "gay", "g4y", "sukkel", "niger", "nigger", "g@y", "n1g", "f@ck", "f*ck", "h*m", "g*y", "b*tch", "k*nk"];
 	for (var i in blacklisted) {
 		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) {
-			message.content.replace("idiot", ":x:")
+			message.delete();
+			message.channel.send(":no_entry_sign: You cannot use blacklisted words in your message.").then(msg => {msg.delete(4000)});
 		}
 	}
 
@@ -328,16 +329,16 @@ client.on('message', message => {
 			message.delete();
 		}
 		else if (command === 'notify') {
-			if (message.member.roles.find(r => r.name === "Bot builder")) {
+			if (message.member.roles.find(r => r.name === "Administrator")) {
 				const mention = message.mentions.members.first();
 				const mentionMessage = message.content.slice(8);
 				if (mention.roles.find(r => r.name === "Notifications")) {
 					mention.sendMessage(mentionMessage + "\n\n*Deze berichten kan je uitschakelen door notifications uit te zetten in de discord-commands channel, dit bericht wordt na 60 minuten automatisch verwijderd.*").then(msg => {msg.delete(3600000)});
 					message.channel.send(":incoming_envelope: Notification succesfully send!").then(msg => {msg.delete(4000)});
-					//message.channels.get
+					message.guild.channels.get('682165828535451658').send(message.member.user.tag + " sent a notification to: " + mention.member.user.tag + ".");
 				}
 				else {
-					message.channel.send(":no_entry: This user doesn't have notifications enabled!").then(msg => {msg.delete(4000)});
+					message.channel.send(":no_entry: This user has notifications disabled!").then(msg => {msg.delete(4000)});
 				}
 			}
 			else {
