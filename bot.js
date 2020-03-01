@@ -20,7 +20,7 @@ client.on('message', message => {
 	let blacklisted = ["kank", "kk ", "k@nk", "suck ", "mongool", "idioot", "idiot", "stfu", "shut ", "bek ", "tyfus", "autist", "bitch", "eikel", "hoer", "homo", "kut", "lul ", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk ", "h0m0", "h0mo", "hom0", "gay", "g4y", "sukkel", "niger", "nigger", "g@y", "n1g", "f@ck", "f*ck", "h*m", "g*y", "b*tch", "k*nk"];
 	for (var i in blacklisted) {
 		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) {
-			message.content.replace(blacklisted[i], ":x:")
+			message.content.replace("idiot", ":x:")
 		}
 	}
 
@@ -334,6 +334,7 @@ client.on('message', message => {
 				if (mention.roles.find(r => r.name === "Notifications")) {
 					mention.sendMessage(mentionMessage + "\n\n*Deze berichten kan je uitschakelen door notifications uit te zetten in de discord-commands channel, dit bericht wordt na 60 minuten automatisch verwijderd.*").then(msg => {msg.delete(3600000)});
 					message.channel.send(":incoming_envelope: Notification succesfully send!").then(msg => {msg.delete(4000)});
+					//message.channels.get
 				}
 				else {
 					message.channel.send(":no_entry: This user doesn't have notifications enabled!").then(msg => {msg.delete(4000)});
