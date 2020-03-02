@@ -336,7 +336,7 @@ client.on('message', message => {
 				if (mention.roles.find(r => r.name === "Notifications")) {
 					mention.sendMessage(mentionMessage + "\n\n*Deze berichten kan je uitschakelen door notifications uit te zetten in de discord-commands channel, dit bericht wordt na 60 minuten automatisch verwijderd.*").then(msg => {msg.delete(3600000)});
 					message.channel.send(":incoming_envelope: Notification succesfully send!").then(msg => {msg.delete(4000)});
-					message.guild.channels.get('682165828535451658').send(message.member.user.tag + " sent a notification to: " + mention + ".");
+					message.guild.channels.get('682165828535451658').send(message.member.user.tag + " sent a notification to: " + message.mention.user.tag + ".");
 				}
 				else {
 					message.channel.send(":no_entry: This user has notifications disabled!").then(msg => {msg.delete(4000)});
