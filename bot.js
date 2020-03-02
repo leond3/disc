@@ -19,9 +19,9 @@ client.on('guildMemberAdd', member => {
 client.on('message', message => {	
 	let blacklisted = ["kank", "kk ", "k@nk", "suck ", "mongool", "idioot", "idiot", "stfu", "shut ", "bek ", "tyfus", "autist", "bitch", "eikel", "hoer", "homo", "kut", "lul ", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk ", "h0m0", "h0mo", "hom0", "gay", "g4y", "sukkel", "niger", "nigger", "g@y", "n1g", "f@ck", "f*ck", "h*m", "g*y", "b*tch", "k*nk"];
 	for (var i in blacklisted) {
-		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) {
+		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase()) && !message.author.bot) {
 			message.delete();
-			message.channel.send(":no_entry_sign: You cannot use blacklisted words in your message.").then(msg => {msg.delete(4000)});
+			message.channel.send(":no_entry_sign: You cannot use blacklisted words in your message:\n||`" + message.content + "`||").then(msg => {msg.delete(10000)});
 		}
 	}
 
@@ -30,7 +30,7 @@ client.on('message', message => {
 	
 	if (!message.content.startsWith(prefix) && !message.author.bot) {
 		if (message.channel.id === "628953682934890538" || message.channel.id === "633699224244191242" || message.channel.id === "643557830162645030" || message.channel.id === "660214547231277102" || message.channel.id === "629330312232435736" || message.channel.id === "640818734633582602") {
-			message.guild.channels.get('682165828535451658').send(message.member.user.tag + " in <#" + message.channel.id + "> (" + message.id + "):\n'" + message.content + "'");
+			message.guild.channels.get('682165828535451658').send(message.member.user.tag + " in <#" + message.channel.id + "> (" + message.id + "):\n'`" + message.content + "`'");
 		}
 	}
 	if (message.content.startsWith(prefix) && !message.author.bot && command === 'fetch' && args[0] && message.member.roles.find(r => r.name === "Administrator")) {
