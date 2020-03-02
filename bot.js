@@ -320,7 +320,7 @@ client.on('message', message => {
 			if (voiceChannel && message.member.roles.find(r => r.name === "Moderator") || message.member.roles.find(r => r.name === "Administrator")) {
 				message.member.setVoiceChannel(privatechannels[getRandomInt(0,10)]);
 				message.channel.send(":white_check_mark: User has been succesfully moved to a private channel.\n*You've to manually move users into this call!*").then(msg => {msg.delete(6000)});
-				message.guild.channels.get('682165828535451658').send(":telephone_receiver: " + message.member.user.tag + " connected to a private call.");
+				message.guild.channels.get('682165828535451658').send(":green_telephone_receiver: " + message.member.user.tag + " connected to a private call.");
 			}
 			else if (!voiceChannel && message.member.roles.find(r => r.name === "Moderator")) {
 				message.channel.send(":no_entry: User is not connected to a channel and thus can't be moved.").then(msg => {msg.delete(6000)});
