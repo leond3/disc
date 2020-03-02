@@ -21,7 +21,7 @@ client.on('message', message => {
 	for (var i in blacklisted) {
 		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase()) && !message.author.bot) {
 			message.delete();
-			message.channel.send(":no_entry_sign: You cannot use blacklisted words in your message:\n||`" + message.content + "`||").then(msg => {msg.delete(10000)});
+			message.channel.send(":no_entry_sign: " + message.member.user.tag + " you cannot use blacklisted words in your message:\n||`" + message.content + "`||").then(msg => {msg.delete(10000)});
 		}
 	}
 
@@ -37,6 +37,7 @@ client.on('message', message => {
 		message.guild.channels.get('682165828535451658').send(":wastebasket: " + message.member.user.tag + " deleted: " + args[0]);
 		message.delete(500);
 		message.channel.fetchMessage(args[0]).then(msg => {msg.delete(500)});
+		message.channel.send("fetching...").then(msg => {msg.delete(500)});
 	}
 	
 	if (message.content.startsWith(prefix) || !message.author.bot) {
