@@ -68,7 +68,7 @@ client.on('message', message => {
 			clearchat();
 		}
 		if (command === 'mcnotify') {
-			if (message.member.roles.find(r => r.name === "Moderator")) {
+			if (message.member.roles.find(r => r.name === "Moderator") || message.member.roles.find(r => r.name === "Administrator")) {
 				message.channel.send(":envelope: Notification detected!").then(msg => {msg.delete(4000)});
 				message.channel.send("`" + message.content.slice(10) + "`\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)});
 			}
@@ -317,7 +317,7 @@ client.on('message', message => {
 			const voiceChannel = message.member.voiceChannel;
 			let privatechannels = ["667089585527980062", "672407468130959371", "672407491807543297", "672407504914743318", "672407514259914762", "672407536741122048", "672407548229320754", "672407558270746635", "672407597248151591", "672407607004364801"];
 			
-			if (voiceChannel && message.member.roles.find(r => r.name === "Moderator")) {
+			if (voiceChannel && message.member.roles.find(r => r.name === "Moderator") || message.member.roles.find(r => r.name === "Administrator")) {
 				message.member.setVoiceChannel(privatechannels[getRandomInt(0,10)]);
 				message.channel.send(":white_check_mark: User has been succesfully moved to a private channel.\n*You've to move users into this call!*").then(msg => {msg.delete(6000)});
 			}
