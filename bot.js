@@ -18,18 +18,6 @@ client.on('guildMemberAdd', member => {
 });
 
 client.on('message', message => {
-//------------------------------------------------------------------------------------------------------------------------------
-let count = 5
-
-const counter = setInterval(() => {
-  if (count > 0) {
-    message.guild.channels.get('638460994926018571').send(count).then(msg => {msg.delete(1000)});
-    count--
-  } else {
-    clearInterval(counter)
-  }
-}, 1000)
-//------------------------------------------------------------------------------------------------------------------------------	
 	let blacklisted = ["kank", "kk ", "k@nk", "suck ", "mongool", "idioot", "idiot", "stfu", "shut ", "bek ", "tyfus", "autist", "bitch", "eikel", "hoer", "homo", "kut", "lul ", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk ", "h0m0", "h0mo", "hom0", "gay", "g4y", "sukkel", "niger", "nigger", "g@y", "n1g", "f@ck", "f*ck", "h*m", "g*y", "b*tch", "k*nk"];
 	for (var i in blacklisted) {
 		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase()) && !message.author.bot) {
@@ -40,6 +28,21 @@ const counter = setInterval(() => {
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
+	
+//------------------------------------------------------------------------------------------------------------------------------
+	if (command === 'abd') {
+		let count = 5
+
+		const counter = setInterval(() => {
+			if (count > 0) {
+			message.guild.channels.get('638460994926018571').send(count).then(msg => {msg.delete(1000)});
+			count--
+			} else {
+				clearInterval(counter)
+			}
+		}, 1000)
+	}
+//------------------------------------------------------------------------------------------------------------------------------	
 	
 	if (!message.content.startsWith(prefix) && !message.author.bot) {
 		if (message.channel.id === "628953682934890538" || message.channel.id === "633699224244191242" || message.channel.id === "643557830162645030" || message.channel.id === "660214547231277102" || message.channel.id === "629330312232435736" || message.channel.id === "640818734633582602") {
