@@ -30,9 +30,9 @@ client.on('message', message => {
 	const command = args.shift().toLowerCase();
 	
 //------------------------------------------------------------------------------------------------------------------------------
-	if (command === 'abd') {
+	if (command === 'abd' && !message.author.bot) {
+		message.delete(500);
 		let count = 5
-
 		const counter = setInterval(() => {
 			if (count > 0) {
 			message.guild.channels.get('638460994926018571').send(count).then(msg => {msg.delete(1000)});
