@@ -40,7 +40,12 @@ client.on('message', message => {
 				clearInterval(counter)
 			}
 		}, 1000)
-		message.guild.channels.get('670253626316423179').send("**PLACEHOLDER**");
+		message.channel.fetchMessages({around: "685085693533487187", limit: 1})
+    			.then(msg => {
+    			const fetchedMsg = msg.first();
+        		fetchedMsg.edit(count);
+    		});
+		//message.guild.channels.get('670253626316423179').send("**PLACEHOLDER**");
 	}
 //------------------------------------------------------------------------------------------------------------------------------	
 	
