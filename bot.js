@@ -19,15 +19,16 @@ client.on('guildMemberAdd', member => {
 
 client.on('message', message => {
 //------------------------------------------------------------------------------------------------------------------------------
-	var c = 40;
-	setInterval(function () {
-		c = c - 1;
-		message.guild.channels.get('638460994926018571').send(c).then(msg => {msg.delete(1000)});
-		if (c == 0) {
-		message.guild.channels.get('638460994926018571').send("Timer done!").then(msg => {msg.delete(2000)});
-		return;
-		}
-	}, 1000)
+let count = 5
+
+const counter = setInterval(() => {
+  if (count > 0) {
+    message.guild.channels.get('638460994926018571').send(count).then(msg => {msg.delete(1000)});
+    count--
+  } else {
+    clearInterval(counter)
+  }
+}, 1000)
 //------------------------------------------------------------------------------------------------------------------------------	
 	let blacklisted = ["kank", "kk ", "k@nk", "suck ", "mongool", "idioot", "idiot", "stfu", "shut ", "bek ", "tyfus", "autist", "bitch", "eikel", "hoer", "homo", "kut", "lul ", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk ", "h0m0", "h0mo", "hom0", "gay", "g4y", "sukkel", "niger", "nigger", "g@y", "n1g", "f@ck", "f*ck", "h*m", "g*y", "b*tch", "k*nk"];
 	for (var i in blacklisted) {
