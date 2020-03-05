@@ -17,7 +17,18 @@ client.on('guildMemberAdd', member => {
 	member.sendMessage("Welkom in de **MineCraft Server**!\nIk ben de main discord bot, je kan met mij praten in de `#discord-commands` channel.\nIk ben een chat control, moderation, role support en command bot.\n\n*Dit bericht wordt na 60 minuten automatisch verwijderd.*").then(msg => {msg.delete(3600000)});
 });
 
-client.on('message', message => {	
+client.on('message', message => {
+//------------------------------------------------------------------------------------------------------------------------------
+	var c = 40;
+	setInterval(function () {
+		c = c - 1;
+		message.guild.channels.get('638460994926018571').send(c).then(msg => {msg.delete(1000)});
+		if (c == 0) {
+		message.guild.channels.get('638460994926018571').send("Timer done!").then(msg => {msg.delete(2000)});
+		return;
+		}
+	}, 1000)
+//------------------------------------------------------------------------------------------------------------------------------	
 	let blacklisted = ["kank", "kk ", "k@nk", "suck ", "mongool", "idioot", "idiot", "stfu", "shut ", "bek ", "tyfus", "autist", "bitch", "eikel", "hoer", "homo", "kut", "lul ", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk ", "h0m0", "h0mo", "hom0", "gay", "g4y", "sukkel", "niger", "nigger", "g@y", "n1g", "f@ck", "f*ck", "h*m", "g*y", "b*tch", "k*nk"];
 	for (var i in blacklisted) {
 		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase()) && !message.author.bot) {
