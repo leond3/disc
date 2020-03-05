@@ -8,8 +8,7 @@ const client = new Discord.Client();
 client.once('ready', () => {
 	console.log('MineCraft bot responded and is operational!');
 	client.user.setStatus('online');
-	//client.user.setActivity('Made by Leon#1250');
-	client.user.setActivity('is coming...');
+	client.user.setActivity('Made by Leon#1250');
 });
 
 client.on('guildMemberAdd', member => {
