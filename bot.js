@@ -35,13 +35,13 @@ client.on('message', message => {
 		let count = 5
 		const counter = setInterval(() => {
 			if (count > 0) {
-			message.guild.channels.get('670253626316423179').send(count).then(msg => {msg.delete(1000)});
+			message.guild.channels.get('638460994926018571').send(count).then(msg => {msg.delete(1000)});
 			count--
 			} else {
 				clearInterval(counter)
 			}
 		}, 1000)
-		message.guild.channels.get('638460994926018571').send("**PLACEHOLDER**");
+		message.guild.channels.get('670253626316423179').send("**PLACEHOLDER**");
 	}
 //------------------------------------------------------------------------------------------------------------------------------	
 	
