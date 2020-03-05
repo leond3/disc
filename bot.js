@@ -202,7 +202,7 @@ client.on('message', message => {
 			const BotEmbed = new Discord.RichEmbed()
 				.setColor('#808080')
 				.setTitle('**MineCraft Bot**')
-				.setDescription("MineCraft Discord Server\nType: '!help' to get started\n\n*- Anti-Swear\n- Custom Commands\n- Chat Support\n- Roles*")
+				.setDescription("MineCraft Discord Server\nType: '!help' to get started\n\n*- Anti-Swear\n- Custom Commands\n- Chat Control\n- Role Support\n- Server Moderation*")
 				.attachFiles(['assets/bot.png'])
 				.setFooter('Made by Leon#1250')
 				.setThumbnail('attachment://bot.png')
