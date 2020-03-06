@@ -29,21 +29,21 @@ client.on('message', message => {
 	const command = args.shift().toLowerCase();
 	
 //------------------------------------------------------------------------------------------------------------------------------
-	if (command === 'countdown' && !message.author.bot && message.member.roles.find(r => r.name === "Bot builder")) {
+	if (command === 'event' && !message.author.bot && message.member.roles.find(r => r.name === "Bot builder")) {
 		message.delete(500);
-		let count = 2
+		let count = args
 		const counter = setInterval(() => {
 			if (count > 0) {
 			message.channel.fetchMessages({around: "685085693533487187", limit: 1})
     			.then(msg => {
     			const fetchedMsg = msg.first();
-        		fetchedMsg.edit(count);
+        		fetchedMsg.edit("```css\nCode: " + count + "```");
     			});
 			count--
 			} else {
 				clearInterval(counter)
 			}
-		}, 10000)
+		}, 60000)
 		//message.guild.channels.get('670253626316423179').send("**PLACEHOLDER**");
 	}
 //------------------------------------------------------------------------------------------------------------------------------	
