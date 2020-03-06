@@ -9,20 +9,6 @@ client.once('ready', ready => {
 	console.log('MineCraft bot responded and is operational!');
 	client.user.setStatus('online');
 	client.user.setActivity('Made by Leon#1250');
-	
-	const counter = setInterval(() => {
-		let count = 10;
-		if (count > 0) {
-		ready.guild.channels.get('670253626316423179').channel.fetchMessages({around: "685085693533487187", limit: 1})
-    		.then(msg => {
-    		const fetchedMsg = msg.first();
-        	fetchedMsg.edit("```css\nCode: " + count + "```");
-    		});
-		count--
-		} else {
-			clearInterval(counter)
-		}
-	}, 6000)
 });
 
 client.on('guildMemberAdd', member => {
@@ -46,6 +32,19 @@ client.on('message', message => {
 	if (command === 'event' && !message.author.bot && message.member.roles.find(r => r.name === "Bot builder")) {
 		message.delete(500);
 		let count = args[0];
+		const counter = setInterval(() => {
+			let count = 10;
+			if (count > 0) {
+				message.channel.fetchMessages({around: "685085693533487187", limit: 1})
+    				.then(msg => {
+    				const fetchedMsg = msg.first();
+        			fetchedMsg.edit("```css\nCode: " + count + "```");
+    			}
+			count--
+			} else {
+				clearInterval(counter)
+			}
+		}, 6000)
 		//message.guild.channels.get('670253626316423179').send("**PLACEHOLDER**");
 	}
 //------------------------------------------------------------------------------------------------------------------------------	
