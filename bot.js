@@ -40,11 +40,11 @@ client.on('message', message => {
     				const fetchedMsg = msg.first();
         			fetchedMsg.edit("```css\nCode: " + count + "```");
 			});}
-			count--
 			else {
 				clearInterval(counter)
 			}
-		}, 6000)
+			count--
+		}, 6000);
 		//message.guild.channels.get('670253626316423179').send("**PLACEHOLDER**");
 	}
 //------------------------------------------------------------------------------------------------------------------------------	
