@@ -27,8 +27,8 @@ client.on('message', message => {
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
-//------------------------------------------------------------------------------------------------------------------------------
-	if (command === 'event' && !message.author.bot && message.member.roles.find(r => r.name === "Bot builder")) {
+
+	if (command === 'event' && !message.author.bot && message.member.roles.find(r => r.name === "Bot builder") && args[0]) {
 		var spookyfestival = Math.floor(args[0]) + 4900;
 		var travelingzoofirst = Math.floor(args[0]) + 1920;
 		var travelingzoosecond = Math.floor(args[0]) + 5640;
@@ -60,10 +60,8 @@ client.on('message', message => {
 			if (eventofthejerry == 0) { spookyfestival = 7380; }
 			if (newyear == 0) { spookyfestival = 7380; }
 		}, 60000);
-//		message.guild.channels.get('670253626316423179').send("**PLACEHOLDER**");
 	}
-	if (command === 'timer' && !message.author.bot && message.member.roles.find(r => r.name === "Bot builder")) { message.guild.channels.get('633699224244191242').send(spookyfestival + "\n" + travelingzoofirst + "\n" + travelingzoosecond + "\n" + eventofthejerry + "\n" + newyear).then(msg => {msg.delete(10000)}); }
-//------------------------------------------------------------------------------------------------------------------------------	
+	if (command === 'timer' && !message.author.bot && message.member.roles.find(r => r.name === "Bot builder")) { message.channel.send(spookyfestival + "\n" + travelingzoofirst + "\n" + travelingzoosecond + "\n" + eventofthejerry + "\n" + newyear).then(msg => {msg.delete(10000)}); }
 	
 	if (!message.content.startsWith(prefix) && !message.author.bot) {
 		if (message.channel.id === "628953682934890538" || message.channel.id === "633699224244191242" || message.channel.id === "643557830162645030" || message.channel.id === "660214547231277102" || message.channel.id === "629330312232435736" || message.channel.id === "640818734633582602") {
