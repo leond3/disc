@@ -13,7 +13,7 @@ client.once('ready', ready => {
 	const counter = setInterval(() => {
 		let count = 10;
 		if (count > 0) {
-		ready.channel.fetchMessages({around: "685085693533487187", limit: 1})
+		ready.guild.channels.get('670253626316423179').channel.fetchMessages({around: "685085693533487187", limit: 1})
     		.then(msg => {
     		const fetchedMsg = msg.first();
         	fetchedMsg.edit("```css\nCode: " + count + "```");
