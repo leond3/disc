@@ -30,7 +30,7 @@ client.on('message', message => {
 //------------------------------------------------------------------------------------------------------------------------------
 	if (command === 'event' && !message.author.bot && message.member.roles.find(r => r.name === "Bot builder")) {
 		let spookyfestival = args[0];
-		let travelingzoofirst = args[1]‬;
+		let travelingzoofirst = 10;
 		let travelingzoosecond = args[2]‬;
 		let eventofthejerry = args[3];
 		let newyear = args[4];
