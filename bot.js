@@ -29,10 +29,10 @@ client.on('message', message => {
 	const command = args.shift().toLowerCase();
 //------------------------------------------------------------------------------------------------------------------------------
 	if (command === 'event' && !message.author.bot && message.member.roles.find(r => r.name === "Bot builder")) {
-		var spookyfestival = Math.evaluate(args[0] + 4480);
-		var travelingzoofirst = Math.evaluate(args[0] + 1920);
-		var travelingzoosecond = Math.evaluate(args[0] + 5640);
-		var eventofthejerry = Math.evaluate(args[0] + 7100);
+		var spookyfestival = Math.ceil("4.4");
+		var travelingzoofirst = "1920";
+		var travelingzoosecond = "5640";
+		var eventofthejerry = "7100";
 		var newyear = args[0];
 		
 		message.channel.send(spookyfestival + "\n" + travelingzoofirst + "\n" + travelingzoosecond + "\n" + eventofthejerry + "\n" + newyear).then(msg => {msg.delete(10000)});
