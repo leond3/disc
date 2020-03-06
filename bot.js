@@ -38,7 +38,7 @@ client.on('message', message => {
 				message.channel.fetchMessages({around: "685085693533487187", limit: 1})
     				.then(msg => {
     				const fetchedMsg = msg.first();
-        			fetchedMsg.edit("```css\nCode: " + count + "```");
+        			fetchedMsg.edit("```css\nCode: " + count + "```")};
     			}
 			count--
 			else {
