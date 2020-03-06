@@ -29,15 +29,11 @@ client.on('message', message => {
 	const command = args.shift().toLowerCase();
 //------------------------------------------------------------------------------------------------------------------------------
 	if (command === 'event' && !message.author.bot && message.member.roles.find(r => r.name === "Bot builder")) {
-		var spookyfestival = args[0];
-		var travelingzoofirst = args[0];
-		var travelingzoosecond = args[0];
-		var eventofthejerry = args[0];
+		var spookyfestival = Math.add(args[0], 4480)
+		var travelingzoofirst = Math.add(args[0], 1920)
+		var travelingzoosecond = Math.add(args[0], 5640)
+		var eventofthejerry = Math.add(args[0], 7100)
 		var newyear = args[0];
-		spookyfestival = spookyfestival + 4480;
-		travelingzoofirst = travelingzoofirst + 1920;
-		travelingzoosecond = travelingzoosecond + 5640;
-		eventofthejerry = eventofthejerry + 7100;
 		
 		message.channel.send(spookyfestival + "\n" + travelingzoofirst + "\n" + travelingzoosecond + "\n" + eventofthejerry + "\n" + newyear).then(msg => {msg.delete(10000)});
 		
