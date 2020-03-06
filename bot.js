@@ -30,28 +30,28 @@ client.on('message', message => {
 //------------------------------------------------------------------------------------------------------------------------------
 	if (command === 'event' && !message.author.bot && message.member.roles.find(r => r.name === "Bot builder")) {
 		let spookyfestival = args[0];
-		let travelingzoo1 = args[0]‬;
-		let travelingzoo2 = args[0]‬;
+		let travelingzoofirst = args[0]‬;
+		let travelingzoosecond = args[0]‬;
 		let eventofthejerry = args[0];
 		let newyear = args[0];
 		spookyfestival = spookyfestival + 4480;
-		travelingzoo1 = travelingzoo1 + 1920;
-		travelingzoo2 = travelingzoo2 + 5640;
+		travelingzoofirst = travelingzoofirst + 1920;
+		travelingzoosecond = travelingzoosecond + 5640;
 		eventofthejerry = eventofthejerry + 7100;
 		
-		message.channel.send(spookyfestival + "\n" + travelingzoo1 + "\n" + travelingzoo2 + "\n" + eventofthejerry + "\n" + newyear).then(msg => {msg.delete(10000)});
+		message.channel.send(spookyfestival + "\n" + travelingzoofirst + "\n" + travelingzoosecond + "\n" + eventofthejerry + "\n" + newyear).then(msg => {msg.delete(10000)});
 		
 		const counter = setInterval(() => {
 			spookyfestival--
-			travelingzoo1--
-			travelingzoo2--
+			travelingzoofirst--
+			travelingzoosecond--
 			eventofthejerry--
 			newyear--
 			
 			if (spookyfestival == 60) { message.guild.channels.get('633699224244191242').send("**`Spooky Festival in 60 minuten!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
 			if (spookyfestival == 5) { message.guild.channels.get('633699224244191242').send("**`Spooky Festival in 5 minuten!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
-			if (travelingzoo1 == 60 || travelingzoo2 == 60) { message.guild.channels.get('633699224244191242').send("**`Traveling Zoo in 60 minuten!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
-			if (travelingzoo1 == 5 || travelingzoo2 == 5) { message.guild.channels.get('633699224244191242').send("**`Traveling Zoo in 5 minuten!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
+			if (travelingzoofirst == 60 || travelingzoosecond == 60) { message.guild.channels.get('633699224244191242').send("**`Traveling Zoo in 60 minuten!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
+			if (travelingzoofirst == 5 || travelingzoosecond == 5) { message.guild.channels.get('633699224244191242').send("**`Traveling Zoo in 5 minuten!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
 			if (eventofthejerry == 480) { message.guild.channels.get('633699224244191242').send("**`Jerry's Workshop is open!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
 			if (eventofthejerry == 60) { message.guild.channels.get('633699224244191242').send("**`Event of the Jerry in 60 minuten!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
 			if (eventofthejerry == 5) { message.guild.channels.get('633699224244191242').send("**`Event of the Jerry in 5 minuten!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
@@ -59,8 +59,8 @@ client.on('message', message => {
 			if (newyear == 5) { message.guild.channels.get('633699224244191242').send("**`New Year Festival in 5 minuten!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
 			
 			if (spookyfestival == 0) { spookyfestival = 7380; }
-			if (travelingzoo1 == 0) { spookyfestival = 7380; }
-			if (travelingzoo2 == 0) { spookyfestival = 7380; }
+			if (travelingzoofirst == 0) { spookyfestival = 7380; }
+			if (travelingzoosecond == 0) { spookyfestival = 7380; }
 			if (eventofthejerry == 0) { spookyfestival = 7380; }
 			if (newyear == 0) { spookyfestival = 7380; }
 		}, 60000);
