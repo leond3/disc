@@ -41,7 +41,7 @@ client.on('message', message => {
         			fetchedMsg.edit("```css\nCode: " + count + "```");
     			}
 			count--
-			} else {
+			else {
 				clearInterval(counter)
 			}
 		}, 6000)
