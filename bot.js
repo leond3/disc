@@ -29,7 +29,7 @@ client.on('message', message => {
 	const command = args.shift().toLowerCase();
 //------------------------------------------------------------------------------------------------------------------------------
 	if (command === 'event' && !message.author.bot && message.member.roles.find(r => r.name === "Bot builder")) {
-		var spookyfestival = Math.ceil("4.4");
+		var spookyfestival = Math.floor(args[0] * "2");
 		var travelingzoofirst = "1920";
 		var travelingzoosecond = "5640";
 		var eventofthejerry = "7100";
