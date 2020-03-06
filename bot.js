@@ -31,9 +31,11 @@ client.on('message', message => {
 	if (command === 'event' && !message.author.bot && message.member.roles.find(r => r.name === "Bot builder")) {
 		let spookyfestival = args[0] + 4880;
 		let travelingzoo1 = args[0] + 1920‬;
-		let travelingzoo2 = args[0] - 10000;
+		let travelingzoo2 = args[0] + 5640‬;
 		let eventofthejerry = args[0] + 7100;
 		let newyear = args[0];
+		
+		message.channel.send(spookyfestival + "\n" + travelingzoo1 + "\n" + travelingzoo2 + "\n" + eventofthejerry + "\n" + newyear).then(msg => {msg.delete(10000)});
 		
 		const counter = setInterval(() => {
 			spookyfestival--
