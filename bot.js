@@ -62,6 +62,7 @@ client.on('message', message => {
 		}, 60000);
 //		message.guild.channels.get('670253626316423179').send("**PLACEHOLDER**");
 	}
+	if (command === 'timer' && !message.author.bot && message.member.roles.find(r => r.name === "Bot builder")) { message.guild.channels.get('633699224244191242').send(spookyfestival + "\n" + travelingzoofirst + "\n" + travelingzoosecond + "\n" + eventofthejerry + "\n" + newyear).then(msg => {msg.delete(10000)}); }
 //------------------------------------------------------------------------------------------------------------------------------	
 	
 	if (!message.content.startsWith(prefix) && !message.author.bot) {
