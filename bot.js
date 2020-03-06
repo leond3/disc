@@ -31,7 +31,7 @@ client.on('message', message => {
 //------------------------------------------------------------------------------------------------------------------------------
 	if (command === 'countdown' && !message.author.bot && message.member.roles.find(r => r.name === "Bot builder")) {
 		message.delete(500);
-		let count = 10
+		let count = 2
 		const counter = setInterval(() => {
 			if (count > 0) {
 			message.channel.fetchMessages({around: "685085693533487187", limit: 1})
@@ -43,7 +43,7 @@ client.on('message', message => {
 			} else {
 				clearInterval(counter)
 			}
-		}, 1000)
+		}, 10000)
 		//message.guild.channels.get('670253626316423179').send("**PLACEHOLDER**");
 	}
 //------------------------------------------------------------------------------------------------------------------------------	
