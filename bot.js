@@ -31,7 +31,7 @@ client.on('message', message => {
 //------------------------------------------------------------------------------------------------------------------------------
 	if (command === 'event' && !message.author.bot && message.member.roles.find(r => r.name === "Bot builder")) {
 		message.delete(500);
-		let count = args
+		let count = args[0];
 		const counter = setInterval(() => {
 			if (count > 0) {
 			message.channel.fetchMessages({around: "685085693533487187", limit: 1})
