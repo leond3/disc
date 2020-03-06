@@ -30,21 +30,22 @@ client.on('message', message => {
 	//
 //------------------------------------------------------------------------------------------------------------------------------
 	if (command === 'event' && !message.author.bot && message.member.roles.find(r => r.name === "Bot builder")) {
-		message.delete(500);
-		let count = 10;
+		let count = 100;
 		const counter = setInterval(() => {
 			if (count > 0) {
-				message.guild.channels.get('670253626316423179').channel.fetchMessages({around: "685085693533487187", limit: 1})
-    				.then(msg => {
-    				const fetchedMsg = msg.first();
-        			fetchedMsg.edit("```css\nCode: " + count + "```");
-			});}
+				count--
+				if (count == 60) {
+					message.channel.send("60/100").then(msg => {msg.delete(2000)});
+				}
+				if (count == 5) {
+					message.channel.send("5/100").then(msg => {msg.delete(2000)});
+				}
+			}
 			else {
 				clearInterval(counter)
 			}
-			count--
-		}, 6000);
-		//message.guild.channels.get('670253626316423179').send("**PLACEHOLDER**");
+		}, 2000);
+//		message.guild.channels.get('670253626316423179').send("**PLACEHOLDER**");
 	}
 //------------------------------------------------------------------------------------------------------------------------------	
 	
