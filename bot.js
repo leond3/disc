@@ -29,11 +29,11 @@ client.on('message', message => {
 	const command = args.shift().toLowerCase();
 //------------------------------------------------------------------------------------------------------------------------------
 	if (command === 'event' && !message.author.bot && message.member.roles.find(r => r.name === "Bot builder")) {
-		const spookyfestival = args[0];
-		const travelingzoofirst = args[0];
-		const travelingzoosecond = args[0]‬;
-		const eventofthejerry = args[0];
-		const newyear = args[0];
+		var spookyfestival = args[0];
+		var travelingzoofirst = args[0];
+		var travelingzoosecond = args[0]‬;
+		var eventofthejerry = args[0];
+		var newyear = args[0];
 		spookyfestival = spookyfestival + 4480;
 		travelingzoofirst = travelingzoofirst + 1920;
 		travelingzoosecond = travelingzoosecond + 5640;
