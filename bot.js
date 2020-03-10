@@ -178,8 +178,8 @@ client.on('message', message => {
 			const worth = {
 				"leond3": "**~64 Million**",
 				"grecio0278": "**~92 Million**",
-				"jortboss": "**~35 Million**",
-				"yojoost_1": "**~37 Million**",
+				"jortboss": "**~48 Million**",
+				"yojoost_1": "**~39 Million**",
 				"n0xy": "**~27 Million**",
 				"nietgewoontim": "**Less than a million**",
 				"vanantonie": "**Less than a million**",
