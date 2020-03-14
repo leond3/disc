@@ -17,11 +17,11 @@ client.on('guildMemberAdd', member => {
 });
 
 client.on('message', message => {
-	let blacklisted = ["kank", "kk ", "k@nk", "suck ", "mongool", "idioot", "idiot", "stfu", "shut ", "bek ", "tyfus", "autist", "bitch", "eikel", "hoer", "homo", "kut", "lul ", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk ", "h0m0", "h0mo", "hom0", "gay", "g4y", "sukkel", "niger", "nigger", "g@y", "n1g", "f@ck", "f*ck", "h*m", "g*y", "b*tch", "k*nk"];
+	let blacklisted = ["kank", "kk ", "k@nk", "suck ", "mongool", "idioot", "idiot", "stfu", "shut ", "bek ", "tyf", "auti", "bitch", "eikel", "hoer", "homo", "kut", "lul ", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk ", "h0m0", "h0mo", "hom0", "gay", "g4y", "sukkel", "niger", "nigger", "g@y", "n1g", "f@ck", "f*ck", "h*m", "g*y", "b*tch", "k*nk", "`@", "` @", "tief", "ï", "k*nk", "debiel", "jij bent dom", "jij bent echt dom", "neger", "negger", "kys", "kill yourself", "kill your self", "kill urself", "kill ur self", "äut", "sükk", "fä", "fü"];
 	for (var i in blacklisted) {
 		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase()) && !message.author.bot) {
-			message.delete();
-			message.channel.send(":no_entry_sign: " + message.member.user.tag + " you cannot use blacklisted words in your message:\n||`" + message.content + "`||").then(msg => {msg.delete(10000)});
+			message.delete(200);
+			message.channel.send(":warning: " + message.member.user.tag + " you cannot use blacklisted words or characters in your message:\n||`" + message.content + "`||").then(msg => {msg.delete(12000)});
 		}
 	}
 
@@ -34,6 +34,7 @@ client.on('message', message => {
 		var travelingzoosecond = Math.floor(args[0]) + 5640;
 		var eventofthejerry = Math.floor(args[0]) + 7100;
 		var newyear = args[0];
+		var da = args[1];
 		
 		message.channel.send(spookyfestival + "\n" + travelingzoofirst + "\n" + travelingzoosecond + "\n" + eventofthejerry + "\n" + newyear).then(msg => {msg.delete(10000)});
 		
@@ -43,6 +44,7 @@ client.on('message', message => {
 			travelingzoosecond--
 			eventofthejerry--
 			newyear--
+			da--
 			
 			if (spookyfestival == 60) { message.guild.channels.get('633699224244191242').send("**`Spooky Festival in 60 minuten!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
 			if (spookyfestival == 5) { message.guild.channels.get('633699224244191242').send("**`Spooky Festival in 5 minuten!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
@@ -54,11 +56,15 @@ client.on('message', message => {
 			if (newyear == 60) { message.guild.channels.get('633699224244191242').send("**`New Year in 60 minuten!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
 			if (newyear == 5) { message.guild.channels.get('633699224244191242').send("**`New Year Festival in 5 minuten!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
 			
-			if (spookyfestival == 0) { spookyfestival = 7380; }
-			if (travelingzoofirst == 0) { spookyfestival = 7380; }
-			if (travelingzoosecond == 0) { spookyfestival = 7380; }
-			if (eventofthejerry == 0) { spookyfestival = 7380; }
-			if (newyear == 0) { spookyfestival = 7380; }
+			if (da == 10) {message.guild.channels.get('688416802015019013').send("**`Dark Auction in 10 minuten!`**\n\n*This message will be deleted in 2 minutes.*\n<@&687632337814552596>").then(msg => {msg.delete(120000)}); }
+			if (da == 5) {message.guild.channels.get('688416802015019013').send("**`Dark Auction in 5 minuten!`**\n\n*This message will be deleted in 2 minutes.*\n<@&687632337814552596>").then(msg => {msg.delete(120000)}); }
+			
+			if (spookyfestival <= 0) { spookyfestival = 7380; }
+			if (travelingzoofirst <= 0) { spookyfestival = 7380; }
+			if (travelingzoosecond <= 0) { spookyfestival = 7380; }
+			if (eventofthejerry <= 0) { spookyfestival = 7380; }
+			if (newyear <= 0) { spookyfestival = 7380; }
+			if (da <= 0) { spookyfestival = 60; }
 		}, 60000);
 	}
 	if (command === 'timer' && !message.author.bot && message.member.roles.find(r => r.name === "Bot builder")) { message.channel.send(spookyfestival + "\n" + travelingzoofirst + "\n" + travelingzoosecond + "\n" + eventofthejerry + "\n" + newyear).then(msg => {msg.delete(10000)}); }
@@ -150,7 +156,7 @@ client.on('message', message => {
 			return;
 		}
 		if (command === 'help') {
-			message.channel.send('**Bot command list:**\n - !help\n - !talisman\n - !reforge\n - !stats [username]\n - !networth [username]').then(msg => {msg.delete(30000)});
+			message.channel.send('**Bot command list:**\n - !help\n - !talisman\n - !reforge\n - !stats [username]\n - !networth [username]\n - !da').then(msg => {msg.delete(30000)});
 			message.delete(30000);
 		}
 		else if (command === 'reforge') {
@@ -194,6 +200,17 @@ client.on('message', message => {
 				else { message.channel.send(":no_entry: **Invalid Username, try: '!help'.**").then(msg => {msg.delete(4000)}); }
 			}
 			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
+			message.delete(4000);
+		}
+		else if (command === 'da') {
+			if (!message.member.roles.find(r => r.name.toLowerCase() === "dark auction reminder")) {
+				message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "dark auction reminder"));
+				message.channel.send(":moneybag: Dark Auction notifications enabled!").then(msg => {msg.delete(4000)});
+			}
+			else {
+				message.member.removeRole(message.guild.roles.find(r => r.name.toLowerCase() == "dark auction reminder"));
+				message.channel.send(":moneybag: Dark Auction notifications disabled!").then(msg => {msg.delete(4000)});
+			}
 			message.delete(4000);
 		}
 		else {
