@@ -99,7 +99,7 @@ client.on('message', message => {
 			let verifycode = ["abc", "dca"];
 			for (var i in verifycode) {
 				if (message.content.toLowerCase().includes(verifycode[i].toLowerCase()) && !message.author.bot) {
-					message.delete(200).then(message.channel.send("Compressing Code...")).then(message.delete(1200)).then(message.channel.send("Compiling structure...")).then(message.delete(1600)).then(message.channel.send("Checking for malware, trackers and spam bots...\n*This may take a while!*")).then(message.delete(6800)).then(message.channel.send("Checking banlist...")).then(message.delete(700).then(message.channel.send(":white_check_mark: Account succesfully verified!")).then(message.delete(1000));
+					message.delete(200).then(message.channel.send("Compressing Code...")).then(message.delete(1200)).then(message.channel.send("Compiling structure...")).then(message.delete(1600)).then(message.channel.send("Checking for malware, trackers and spam bots...\n*This may take a while!*")).then(message.delete(6800)).then(message.channel.send("Checking banlist...")).then(message.delete(700)).then(message.channel.send(":white_check_mark: Account succesfully verified!")).then(message.delete(1000));
 				}
 			}
 		}
