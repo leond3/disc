@@ -12,8 +12,9 @@ client.once('ready', ready => {
 });
 
 client.on('guildMemberAdd', member => {
-	let code = [" 471664 ", " 641535 ", " 183341 ", " 216541 ", " 418184 ", " 957619 ", " 346496 ", " 156986 ", " 642842", "987661 ", " 356791 ", " 940368 ", " 032134 ", " 448388 ", " 308601 ", " 944956 ", " 188977 ", " 337853 ", " 980848 ", " 890043 ", " 448349 ", " 679331 ", " 914941 ", " 618290 ", " 691407 ", " 209946 ", " 643969 "];
-	member.sendMessage("Welcome to **MineCraft Server**!\nI'm the main discord bot, please verify the code in the `#verification` channel to gain access to the server. Check out the `#discord-commands` channel for more features.\n\nCode: **||" + code[getRandomInt(0,27)] + "||**. Please add **MC** behind the verification code, example: ***123456 MC***.");
+//	let code = [" 471664 ", " 641535 ", " 183341 ", " 216541 ", " 418184 ", " 957619 ", " 346496 ", " 156986 ", " 642842", "987661 ", " 356791 ", " 940368 ", " 032134 ", " 448388 ", " 308601 ", " 944956 ", " 188977 ", " 337853 ", " 980848 ", " 890043 ", " 448349 ", " 679331 ", " 914941 ", " 618290 ", " 691407 ", " 209946 ", " 643969 "];
+//	member.sendMessage("Welcome to **MineCraft Server**!\nI'm the main discord bot, please verify the code in the `#verification` channel to gain access to the server. Check out the `#discord-commands` channel for more features.\n\nCode: **||" + code[getRandomInt(0,27)] + "||**. Please add **MC** behind the verification code, example: ***123456 MC***.");
+	member.addRole(member.guild.roles.find(r => r.name.toLowerCase() == "verified"));
 	
 	function getRandomInt(min, max) {
 	 		min = Math.ceil(min);
