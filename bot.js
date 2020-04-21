@@ -106,7 +106,7 @@ client.on('message', message => {
 			}
 			message.delete(200);
 		}
-		else if (!message.author.bot) {
+		else if (!message.author.bot && !message.member.roles.find(r => r.name === "Bot builder")) {
 			message.delete(200);
 			message.channel.send(":no_entry: **Invalid command or code.**").then(msg => {msg.delete(4000)});
 		}
@@ -344,6 +344,12 @@ client.on('message', message => {
 				message.channel.send(":no_entry: You do not have the right permission to execute this command, or this user has notifications disabled!").then(msg => {msg.delete(4000)});
 			}
 			message.delete();
+		}
+		else if (command === 'sendverify' && message.member.roles.find(r => r.name === "Bot builder")) {
+			const mention = message.mentions.members.first();
+			let code = [" 471664 ", " 641535 ", " 183341 ", " 216541 ", " 418184 ", " 957619 ", " 346496 ", " 156986 ", " 642842", "987661 ", " 356791 ", " 940368 ", " 032134 ", " 448388 ", " 308601 ", " 944956 ", " 188977 ", " 337853 ", " 980848 ", " 890043 ", " 448349 ", " 679331 ", " 914941 ", " 618290 ", " 691407 ", " 209946 ", " 643969 "];
+			mention.sendMessage("Welcome to **MineCraft Server**!\nI'm the main discord bot, please verify the code in the `#verification` channel to gain access to the server. Check out the `#discord-commands` channel for more features.\n\nCode: **||" + code[getRandomInt(0,27)] + "||**. Please add **MC** behind the verification code, example: ***!code 123456 MC***.");
+			message.delete(100);
 		}
 		else if (command === 'promote') {
 			const mention = message.mentions.members.first();
