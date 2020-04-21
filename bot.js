@@ -15,9 +15,15 @@ client.on('guildMemberAdd', member => {
 	const code = [
 		"abc",
 		"dca"
-		]
-	member.guild.channels.get('628953682934890538').send("Welcome to the server " + member + ".").then(msg => {msg.delete(3600000)});
+	]
+//	member.guild.channels.get('628953682934890538').send("Welcome to the server " + member + ".").then(msg => {msg.delete(3600000)});
 	member.sendMessage("Welcome to **MineCraft Server**!\nI'm the main discord bot, please verify the code in the `#verification` channel to gain access to the server. Check out the `#discord-commands` channel for more features.\n\nCode: **" + code[getRandomInt(0,2)] + "**");
+	
+	function getRandomInt(min, max) {
+	 		min = Math.ceil(min);
+	  		max = Math.floor(max);
+	 		return Math.floor(Math.random() * (max - min)) + min;
+	}
 });
 
 client.on('message', message => {
