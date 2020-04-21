@@ -103,7 +103,7 @@ client.on('message', message => {
 				}
 			}
 		}
-		else {
+		else if (!message.author.bot) {
 			message.delete(200);
 			message.channel.send(":no_entry: **Invalid command or code.**").then(msg => {msg.delete(4000)});
 		}
