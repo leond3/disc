@@ -111,6 +111,7 @@ client.on('message', message => {
 			message.delete(200);
 			message.channel.send(":no_entry: **Invalid command or code.**").then(msg => {msg.delete(4000)});
 		}
+		message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "verified"));
 	}
 	
 	if(message.channel.name == "skyblock-giveaways") {
