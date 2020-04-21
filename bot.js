@@ -12,8 +12,12 @@ client.once('ready', ready => {
 });
 
 client.on('guildMemberAdd', member => {
-	member.guild.channels.get('628953682934890538').send("Welcome to the server " + member + ".").then(msg => {msg.delete(80000000)});
-	member.sendMessage("Welkom in de **MineCraft Server**!\nIk ben de main discord bot, je kan met mij praten in de `#discord-commands` channel.\nIk ben een chat control, moderation, role support en command bot.\n\n*Dit bericht wordt na 60 minuten automatisch verwijderd.*").then(msg => {msg.delete(3600000)});
+	const code = [
+		"abc",
+		"dca"
+		]
+	member.guild.channels.get('628953682934890538').send("Welcome to the server " + member + ".").then(msg => {msg.delete(3600000)});
+	member.sendMessage("Welcome to **MineCraft Server**!\nI'm the main discord bot, please verify the code in the `#verification` channel to gain access to the server. Check out the `#discord-commands` channel for more features.\n\nCode: **" + code[getRandomInt(0,2)] + "**");
 });
 
 client.on('message', message => {
@@ -27,47 +31,6 @@ client.on('message', message => {
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
-
-	if (command === 'event' && !message.author.bot && message.member.roles.find(r => r.name === "Bot builder") && args[0]) {
-		var spookyfestival = Math.floor(args[0]) + 4900;
-		var travelingzoofirst = Math.floor(args[0]) + 1920;
-		var travelingzoosecond = Math.floor(args[0]) + 5640;
-		var eventofthejerry = Math.floor(args[0]) + 7100;
-		var newyear = args[0];
-		var da = args[1];
-		
-		message.channel.send(spookyfestival + "\n" + travelingzoofirst + "\n" + travelingzoosecond + "\n" + eventofthejerry + "\n" + newyear).then(msg => {msg.delete(10000)});
-		
-		const counter = setInterval(() => {
-			spookyfestival--
-			travelingzoofirst--
-			travelingzoosecond--
-			eventofthejerry--
-			newyear--
-			da--
-			
-			if (spookyfestival == 60) { message.guild.channels.get('633699224244191242').send("**`Spooky Festival in 60 minuten!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
-			if (spookyfestival == 5) { message.guild.channels.get('633699224244191242').send("**`Spooky Festival in 5 minuten!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
-			if (travelingzoofirst == 60 || travelingzoosecond == 60) { message.guild.channels.get('633699224244191242').send("**`Traveling Zoo in 60 minuten!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
-			if (travelingzoofirst == 5 || travelingzoosecond == 5) { message.guild.channels.get('633699224244191242').send("**`Traveling Zoo in 5 minuten!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
-			if (eventofthejerry == 480) { message.guild.channels.get('633699224244191242').send("**`Jerry's Workshop is open!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
-			if (eventofthejerry == 60) { message.guild.channels.get('633699224244191242').send("**`Event of the Jerry in 60 minuten!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
-			if (eventofthejerry == 5) { message.guild.channels.get('633699224244191242').send("**`Event of the Jerry in 5 minuten!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
-			if (newyear == 60) { message.guild.channels.get('633699224244191242').send("**`New Year in 60 minuten!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
-			if (newyear == 5) { message.guild.channels.get('633699224244191242').send("**`New Year Festival in 5 minuten!`**\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)}); }
-			
-			if (da == 10) {message.guild.channels.get('688416802015019013').send("**`Dark Auction in 10 minuten!`**\n\n*This message will be deleted in 2 minutes.*\n<@&687632337814552596>").then(msg => {msg.delete(120000)}); }
-			if (da == 5) {message.guild.channels.get('688416802015019013').send("**`Dark Auction in 5 minuten!`**\n\n*This message will be deleted in 2 minutes.*\n<@&687632337814552596>").then(msg => {msg.delete(120000)}); }
-			
-			if (spookyfestival <= 0) { spookyfestival = 7380; }
-			if (travelingzoofirst <= 0) { spookyfestival = 7380; }
-			if (travelingzoosecond <= 0) { spookyfestival = 7380; }
-			if (eventofthejerry <= 0) { spookyfestival = 7380; }
-			if (newyear <= 0) { spookyfestival = 7380; }
-			if (da <= 0) { spookyfestival = 60; }
-		}, 60000);
-	}
-	if (command === 'timer' && !message.author.bot && message.member.roles.find(r => r.name === "Bot builder")) { message.channel.send(spookyfestival + "\n" + travelingzoofirst + "\n" + travelingzoosecond + "\n" + eventofthejerry + "\n" + newyear).then(msg => {msg.delete(10000)}); }
 	
 	if (!message.content.startsWith(prefix) && !message.author.bot) {
 		if (message.channel.id === "628953682934890538" || message.channel.id === "633699224244191242" || message.channel.id === "643557830162645030" || message.channel.id === "660214547231277102" || message.channel.id === "629330312232435736" || message.channel.id === "640818734633582602") {
@@ -124,6 +87,13 @@ client.on('message', message => {
 		}
 	}
 	
+	if(message.channel.name == "verification") {
+		if (!message.content.startsWith(prefix) && !message.author.bot) {
+			message.delete(200);
+			message.channel.send(":no_entry: **You can't chat in this channel.**").then(msg => {msg.delete(4000)});
+		}
+	}
+	
 	if(message.channel.name == "skyblock-giveaways") {
 		if (command === 'gstart' && message.member.roles.find(r => r.name === "Giveaways") && !message.author.bot) {
 			message.delete(4000);
@@ -156,7 +126,7 @@ client.on('message', message => {
 			return;
 		}
 		if (command === 'help') {
-			message.channel.send('**Bot command list:**\n - !help\n - !talisman\n - !reforge\n - !stats [username]\n - !networth [username]\n - !da').then(msg => {msg.delete(30000)});
+			message.channel.send('**Bot command list:**\n - !help\n - !talisman\n - !reforge\n - !stats [username]').then(msg => {msg.delete(30000)});
 			message.delete(30000);
 		}
 		else if (command === 'reforge') {
@@ -180,39 +150,6 @@ client.on('message', message => {
 //			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
 //			message.delete(4000);
 //		}
-		else if (command === 'networth') {
-			const worth = {
-				"leond3": "**~64 Million**",
-				"grecio0278": "**~92 Million**",
-				"jortboss": "**~48 Million**",
-				"yojoost_1": "**~39 Million**",
-				"n0xy": "**~27 Million**",
-				"nietgewoontim": "**Less than a million**",
-				"vanantonie": "**Less than a million**",
-				"luukystrikes": "**Less than a million**",
-				"joostftw": "**~21 Million**",
-				"itzzties": "**~11 Million**",
-			};
-			if (args[0]) {
-				if (worth[message.content.toLowerCase().slice(10)]) {
-    					message.channel.send(":euro: Estimated networth: " + worth[args[0].toLowerCase()] + " (" + message.content.slice(10) + ")\n*Networth may take a while to update\nNetworth calculations will not include any coins in your bank or pets\nCalculations may be incorrect (you need to have API enabled)*").then(msg => {msg.delete(30000)});
-				}
-				else { message.channel.send(":no_entry: **Invalid Username, try: '!help'.**").then(msg => {msg.delete(4000)}); }
-			}
-			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
-			message.delete(4000);
-		}
-		else if (command === 'da') {
-			if (!message.member.roles.find(r => r.name.toLowerCase() === "dark auction reminder")) {
-				message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "dark auction reminder"));
-				message.channel.send(":moneybag: Dark Auction notifications enabled!").then(msg => {msg.delete(4000)});
-			}
-			else {
-				message.member.removeRole(message.guild.roles.find(r => r.name.toLowerCase() == "dark auction reminder"));
-				message.channel.send(":moneybag: Dark Auction notifications disabled!").then(msg => {msg.delete(4000)});
-			}
-			message.delete(4000);
-		}
 		else {
 			message.delete();
 			message.channel.send(":no_entry: **Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
@@ -283,8 +220,7 @@ client.on('message', message => {
 				message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
 				return;
 			}
-			else if (args[0].toLowerCase() === 'school' || args[0].toLowerCase() === 'skyblock' || args[0].toLowerCase() === 'wynncraft' || args[0].toLowerCase() === 'minigames' || args[0].toLowerCase() === 'uhc' || args[0].toLowerCase() === 'survival' || args[0].toLowerCase() === 'modded' || args[0].toLowerCase() === 'ark' || args[0].toLowerCase() === 'hypixel' || args[0].toLowerCase() === 'banned' || args[0].toLowerCase() === 'none') {
-				message.member.removeRole(message.guild.roles.find(r => r.name === "banned"));
+			else if (args[0].toLowerCase() === 'school' || args[0].toLowerCase() === 'skyblock' || args[0].toLowerCase() === 'wynncraft' || args[0].toLowerCase() === 'minigames' || args[0].toLowerCase() === 'uhc' || args[0].toLowerCase() === 'survival' || args[0].toLowerCase() === 'modded' || args[0].toLowerCase() === 'ark' || args[0].toLowerCase() === 'hypixel' || args[0].toLowerCase() === 'none') {
 				message.member.removeRole(message.guild.roles.find(r => r.name === "school"));
 				message.member.removeRole(message.guild.roles.find(r => r.name === "skyblock"));
 				message.member.removeRole(message.guild.roles.find(r => r.name === "wynncraft"));
@@ -299,22 +235,13 @@ client.on('message', message => {
 					message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == args[0].toLowerCase()));
 					message.channel.send(":white_check_mark: Tag asigned!").then(msg => {msg.delete(4000)});
 				}
-				else if (args[0].toLowerCase() === 'banned') {
-					if (message.member.roles.find(r => r.name === "banned F")) {
-						message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == args[0].toLowerCase())); 
-						message.channel.send(":white_check_mark: Tag asigned!").then(msg => {msg.delete(4000)});
-					}
-					else {
-						message.channel.send(":no_entry: **According to the Hypixel database you have never been banned!**").then(msg => {msg.delete(4000)});
-					}
-				}
 				else {
 					message.channel.send(":white_check_mark: Tag removed!").then(msg => {msg.delete(4000)});
 				}
 				message.delete();
 			}
 			else if (args[0].toLowerCase() === 'list') {
-				message.channel.send("**Tags:**\n - Banned\n - School\n - Skyblock\n - Wynncraft\n - Minigames\n - UHC\n - Survival\n - Modded\n - ARK\n - Hypixel\n - None").then(msg => {msg.delete(30000)});
+				message.channel.send("**Tags:**\n - Skyblock\n - Wynncraft\n - Minigames\n - UHC\n - Survival\n - Modded\n - ARK\n - Hypixel\n - School\n - None").then(msg => {msg.delete(30000)});
 				message.delete(30000);
 			}
 			else {
@@ -387,7 +314,7 @@ client.on('message', message => {
 				const mention = message.mentions.members.first();
 				const mentionMessage = message.content.slice(8);
 				if (mention.roles.find(r => r.name === "Notifications")) {
-					mention.sendMessage(mentionMessage + "\n\n*Deze berichten kan je uitschakelen door notifications uit te zetten in de discord-commands channel, dit bericht wordt na 60 minuten automatisch verwijderd.*").then(msg => {msg.delete(3600000)});
+					mention.sendMessage(mentionMessage + "\n\n*These messages may be disabled by disabling notifications in the discord-commands channel, this notification will be automatically deleted after 60 minutes.*").then(msg => {msg.delete(3600000)});
 					message.channel.send(":incoming_envelope: Notification succesfully send!").then(msg => {msg.delete(4000)});
 					message.guild.channels.get('682165828535451658').send(message.member.user.tag + " sent a notification to: " + mention + ".");
 				}
@@ -438,20 +365,6 @@ client.on('message', message => {
 			}
 			message.delete(4000);
 		}
-//------------------------------------------------------------------------------------------------------------------------------
-		else if (command === 'eten') {
-			const voedsel = {
-				"chips": "zout",
-				"chocolade": "zoet",
-				"appel": "zuur",
-				"friet": "vet"
-				};
-			if (args[0]) {
-				message.channel.send("Data: " + args[0] + " - " + voedsel[args[0].toLowerCase()]).then(msg => {msg.delete(10000)});
-			}
-			message.delete(1000);
-		}
-//------------------------------------------------------------------------------------------------------------------------------
 		else {
 			message.delete();
 			message.channel.send(":no_entry: **Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
