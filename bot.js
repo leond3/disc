@@ -138,7 +138,7 @@ client.on('message', message => {
 	}
 	if(message.channel.name == "music-verify") {
 		if (message.content.startsWith(prefix) && !message.author.bot) {
-			if (command === 'prefix') {
+			if (command === 'verify') {
 				message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "dj"));
 			}
 			message.delete(200);
