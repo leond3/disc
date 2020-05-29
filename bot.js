@@ -136,6 +136,18 @@ client.on('message', message => {
 			message.channel.send(":no_entry: **You can't chat in this channel, try: '!help'.**").then(msg => {msg.delete(4000)});
 		}
 	}
+	if(message.channel.name == "music-verify") {
+		if (message.content.startsWith(prefix) && !message.author.bot) {
+			if (command === 'prefix') {
+				message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "dj"));
+			}
+			message.delete(200);
+		}
+		else if (!message.content.startsWith(prefix) && !message.author.bot) {
+			message.delete(200);
+			message.channel.send(":no_entry: **You can't chat in this channel, try: '!verify'.**").then(msg => {msg.delete(4000)});
+		}
+	}
 	
 	if(message.channel.name == "skyblock-commands") {
 		if (!message.content.startsWith(prefix) || message.author.bot) {
