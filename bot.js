@@ -90,30 +90,6 @@ client.on('message', message => {
 		}
 	}
 	
-	if(message.channel.name == "verification") {
-		if (!message.content.startsWith(prefix) && !message.author.bot) {
-			message.delete(200);
-			message.channel.send(":no_entry: **You can't chat in this channel.**").then(msg => {msg.delete(4000)});
-		}
-		else if (command === 'code' && args[0]) {
-			let verifycode = [" 471664 ", " 641535 ", " 183341 ", " 216541 ", " 418184 ", " 957619 ", " 346496 ", " 156986 ", " 642842", "987661 ", " 356791 ", " 940368 ", " 032134 ", " 448388 ", " 308601 ", " 944956 ", " 188977 ", " 337853 ", " 980848 ", " 890043 ", " 448349 ", " 679331 ", " 914941 ", " 618290 ", " 691407 ", " 209946 ", " 643969 "];
-			for (var i in verifycode) {
-				if (message.content.toLowerCase().includes(verifycode[i].toLowerCase()) && !message.author.bot) {
-					message.member.sendMessage("You succesfully enter the code: **||" + args[0] + "||**\nYou have surpassed the banlist and malware/spambot/scam detection. You have gained access to the server.\n\n*This verification message will be deleted in 5 minutes.*").then(msg => {msg.delete(300000)});
-					message.guild.channels.get('628953682934890538').send("Welcome to the server <@" + message.member.user.id + "> .").then(msg => {msg.delete(3600000)});
-					message.guild.channels.get('682165828535451658').send(":white_check_mark: " + message.member.user.tag + " verified with code: ||" + args[0] + "||");
-					message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "verified"));
-				}
-			}
-			message.delete(200);
-		}
-		else if (!message.author.bot && !message.member.roles.find(r => r.name === "Bot builder")) {
-			message.delete(200);
-			message.channel.send(":no_entry: **Invalid command or code.**").then(msg => {msg.delete(4000)});
-		}
-		message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "verified"));
-	}
-	
 	if(message.channel.name == "skyblock-giveaways") {
 		if (command === 'gstart' && message.member.roles.find(r => r.name === "Giveaways") && !message.author.bot) {
 			message.delete(4000);
@@ -139,6 +115,7 @@ client.on('message', message => {
 	if(message.channel.name == "music-verify") {
 		if (message.content.startsWith(prefix) && !message.author.bot) {
 			if (command === 'verify') {
+				message.channel.send(":white_check_mark: " + message.member.user.tag + " gained access to the <#716038164266877040> channel.").then(msg => {msg.delete(4000)});
 				message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "dj"));
 			}
 			message.delete(200);
