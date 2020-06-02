@@ -259,13 +259,15 @@ client.on('message', message => {
 			}
 		}
 		else if (command === 'cf') {
-			var cf = Array(2);
+			var cf = Array(3);
 			cf[1] = "Heads";
 			cf[2] = "Tails";
+			cf[3] = "Side";
 			
-			var coinflip = getRandomInt(1, 3);
+			var coinflip = getRandomInt(1, 4);
 			if (coinflip === 1) { message.channel.send(cf[1]).then(msg => {msg.delete(300000)}); }
 			if (coinflip === 2) { message.channel.send(cf[2]).then(msg => {msg.delete(300000)}); }
+			if (coinflip === 3) { message.channel.send(cf[3]).then(msg => {msg.delete(300000)}); }
 			message.delete(300000);
 		}
 		else if (command === 'notifications') {
