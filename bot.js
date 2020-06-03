@@ -381,8 +381,6 @@ client.on('message', message => {
 		message.react(message.guild.emojis.cache.find(r => r.name === 'L_'));
 	}
 
-	message.react(message.guild.emojis.cache.find(r => r.name === ':L_:'));
-
 	message.react(message.guild.emojis.cache.find(r => r.name === '😄'));
 
 	message.react(message.guild.emojis.cache.find(r => r.name === '\:smile:'));
