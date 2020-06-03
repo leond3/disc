@@ -99,6 +99,9 @@ client.on('message', message => {
 		if (message.content.startsWith(prefix) && !message.author.bot) {
 			message.delete(4000);
 		}
+		else if (message.member.roles.find(r => r.name.toLowerCase() === "music")) {
+			message.delete(10000);
+		}
 		else if (!message.content.startsWith(prefix) && !message.author.bot) {
 			message.delete();
 			message.channel.send(":no_entry: **You can't chat in this channel, try: '!help'.**").then(msg => {msg.delete(4000)});
