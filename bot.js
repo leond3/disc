@@ -381,9 +381,9 @@ client.on('message', message => {
 		message.react(message.guild.emojis.cache.find(r => r.name === 'L_'));
 	}
 
-	message.react(message.guild.emojis.cache.find(r => r.name === '😄'));
+	message.react('😄');
 
-	message.react(message.guild.emojis.cache.find(r => r.name === '\:smile:'));
+	message.react('\:smile:');
 
 	function getRandomInt(min, max) {
 	 		min = Math.ceil(min);
