@@ -378,7 +378,7 @@ client.on('message', message => {
 	}
 
 	if (message.member.roles.find(r => r.name.toLowerCase === "l")) {
-		message.react(':regional_indicator_l:');
+		message.react('😄');
 	}
 
 	function getRandomInt(min, max) {
