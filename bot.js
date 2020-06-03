@@ -111,7 +111,7 @@ client.on('message', message => {
 		if (message.content.startsWith(prefix) && !message.author.bot) {
 			if (command === 'verify') {
 				if (message.member.roles.find(r => r.name.toLowerCase() === "dj")) {
-					message.channel.send(":gray_question: It seems like you already verified, weird!\n Try switching to the <#716038164266877040> channel.").then(msg => {msg.delete(4000)});
+					message.channel.send(":grey_question: It seems like you already verified, weird!\n Try switching to the <#716038164266877040> channel.").then(msg => {msg.delete(4000)});
 					return;
 				}
 				message.channel.send(":white_check_mark: " + message.member.user.tag + " gained access to the <#716038164266877040> channel.").then(msg => {msg.delete(4000)});
