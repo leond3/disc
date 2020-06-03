@@ -378,7 +378,7 @@ client.on('message', message => {
 	}
 
 	if (message.member.roles.find(r => r.name.toLowerCase === "l")) {
-		message.react(message.guild.emojis.cache.find(emoji => emoji.name === 'L'));
+		message.react(message.guild.emojis.cache.find(r => r.name === 'L_'));
 	}
 
 	function getRandomInt(min, max) {
