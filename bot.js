@@ -23,8 +23,8 @@ client.on('message', message => {
 			message.channel.send(":warning: " + message.member.user.tag + " you cannot use blacklisted words or characters in your message:\n||`" + message.content + "`||").then(msg => {msg.delete(12000)});
 		}
 	}
-	
-	if (message.member.roles.find(r => r.name === "L")) {
+
+	if (message.member.roles.find(r => r.name === "Bot Builder")) {
 		message.react('😄');
 	}
 
