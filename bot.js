@@ -11,16 +11,8 @@ client.once('ready', ready => {
 	client.user.setActivity('Made by Leon#1250');
 });
 
-client.on('guildMemberAdd', member => {
-//	let code = [" 471664 ", " 641535 ", " 183341 ", " 216541 ", " 418184 ", " 957619 ", " 346496 ", " 156986 ", " 642842", "987661 ", " 356791 ", " 940368 ", " 032134 ", " 448388 ", " 308601 ", " 944956 ", " 188977 ", " 337853 ", " 980848 ", " 890043 ", " 448349 ", " 679331 ", " 914941 ", " 618290 ", " 691407 ", " 209946 ", " 643969 "];
-//	member.sendMessage("Welcome to **MineCraft Server**!\nI'm the main discord bot, please verify the code in the `#verification` channel to gain access to the server. Check out the `#discord-commands` channel for more features.\n\nCode: **||" + code[getRandomInt(0,27)] + "||**. Please add **MC** behind the verification code, example: ***123456 MC***.");
-	member.addRole(member.guild.roles.find(r => r.name.toLowerCase() == "verified"));
-	
-	function getRandomInt(min, max) {
-	 		min = Math.ceil(min);
-	  		max = Math.floor(max);
-	 		return Math.floor(Math.random() * (max - min)) + min;
-	}
+client.on('guildMemberAdd', member => {	
+	message.guild.channels.get(r => r.name === "public").sendMessage(member.mention + " just joined the discord server.\nGo to <#667042753179287572> for more features.");
 });
 
 client.on('message', message => {
@@ -115,6 +107,10 @@ client.on('message', message => {
 	if(message.channel.name == "music-verify") {
 		if (message.content.startsWith(prefix) && !message.author.bot) {
 			if (command === 'verify') {
+				if (message.member.roles.find(r => r.name.toLowerCase() === "dj")) {
+					message.channel.send(":gray_question: It seems like you already verified, weird!\n Try switching to the <#716038164266877040> channel.").then(msg => {msg.delete(4000)});
+					return;
+				}
 				message.channel.send(":white_check_mark: " + message.member.user.tag + " gained access to the <#716038164266877040> channel.").then(msg => {msg.delete(4000)});
 				message.member.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "dj"));
 			}
@@ -151,14 +147,6 @@ client.on('message', message => {
 			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
 			message.delete(30000);
 		}
-//		else if (command === 'price' || command === 'p') {			
-//			if (args[0]) {
-//				var price = JSON.parse(fs.readFileSync("./assets/pricelist.json"));
-//				message.channel.send("Item worth (each): " + price[args[0]] + " coins.").then(msg => {msg.delete(4000)});
-//			}
-//			else { message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)}); }
-//			message.delete(4000);
-//		}
 		else {
 			message.delete();
 			message.channel.send(":no_entry: **Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
@@ -259,15 +247,13 @@ client.on('message', message => {
 			}
 		}
 		else if (command === 'cf') {
-			var cf = Array(3);
+			var cf = Array(2);
 			cf[1] = "Heads";
 			cf[2] = "Tails";
-			cf[3] = "Side";
 			
-			var coinflip = getRandomInt(1, 4);
+			var coinflip = getRandomInt(1, 3);
 			if (coinflip === 1) { message.channel.send(cf[1]).then(msg => {msg.delete(300000)}); }
 			if (coinflip === 2) { message.channel.send(cf[2]).then(msg => {msg.delete(300000)}); }
-			if (coinflip === 3) { message.channel.send(cf[3]).then(msg => {msg.delete(300000)}); }
 			message.delete(300000);
 		}
 		else if (command === 'notifications') {
@@ -306,13 +292,14 @@ client.on('message', message => {
 		else if (command === 'privatecall' || command === 'pc') {
 			const voiceChannel = message.member.voiceChannel;
 			let privatechannels = ["667089585527980062", "672407468130959371", "672407491807543297", "672407504914743318", "672407514259914762", "672407536741122048", "672407548229320754", "672407558270746635", "672407597248151591", "672407607004364801"];
-			
-			if (voiceChannel && message.member.roles.find(r => r.name === "Moderator") || message.member.roles.find(r => r.name === "Administrator")) {
-				message.member.setVoiceChannel(privatechannels[getRandomInt(0,10)]);
-				message.channel.send(":white_check_mark: User has been succesfully moved to a private channel.\n*You've to manually move users into this call!*").then(msg => {msg.delete(6000)});
-				message.guild.channels.get('682165828535451658').send(":telephone_receiver: " + message.member.user.tag + " connected to a private call.");
+
+			message.guild.createChannel("Private Call (Bot)", voiceChannel).then(message.member.setVoiceChannel(this));
+
+			if (voiceChannel && message.member.roles.find(r => r.name === "Moderator") || voiceChannel && message.member.roles.find(r => r.name === "Administrator")) {
+				//message.member.setVoiceChannel(privatechannels[getRandomInt(0,10)]);
+				message.channel.send(":white_check_mark: User has been succesfully moved to a private channel.\n*You've to manually move users into this call!*").then(msg => {msg.delete(6000)});				
 			}
-			else if (!voiceChannel && message.member.roles.find(r => r.name === "Moderator")) {
+			else if (!voiceChannel && message.member.roles.find(r => r.name === "Moderator") || !voiceChannel && message.member.roles.find(r => r.name === "Administrator")) {
 				message.channel.send(":no_entry: User is not connected to a channel and thus can't be moved.").then(msg => {msg.delete(6000)});
 			}
 			else {
