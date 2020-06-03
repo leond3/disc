@@ -23,6 +23,10 @@ client.on('message', message => {
 			message.channel.send(":warning: " + message.member.user.tag + " you cannot use blacklisted words or characters in your message:\n||`" + message.content + "`||").then(msg => {msg.delete(12000)});
 		}
 	}
+	
+	if (message.member.roles.find(r => r.name === "L")) {
+		message.react('😄');
+	}
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
@@ -375,10 +379,6 @@ client.on('message', message => {
 			message.delete();
 			message.channel.send(":no_entry: **Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
 		}		
-	}
-
-	if (message.member.roles.find(r => r.name.toLowerCase === "l")) {
-		message.react('😄');
 	}
 
 	function getRandomInt(min, max) {
