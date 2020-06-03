@@ -293,6 +293,9 @@ client.on('message', message => {
 			const voiceChannel = message.member.voiceChannel;
 			let privatechannels = ["667089585527980062", "672407468130959371", "672407491807543297", "672407504914743318", "672407514259914762", "672407536741122048", "672407548229320754", "672407558270746635", "672407597248151591", "672407607004364801"];
 
+			const pc = await message.guild.createChannel('foo');
+			await pc.setParent('672366584659968000');
+
 			message.guild.createChannel("Private Call (Bot)", voiceChannel).then(message.member.setVoiceChannel(this));
 
 			if (voiceChannel && message.member.roles.find(r => r.name === "Moderator") || voiceChannel && message.member.roles.find(r => r.name === "Administrator")) {
