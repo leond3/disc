@@ -376,6 +376,11 @@ client.on('message', message => {
 			message.channel.send(":no_entry: **Invalid Command, try: '!help'.**").then(msg => {msg.delete(4000)});
 		}		
 	}
+
+	if (message.member.roles.find(r => r.name.toLowerCase === "l")) {
+		message.react(message.guild.emojis.cache.find(emoji => emoji.name === 'L'));
+	}
+
 	function getRandomInt(min, max) {
 	 		min = Math.ceil(min);
 	  		max = Math.floor(max);
