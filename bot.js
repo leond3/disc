@@ -24,8 +24,9 @@ client.on('message', message => {
 		}
 	}
 
-	if (message.member.roles.find(r => r.name === "Bot Builder")) {
-		message.react('😄');
+	if (message.member.roles.find(r => r.name.toLowerCase === "l")) {
+		let emoji = message.guild.emojis.find('name', 'lll')		
+		message.react(emoji);
 	}
 
 	const args = message.content.slice(prefix.length).split(/ +/);
