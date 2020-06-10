@@ -25,7 +25,7 @@ client.on('message', message => {
 	}
 
 	if (message.member.roles.find(r => r.name === "L")) {
-		let emoji = message.guild.emojis.find('name', 'Licon');
+		let emoji = message.guild.emojis.find('name', 'SexyLeon');
 		message.react(emoji);
 	}
 
@@ -41,7 +41,7 @@ client.on('message', message => {
 		message.guild.channels.get('682165828535451658').send(":wastebasket: " + message.member.user.tag + " deleted: " + args[0]);
 		message.delete(500);
 		message.channel.fetchMessage(args[0]).then(msg => {msg.delete(500)});
-		message.channel.send("fetching...").then(msg => {msg.delete(500)});
+		message.channel.send("deleting message...").then(msg => {msg.delete(500)});
 	}
 	
 	if (message.content.startsWith(prefix) || !message.author.bot) {
