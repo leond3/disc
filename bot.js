@@ -74,7 +74,7 @@ client.on('message', message => {
 		if (command === 'mcnotify') {
 			if (message.member.roles.find(r => r.name === "Moderator") || message.member.roles.find(r => r.name === "Administrator")) {
 				message.channel.send(":envelope: Notification detected!").then(msg => {msg.delete(4000)});
-				message.channel.send("`" + message.content.slice(10) + "`\n\n*This message will be deleted in 5 minutes.*\n<@&671293618421497868>").then(msg => {msg.delete(300000)});
+				message.channel.send("`" + message.content.slice(10) + "`\n\n*This message will be deleted in 2 minutes.*\n<@&671293618421497868> *(You can enable/disable notifications by typing '!notifications' in <#667042753179287572>)*").then(msg => {msg.delete(120000)});
 			}
 			else {
 				message.channel.send(":no_entry: You do not have the permission to create a server notification.\n*Please contact a Moderator if you want to create a notification*").then(msg => {msg.delete(4000)});
