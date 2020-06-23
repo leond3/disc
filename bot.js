@@ -37,7 +37,7 @@ client.on('message', message => {
 	const command = args.shift().toLowerCase();
 	
 	if (!message.content.startsWith(prefix) && !message.author.bot) {
-		if (message.channel.id === "628953682934890538" || message.channel.id === "633699224244191242" || message.channel.id === "643557830162645030" || message.channel.id === "660214547231277102" || message.channel.id === "629330312232435736" || message.channel.id === "640818734633582602") {
+		if (message.channel.id === "628953682934890538" || message.channel.id === "633699224244191242" || message.channel.id === "643557830162645030" || message.channel.id === "725029808094052453" || message.channel.id === "629330312232435736" || message.channel.id === "640818734633582602") {
 			message.guild.channels.get('682165828535451658').send(message.member.user.tag + " in <#" + message.channel.id + "> (" + message.id + "):\n'`" + message.content + "`'");
 		}
 	}
