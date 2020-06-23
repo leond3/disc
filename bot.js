@@ -87,7 +87,11 @@ client.on('message', message => {
 		}
 	}
 	
-	if(message.channel.name == "skyblock-giveaways") {
+	if(message.channel.name == "uhc") {
+		message.delete(100000);
+	}
+	
+	if(message.channel.name == "giveaways") {
 		if (command === 'gstart' && message.member.roles.find(r => r.name === "Giveaways") && !message.author.bot) {
 			message.delete(4000);
 			message.channel.send(":tada: Giveaway detected").then(msg => {msg.delete(4000)});
