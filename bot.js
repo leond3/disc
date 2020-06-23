@@ -237,10 +237,13 @@ client.on('message', message => {
 		}
 		else if (command === 'mute') {
 			const mention = message.mentions.members.first();
-			if (!mention.roles.find(r => r.name === "MUTE")) {
+			if (!mention.roles.find(r => r.name === "MUTE") && !mention.roles.find(r => r.name === "Administrator")) {
 				mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "mute"));
 				message.channel.send(":white_check_mark: Succesfully muted user!").then(msg => {msg.delete(4000)});
-			} else {
+			} else if (mention.roles.find(r => r.name === "Administrator")) {
+				message.channel.send(":warning: Wait... you can't mute that user!").then(msg => {msg.delete(4000)});
+			}
+			else {
 				message.channel.send(":no_entry: User is already muted!").then(msg => {msg.delete(4000)});
 			}
 			message.delete(4000);
