@@ -16,7 +16,7 @@ client.on('guildMemberAdd', member => {
 });
 
 client.on('message', message => {
-	let blacklisted = ["kank", "kk ", "k@nk", "suck ", "mongool", "idioot", "idiot", "stfu", "shut ", "bek ", "tyf", "auti", "bitch", "eikel", "hoer", "homo", "kut", "lul ", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk ", "h0m0", "h0mo", "hom0", "gay", "g4y", "sukkel", "niger", "nigger", "g@y", "n1g", "f@ck", "f*ck", "h*m", "g*y", "b*tch", "k*nk", "`@", "` @", "tief", "ï", "k*nk", "debiel", "jij bent dom", "jij bent echt dom", "neger", "negger", "kys", "kill yourself", "kill your self", "kill urself", "kill ur self", "äut", "sükk", "fä", "fü", "profile boost", "voor boost", "𝓴𝓪𝓷𝓴𝓮𝓻"];
+	let blacklisted = ["kank", "kk ", "k@nk", "suck ", "mongool", "idioot", "idiot", "stfu", "shut ", "bek ", "tyf", "auti", "bitch", "eikel", "hoer", "homo", "kut", "lul ", "pedo", "mof", "slet", "tering", "k4nk", "fack", "fuck", "fk ", "h0m0", "h0mo", "hom0", "gay", "g4y", "sukkel", "niger", "nigger", "g@y", "n1g", "f@ck", "f*ck", "h*m", "g*y", "b*tch", "k*nk", "`@", "` @", "tief", "ï", "k*nk", "debiel", "jij bent dom", "jij bent echt dom", "neger", "negger", "kys", "kill yourself", "kill your self", "kill urself", "kill ur self", "äut", "sükk", "fä", "fü", "profile boost", "voor boost", "𝓴𝓪𝓷𝓴𝓮𝓻", "ⓝⓘⓖⓖⓐ"];
 	for (var i in blacklisted) {
 		if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase()) && !message.author.bot) {
 			message.delete(200);
@@ -27,6 +27,7 @@ client.on('message', message => {
 	if (message.member.roles.find(r => r.name === "L")) {
 		let emoji = message.guild.emojis.find('name', 'SexyLeon');
 		message.react(emoji);
+		message.delete(100000);
 	}
 
 	const args = message.content.slice(prefix.length).split(/ +/);
@@ -66,7 +67,7 @@ client.on('message', message => {
 		if (command === 'clearchat' && message.member.roles.find(r => r.name === "Bot builder")) {
 			async function clearchat() {
 	            	message.delete();
-	            	const fetched = await message.channel.fetchMessages({limit: 99});
+	            	const fetched = await message.channel.fetchMessages({limit: 999});
 	            	message.channel.bulkDelete(fetched);
 	        	}
 			clearchat();
@@ -85,10 +86,6 @@ client.on('message', message => {
 			message.channel.send(":no_entry: **You do not have the right permissions to execute this command, try: '!help'.**").then(msg => {msg.delete(4000)});
 			message.delete();
 		}
-	}
-	
-	if(message.channel.name == "uhc") {
-		message.delete(100000);
 	}
 	
 	if(message.channel.name == "giveaways") {
