@@ -24,7 +24,10 @@ client.on('message', message => {
 		}
 	}
 
-	if (message.member.roles.find(r => r.name === "L")) {
+	if (message.member.roles.find(r => r.name === "MUTE")) {
+		message.channel.send(message.member.user.tag + " you're muted.")
+		message.delete(200);
+	} else if (message.member.roles.find(r => r.name === "L")) {
 		let emoji = message.guild.emojis.find('name', 'SexyLeon');
 		message.react(emoji);
 		message.delete(100000);
