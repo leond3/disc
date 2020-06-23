@@ -27,10 +27,6 @@ client.on('message', message => {
 	if (message.member.roles.find(r => r.name === "MUTE")) {
 		message.channel.send(":mute:" + message.member.user.tag + " you have been muted by an administrator.").then(msg => {msg.delete(2000)});
 		message.delete(200);
-	} else if (message.member.roles.find(r => r.name === "L")) {
-		let emoji = message.guild.emojis.find('name', 'SexyLeon');
-		message.react(emoji);
-		message.delete(100000);
 	}
 
 	const args = message.content.slice(prefix.length).split(/ +/);
