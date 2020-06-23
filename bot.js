@@ -25,7 +25,7 @@ client.on('message', message => {
 	}
 
 	if (message.member.roles.find(r => r.name === "MUTE")) {
-		message.channel.send(message.member.user.tag + " you're muted.")
+		message.channel.send(":mute:" + message.member.user.tag + " you have been muted by an administrator.").then(msg => {msg.delete(2000)});
 		message.delete(200);
 	} else if (message.member.roles.find(r => r.name === "L")) {
 		let emoji = message.guild.emojis.find('name', 'SexyLeon');
@@ -166,6 +166,111 @@ client.on('message', message => {
 		}
 	}
 	
+	if(message.channel.name == "admin-commands") {
+		if (!message.content.startsWith(prefix) || message.author.bot) {
+			if (!message.author.bot) { 
+				message.delete(10000);
+			}
+			return;
+		}
+		if (command === 'help') {
+		message.channel.send('**Bot command list:**\n - !help\n - !privatecall\n - !promote [mention]\n - !demote [mention]\n - !mute [mention]\n - !unmute [mention]\n - /nick [name]').then(msg => {msg.delete(300000)});
+		message.delete(300000);
+		}
+		else if (command === 'privatecall' || command === 'pc') {
+			const voiceChannel = message.member.voiceChannel;
+			let privatechannels = ["667089585527980062", "672407468130959371", "672407491807543297", "672407504914743318", "672407514259914762", "672407536741122048", "672407548229320754", "672407558270746635", "672407597248151591", "672407607004364801"];
+
+			if (voiceChannel && message.member.roles.find(r => r.name === "Moderator") || voiceChannel && message.member.roles.find(r => r.name === "Administrator")) {
+				message.member.setVoiceChannel(privatechannels[getRandomInt(0,10)]);
+				message.channel.send(":white_check_mark: User has been succesfully moved to a private channel.\n*You've to manually move users into this call!*").then(msg => {msg.delete(6000)});				
+			}
+			else if (!voiceChannel && message.member.roles.find(r => r.name === "Moderator") || !voiceChannel && message.member.roles.find(r => r.name === "Administrator")) {
+				message.channel.send(":no_entry: User is not connected to a channel and thus can't be moved.").then(msg => {msg.delete(6000)});
+			}
+			else {
+				message.channel.send(":no_entry: You do not have the permission to create a private call.\n*Please contact a Moderator if you need a private call*").then(msg => {msg.delete(6000)});
+			}
+			message.delete();
+		}
+		else if (command === 'notify') {
+			if (message.member.roles.find(r => r.name === "Administrator")) {
+				const mention = message.mentions.members.first();
+				const mentionMessage = message.content.slice(8);
+				if (mention.roles.find(r => r.name === "Notifications")) {
+					mention.sendMessage(mentionMessage + "\n\n*These messages may be disabled by disabling notifications in the discord-commands channel, this notification will be automatically deleted after 60 minutes.*").then(msg => {msg.delete(3600000)});
+					message.channel.send(":incoming_envelope: Notification succesfully send!").then(msg => {msg.delete(4000)});
+					message.guild.channels.get('682165828535451658').send(message.member.user.tag + " sent a notification to: " + mention + ".");
+				}
+				else {
+					message.channel.send(":no_entry: This user has notifications disabled!").then(msg => {msg.delete(4000)});
+				}
+			}
+			else {
+				message.channel.send(":no_entry: You do not have the right permission to execute this command, or this user has notifications disabled!").then(msg => {msg.delete(4000)});
+			}
+			message.delete();
+		}
+		else if (command === 'promote') {
+			const mention = message.mentions.members.first();
+			if (!mention.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Moderator") || !mention.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Administrator")) {
+				mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
+				message.channel.send(":white_check_mark: Succesfully updated rank!").then(msg => {msg.delete(4000)});
+			}
+			else if (mention.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Administrator")) {
+				mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "administrator"));
+				mention.removeRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
+				message.channel.send(":white_check_mark: Succesfully updated rank!").then(msg => {msg.delete(4000)});
+			}
+			else if (!mention.roles.find(r => r.name === "Administrator") || message.member.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Administrator")) {
+				message.channel.send(":no_entry: This user is the highest possible rank or you do not have enough permissions").then(msg => {msg.delete(4000)});
+			}
+			else {
+				message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
+			}
+			message.delete(4000);
+		}
+		else if (command === 'demote') {
+			const mention = message.mentions.members.first();
+			if (mention.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Administrator")) {
+				mention.removeRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
+				message.channel.send(":white_check_mark: Succesfully updated rank!").then(msg => {msg.delete(4000)});
+			}
+			else if (mention.roles.find(r => r.name === "Administrator") && message.member.roles.find(r => r.name === "Bot builder")) {
+				mention.removeRole(message.guild.roles.find(r => r.name.toLowerCase() == "administrator"));
+				mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
+				message.channel.send(":white_check_mark: Succesfully updated rank!").then(msg => {msg.delete(4000)});
+			}
+			else if (!mention.roles.find(r => r.name === "Moderator")) {
+				message.channel.send(":no_entry: This user is the lowest possible rank or you do not have enough permissions").then(msg => {msg.delete(4000)});
+			}
+			else {
+				message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
+			}
+			message.delete(4000);
+		}
+		else if (command === 'mute') {
+			const mention = message.mentions.members.first();
+			if (mention.roles.find(r => r.name === "MUTE")) {
+				mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "mute"));
+				message.channel.send(":white_check_mark: Succesfully muted user!").then(msg => {msg.delete(4000)});
+			} else {
+				message.channel.send(":no_entry: User is already muted!").then(msg => {msg.delete(4000)});
+			}
+			message.delete(4000);
+		}
+		else if (command === 'unmute') {
+			const mention = message.mentions.members.first();
+			if (!mention.roles.find(r => r.name === "MUTE")) {
+				mention.removeRole(message.guild.roles.find(r => r.name.toLowerCase() == "mute"));
+				message.channel.send(":white_check_mark: Succesfully unmuted user!").then(msg => {msg.delete(4000)});
+			} else {
+				message.channel.send(":no_entry: User is not muted!").then(msg => {msg.delete(4000)});
+			}
+			message.delete(4000);
+		}
+	}
+	
 	if(message.channel.name == "discord-commands") {
 		if (!message.content.startsWith(prefix) || message.author.bot) {
 			if (!message.author.bot) { 
@@ -174,7 +279,7 @@ client.on('message', message => {
 			return;
 		}
 		if (command === 'help') {
-		message.channel.send('**Bot command list:**\n - !help\n - !bot\n - !color [color/list]\n - !tag [tag/list]\n - !cf\n - !quickquestion\n - !notifications\n - !privatecall\n - !promote [mention]\n - !demote [mention]\n - /nick [name]').then(msg => {msg.delete(300000)});
+		message.channel.send('**Bot command list:**\n - !help\n - !bot\n - !color [color/list]\n - !tag [tag/list]\n - !cf\n - !quickquestion\n - !notifications\n - !privatecall\n - /nick [name]').then(msg => {msg.delete(300000)});
 		message.delete(300000);
 		}
 		else if (command === 'bot') {
@@ -317,68 +422,6 @@ client.on('message', message => {
 				message.channel.send(":no_entry: You do not have the permission to create a private call.\n*Please contact a Moderator if you need a private call*").then(msg => {msg.delete(6000)});
 			}
 			message.delete();
-		}
-		else if (command === 'notify') {
-			if (message.member.roles.find(r => r.name === "Administrator")) {
-				const mention = message.mentions.members.first();
-				const mentionMessage = message.content.slice(8);
-				if (mention.roles.find(r => r.name === "Notifications")) {
-					mention.sendMessage(mentionMessage + "\n\n*These messages may be disabled by disabling notifications in the discord-commands channel, this notification will be automatically deleted after 60 minutes.*").then(msg => {msg.delete(3600000)});
-					message.channel.send(":incoming_envelope: Notification succesfully send!").then(msg => {msg.delete(4000)});
-					message.guild.channels.get('682165828535451658').send(message.member.user.tag + " sent a notification to: " + mention + ".");
-				}
-				else {
-					message.channel.send(":no_entry: This user has notifications disabled!").then(msg => {msg.delete(4000)});
-				}
-			}
-			else {
-				message.channel.send(":no_entry: You do not have the right permission to execute this command, or this user has notifications disabled!").then(msg => {msg.delete(4000)});
-			}
-			message.delete();
-		}
-		else if (command === 'sendverify' && message.member.roles.find(r => r.name === "Bot builder")) {
-			const mention = message.mentions.members.first();
-			let code = [" 471664 ", " 641535 ", " 183341 ", " 216541 ", " 418184 ", " 957619 ", " 346496 ", " 156986 ", " 642842", "987661 ", " 356791 ", " 940368 ", " 032134 ", " 448388 ", " 308601 ", " 944956 ", " 188977 ", " 337853 ", " 980848 ", " 890043 ", " 448349 ", " 679331 ", " 914941 ", " 618290 ", " 691407 ", " 209946 ", " 643969 "];
-			mention.sendMessage("Welcome to **MineCraft Server**!\nI'm the main discord bot, please verify the code in the `#verification` channel to gain access to the server. Check out the `#discord-commands` channel for more features.\n\nCode: **||" + code[getRandomInt(0,27)] + "||**. Please add **MC** behind the verification code, example: ***!code 123456 MC***.");
-			message.delete(100);
-		}
-		else if (command === 'promote') {
-			const mention = message.mentions.members.first();
-			if (!mention.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Moderator") || !mention.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Administrator")) {
-				mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
-				message.channel.send(":white_check_mark: Succesfully updated rank!").then(msg => {msg.delete(4000)});
-			}
-			else if (mention.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Administrator")) {
-				mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "administrator"));
-				mention.removeRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
-				message.channel.send(":white_check_mark: Succesfully updated rank!").then(msg => {msg.delete(4000)});
-			}
-			else if (!mention.roles.find(r => r.name === "Administrator") || message.member.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Administrator")) {
-				message.channel.send(":no_entry: This user is the highest possible rank or you do not have enough permissions").then(msg => {msg.delete(4000)});
-			}
-			else {
-				message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
-			}
-			message.delete(4000);
-		}
-		else if (command === 'demote') {
-			const mention = message.mentions.members.first();
-			if (mention.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Administrator")) {
-				mention.removeRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
-				message.channel.send(":white_check_mark: Succesfully updated rank!").then(msg => {msg.delete(4000)});
-			}
-			else if (mention.roles.find(r => r.name === "Administrator") && message.member.roles.find(r => r.name === "Bot builder")) {
-				mention.removeRole(message.guild.roles.find(r => r.name.toLowerCase() == "administrator"));
-				mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
-				message.channel.send(":white_check_mark: Succesfully updated rank!").then(msg => {msg.delete(4000)});
-			}
-			else if (!mention.roles.find(r => r.name === "Moderator")) {
-				message.channel.send(":no_entry: This user is the lowest possible rank or you do not have enough permissions").then(msg => {msg.delete(4000)});
-			}
-			else {
-				message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
-			}
-			message.delete(4000);
 		}
 		else {
 			message.delete();
