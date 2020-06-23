@@ -209,17 +209,12 @@ client.on('message', message => {
 		}
 		else if (command === 'promote') {
 			const mention = message.mentions.members.first();
-			if (!mention.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Moderator") || !mention.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Administrator")) {
+			else if (!mention.roles.find(r => r.name === "Moderator") && !mention.roles.find(r => r.name === "Administrator")) {
 				mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
 				message.channel.send(":white_check_mark: Succesfully updated rank!").then(msg => {msg.delete(4000)});
 			}
-			else if (mention.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Administrator")) {
-				mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "administrator"));
-				mention.removeRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
-				message.channel.send(":white_check_mark: Succesfully updated rank!").then(msg => {msg.delete(4000)});
-			}
-			else if (!mention.roles.find(r => r.name === "Administrator") || message.member.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Administrator")) {
-				message.channel.send(":no_entry: This user is the highest possible rank or you do not have enough permissions").then(msg => {msg.delete(4000)});
+			else if (mention.roles.find(r => r.name === "Moderator") || mention.roles.find(r => r.name === "Administrator")) {
+				message.channel.send(":no_entry: Couldn't promote to a higher rank :(").then(msg => {msg.delete(4000)});
 			}
 			else {
 				message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
@@ -228,17 +223,12 @@ client.on('message', message => {
 		}
 		else if (command === 'demote') {
 			const mention = message.mentions.members.first();
-			if (mention.roles.find(r => r.name === "Moderator") && message.member.roles.find(r => r.name === "Administrator")) {
+			else if (mention.roles.find(r => r.name === "Moderator")) {
 				mention.removeRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
 				message.channel.send(":white_check_mark: Succesfully updated rank!").then(msg => {msg.delete(4000)});
 			}
-			else if (mention.roles.find(r => r.name === "Administrator") && message.member.roles.find(r => r.name === "Bot builder")) {
-				mention.removeRole(message.guild.roles.find(r => r.name.toLowerCase() == "administrator"));
-				mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "moderator"));
-				message.channel.send(":white_check_mark: Succesfully updated rank!").then(msg => {msg.delete(4000)});
-			}
 			else if (!mention.roles.find(r => r.name === "Moderator")) {
-				message.channel.send(":no_entry: This user is the lowest possible rank or you do not have enough permissions").then(msg => {msg.delete(4000)});
+				message.channel.send(":no_entry: Couldn't demote to a lower rank :(").then(msg => {msg.delete(4000)});
 			}
 			else {
 				message.channel.send(":no_entry: **Invalid Argument, try: '!help'.**").then(msg => {msg.delete(4000)});
@@ -247,7 +237,7 @@ client.on('message', message => {
 		}
 		else if (command === 'mute') {
 			const mention = message.mentions.members.first();
-			if (mention.roles.find(r => r.name === "MUTE")) {
+			if (!mention.roles.find(r => r.name === "MUTE")) {
 				mention.addRole(message.guild.roles.find(r => r.name.toLowerCase() == "mute"));
 				message.channel.send(":white_check_mark: Succesfully muted user!").then(msg => {msg.delete(4000)});
 			} else {
@@ -257,7 +247,7 @@ client.on('message', message => {
 		}
 		else if (command === 'unmute') {
 			const mention = message.mentions.members.first();
-			if (!mention.roles.find(r => r.name === "MUTE")) {
+			if (mention.roles.find(r => r.name === "MUTE")) {
 				mention.removeRole(message.guild.roles.find(r => r.name.toLowerCase() == "mute"));
 				message.channel.send(":white_check_mark: Succesfully unmuted user!").then(msg => {msg.delete(4000)});
 			} else {
