@@ -24,7 +24,7 @@ client.on('message', message => {
 		}
 	}
 
-	if (message.member.roles.find(r => r.name === "Bot Builder")) {
+	if (message.member.roles.find("717700309777907742")) {
 		message.react('😄');
 	}
 
